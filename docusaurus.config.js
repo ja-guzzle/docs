@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Guzzle Documentation',
   // url: 'https://your-docusaurus-test-site.com',
   url: 'https://guzzle-test.github.io',
-  baseUrl: '/guzzle/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -13,10 +13,10 @@ module.exports = {
   
   themeConfig: {
     navbar: {
-      title: `   |  Guzzle`,
+      title: ``,
       logo: {
-        alt: 'Logo',
-        src: 'img/just-analytics-logo.png',
+        alt: 'Guzzle',
+        src: 'img/guzzle-logo.svg',
       },
       items: [
         {
@@ -25,8 +25,7 @@ module.exports = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/questions/question', label: 'Q&A', position: 'left'},
-        {to: '/codesample/code', label: 'Code Sample', position: 'left'},
+        {to: '/Api/api', label: 'API', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'search',

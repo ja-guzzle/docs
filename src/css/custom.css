@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=helvetica&display=swap');
 
 :root {
-  --ifm-color-primary: #65ACDC;
+  --ifm-color-primary: #005484;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -22,7 +22,7 @@
   --ifm-heading-color: #404040;
   --ifm-color-content: #404040;
   --ifm-heading-font-weight: 300;
-  --ifm-navbar-background-color: #65ACDC;
+  --ifm-navbar-background-color: #005484;
   --ifm-navbar-link-color: hsla(0,0%,100%,.8);
   --ifm-navbar-link-hover-color: #ffffff;
 
