@@ -39,3 +39,7 @@ html[data-theme='dark'] {
   --ifm-heading-color: #ffffff;
   --ifm-color-content: #ffffff;
 }
+
+.navbar__item {
+  font-weight: bold;
+}

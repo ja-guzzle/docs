@@ -3,13 +3,13 @@ module.exports = {
   title: 'Guzzle',
   tagline: 'Guzzle Documentation',
   // url: 'https://your-docusaurus-test-site.com',
-  url: 'https://guzzle-test.github.io',
-  baseUrl: '/',
+  url: 'https://ja-guzzle.github.io',
+  baseUrl: "/",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'guzzle-test', // Usually your GitHub org/user name.
-  projectName: 'guzzle', // Usually your repo name.
+  organizationName: 'ja-guzzle', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
   
   themeConfig: {
     navbar: {
@@ -23,7 +23,7 @@ module.exports = {
           type: 'doc',
           docId: 'introduction to guzzle',
           position: 'left',
-          label: 'Documentation',
+          label: 'Docs'
         },
         {to: '/Api/api', label: 'API', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
