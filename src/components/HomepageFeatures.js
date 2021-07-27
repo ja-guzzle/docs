@@ -1,49 +1,80 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
+import Link from '@docusaurus/Link';
 
-const FeatureList = [
+const GetStartList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'What is Guzzle',
+    goto: "/Docs/introduction%20to%20guzzle",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Some of the very first questions a new user has are covered in this introduction.
+        Some of the very first questions a new user has are covered in this introduction.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Gettting Started Tutorial',
+    goto: "/Docs/introduction%20to%20guzzle",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Some of the very first questions a new user has are covered in this introduction.
+        Some of the very first questions a new user has are covered in this introduction.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Guzzle docs',
+    goto: "/Docs/introduction%20to%20guzzle",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Some of the very first questions a new user has are covered in this introduction.
+        Some of the very first questions a new user has are covered in this introduction.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+const projects = [
+  {
+    title: 'Guzzle docs',
+    goto: "/Docs/introduction%20to%20guzzle",
+    description: (
+      <>
+        Some of the very first questions a new user has are covered in this introduction.
+      </>
+    ),
+  },
+  {
+    title: 'How-tos',
+    goto: "/Docs/introduction%20to%20guzzle",
+    description: (
+      <>
+        Some of the very first questions a new user has are covered in this introduction.
+      </>
+    ),
+  },
+  {
+    title: 'APIs',
+    goto: "/Api/api",
+    description: (
+      <>
+        Some of the very first questions a new user has are covered in this introduction.
+      </>
+    ),
+  },
+];
+
+function InfoCard({title, description, goto}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+    <div className="col col--4" style={{margin: `calc(2vh) auto`}}>
+      <div className={styles.card}>
+        <h2 style={{color: "white", fontWeight: "bold"}}>{title}</h2>
         <p>{description}</p>
+        <Link
+          className="button button--secondary button--lg"
+          to={goto}
+        >Learn more</Link>
       </div>
     </div>
   );
@@ -52,11 +83,22 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+      <div className="container" style={{paddingLeft: "5%", paddingRight: "5%"}}>
+        <h1>Get Started</h1>
+        <p>If you’re new to Guzzle, explore Guzzle here : </p>
+        <div className={`row`}>
+          {GetStartList.map((props, index) => 
+            <InfoCard key={index} {...props}/>
+          )}
+        </div>
+        <div style={{marginTop: "5%"}}>
+          <h1>Build your projects</h1>
+          <p>If you peeked Guzzle, remember these resources! They’ll help you level up quickly. </p>
+          <div className={`row`}>
+            {projects.map((props, index) => 
+              <InfoCard key={index} {...props}/>
+            )}
+          </div>
         </div>
       </div>
     </section>

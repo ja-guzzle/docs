@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/introduction%20to%20guzzle">
+            to="/Docs/introduction%20to%20guzzle">
             Guzzle Tutorial - 5min ⏱️
           </Link>
         </div>
@@ -29,9 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title={`Guzzle Docs`}
+      description="Guzzle ingesion tools">
       <main>
         <HomepageFeatures />
       </main>

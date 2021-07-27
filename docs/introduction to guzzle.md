@@ -11,7 +11,7 @@ There are plethora of frameworks and data integration tools available for Big Da
 Guzzle is not meant to compete with existing Data Integration and ETL tools or existing ETL frameworks like Gobblin. Whilst it provides native modules to support Ingestion , Data processing, and others - it also supports calling the jobs / procs from other frameworks and ETL tools.
 
 
-# Guzzle Architecture Overview
+## Guzzle Architecture Overview
 Guzzle is build as combination of foundation or common services , native modules and external modules which come together to provide integrated set of accelerators which can achieve [Guzzle's goal of RACE OIL] (Documentation/guzzle-overview#guzzle-goals-race-oil)
 ![image](/img/docs/guzzle_architecture.png)
 

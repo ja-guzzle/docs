@@ -18,7 +18,7 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Source Sans Pro,Helvetica Neue,Helvetica';
+  /* --ifm-font-family-base: 'Source Sans Pro,Helvetica Neue,Helvetica'; */
   --ifm-heading-color: #404040;
   --ifm-color-content: #404040;
   --ifm-heading-font-weight: 300;

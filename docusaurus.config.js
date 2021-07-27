@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Guzzle Documentation',
   // url: 'https://your-docusaurus-test-site.com',
   url: 'https://ja-guzzle.github.io',
-  baseUrl: "/",
+  baseUrl: "/docs/",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
