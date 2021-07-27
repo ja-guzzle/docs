@@ -1,10 +1,10 @@
-Working with Fixed Length Files
-
 Fixed length files have a constant length for each field and record. In fixed-length text files, each field starts and ends at the same place in every record. Each new line is assumed as Row Separator. This article outlines how to use Fixed Length  Files as a source in Ingestion activity. 
 
-**Note: Fixed Length Files are supported only as a Source and not a Target in Guzzle.**
+:::note
+Fixed Length Files are supported only as a Source and not a Target in Guzzle.
+:::
 
-# Text and Log File Properties in Guzzle
+## Text and Log File Properties in Guzzle
 
 <table>
   <tr>

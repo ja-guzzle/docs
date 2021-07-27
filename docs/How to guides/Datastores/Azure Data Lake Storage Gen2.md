@@ -1,10 +1,12 @@
-**Only supported on Databricks compute**
+:::note
+Only supported on Databricks compute
+:::
 
 [Azure Data Lake Storage Gen2 ](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) (ADLS Gen2) is a set of big data analytics capabilities, offered on Azure Blob Storage. ADLS Gen2 allows enterprises to deploy data lake solutions on Azure in order to store petadata bytes of data across a large number of data files.
 
 Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink and allows copy data to/from using storage access keys or service principal. 
 
-# Steps to create Datastore  for ADLS Gen2
+## Steps to create Datastore  for ADLS Gen2
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **ADLS Gne2 **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
@@ -81,7 +83,7 @@ Sample config when using Credential Type as : Access Key
 
 ![image alt text](/img/docs/how-to-guides/datastores/Azure_Data_Lake_Storage_2.png)
 
-# Known Limitation
+## Known Limitation
 
 --
 

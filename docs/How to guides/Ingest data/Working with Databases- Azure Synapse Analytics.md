@@ -1,12 +1,12 @@
-Working with Databases- Azure Synapse Analytics
-
-**Only supported on Databricks compute**
+:::note 
+Only supported on Databricks compute
+:::
 
 Azure Synapse Analytics is a cloud-based enterprise data warehouse platform that leverages massively parallel processing (MPP) to quickly run complex queries across petabytes of data. 
 
 This article outlines how to use Azure Synapse Analytics as source or target in Ingestion activity. Guzzle leverages Databrick’s Synapse Spark Connector detail of which can be found [here](https://docs.microsoft.com/en-us/azure/databricks/data/data-sources/azure/synapse-analytics) which uses a common Azure Blob storage container to exchange data between two systems (Databricks Cluster and Azure Synapse). Ingestion Active lets you leverage this native connector offered by Databricks and allows you to specify different configurations that are supported by this connector. 
 
-# Azure Synapse Analytics as a Source
+## Azure Synapse Analytics as a Source
 
 **Note: In the Datastore section we can choose to read from Azure Synapse either as a Table or through SQL (in the form of a query).**
 
@@ -39,7 +39,7 @@ Also when the Table option is selected, you can also specify the Filter which ne
 </table>
 
 
-# Azure Synapse Analytics as a Target or Reject
+## Azure Synapse Analytics as a Target or Reject
 
 <table>
   <tr>

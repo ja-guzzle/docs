@@ -1,8 +1,6 @@
-Column Restrictions - Exclude and Include Columns
-
 When we select any of the five databases as our Datastore, Guzzle provides us with the feature to Configure Column Restrictions for both Including and Excluding Columns. This article discusses the Column Restrictions feature in Guzzle.
 
-# Use of Column Restrictions in Guzzle
+## Use of Column Restrictions in Guzzle
 
 * In order to use Column Restrictions in Guzzle all we need to do is mention the Column Names and choose between the Exclude and Include Column options.
 
@@ -30,11 +28,10 @@ When we select any of the five databases as our Datastore, Guzzle provides us wi
 
 In this case all columns except first_name and age are visible in the Table.
 
-# Case Sensitivity and Special Characters in Column Restriction
+## Case Sensitivity and Special Characters in Column Restriction
 
 * Guzzle ignores the case sensitivity in the Column Restriction section. Irrespective of the case of the columns Guzzle will handle the exclusion and inclusion. For Example: If we have first_name as one of our columns in the Table and enter FIRST_NAME in the Exclude/Include Column Section Guzzle will still perform the Column Restriction on the first_name column.
 
 * Similar to Case Sensitivity Guzzle also handles the Special Characters in the Column Restriction Section. Irrespective of the presence of Special Characters in our Column Names Guzzle will successfully handle the exclusion and inclusion. 
 
 * If the user enters a column name that does not exist in the table, Guzzle will not throw an error but would simply ignore the Columns.
-

@@ -1,10 +1,8 @@
-Working with XML files
-
 Extensible Markup Language (**XML**) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
 
 XML file support in Guzzle provides extensive features to specify file format details and many other properties which make it easier to work with our Data. This article outlines how to work with XML files for source and target in Ingestion activity.  
 
-# XML File Properties in Guzzle
+## XML File Properties in Guzzle
 
 <table>
   <tr>

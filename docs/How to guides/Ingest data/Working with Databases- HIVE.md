@@ -1,16 +1,14 @@
-Working with Databases- HIVE
-
 **Only supported on Databricks compute**
-
-** **
 
 Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data query and analysis. Hive gives an SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop.
 
 This article outlines how to use Hive as a source or target in Ingestion activity. Ingestion Active lets you leverage this native connector offered by Databricks and allows you to specify different configurations that are supported by this connector. 
 
-# Apache Hive as a Source
+## Apache Hive as a Source
 
-**Note: In the Datastore section we can choose to read four Data either as a Table or through SQL (in the form of a query).**
+:::note: 
+In the Datastore section we can choose to read four Data either as a Table or through SQL (in the form of a query).
+:::
 
 <table>
   <tr>
@@ -38,7 +36,7 @@ Also when the Table option is selected, you can also specify the Filter. The fil
 </table>
 
 
-# Apache Hive as a Target or Reject
+## Apache Hive as a Target or Reject
 
 <table>
   <tr>
@@ -79,5 +77,6 @@ This can be seen in the figure below:
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/hive.png)
 
-**Note: When Guzzle creates a Table using the Auto Create Table option it will use the Partition Column Setting to determine the Partition Columns to use. The sequence will be as per the order specified.**
-
+:::note 
+When Guzzle creates a Table using the Auto Create Table option it will use the Partition Column Setting to determine the Partition Columns to use. The sequence will be as per the order specified.
+:::

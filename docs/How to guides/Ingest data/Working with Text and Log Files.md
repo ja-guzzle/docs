@@ -1,10 +1,10 @@
-Working with Text and Log Files
-
 This article outlines how to use Free Form Text and Log Files as a source in Ingestion activity. 
 
-**Note: Text and Log Files are supported only as a Source and not a Target in Guzzle.**
+:::note
+Text and Log Files are supported only as a Source and not a Target in Guzzle.
+:::
 
-# Text and Log File Properties in Guzzle
+## Text and Log File Properties in Guzzle
 
 <table>
   <tr>

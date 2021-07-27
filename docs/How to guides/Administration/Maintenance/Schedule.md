@@ -3,9 +3,9 @@ This article provides information about how to schedule a Guzzle and steps to cr
 
 Follow below steps to create schedule
 
-Step 1 : Goto Admin from top navigation bar
+1 : Goto Admin from top navigation bar
 
-Step 2 : Goto Maintenance and click on Schedule.
+2 : Goto Maintenance and click on Schedule.
 
 Add Quantity Resource properties Name and value and click on Save to save changes.
 

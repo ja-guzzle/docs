@@ -49,7 +49,7 @@ Below are the steps to create new user
 </table>
 
 
-:::info Note: 
+:::note
 It’s not possible to convert the native user to External (also referred as SSO) user. The only way to achieve this by deleting existing native user and re-creating it as external user
 :::
 

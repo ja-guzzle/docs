@@ -149,6 +149,6 @@ Step 11 :  Save the changes and Initialize the database via click on Initialize.
 
 The Guzzle UI will auto-detect if the repository tables are present, and it will show
 
-:::info Note
+:::note
 On Initialize guzzle will create a database table related to guzzle jobs if the database is already initialized then guzzle will show an option as reinitialize to reinitialize the database.
 :::

@@ -1,12 +1,11 @@
-Processing
-
 Processing in Guzzle is used  to transform ingested Data into a data lake (or target platform). This activity deals with complex processing logic by implementing all data transformation rules. 
 
 Data Processing is the module which supports intra-ETL from staging to foundation and finally to analytics data tables. "Transforming data from one form to another" is the key purpose of the Data Processing module. Guzzle’s processing module can read data from RDBMS, Hive, SQL server, Azure Synapse, other JDBC sources etc.
 
-**Note:	As processing is meant for data movement between homogeneous sources and target, we cannot read data from source tables maintained in one technology and write it into target tables maintained in some other technology.**
-
-# Source Section of the Processing Module
+:::note	
+As processing is meant for data movement between homogeneous sources and target, we cannot read data from source tables maintained in one technology and write it into target tables maintained in some other technology.
+:::
+## Source Section of the Processing Module
 
 <table>
   <tr>
@@ -34,8 +33,6 @@ Data Processing is the module which supports intra-ETL from staging to foundatio
   <tr>
     <td>Incremental</td>
     <td>This property is to control behavior of the framework generated column w_current_record_flag, in the cases where target is configured for merge operation. By default, when this property is unchecked, the source is considered a full dump. Hence all target records are first marked as w_current_record_flag is equal to N before performing the merge on target. In the next step, to merge primary keys that are present in source, this flag is again updated to Y and keys that are not present in source, this flag remains N. In case you check this property, source is considered incremental. Hence all target records are not marked as N for w_current_record_flag column.
-
-
 </td>
     <td>Unchecked</td>
     <td>     Yes</td>
@@ -66,7 +63,7 @@ w_version_key
 </table>
 
 
-# Target Section of the Processing Module
+## Target Section of the Processing Module
 
 <table>
   <tr>
@@ -128,7 +125,7 @@ w_version_key
 </table>
 
 
-# Example of the Processing Module:
+## Example of the Processing Module:
 
 **Source Table**
 

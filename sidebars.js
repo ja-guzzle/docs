@@ -15,11 +15,13 @@ module.exports = {
 
   // But you can create a sidebar manually
 
-  // tutorialSidebar: [
+  // apiSidebar: [
   //   {
   //     type: 'category',
-  //     label: 'Tutorial',
-  //     items: ['hello'],
+  //     label: 'Api',
+  //     items: ['/api/api'],
   //   },
   // ]
+
+  // apiSidebar: ['api'],
 };

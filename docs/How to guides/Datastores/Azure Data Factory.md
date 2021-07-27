@@ -2,7 +2,7 @@ Azure Data Factory is the platform that solves such data scenarios. It is the cl
 
 Guzzle only supports ADF as an External job. 
 
-# Steps to create Datastore  for Azure Data Factory
+## Steps to create Datastore  for Azure Data Factory
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Azure Data Factory **connector. Alternatively users can launch from **Create New Datastore **link in Activity authoring UI.
 

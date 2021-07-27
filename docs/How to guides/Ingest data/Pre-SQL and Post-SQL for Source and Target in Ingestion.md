@@ -1,5 +1,3 @@
-Pre-SQL and Post-SQL for Source and Target in Ingestion
-
 Pre-SQL is a SQL statement executed using the source and target connections before the pipeline is run. On the other hand Post-SQL statements are executed after the pipeline is run. Using Pre and Post SQL statements helps in performing operations like insert, delete and update before and after the load.
 
 Guzzle supports Pre-SQL and Post-SQL for Source and Target and their execution in Ingestion. It is used mainly for pre and post formatting of Data in a Database. 

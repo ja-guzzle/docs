@@ -1,12 +1,12 @@
-Working with Databases- JDBC
-
 Java Database Connectivity (JDBC) is an application programming interface (API) for the programming language Java, which defines how a client may access a database. It is a Java-based data access technology used for Java database connectivity.
 
 This article outlines how to use JDBC as source or target in Ingestion activity. Ingestion Active lets you leverage this native connector offered by Databricks and allows you to specify different configurations that are supported by this connector. 
 
-# JDBC as a Source
+## JDBC as a Source
 
-**Note: In the Datastore section we can choose to read four Data either as a Table or through SQL (in the form of a query).**
+:::note
+In the Datastore section we can choose to read four Data either as a Table or through SQL (in the form of a query).
+:::
 
 <table>
   <tr>
@@ -51,7 +51,7 @@ In the animation below, we add a filter to the column ID that is ID>3. In the Sa
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/jdbc2.gif)
 
-# JDBC as a Target or Reject
+## JDBC as a Target or Reject
 
 <table>
   <tr>

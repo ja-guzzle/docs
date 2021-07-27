@@ -11,7 +11,7 @@ When you enable shared storage, Guzzle will do a one time copy of configs and bi
 
 Similarly the Azure blob storage container is also mounted on Azure Databricks workspace by running "Setup Workspace" wizard on compute UI
 
-:::info Note: 
+:::note 
 Once shared storage is enabled, you will not be able to disable it.. 
 :::
 
@@ -84,7 +84,7 @@ Guzzle will validate the shared storage configuration ensuring the storage accou
 
 Guzzle allows you to update Shared storage configuration when there is a change in the access keys, or if a storage account, container or directory.
 
-:::info Note: 
+:::note 
 When there is change in storage account, container or folder name, Guzzle will copy the configs, logs and Guzzle binaries  from the existing storage account /container container / folder to the new one. This process can take many minutes depending on the size of log files and config directories. 
 :::
 

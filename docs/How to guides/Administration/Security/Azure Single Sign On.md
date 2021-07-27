@@ -18,7 +18,7 @@ To use create a new one that shall be used by Guzzle to perform SSO- [for more](
 
 ![image alt text](/img/docs/how-to-guides/administrator/security/sso0.png)
 
-:::info Note: 
+:::note
 You can also use existing App registration in AAD and add the redirect URL of the Guzzle instance you are integrating. However as  a best practice, each Guzzle instance should have its own App registration for better segregation
 :::
 
@@ -91,6 +91,6 @@ Step 7 : Create User
 
 ![image alt text](/img/docs/how-to-guides/administrator/security/sso2.gif)
 
-:::info Note:
+:::note
 Once SSO is enabled, the native login gets disabled. User can only login via SSO
 :::

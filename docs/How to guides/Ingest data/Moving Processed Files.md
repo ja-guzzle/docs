@@ -1,10 +1,8 @@
-Moving Processed Files
-
 Ingestion activity in Guzzle allows to 
 
 In this article we discuss how Guzzle handles processed files. Guzzle’s Moving Process File feature allows the user to specify the directory and Guzzle will move the files to that destination.  
 
-# How does it Work
+## How does it Work
 
 On adding a processed file path in the Configure processed path section Guzzle moves the Data into that directory.  Here let us use archive/ as our processed file path. 
 
@@ -52,7 +50,8 @@ Sg:
 
 			Customer<job_ID>.csv
 
-**Note: For our Datastores, Hive, Delta, Azure SQL and Azure Synapse Analytics supports all servers while JDBC supports only MySQL server.**
-
+:::note 
+For our Datastores, Hive, Delta, Azure SQL and Azure Synapse Analytics supports all servers while JDBC supports only MySQL server.
+:::
       
 

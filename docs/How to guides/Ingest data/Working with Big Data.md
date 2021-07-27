@@ -1,8 +1,6 @@
-Working with Big Data file formats
-
 This article outlines how to work with Big Data file formats namely: Parquet, Avro and ORC in Guzzle’s Ingestion activity. Guzzle supports these file formats for source and target in Ingestion activity.  Excel file support in Guzzle provides extensive features to specify file format details and many other properties which make it easier to work with our Data. 
 
-# Big Data File Formats as a Source
+## Big Data File Formats as a Source
 
 <table>
   <tr>

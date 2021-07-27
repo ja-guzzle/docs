@@ -1,8 +1,6 @@
-Pipeline
-
 Pipelines in Guzzle are used to run multiple activities simultaneously. A pipeline is a logical grouping of activities that together perform a task. The pipeline allows you to manage the activities as a set instead of each one individually. For example, a pipeline could contain a set of activities that first ingest data and then perform processing on the ingested data. Pipelines allow  us to manage activities as a set instead of each one individually.
 
-# Use of Pipelines in Guzzle
+## Use of Pipelines in Guzzle
 
 * We may create a new pipeline in Guzzle by selecting the menu button in the Pipelines section on the left hand side bar of Guzzle. We must specify the name of the pipeline according to the action it performs.
 

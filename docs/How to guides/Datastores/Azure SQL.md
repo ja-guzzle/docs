@@ -2,7 +2,7 @@ Azure SQL is a cloud native and fully managed database management system (DBMS) 
 
 The connector can be used for SQL databases, on-premises or in the cloud (both Azure SQL and SQL Server Managed Instance), as an input data source or output data sink for Spark jobs.
 
-# Steps to create Datastore  for Azure SQL
+## Steps to create Datastore  for Azure SQL
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Server file system **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
@@ -45,7 +45,7 @@ The URL can optionally contain database name, user name and other connection pro
 
 ![image alt text](/img/docs/how-to-guides/datastores/azure_sql_1.gif)
 
-# Known Limitation
+## Known Limitation
 
 --
 

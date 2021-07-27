@@ -16,7 +16,7 @@ Guzzle supports Watermark for all the 5 types of Database Connectors namely:
 
 * JDBC
 
-# How Does a Watermark Work in Guzzle
+## How Does a Watermark Work in Guzzle
 
 "Configure Watermark" section in Source Tab contains following properties for configuring  incremental loading for a source table: 
 
@@ -73,7 +73,7 @@ In the image below we consider 2 columns of our Data last_modified_dt which is a
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/watermark2.png)
 
-# Custom Watermarks or Watermark Filter
+## Custom Watermarks or Watermark Filter
 
 We can create Custom Watermarks by using the Watermark Filter option provided by Guzzle. The Watermark Filter section can be used to specify the condition for our Columns. Only the rows which satisfy the condition will be reflected in the Target Table.
 
@@ -85,7 +85,9 @@ The @1 represent last max value stored in guzzle watermark table for first colum
 
 The @2 represent last max value stored in guzzle watermark table for second column
 
-**Note: The cast function is used in the second test case to ensure that Guzzle reads id as an integer and not a String, as Watermark supports only timestamps and integers.**
+:::note
+The cast function is used in the second test case to ensure that Guzzle reads id as an integer and not a String, as Watermark supports only timestamps and integers.
+:::
 
 If Custom Watermark is applied to multiple columns the and condition is used as shown above.
 

@@ -16,7 +16,7 @@
 
 5. Processing activity supports Delta target using Template approach or Spark dataframe approach. Template approach leverages native DML commands when moving data from one delta table to other delta table using MERGE/UPDATE/INSERT INTO SELECT. Refer to [Working with Delta for Processing ](xxxx)
 
-# Steps to create Datastore  for Delta
+## Steps to create Datastore  for Delta
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **DELTA **connector in Database section. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI, or Copy Data tool 
 
@@ -30,7 +30,7 @@
 
 ![image alt text](/img/docs/how-to-guides/datastores/hive_1.png)
 
-# Known Limitation
+## Known Limitation
 
 --
 

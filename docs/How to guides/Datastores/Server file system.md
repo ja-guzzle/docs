@@ -3,8 +3,7 @@ Server file system represents the local operating file system on the **Compute *
 :::note
 Only Ingestion activity supports File based connectors. 
 :::
-
-# Steps to create Datastore  for Server file system
+## Steps to create Datastore  for Server file system
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/server_file_system_0.png)) from the **Datastores **section in Left Navigation and select **Server file system**** **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
@@ -16,11 +15,13 @@ Only Ingestion activity supports File based connectors.
 
 5. Save the Datastore config. Optionally you can Test the connection. 
 
-**Note: **Ensure the same path is visible on all Driver and Worker nodes for Yarn or Databricks computes you are using. 
+:::note: 
+Ensure the same path is visible on all Driver and Worker nodes for Yarn or Databricks computes you are using. 
+:::
 
 ![image alt text](/img/docs/how-to-guides/datastores/server_file_system_1.gif)
 
-# Known Limitation
+## Known Limitation
 
 --
 

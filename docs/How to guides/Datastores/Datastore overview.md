@@ -2,7 +2,7 @@ Datastore in Guzzle represents either on premise or cloud data service which can
 
 Additionally Guzzle supports datastore to run external activities like procedure, Azure Data Facotry pipeline or notebook. 
 
-# Supported Datastores 
+## Supported Datastores 
 
 Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores - across different activity types and Computes
 
@@ -171,9 +171,7 @@ Guzzle broadly supports three types of datastores: File, Database and API. Below
 </table>
 
 :::note
-
 1. The JDBC connector is a generic connector that lets you connect to any database that supports the JDBC interface. 
-
 2. Rest API connector allows you to connect any API or cloud application which provides REST API interface 
 :::
 
@@ -201,7 +199,7 @@ Guzzle supports running external procedures, scripts, notebook and pipelines on 
 </table>
 
 
-# Supported File Format
+## Supported File Format
 
 * Delimited format
 
@@ -221,7 +219,7 @@ Guzzle supports running external procedures, scripts, notebook and pipelines on 
 
 * Parquet format
 
-# Next Steps
+## Next Steps
 
 Ingestion Activity
 

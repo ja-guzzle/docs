@@ -60,27 +60,17 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/ja-guzzle/docs/blob/master/',
+          // showLastUpdateAuthor: true,
+          // showLastUpdateTime: true
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          editUrl: 'https://github.com/ja-guzzle/docs/blob/master/',
         },
-        // questions: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        // },
-        // codesample: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        // api: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

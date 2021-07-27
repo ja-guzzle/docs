@@ -140,41 +140,41 @@ Following are not part of version control:
 3. Schedules
 
 
-## Creating new branch
+### Creating new branch
 
 Each Git repository that's associated with a Guzzle has a collaboration branch. (main) is the default collaboration branch. Users can also create feature branches by clicking + New Branch in the Top Nav Git dropdown. Once the new branch Dialogue  appears, enter the name of your feature branch.
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations11.png)
 
-## Publish Branch
+### Publish Branch
 
 After you have merged changes to the collaboration branch (main is the default), click Publish to manually publish your code changes in the main branch to the Guzzle default configs.Users can publish branches by clicking Publish Branch in the Top Nav Git dropdown.
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations12.png)
 
-## Pull Branch
+### Pull Branch
 
 Users can manually pull branches by clicking Pull Branch in the Top Nav Git dropdown. To get the updated version of the branch from git repo
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations13.png)
 
-## Create Pull Request
+### Create Pull Request
 
 Users can manually create pull Requests by clicking Create pull request in the Top Nav Git dropdown. This will show appropriate merge request UI of github or azure devops
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations14.png)
 
-## Switch to a different Git Provider
+### Switch to a different Git Provider
 
 To switch to a different Git Provider, go to the Git Settings from the Top Nav bar. Click on Remove (![image alt text](/img/docs/how-to-guides/author/gitintegrations15.png)) of the tab bar. 
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations16.gif)
 
-## Commit and Push
+### Commit and Push
 
 For every action which requires updated configs to be saved in git, Guzzle takes the latest changes first and puts incoming changes on top of the current changes.
 
-## Custom Git Commit Message
+### Custom Git Commit Message
 
 Once Users do git integrations every time when some config was changed, guzzle prompts the user to enter a custom git commit message if the user leaves as empty then by default guzzle takes some internal git commit message.
 

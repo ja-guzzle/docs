@@ -1,8 +1,6 @@
-Housekeeping
-
 Guzzle’s Housekeeping module allows the user to implement granular level housekeeping on the target tables according to different data retention policies across various data storage layers within the data lake.
 
-# Housekeeping Properties
+## Housekeeping Properties
 
 <table>
   <tr>

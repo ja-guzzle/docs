@@ -1,4 +1,6 @@
-**Only supported on Databricks compute**
+:::note
+Only supported on Databricks compute
+:::
 
 [Delta Lake](https://databricks.com/product/delta-lake-on-databricks) is an open format storage layer that delivers reliability, security and performance on your data lake. Guzzle has extensive support of Delta tables including following features:
 
@@ -16,7 +18,7 @@
 
 5. Processing activity supports Delta target using Template approach or Spark dataframe approach. Template approach leverages native DML commands when moving data from one delta table to other delta table using MERGE/UPDATE/INSERT INTO SELECT. Refer to [Working with Delta for Processing ](xxxx)
 
-# Steps to create Datastore  for Delta
+## Steps to create Datastore  for Delta
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **DELTA **connector in Database section. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI, or Copy Data tool 
 
@@ -30,7 +32,4 @@
 
 ![image alt text](/img/docs/how-to-guides/datastores/delta_lake_1.png)
 
-# Known Limitation
-
---
-
+## Known Limitation

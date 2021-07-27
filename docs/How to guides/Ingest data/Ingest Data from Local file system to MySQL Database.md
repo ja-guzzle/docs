@@ -14,7 +14,7 @@ This tutorial will be covering an end to end use-case of loading data from a loc
 
 * Applying a Failure Threshold to the Loaded Data to check the consistency and viability of the Data as a whole
 
-# Pre-Requisites
+## Pre-Requisites
 
 * Since we use Guzzle as our Data Integration Workbench for movement and transformation we must ensure it is set up and configured properly. Guzzle supports both on-premise and cloud deployment.
 
@@ -26,7 +26,7 @@ This tutorial will be covering an end to end use-case of loading data from a loc
 
 * Load Dataset from Local File to the Guzzle Platform through its Source Section
 
-# Load Dataset from Local File to the Guzzle Platform through its Source Section
+## Load Dataset from Local File to the Guzzle Platform through its Source Section
 
 The first step in the Ingestion Process would be to deal with the Source Section of Guzzle. Guzzle’s Source Section provides many features including specifying the file names, location of the file and the file format.
 
@@ -42,7 +42,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
 
-# Perform Validations and Transformations on the Dataset to check the accuracy of Data 
+## Perform Validations and Transformations on the Dataset to check the accuracy of Data 
 
 The next step would be to perform Validations and Transformations on the Data . This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Integration a much quicker process as it Automates the Validation Process.
 
@@ -60,7 +60,7 @@ The next step would be to perform Validations and Transformations on the Data . 
 
 Here we have Validated the Columns first_name and age for their data types and entered a condition to partition the column age while validating its Nullability.
 
-# Loading or configuring the Source Dataset to a Target Dataset or Table
+## Loading or configuring the Source Dataset to a Target Dataset or Table
 
 We now have to load the Source Dataset to a Target Dataset or Table. Guzzle provides many different Datastores from Local Files, Delta Tables and MySQL. It allows configuring a Target Partition Scheme.
 
@@ -72,7 +72,7 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 Here we have chosen MySQL as our Datastore and assigned the name customer to our Table.
 
-# Applying a Failure Threshold to the Loaded Data to check the consistency and viability of the Data as a whole
+## Applying a Failure Threshold to the Loaded Data to check the consistency and viability of the Data as a whole
 
 We now move onto the Reject Section where we deal with the Data which does not pass our Validations. This helps to check the consistency and viability of the Data as a whole.
 

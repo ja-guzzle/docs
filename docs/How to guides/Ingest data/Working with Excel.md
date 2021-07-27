@@ -1,8 +1,6 @@
-Working with Excel
-
 This article outlines how to work with Excel (.xls or .xlsx)  for source and target in Ingestion activity.  Excel file support in Guzzle provides extensive features to specify file format details and many other properties which make it easier to work with our Data. 
 
-# Excel File Properties in Guzzle
+## Excel File Properties in Guzzle
 
 <table>
   <tr>
@@ -69,7 +67,7 @@ The Interface for the Excel File Format can be seen in the figure below.
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/excel1.png)
 
-# Column Mapping in Excel Files
+## Column Mapping in Excel Files
 
 Column Mapping in Excel Files are very similar to Delimited Files. We can add Column Mapping to specify how to map columns in the source file. This is applicable for files which are having headers or without header. The functionality is meant to achieve either or both of the following item:
 

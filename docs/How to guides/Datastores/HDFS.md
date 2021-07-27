@@ -1,14 +1,11 @@
-HDFS
-
 Hadoop Distributed File System (HDFS) is a distributed file system that provides high-throughput access to application data.Guzzle Ingestion activity supports ingesting data from HDFS file system. 
 
-**Note: **
-
+:::note
 1. Supported only with Local Spark and Yarn
-
 2. Ensure hadoop core site file are setup correctly on the yarn or local spark cluster
+:::
 
-# Steps to create Datastore  for HDFS
+## Steps to create Datastore  for HDFS
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Server file system **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
@@ -22,7 +19,4 @@ Hadoop Distributed File System (HDFS) is a distributed file system that provides
 
 ![image alt text](/img/docs/how-to-guides/datastores/HDFS_1.gif)
 
-# Known Limitation
-
---
-
+## Known Limitation

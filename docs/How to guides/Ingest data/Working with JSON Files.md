@@ -1,18 +1,3 @@
-export const Highlight = ({children, color}) => (
-  <div
-    style={{
-      color: '#000000',
-      minWidth: '100%',
-      height: '50%',
-      padding: '10px'
-    }}
-  >
-    6/01/2021 - 7 Minutes to read
-  </div>
-);
-
-<Highlight color="#25c2a0"></Highlight>
-
 JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications. JSON is a language-independent data format.
 
 :::tip Json File tip
@@ -21,7 +6,7 @@ JSON file support in Guzzle provides extensive features to specify file format d
 
 :::
 
-# JSON File Properties in Guzzle
+## JSON File Properties in Guzzle
 
 <table>
   <tr>
@@ -61,7 +46,7 @@ The Interface for the JSON Format for both Source and Target can be seen in the 
 
 ![image alt text](/img/docs/working_with_json1.png)
 
-# Multiline: 
+## Multiline: 
 
 Each line must contain a separate, self-contained valid JSON object. 
 
@@ -79,7 +64,9 @@ When Multi-line is true Guzzle expects Data in the following way:
 
 *  it should be one singular valid JSON object / array
 
-**note: every object in that array or object is separated by commas ( because that single JSON object/array should valid)** 
+:::note
+every object in that array or object is separated by commas ( because that single JSON object/array should valid)
+:::
 
  for example:
 
@@ -389,15 +376,17 @@ Sample Output when multiline is True is shown below:
 </table>
 
 
-**Note: Every object in the array is separated by a comma**
+:::note
+Every object in the array is separated by a comma
+:::
 
-# Column Mapping in JSON Files
+## Column Mapping in JSON Files
 
 We can also add Column Mapping to specify how to map columns in the source file. This is applicable for files which are having headers or without header. Column Mapping in JSON helps in mapping the columns to a new Column Name as shown here:
 
 ![image alt text](/img/docs/working_with_json2.png)
 
-# Here we have mapped the columns to a new Column Name. name is mapped to first_name and created_time is mapped to time.
+## Here we have mapped the columns to a new Column Name. name is mapped to first_name and created_time is mapped to time.
 
 x
 
@@ -471,7 +460,7 @@ Sample output:
 </table>
 
 
-# If file has multiline (Customer.json)
+## If file has multiline (Customer.json)
 
   column_mapping:
 
@@ -505,8 +494,3 @@ Sample Output
     <td>[[1001, broward county],   [1002, valcore line]]</td>
   </tr>
 </table>
-
-
-
-
-

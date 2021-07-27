@@ -1,8 +1,6 @@
-Configure Control File
-
 Control files are used to cross check whether a file is valid or not. Validity of files are checked on the basis of Count of Records. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.
 
-# Use of Control File in Guzzle
+## Use of Control File in Guzzle
 
 * The Configure Control File feature compares the number of records in the original file and the control file extension. The file is valid only if the two are equal, otherwise it is invalid. 
 
