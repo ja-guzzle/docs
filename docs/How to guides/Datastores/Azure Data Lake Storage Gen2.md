@@ -42,7 +42,7 @@ Also ensure following permission:
 As source: Grant Execute permission for all  parent folders, along with Read permission for the files to copy. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Reader role at container or storage account level
 As sink: Grant Execute permission for all parents folders, along with Write permission for the sink folders. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Contributor role at container or storage account level.
 Access Key:  To use storage account access keys to access  the data.
-Recommendation is to use service principal </td>
+Recommendation is to use service principal</td>
     <td>Yes</td>
   </tr>
   <tr>
