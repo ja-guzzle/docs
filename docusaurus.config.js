@@ -10,7 +10,8 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'ja-guzzle', // Usually your GitHub org/user name.
+  // organizationName: 'ja-guzzle', // Usually your GitHub org/user name.
+  organizationName: 'guzzle-test', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   
   themeConfig: {
