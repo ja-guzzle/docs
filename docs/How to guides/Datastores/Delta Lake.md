@@ -14,9 +14,9 @@ Only supported on Databricks compute
 
 3. Ability to auto-create the Delta table if its not present (only applies to Ingestion Module) including auto-creating tables with partition
 
-4. Ingestion activity supports Append and Overwrite mode (overwrite happens at partition level if the table is partitioned) or at the entire table for non-partitioned tables. Refer to [Working with Delta](xxxx) for ingesting data.
+4. Ingestion activity supports Append and Overwrite mode (overwrite happens at partition level if the table is partitioned) or at the entire table for non-partitioned tables. Refer to [Working with Delta] for ingesting data.
 
-5. Processing activity supports Delta target using Template approach or Spark dataframe approach. Template approach leverages native DML commands when moving data from one delta table to other delta table using MERGE/UPDATE/INSERT INTO SELECT. Refer to [Working with Delta for Processing ](xxxx)
+5. Processing activity supports Delta target using Template approach or Spark dataframe approach. Template approach leverages native DML commands when moving data from one delta table to other delta table using MERGE/UPDATE/INSERT INTO SELECT. Refer to [Working with Delta for Processing ]
 
 ## Steps to create Datastore  for Delta
 
@@ -24,7 +24,7 @@ Only supported on Databricks compute
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ] for more details
 
 4. Optionally  enter the **Database . **This shall be used as schema name for source or target/reject tables in all the activities if schema name is not provided along with table name. This property is ignored if SQL is used for source or target; schema name prefix is provided along with table name or delta path is used.
 

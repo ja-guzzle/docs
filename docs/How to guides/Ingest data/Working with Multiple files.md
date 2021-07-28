@@ -4,7 +4,7 @@ For Target  section of Ingestion activity, Ingestion activity provides various s
 
 ## Support for File Pattern in Source Section
 
-Ingestion activity allows specifying the initial (or root) path when defining the data store as explained [File datastores ](http://link). The `File Pattern` setting is treated as relative to the path  specified in the data store. Ingestion activity has the same treatment of File Pattern for all the types of [File datastores](link). 
+Ingestion activity allows specifying the initial (or root) path when defining the data store as explained. The `File Pattern` setting is treated as relative to the path  specified in the data store. Ingestion activity has the same treatment of File Pattern for all the types of. 
 
 Below describes different options of how `File Pattern` can be specified and its treatment by Ingestion activity
 
@@ -70,7 +70,7 @@ If the settings is set to false, it will create a folder for each source file or
 </table>
 
 
-Apat from the above properties, there are additional settings that are meant to specify File Format and its associated properties. This is covered in detail in section : [XXX](link)
+Apat from the above properties, there are additional settings that are meant to specify File Format and its associated properties. This is covered in detail in section :
 
 :::note 
 Any existing file within the same folder and file name shall be overwritten 
@@ -176,7 +176,7 @@ customer
   country=my
 
   region=europe
-  
+
   country=fr
 
 The target files and folder will following below structure as per different settings of 
