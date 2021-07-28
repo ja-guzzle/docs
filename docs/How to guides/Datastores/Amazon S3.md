@@ -1,6 +1,6 @@
 [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is an object storage service that offers industry-leading scalability, data availability, security, and performance. Guzzle 
 
-:::note
+:::info
 1. Only Ingestion activity supports File based connectors. 
 2. Guzzle only supports [Access Key ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/RESTAuthentication.html#ConstructingTheAuthenticationHeader)based authentication for S3
 :::
