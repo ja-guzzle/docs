@@ -2,16 +2,12 @@
 module.exports = {
   title: 'Guzzle',
   tagline: 'Guzzle Documentation',
-  // url: 'https://your-docusaurus-test-site.com',
-  // url: 'https://ja-guzzle.github.io',
-  // baseUrl: "/docs/",
-  url: 'https://guzzle-test.github.io',
-  baseUrl: "/",
+  url: 'https://ja-guzzle.github.io',
+  baseUrl: "/docs/",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  // organizationName: 'ja-guzzle', // Usually your GitHub org/user name.
-  organizationName: 'guzzle-test', // Usually your GitHub org/user name.
+  organizationName: 'ja-guzzle', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   
   themeConfig: {
@@ -28,7 +24,7 @@ module.exports = {
           position: 'left',
           label: 'Docs'
         },
-        {to: '/Api/api', label: 'API', position: 'left'},
+        {to: '/api/api', label: 'API', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'search',
@@ -51,11 +47,10 @@ module.exports = {
 
     //   //... other Algolia params
     // },
-
     footer: {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Guzzle, Inc.`,
-    },
+    }
   },
   presets: [
     [
@@ -64,17 +59,11 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/ja-guzzle/docs/blob/master/',
-          // showLastUpdateAuthor: true,
-          // showLastUpdateTime: true
         },
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/ja-guzzle/docs/blob/master/',
         },
-        // api: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

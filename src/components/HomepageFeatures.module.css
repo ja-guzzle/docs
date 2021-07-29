@@ -17,8 +17,7 @@
   padding: 30px;
   color: #fff;
   border-radius: 5px;
-  margin-left: 1%;
-  margin-right: 1%;
+  height: 95%;
   background: linear-gradient(27deg, #005484 20%, #15C5FF 100%);
   font-weight: 500;
 }

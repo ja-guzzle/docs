@@ -56,7 +56,7 @@ const projects = [
   },
   {
     title: 'APIs',
-    goto: "/Api/api",
+    goto: "/api/api",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
@@ -69,10 +69,10 @@ function InfoCard({title, description, goto}) {
   return (
     <div className="col col--4" style={{margin: `calc(2vh) auto`}}>
       <div className={styles.card}>
-        <h2 style={{color: "white", fontWeight: "bold"}}>{title}</h2>
+        <h3 style={{color: "white", fontWeight: "bold"}}>{title}</h3>
         <p>{description}</p>
         <Link
-          className="button button--secondary button--lg"
+          className="button button--secondary button--md"
           to={goto}
         >Learn more</Link>
       </div>
@@ -84,7 +84,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container" style={{paddingLeft: "5%", paddingRight: "5%"}}>
-        <h1>Get Started</h1>
+        <h1><b>Get Started</b></h1>
         <p>If you’re new to Guzzle, explore Guzzle here : </p>
         <div className={`row`}>
           {GetStartList.map((props, index) => 
@@ -92,7 +92,7 @@ export default function HomepageFeatures() {
           )}
         </div>
         <div style={{marginTop: "5%"}}>
-          <h1>Build your projects</h1>
+          <h1><b>Build your projects</b></h1>
           <p>If you peeked Guzzle, remember these resources! They’ll help you level up quickly. </p>
           <div className={`row`}>
             {projects.map((props, index) => 
