@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 const GetStartList = [
   {
     title: 'What is Guzzle',
-    goto: "/Docs/introduction%20to%20guzzle",
+    goto: "/Docs/introduction/what%20is%20guzzle",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
@@ -15,7 +15,7 @@ const GetStartList = [
   },
   {
     title: 'Gettting Started Tutorial',
-    goto: "/Docs/introduction%20to%20guzzle",
+    goto: "/Docs/introduction/what%20is%20guzzle",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
@@ -25,7 +25,7 @@ const GetStartList = [
   },
   {
     title: 'Guzzle docs',
-    goto: "/Docs/introduction%20to%20guzzle",
+    goto: "/Docs/introduction/what%20is%20guzzle",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
@@ -38,7 +38,7 @@ const GetStartList = [
 const projects = [
   {
     title: 'Guzzle docs',
-    goto: "/Docs/introduction%20to%20guzzle",
+    goto: "/Docs/introduction/what%20is%20guzzle",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: 'How-tos',
-    goto: "/Docs/introduction%20to%20guzzle",
+    goto: "/Docs/How%20to%20guides/Administration/Environment%20config/Repository%20database",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
