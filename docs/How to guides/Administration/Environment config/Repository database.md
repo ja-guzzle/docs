@@ -1,5 +1,3 @@
-Updating Guzzle Repository Database
-
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
 1. Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load. 
@@ -127,9 +125,8 @@ Step 8 : Go to Initialize database tab
 
 Step 9: Context Column : Specify a list of context columns you want. Guzzle come up with below default context columns 
 
-1. system
+1. batch
 
-2. location
 
 Step 10 : Stage : Specify a list of Stages you want. Guzzle Come up with below default Stages 
 
