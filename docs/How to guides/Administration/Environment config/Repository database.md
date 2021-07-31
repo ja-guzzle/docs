@@ -97,9 +97,9 @@ Applicable for Azure service principal credential type</td>
 </table>
 
 
-4. Click on **Validate **to validate the connection details of the repository database. Its strongly recommended to validate the connection details else it may impact the Guzzle instance
+4. Click on **Validate** to validate the connection details of the repository database. Its strongly recommended to validate the connection details else it may impact your Guzzle environment to work properly
 
-5. Click on **Update **to update the repository database details. Guzzle initialize the above database with required tables for Guzzle app if they are ont present
+5. Once succesfully validated, you Click on **Update** to update the repository database details. Guzzle initializes  above database with required tables for Guzzle app if these are not present
 
 ## Steps to Initialize Guzzle Repository database
 
