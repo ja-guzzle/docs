@@ -39,7 +39,7 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 | Client Secret   | Client Secret of Azure Service Principal Applicable for Azure service principal credential type                                                                                                                                                                                                                                                                                                              | None          | Yes      |
 | Tenant Id       | Tenant id of Azure Service Principal Applicable for Azure service principal credential type                                                                                                                                                                                                                                                                                                                  | None          | Yes      |
 
-4. Click on **Validate** to validate the connection details of the repository database. Its strongly recommended to validate the connection details before updating it, as incorrect repository database details may impact your Guzzle environment to work properly
+4. Click on **Validate** to validate the connection details of the repository database. Its strongly recommended to validate the connection details before updating it, as incorrect repository database details may impact your Guzzle instance to work properly
 
 5. Once succesfully validated, you click on **Update** to update the repository database details. Guzzle initializes  above database with required tables for Guzzle app if these are not present
 
@@ -51,54 +51,28 @@ As mentioned above, Guzzle repository contains two types of tables. Of this **Gu
  
 ![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png)
 
-**At a minimum, one context columns needs to be defined**. By default Guzzle env comes with one context column named  **batch**. For most of the guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
+**At a minimum, one context columns needs to be defined**. By default Guzzle instance comes with one context column named  **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also captures the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
 
-
+More details of Guzzle Batches can be found [here](http://xxx).  Additoinally a Guzzle `batch` is composed of stages. The master list of stages that are avaliable for defining `batch` can be customized for each your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
  
-  `batch`. More details of Guzzle Batches can be found [here](http://xxx).  Additoinally a Guzzle `batch` is composed of stages. The master list of stages that are avaliable for defining `batch` can be customized for each deployment. the two set of context columns are following:
-This two set of columns are :
+- SRI : Represent source image layer
+- FND : Foundation layer tables or data
+- UCL : Use-case data layer
+- OUT : This are outputfiles
 
+Above stages represents a typical stages through which data from particular source system flows through. However you can amend this list and add additional stages. A batch can be compose of one or more stages from this list.
 
+ ## Steps to Update Repository database
 
-useful for analysis. Guzzle batch functionality has a concept of stages which again are stored as explicit columns in the batch related audit tables. 
-
-1. Metadata tables for for Guzzle app
-
-"Initialize Database" functionality is meant Initialize the run 
-
-6. To initialize the repository 
-
-Step 6 : To validate your connection click on Validate.
-
-Step 7 : For Apply changes click on Update
-
-Guzzle also give functionality to specify your context column and Stages
-
-Step 8 : Go to Initialize database tab 
-
-Step 9: Context Column : Specify a list of context columns you want. Guzzle come up with below default context columns 
-
-1. batch
-
-
-Step 10 : Stage : Specify a list of Stages you want. Guzzle Come up with below default Stages 
-
-1. STG
-
-2. FND
-
-3. SNP
-
-4. CALC
-
-5. REP
-
-6. OUT
-
-Step 11 :  Save the changes and Initialize the database via click on Initialize.
-
-The Guzzle UI will auto-detect if the repository tables are present, and it will show
-
+1. Go to the Admin menu from the top navigation bar.
+2. Navigate to Environment-> Repository Database. Select **Initialize Database** tab
+3. Update the Context Columns and Stages as per your requirement
+4. The UI shall show either "Intialize" button if repo data does no thave any **Audit Metadata** tables. However if there are existing **Audit Metadata** tables, the UI shall show "Reintialize".  It is **must** to Reintialize the **Audit Metadata** tables if there are amendmnets done to Context coulmns or Stages. 
+ 
 :::note
-On Initialize guzzle will create a database table related to guzzle jobs if the database is already initialized then guzzle will show an option as reinitialize to reinitialize the database.
+Do take note On **Reintialize** of **Audit Metadata**  will drop and re-crate these tables. Any existing audit information shall get deleted in this database. Its recommended not to take neccessary backup before doing the "Reintialize"
+ 
+Also its mandatory to have minimum one Context Columns and one Stage defined
+ 
+When doing "Reintialize", do ensure ther are running jobs and batches.
 :::
