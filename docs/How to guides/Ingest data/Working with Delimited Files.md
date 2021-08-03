@@ -82,3 +82,7 @@ All we need to do is add the Column Name and the Index we would like to Map the 
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/delimited4.png)
 
+< For target side :
+	Properties on target side is same as mentioned for source but two more properties are added which is 
+		1. Generate Single file -> this option is selected when you want to generate single file in target path.
+		2. Preserve Hierarchy  -> this option is selected when you have to maintain same hierarchy as source file has. >
