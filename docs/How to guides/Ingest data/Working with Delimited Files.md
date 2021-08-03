@@ -33,6 +33,13 @@ Delimited file support in Guzzle provides extensive features to specify file for
   <tr>
     <td>Trim Whitespace</td>
     <td>You may choose to Trim whitespaces on any one end or both ends of the Characters. This will be applied to all the columns irrespective of their values or data type</td>
+    
+   < It includes four options like
+				1. none -> no trimming whitespace.
+				2. both -> remove whitespace on both side.
+				3. leading -> remove whitespace on front of the data.
+				4. trailing -> remove whitespace at the end of data.	>
+      
     <td>None</td>
   </tr>
   <tr>
@@ -63,6 +70,7 @@ We can also add Column Mapping to specify how to map columns in the source file.
 * Map the columns to a new field name
 
 All we need to do is add the Column Name and the Index we would like to Map the Column to.
+< Example :  In example "first_name" is indexed with 4th column which is "gender" and "age" is indexed with 1st column which is "id". >
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/delimited2.png)
 
