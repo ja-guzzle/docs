@@ -80,4 +80,4 @@ All we need to do is add the Column Name and the Index we would like to Map the 
 ![image alt text](/img/docs/how-to-guides/ingest_data/excel2.png)
 
 Here the column first_name is mapped to index 4 while age is mapped to index 1.
-
+< image of before column mapping and after column mapping >
