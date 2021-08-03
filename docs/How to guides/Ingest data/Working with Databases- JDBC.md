@@ -52,6 +52,8 @@ In the animation above, no filter has been applied to our JDBC source. Hence, th
 In the animation below, we add a filter to the column ID that is ID>3. In the Sample Data we now only see the Data entries which satisfy this condition. 
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/jdbc2.gif)
+  
+ < GIF required :  If sql is selected >
 
 ## JDBC as a Target or Reject
 
