@@ -1,5 +1,8 @@
 Server file system represents the local operating file system on the **Compute **nodes. The operating file system folder itself can in turn be a mounted network file shares or cloud file systems; or attached disk which are visible on all **Compute **nodes. 
 
+< 	- You can use this datastore to read data from anywhere in local machine and can fetch data which is mounted with Azure Blog storage.
+    -  In this datastore we can use different type of files like csv, json, excel, xml, text files or log, and big data files like parque, orc, avro. All this files are stored in local machine. >
+
 :::note
 Only Ingestion activity supports File based connectors. 
 :::
@@ -7,6 +10,7 @@ Only Ingestion activity supports File based connectors.
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/server_file_system_0.png)) from the **Datastores **section in Left Navigation and select **Server file system**** **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
+< insted of "Server file system" "LFS(Local File System)" will come >
 2. Enter the Datastore name for the new datastore and click Ok
 
 3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
@@ -24,4 +28,6 @@ Ensure the same path is visible on all Driver and Worker nodes for Yarn or Datab
 ## Known Limitation
 
 --
+< - This datastore is used to fetch data from local machine only. 
+  - This datastore is only used in Ingestion activity only. >
 
