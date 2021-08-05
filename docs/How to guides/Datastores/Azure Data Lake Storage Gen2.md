@@ -3,6 +3,8 @@ Only supported on Databricks compute
 :::
 
 [Azure Data Lake Storage Gen2 ](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) (ADLS Gen2) is a set of big data analytics capabilities, offered on Azure Blob Storage. ADLS Gen2 allows enterprises to deploy data lake solutions on Azure in order to store petadata bytes of data across a large number of data files.
+< When we want to read big data such as blob files, log files, IoT data, click streams, large datasets from cloud or write data to cloud we can use this datastore.
+This contains folders, which in turn contains data stored as files .>
 
 Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < target > and allows copy data to/from using storage access keys or service principal. 
 
