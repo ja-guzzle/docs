@@ -1,5 +1,7 @@
 Updating Guzzle Repository Database
 
+< Applicable when using spark local as compute. In this you can give config for your local MySQL server and after you initialize it all required tables are stored in local MySQL database. >
+
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
 1. Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load. 
