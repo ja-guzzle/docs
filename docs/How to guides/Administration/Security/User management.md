@@ -48,7 +48,7 @@ Below are the steps to create new user
   </tr>
   <tr>
     <td>Security Role</td>
-    <td>Choose one or more roles <  Choose one role. There are three roles Data Analytics, Operator and Admin which is describe below. > </td>
+    <td>Choose one or more roles < There are three roles Data Analytics, Operator and Admin which is describe below. > </td>
   </tr>
 </table>
 
