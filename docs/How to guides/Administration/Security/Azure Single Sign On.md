@@ -67,15 +67,15 @@ Step 4. Click on Enable to enable SSO
 
 Step 5 : Enter all below necessary details 
 
-1. Client Id
+1. Client Id            < Id of client >
 
-2. Client Secret
+2. Client Secret        < You can give client secret as manual or by providing key vault name and secret name >
 
-3. Tenant Id
+3. Tenant Id            < Tenant Id >
 
-4. Redirect URI
+4. Redirect URI         < Url to which you have to redirect when Guzzle will open. >
 
-Step 6 : Click on Save 
+Step 6 : Click on Save  < To save this properties click on save. >
 
 Step 7 : Create User 
 
