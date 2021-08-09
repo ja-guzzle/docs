@@ -1,6 +1,6 @@
 Yarn
 
-This article provides information about Local spark support in Guzzle.
+This article provides information about Yarn support in Guzzle.
 
 Yarn does not support various features like : 
 
@@ -23,7 +23,7 @@ Guzzle provides below parameter and configs for Yarn
   </tr>
   <tr>
     <td>Number of executors</td>
-    <td>Specify the number of spark executor on you want to run job</td>
+    <td>Specify the number of Yarn executor on you want to run job</td>
     <td>2</td>
     <td>No</td>
   </tr>
@@ -59,9 +59,11 @@ Guzzle provides below parameter and configs for Yarn
   </tr>
   <tr>
     <td>Additional arguments</td>
-    <td>Specify the spark arguments
+    <td>Specify the Yarn arguments
 Ex: 
---conf spark.development=true</td>
+--conf spark.development=true
+      < I dont know about this example... >
+    </td>
     <td>None</td>
     <td>No</td>
   </tr>
