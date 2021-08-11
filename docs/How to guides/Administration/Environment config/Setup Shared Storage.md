@@ -46,7 +46,7 @@ Once shared storage is enabled, you will not be able to disable it any more
   </tr>
   <tr>
     <td>Access Key</td>
-    <td>Manual: Enter the storage storage access key
+    <td>Manual: Enter the storage storage access key.
 Key Vault: Specify the Keyvault name and Secret</td>
     <td>None</td>
     <td>Yes</td>
@@ -67,10 +67,12 @@ If kept unchecked, guzzle_will merge the files of GUZZLE_HOME with the existing 
   </tr>
   <tr>
     <td>Databricks Secret</td>
-    <td>Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks Workspace is covered  here
-Secret Scope: This is the secret scope defined in databricks workspace
-Secret Key: 
-This is the secret containing the access key for the storage account that is to be used for shared storage
+    <td>Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks Workspace is covered  here.
+      
+Secret Scope: This is the secret scope defined in databricks workspace.
+      
+Secret Key: This is the secret containing the access key for the storage account that is to be used for shared storage.
+      
 Refer to this articles to create Databricks Secret Scope and secrets</td>
     <td>None</td>
     <td>No</td>
@@ -98,3 +100,4 @@ Below are the steps to edit the existing Shared Storage configuration:
 
 4. Click on Update button
 
+< No need changes >

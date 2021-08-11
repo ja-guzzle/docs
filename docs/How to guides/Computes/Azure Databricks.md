@@ -123,7 +123,7 @@ In the notebook guzzle programmatically mount shared storage in the databricks e
 
 One can use init script or spark configs. More details of can be found here
 
-A typical set of spark configuration when using Azure SQL server are external meatore are:
+A typical set of spark configuration when using Azure SQL server are external metastore are:
 
     spark.hadoop.javax.jdo.option.ConnectionDriverName 
 

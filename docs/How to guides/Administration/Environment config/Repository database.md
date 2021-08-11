@@ -1,3 +1,7 @@
+Updating Guzzle Repository Database
+
+< Applicable when using spark local as compute. In this you can give config for your local MySQL server and after you initialize it all required tables are stored in local MySQL database. >
+
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
 1. Audit Metadata: This table comprosises of Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load and `batch` audit tables. Full list of Audit metadata tables can be found here. 
@@ -45,6 +49,7 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 
 ## Steps to Initialize Guzzle Repository database
 
+
 As mentioned above, Guzzle repository contains two types of tables. Of this **Guzzle App Metadata** tables are automatically created when Guzzle app is brought up. However **Audit Metadata** has to be explicitly intialized in reposiotry database when using new database. This section describes intializing the **Audit Metadata** tables.
 
 **Audit Metadata** tables contains additional columns which are referred as context columns or context parametres. This context columns are included in all the Guzzle audit tables. Also this context columns will show as additional parameter when running jobs namely: `activity`, `pipeline` or a `batch`. This can be optionally included when running the batches for better tracking of the audit information for the job runs.
@@ -63,6 +68,8 @@ More details of Guzzle Batches can be found [here](http://xxx).  Additoinally a 
 Above stages represents a typical stages through which data from particular source system flows through. However you can amend this list and add additional stages. A batch can be compose of one or more stages from this list.
 
  ## Steps to Update Repository database
+The Guzzle UI will auto-detect if the repository tables are present, and it will show
+< Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be lost and new will created. >
 
 1. Go to the Admin menu from the top navigation bar.
 2. Navigate to Environment-> Repository Database. Select **Initialize Database** tab
@@ -75,4 +82,6 @@ Do take note On **Reintialize** of **Audit Metadata**  will drop and re-crate th
 Also its mandatory to have minimum one Context Columns and one Stage defined
  
 When doing "Reintialize", do ensure ther are running jobs and batches.
+On Initialize guzzle will create a database table related to guzzle jobs if the database is already initialized then guzzle will show an option as reinitialize to reinitialize the database.
+
 :::

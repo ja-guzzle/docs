@@ -11,3 +11,4 @@ Add Quantity Resource properties Name and value and click on Save to save change
 
 When creating a schedule you can specify the name and value of the resources.
 
+< Dont have idea about it but add image of this page with example. >

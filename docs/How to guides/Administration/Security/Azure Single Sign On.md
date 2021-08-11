@@ -55,27 +55,27 @@ Guzzle internally uses below scopes for Azure Active Directory single sign-on:
 
 ## Enabling Azure SSO in Guzzle
 
-1. Go to Admin from the top navigation bar.
+Step 1. Go to Admin from the top navigation bar.
 
-2. Go to Security from  the sidebar
+Step 2. Go to Security from  the sidebar
 
-3. Click on Azure Single Sign On
+Step 3. Click on Azure Single Sign On
 
-4. Click on Enable to enable SSO
+Step 4. Click on Enable to enable SSO
 
 ![image alt text](/img/docs/how-to-guides/administrator/security/sso1.png)
 
 Step 5 : Enter all below necessary details 
 
-1. Client Id
+1. Client Id            < Id of client >
 
-2. Client Secret
+2. Client Secret        < You can give client secret as manual or by providing key vault name and secret name >
 
-3. Tenant Id
+3. Tenant Id            < Tenant Id >
 
-4. Redirect URI
+4. Redirect URI         < Url to which you have to redirect when Guzzle will open. >
 
-Step 6 : Click on Save 
+Step 6 : Click on Save  < To save this properties click on save. >
 
 Step 7 : Create User 
 
@@ -94,3 +94,4 @@ Step 7 : Create User
 :::note
 Once SSO is enabled, the native login gets disabled. User can only login via SSO
 :::
+< File is correct No need changes. >

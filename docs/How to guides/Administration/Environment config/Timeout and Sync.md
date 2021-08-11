@@ -1,5 +1,6 @@
 
 Guzzle use below default timeout for syncing job configs.
+< In this article default timeout for syncing job configs are given you can change it as per your choice and save it by clicking on save. >
 
 ## Sync Job Azure Databricks Configuration
 
