@@ -46,7 +46,7 @@ Also when the Table option is selected, you can also specify the Filter. The fil
     <td>Grouping Columns</td>
     <td>Specify grouping columns in source table if source data has to be aggregated before performing constraint check. All grouping column names and values are logged into constraint_check_summary, constraint_check_detail tables if constraint check fails for a record. You can specify up to 10 columns for group by to perform aggregation.</td>
     <td>None</td>
-    <td>Yes</td>
+    <td>Yes < Not required > </td>
   </tr>
 </table>
 
@@ -78,7 +78,7 @@ You can specify constraint checks to be performed on the source table. Below are
     <td>Constraint Data</td>
     <td>Specify list of columns for which additional data to be logged into constraint_check_summary, constraint_check_detail tables</td>
     <td>None</td>
-    <td>Yes</td>
+    <td>Yes < Not required > </td>
   </tr>
   <tr>
     <td>Detail Check Enabled</td>

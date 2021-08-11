@@ -1,5 +1,7 @@
 Updating Guzzle Repository Database
 
+< Applicable when using spark local as compute. In this you can give config for your local MySQL server and after you initialize it all required tables are stored in local MySQL database. >
+
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
 1. Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load. 
@@ -58,7 +60,10 @@ This can be left empty if standard Driver provided by Guzzle are to be used
     <td>Specify JDBC URL of the Repository database:
 For Azure SQL/ SQL server, you can use below format to specify JDBC URL:
 `jdbc:sqlserver://&lt;server name&gt;.database.windows.net;database=&lt;database name&gt;;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=30;socketKeepAlive=true`
-For Azure MySQL / MySQL Server following format can be used: jdbc:mysql://&lt;server name&gt;:3306/&lt;database name&gt;</td>
+For Azure MySQL / MySQL Server following format can be used: jdbc:mysql://&lt;server name&gt;:3306/&lt;database name&gt;
+      < Replace above line with this one 
+               -For "Local" MySQL / MySQL Server following format can be used: jdbc:mysql://&lt;server name&gt;:3306/&lt;database name&gt; >
+    </td>
     <td>None</td>
     <td>Yes</td>
   </tr>
@@ -113,6 +118,8 @@ This table contains additional context columns that are useful for analysis. Guz
 
 1. Metadata tables for for Guzzle app
 
+< second table is meant for metadata tables for Guzzle app. >
+
 "Initialize Database" functionality is meant Initialize the run 
 
 6. To initialize the repository 
@@ -121,13 +128,17 @@ Step 6 : To validate your connection click on Validate.
 
 Step 7 : For Apply changes click on Update
 
+< I think step 6 and 7 is not proper. >
+
 Guzzle also give functionality to specify your context column and Stages
+
+< To initialize database follow below steps >
 
 Step 8 : Go to Initialize database tab 
 
 Step 9: Context Column : Specify a list of context columns you want. Guzzle come up with below default context columns 
 
-1. system
+1. system (<batch>)
 
 2. location
 
@@ -148,6 +159,7 @@ Step 10 : Stage : Specify a list of Stages you want. Guzzle Come up with below d
 Step 11 :  Save the changes and Initialize the database via click on Initialize.
 
 The Guzzle UI will auto-detect if the repository tables are present, and it will show
+< Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be lost and new will created. >
 
 :::note
 On Initialize guzzle will create a database table related to guzzle jobs if the database is already initialized then guzzle will show an option as reinitialize to reinitialize the database.
