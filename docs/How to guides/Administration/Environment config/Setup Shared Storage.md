@@ -1,18 +1,18 @@
 
 **Applicable when using Azure Databricks as compute**
 
-Guzzle home (also referred as GUZZLE_HOME) stores the binaries and configs on a file system which should be accessible to both the Guzzle VM and the compute where the **activities **will run**. ** Below architecture diagram explains this further 
+Guzzle home (also referred as GUZZLE_HOME) is stores the binaries, configs and logs on a file system which should be accessible to both the Guzzle VM and the `compute` where the **activities ** will run. Below architecture diagram explains this further 
 
 ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png)
 
-When using Azure Databricks compute for running activities, it is mandatory to enable shared storage using Azure blob storage. A shared storage simply means mounting the same Azure blob storage account on both Guzzle VM and Azure Databricks workspace so that both this component can point to the same GUZZLE_HOME which contains the Guzzle configs, log files, and binaries. 
+When using Azure Databricks `compute` for running activities, it is mandatory to enable shared storage using Azure blob storage. A shared storage simply means mounting the same Azure blob storage account on both Guzzle VM and Azure Databricks Workspace so that both this component can point to the same GUZZLE_HOME which contains the Guzzle configs, logs, and binaries. 
 
-When you enable shared storage, Guzzle will do a one time copy of configs and binaries in GUZZLE_HOME directory on Guzzle VM (which is located at /guzzle/guzzlehome). to the blob storage. It will also ensure that Azure blob storage is mounted on Guzzle VM using [Blob fuse](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-how-to-mount-container-linux) and automatically mount and unmount when the Guzzle services  or Guzzle VM is restarted. 
+The Guzzle Azure Marketplace VM by defualt hosts GUZZLE_HOME on local folder in VM at location /guzzle/guzzlehome. When  enabling the shared storage first time, Guzzle will do a one time copy of configs, binaries and logs from this direcotry  to the blob storage. It will also mount the Azure blob storage is mounted on Guzzle VM using [Blob fuse](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-how-to-mount-container-linux) and automatically mount and unmount when the Guzzle services on Guzzle VM is restarted. 
 
-Similarly the Azure blob storage container is also mounted on Azure Databricks workspace by running "Setup Workspace" wizard on compute UI
+Similarly the Azure blob storage container is also mounted on Azure Databricks workspace by running "Setup Workspace" wizard from `compute` UI
 
 :::note 
-Once shared storage is enabled, you will not be able to disable it.. 
+Once shared storage is enabled, you will not be able to disable it any more
 :::
 
 ## Steps to Enable Shared Storage 

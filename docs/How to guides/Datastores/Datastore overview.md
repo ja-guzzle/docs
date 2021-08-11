@@ -1,3 +1,4 @@
+< What types of datastores does Guzzle has is described in this article. >
 Datastore in Guzzle represents either on premise or cloud data service which can either act as source or sink (target) for Guzzle **activities**. A datastore can either be cloud files services like S3, Azure Blob, DBFS or databases like  Azure SQL, MySQL or apps which are accessible via Rest API.
 
 Additionally Guzzle supports datastore to run external activities like procedure, Azure Data Facotry pipeline or notebook. 
@@ -219,7 +220,8 @@ Guzzle supports running external procedures, scripts, notebook and pipelines on 
 
 * Parquet format
 
-## Next Steps
+## Next Steps 
+< I think no need of this point >
 
 Ingestion Activity
 

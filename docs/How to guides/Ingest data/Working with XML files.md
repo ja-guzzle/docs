@@ -22,7 +22,17 @@ XML file support in Guzzle provides extensive features to specify file format de
   <tr>
     <td>XML Row Tag</td>
     <td>The row tag of your xml files to treat as a row. 
-For example, in this xml &lt;books&gt; &lt;books&gt;&lt;/books&gt; ...&lt;/books&gt;, the appropriate value would be book.</td>
+For example, in this xml &lt;books&gt; &lt;books&gt;&lt;/books&gt; ...&lt;/books&gt;, the appropriate value would be book.
+   < Comments : 
+      example is not proper example :
+              &lt;id&gt;&lt;/id&gt;
+              &lt;name&gt;
+                &lt;first_name&gt;&lt;/first_name&gt;
+                &lt;second_name&gt;&lt;/second_name&gt;
+              &lt;/name&gt;
+              &lt;address&gt;&lt;/address&gt;
+	  In given example "id" tag is row tag  >
+    </td>
     <td> Row</td>
     <td> ✔</td>
     <td> ✔</td>
@@ -30,7 +40,17 @@ For example, in this xml &lt;books&gt; &lt;books&gt;&lt;/books&gt; ...&lt;/books
   <tr>
     <td>XML Root Tag</td>
     <td>The Root tag of your xml files to treat as a root.  It encloses all the other elements and is therefore the sole parent element to all the other elements.
- For example, in the XML  &lt;books&gt; &lt;books&gt; &lt;books&gt; ...&lt;/books&gt;, the appropriate value would be books.</td>
+ For example, in the XML  &lt;books&gt; &lt;books&gt; &lt;books&gt; ...&lt;/books&gt;, the appropriate value would be books.
+     < Comments :
+        example is not proper example :
+              &lt;id&gt;&lt;/id&gt;
+              &lt;name&gt;
+                &lt;first_name&gt;&lt;/first_name&gt;
+                &lt;second_name&gt;&lt;/second_name&gt;
+              &lt;/name&gt;
+              &lt;address&gt;&lt;/address&gt;
+	  In given example "name" tag is root tag for "first_name" and "last_name" tags>
+    </td>
     <td> Rows</td>
     <td> ✔</td>
     <td> ✔</td>

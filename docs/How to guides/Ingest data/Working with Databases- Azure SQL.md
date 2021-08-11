@@ -1,5 +1,9 @@
 Azure SQL is a family of managed, secure, and intelligent products that use the SQL Server database engine in the Azure cloud. Azure SQL is built upon the familiar SQL Server engine, so you can migrate applications with ease and continue to use the tools, languages, and resources you're familiar with.
 
+< - This article outlines how to use Azure SQL table as source or target in ingestion activity. >
+< - First create datastore of "Azure SQL" from left side menu bar option. >
+
+< Next point is ablout Azure Synapse Analytics which is not correct for this article. >
 This article outlines how to use Azure Synapse Analytics as source or target in Ingestion activity. Ingestion Active lets you leverage this native connector offered by Databricks and allows you to specify different configurations that are supported by this connector. 
 
 ## Azure SQL as a Source
@@ -46,15 +50,15 @@ Also when the Table option is selected, you can also specify the Filter which ne
   </tr>
   <tr>
     <td>Table</td>
-    <td>This is used to specify the Target Table we would like to create based on our Source.</td>
+    <td>This is used to specify the Target Table we would like to create based on our Source. < This contains target table name to write data from source. >  </td>
     <td>None</td>
     <td>Yes</td>
   </tr>
   <tr>
     <td>Operation</td>
-    <td>Provides two options that determines whether the content of source or reject data is expected to be -
+    <td> < Format this point >  Provides two options that determines whether the content of source or reject data is expected to be -
 
-append: To append the existing data in the Azure SQL server.
+append: To append the existing data in the given Azure SQL table.
 overwrite:This will do an overwrite of data for a subset of partitions that are present in the source. The entire Data in the Azure SQL server will be overwritten.
 
 </td>
@@ -63,7 +67,7 @@ overwrite:This will do an overwrite of data for a subset of partitions that are 
   </tr>
   <tr>
     <td>Reliability Level</td>
-    <td>Allowed Values include BEST_EFFORT and NO_DUPLICATES. 
+    <td>Allowed Values include BEST_EFFORT and NO_DUPLICATES. < I think this is confusing. Discussion of two options is incorrect. >
 NO_DUPLICATES implements a reliable insert in executor restart scenarios. It also ensures higher reliability and availability of Data.
 BEST_EFFORT is a De-duplication mechanism. It seeks to minimize the number of duplicates in our Data. This means if there is the same piece of Data more than 1 time in a row BEST_EFFORT de-duplicates these instances and will only retain only one of these occurrences.  However, it does guarantee an absence of duplicates.  </td>
     <td>BEST_EFFORT</td>
@@ -91,4 +95,4 @@ Allowed values are Integers.</td>
   </tr>
 </table>
 
-
+< If possible add images for source and target or gif >

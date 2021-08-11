@@ -23,7 +23,18 @@ JSON file support in Guzzle provides extensive features to specify file format d
   </tr>
   <tr>
     <td>Override JSON root path</td>
-    <td>It can be used to specify an object or location where we want to take our data from. For eg- If we want to focus on one particular column of our data we can specify the Column name here.</td>
+    <td>It can be used to specify an object or location where we want to take our data from. For eg- If we want to focus on one particular column of our data we can specify the Column name here.
+	    < example :
+		{
+			"id" : 1,
+			"name" : {
+				"first_name" : "ABCD",
+				"last_name" : "XYZ"
+			},
+			"age" : 10
+		}
+	- if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.. >
+	</td>
     <td>None</td>
     <td> ✔</td>
     <td>X</td>
@@ -72,7 +83,7 @@ every object in that array or object is separated by commas ( because that singl
 
 [
 
-     {"id": 0001, "name": "john", "address": “broward county” }
+    {"id": 0001, "name": "john", "address": “broward county” }
 
     {"id": 0002, "name": "lynda", "address": “velcore line”}
 
@@ -84,9 +95,9 @@ every object in that array or object is separated by commas ( because that singl
 
 {
 
-"Addresse1": {
+	"Addresse1": {
 
-"address":
+			"address":
 
 				[
 
@@ -100,7 +111,7 @@ every object in that array or object is separated by commas ( because that singl
 
   	 "Addresses2": {
 
-"address":
+			"address":
 
 				[
 
@@ -112,9 +123,9 @@ every object in that array or object is separated by commas ( because that singl
 
 		},
 
-"Addresses3": {
+	"Addresses3": {
 
-"address":
+			"address":
 
 				[
 
@@ -131,6 +142,8 @@ every object in that array or object is separated by commas ( because that singl
 	**Fig 1.2**  File as Singular Json object
 
 # Illustrations
+< confusing !!! 
+  I have tried and got opposite result so this illustration is confusing.... >
 
 **Json file containing with single object separated **
 
@@ -197,7 +210,7 @@ Sample source data (Customer.json) :
 
 		"name": "john",
 
-	"addresses":
+		"addresses":
 
 		{
 
@@ -319,7 +332,7 @@ Sample Output when multiline is false is shown below:
 
 When multiline is set to true Guzzle will treat the entire file.
 
-When multiline is set to false Guzzle will treat the entire file like a single JSON object.
+When multiline is set to true Guzzle will treat the entire file like a single JSON object.
 
 Job Config (json_with_multiline_true): 
 

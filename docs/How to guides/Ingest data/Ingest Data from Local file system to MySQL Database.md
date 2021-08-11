@@ -38,7 +38,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-          ![image alt text](/img/docs/ingest_data_from_lfs_to_mysql_1.png)
+          ![image alt text](/img/docs/ingest_data_from_lfs_to_mysql_1.png)   < Image is not visible in site >
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
 
@@ -86,3 +86,4 @@ We now move onto the Reject Section where we deal with the Data which does not p
 
 Here we store our rejects in a Local File in the Delimited Format and apply a Failure Threshold of 25%.
 
+< All is correct >
