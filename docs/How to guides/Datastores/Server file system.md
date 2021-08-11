@@ -1,8 +1,5 @@
 Server file system represents the local operating file system on the **Compute **nodes. The operating file system folder itself can in turn be a mounted network file shares or cloud file systems; or attached disk which are visible on all **Compute **nodes. 
 
-< 	- You can use this datastore to read data from anywhere in local machine and can fetch data which is mounted with Azure Blog storage.
-    -  In this datastore we can use different type of files like csv, json, excel, xml, text files or log, and big data files like parque, orc, avro. All this files are stored in local machine. >
-
 :::note
 Only Ingestion activity supports File based connectors. 
 :::
@@ -28,6 +25,6 @@ Ensure the same path is visible on all Driver and Worker nodes for Yarn or Datab
 ## Known Limitation
 
 --
-< - This datastore is used to fetch data from local machine only. 
-  - This datastore is only used in Ingestion activity only. >
+- This datastore is used to fetch data from local machine only. 
+- This datastore is only used in Ingestion activity only.
 

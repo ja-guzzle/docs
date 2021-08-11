@@ -1,11 +1,10 @@
 
 This article provides information about the Author tab in Guzzle.
 
-Guzzle provides below utility to manage job related stacks. << whye we are doing this>>
+Guzzle provides below utility to manage job related stacks.
 
-<  - From author tab you can create and run jobs from different modules.
-	 - You can also enable git integration.
-	 - Create datastores, batches, pipeline, computes.  >
+- From author tab you can create and run jobs from different modules.
+- User can also enable git integration.
 
 ## Save All
 

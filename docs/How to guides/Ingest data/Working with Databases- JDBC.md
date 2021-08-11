@@ -5,7 +5,7 @@ This article outlines how to use JDBC as source or target in Ingestion activity.
 ## JDBC as a Source
 
 :::note
-In the Datastore section we can choose to read full Data either as a Table <name> or through SQL <query> (in the form of a query).
+In the Datastore section we can choose to read full Data either as a Table name or through SQL query (in the form of a query).
 :::
 
 <table>
@@ -17,16 +17,11 @@ In the Datastore section we can choose to read full Data either as a Table <name
   </tr>
   <tr>
     <td>Table + Filter</td>
-    <td>Specify the table from where to read data. 
-
-
+    <td>Specify the table from where to read data.
 [database name].[schema name].[table name]
-
 Note: Depending on the database technology used: [database name] and [schema name] can be optionally specified along with the table name. 
-      < Database name and jdbc url all this will be stored in datastore.
-        In source or target section we have to select datastore name and give table name and give filter (if required). 
-
-
+  Database name and jdbc url all this will be stored in datastore.
+  In source or target section we have to select datastore name and give table name and give filter (if required). 
 Along with the Table option, you can also specify the Filter property - which is SQL filter condition in native SQL of the underlying JDBC technology to filter  subset of records from the table
 </td>
     <td>None</td>
@@ -35,8 +30,8 @@ Along with the Table option, you can also specify the Filter property - which is
   <tr>
     <td>SQL</td>
     <td>Specify the SQL query which will be run as-is on the source</td>
-    <td></td>
-    <td></td>
+    <td>None</td>
+    <td>Yes</td>
   </tr>
 </table>
 
@@ -52,8 +47,6 @@ In the animation above, no filter has been applied to our JDBC source. Hence, th
 In the animation below, we add a filter to the column ID that is ID>3. In the Sample Data we now only see the Data entries which satisfy this condition. 
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/jdbc2.gif)
-  
- < GIF required :  If sql is selected >
 
 ## JDBC as a Target or Reject
 

@@ -25,6 +25,7 @@ module.exports = {
           label: 'Docs'
         },
         {to: '/api/api', label: 'API', position: 'left'},
+        {to: 'docs/changelog', label: 'Changelog', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'search',

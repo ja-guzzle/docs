@@ -1,7 +1,5 @@
-This article outlines how to work with Big Data file formats namely: Parquet, Avro and ORC in Guzzle’s Ingestion activity. Guzzle supports these file formats for source and target in Ingestion activity.< 	- This feature is use to do validation and transformation on big data files like parquet, orc and avro.
-	- This is files is available in both source and target side. >
-Excel file support in Guzzle provides extensive features to specify file format details and many other properties which make it easier to work with our Data. 
-< 	- This excel sentence is not proper. >
+This article outlines how to work with Big Data file formats namely: Parquet, Avro and ORC in Guzzle’s Ingestion activity. Guzzle supports these file formats for source and target in Ingestion activity.
+
 ## Big Data File Formats as a Source
 
 <table>
@@ -38,6 +36,5 @@ The Interface for the Big Data Formats can be seen in the figure below:
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/bigdatafileformat.png)
 
-< - As this files has binary type data we can see data in table form by clicking on "Sample Data" which is present on right side on the corner of UI.
-	- Insert image of source tab. >
+- As this files has binary type data we can see data in table form by clicking on "Sample Data" which is present on right side on the corner of UI.
 

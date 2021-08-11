@@ -4,9 +4,8 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 
 ## Steps to create Datastore  for Azure SQL
 
-1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Server file system **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
+1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Azure SQL **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
-< step 1 is incorrect. It will be select "Azure SQL" in database category from Datastores. >
 
 2. Enter the Datastore name for the new datastore and click Ok
 
@@ -14,40 +13,19 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 
 4. Enter the connection details properties as described below:
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Database URL</td>
-    <td>JDBC URL for connecting to SQL server.
-      < Database URL - you can find URL from Azure portal it will be in this form " jdbc:sqlserver://<servername>:1433;database=<databasename>;user=<username>;password=<password>;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30; " >
-Example: jdbc:sqlserver://&lt; sql server name &gt;.
-The URL can optionally contain database name, user name and other connection properties.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Database</td>
-    <td>Database name of the  SQL Server (this property can be skipped if its specified as part of Database URL)</td>
-    <td>No < yes > </td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td>User name of SQL server</td>
-    <td>No < yes > </td>
-  </tr>
-  <tr>
-    <td>Password</td>
-    <td>Password of SQL server</td>
-    <td>No < yes > </td>
-  </tr>
-</table>
-<	- All this property is required. >
+||||
+|--- |--- |--- |
+|Property|Description|Required|
+|Database URL|JDBC URL for connecting to SQL server.
+      Database URL - you can find URL from Azure portal it will be in this form jdbc:sqlserver://:1433;database=;user=;password=;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+Example: jdbc:sqlserver://< sql server name >.
+The URL can optionally contain database name, user name and other connection properties.|Yes|
+|Database|Database name of the  SQL Server (this property can be skipped if its specified as part of Database URL)|yes|
+|Username|User name of SQL server|yes|
+|Password|Password of SQL server|yes|
+
 
 ![image alt text](/img/docs/how-to-guides/datastores/azure_sql_1.gif)
-< This gif is not proper for this article. >
 
 ## Known Limitation
 

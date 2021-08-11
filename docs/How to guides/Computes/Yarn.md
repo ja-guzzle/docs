@@ -1,5 +1,3 @@
-Yarn
-
 This article provides information about Yarn support in Guzzle.
 
 Yarn does not support various features like : 
@@ -62,7 +60,6 @@ Guzzle provides below parameter and configs for Yarn
     <td>Specify the Yarn arguments
 Ex: 
 --conf spark.development=true
-      < I dont know about this example... >
     </td>
     <td>None</td>
     <td>No</td>

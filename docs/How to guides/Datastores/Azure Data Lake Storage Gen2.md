@@ -3,8 +3,9 @@ Only supported on Databricks compute
 :::
 
 [Azure Data Lake Storage Gen2 ](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) (ADLS Gen2) is a set of big data analytics capabilities, offered on Azure Blob Storage. ADLS Gen2 allows enterprises to deploy data lake solutions on Azure in order to store petadata bytes of data across a large number of data files.
-< When we want to read big data such as blob files, log files, IoT data, click streams, large datasets from cloud or write data to cloud we can use this datastore.
-This contains folders, which in turn contains data stored as files .>
+
+When we want to read big data such as blob files, log files, IoT data, click streams, large datasets from cloud or write data to cloud we can use this datastore.
+This contains folders, which in turn contains data stored as files.
 
 Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < target > and allows copy data to/from using storage access keys or service principal. 
 
@@ -26,7 +27,7 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < targe
   </tr>
   <tr>
     <td>Account Name</td>
-    <td>< storage account name ></td>
+    <td>storage account name</td>
     <td>Yes</td>
   </tr>
   <tr>
@@ -44,9 +45,9 @@ Client secret,
 Directory (Tenant) ID.
 Also ensure following permission:
 As source: Grant Execute permission for all  parent folders, along with Read permission for the files to copy. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Reader role at container or storage account level
-As sink <target>: Grant Execute permission for all parents folders, along with Write permission for the sink folders. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Contributor role at container or storage account level.
+As sink target: Grant Execute permission for all parents folders, along with Write permission for the sink folders. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Contributor role at container or storage account level.
       
-Access Key:  To use storage account access keys to access  the data. < provide access key from azure portal. Which is available in storage account -> access keys >
+Access Key:  To use storage account access keys to access  the data. provide access key from azure portal. Which is available in storage account
 Recommendation is to use service principal</td>
     <td>Yes</td>
   </tr>

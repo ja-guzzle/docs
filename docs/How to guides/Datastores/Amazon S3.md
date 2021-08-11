@@ -1,6 +1,8 @@
 [Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is an object storage service that offers industry-leading scalability, data availability, security, and performance. Guzzle 
-< We can use this datastore for reading data from amazon (aws) and do validation and transformations on that data and write that data on csv, json, xml, excel, etc files. >
-< This datastore is use for both source and target tabs. >
+
+We can use this datastore for reading data from amazon (aws) and do validation and transformations on that data and write that data on csv, json, xml, excel, etc files.
+
+This datastore is use for both source and target tabs.
 
 :::info
 1. Only Ingestion activity supports File based connectors. 
@@ -52,7 +54,6 @@
 
 
 ![image alt text](/img/docs/how-to-guides/datastores/amazon_s3_1.gif)
-< Improper GIF for this article. >
 
 ## Known Limitation
 

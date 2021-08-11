@@ -1,6 +1,6 @@
 Updating Guzzle Repository Database
 
-< Applicable when using spark local as compute. In this you can give config for your local MySQL server and after you initialize it all required tables are stored in local MySQL database. >
+user has to define there databse configs to store guzzle related repository data. once initialiazed the repository database guzzle will create database table in the given config database.
 
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
@@ -36,7 +36,7 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------|
 | Credential type | Specify credential type to be used to connect to repository database: - Native : This is native Azure SQL, SQL Server or MySQL account - Azure service principal: To use Azure service principal and secret to connect to Azure SQL database. This is not supported for other database                                                                                                                       | Native        | Yes      |
 | Driver class    | Specify the driver class name which database is going to be used. This can be left empty if standard Driver provided by Guzzle are to be used                                                                                                                                                                                                                                                                | None          | Yes      |
-| JDBC Url        | Specify JDBC URL of the Repository database: For Azure SQL/ SQL server, you can use below format to specify JDBC URL: `jdbc:sqlserver://<server name>.database.windows.net;database=<database name>;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=30;socketKeepAlive=true` For Azure MySQL / MySQL Server following format can be used: jdbc:mysql://<server name>:3306/<database name> | None          | Yes      |
+| JDBC Url        | Specify JDBC URL of the Repository database: For Azure SQL/ SQL server, you can use below format to specify JDBC URL: `jdbc:sqlserver://<server name>.database.windows.net;database=<database name>;encrypt=true;trustServerCertificate=true;create=false;loginTimeout=30;socketKeepAlive=true` For Azure MySQL / MySQL Server following format can be used: `jdbc:mysql://<server name>:3306/<database name>` | None          | Yes      |
 | Username        | Username to connect to repository database Applicable for Native credential type                                                                                                                                                                                                                                                                                                                             | None          | Yes      |
 | Password        | Password to connect to repository database Applicable for Native credential type                                                                                                                                                                                                                                                                                                                             | None          | Yes      |
 | Client Id       | Client id of Azure Service Principal Applicable for Azure service principal credential type                                                                                                                                                                                                                                                                                                                  | None          | Yes      |
@@ -68,8 +68,7 @@ More details of Guzzle Batches can be found [here](http://xxx).  Additoinally a 
 Above stages represents a typical stages through which data from particular source system flows through. However you can amend this list and add additional stages. A batch can be compose of one or more stages from this list.
 
  ## Steps to Update Repository database
-The Guzzle UI will auto-detect if the repository tables are present, and it will show
-< Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be lost and new will created. >
+Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be vanished and create new one.
 
 1. Go to the Admin menu from the top navigation bar.
 2. Navigate to Environment-> Repository Database. Select **Initialize Database** tab

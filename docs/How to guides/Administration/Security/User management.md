@@ -1,13 +1,12 @@
-
- < - You can view total numbers of users from Admin/Security path and if you want to create you can create from there clicking on create user button.
-	 - You can manage users like edit or delete user.
-	 - If you create user Guzzle will ask some properties like First Name, Last Name, Username, Email and Role. >
+- User can see total numbers of users from Admin/Security path and if you want to create you can create from there clicking on create user button.
+	 - also can manage users like edit or delete user.
+	 - If you create user Guzzle will ask some properties like First Name, Last Name, Username, Email and Role.
 
 Guzzle provides two types of Authentication namely:
 
 1. Native users: Here the user 
 
-2. [Azure Active Directory SSO](/docs/How to guides/Administration/Security/Azure%Single%Sign%On) < Link is not visible. >. We can add new users and consider single sign on with azure. 
+2. [Azure Active Directory SSO](/docs/How to guides/Administration/Security/Azure%Single%Sign%On). We can add new users and consider single sign on with azure. 
 
 Users Maintenance
 
@@ -48,7 +47,7 @@ Below are the steps to create new user
   </tr>
   <tr>
     <td>Security Role</td>
-    <td>Choose one or more roles < There are three roles Data Analytics, Operator and Admin which is describe below. > </td>
+    <td>Choose one or more roles: There are three roles Data Analytics, Operator and Admin which is describe below </td>
   </tr>
 </table>
 

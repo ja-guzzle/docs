@@ -4,7 +4,7 @@ Control files are used to cross check whether a file is valid or not. Validity o
 
 * The Configure Control File feature compares the number of records in the original file and the control file extension. The file is valid only if the two are equal, otherwise it is invalid. 
 
-* In Guzzle, in order to create the Control File we simply need to add the extension in the Control File Section. The Control File has the same name as the original data file with only a change in the name of the extension. For Example: If we have a data file with the name customer.csv and enter the extension .ctl then a Control File with the name customer.ctl will be created automatically by Guzzle.  < This point is incorrect. *Correct one is "Guzzle not create .ctl file automatically it just validate that records in source data are same with selected file or not." >
+* In Guzzle, Use of control file is varified the metadata records with data The Control File has the same name as the original data file with only a change in the name of the extension. For Example: If we have a data file with the name customer.csv and enter the extension .ctl then a Control File name should be the customer.ctl.
 
 Let us consider a Delimited file with the name customer.csv with the given data as shown below:
 
@@ -38,9 +38,8 @@ In this case the file will not be validated as the Control file counts 6 records
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/image_0.png)
 
-This will create a control file with the same name as the file pattern mentioned above with the extension .ctl.
-< This will validate a control file with the same name as the file pattern mentioned above with the extension .ctl >
+This will validate a control file with the same name as the file pattern mentioned above with the extension .ctl
 
-< If control file is on another path 
-Override control path - We want to add another path for control file to validate we have to check this box and give path in input text. >
+If control file is on another path 
+Override control path - We want to add another path for control file to validate we have to check this box and give path in input text.
 

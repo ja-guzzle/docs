@@ -99,5 +99,3 @@ Below are the steps to edit the existing Shared Storage configuration:
 3. Update the required configuration details
 
 4. Click on Update button
-
-< No need changes >

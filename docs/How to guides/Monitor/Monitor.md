@@ -1,5 +1,4 @@
 This Article provides information about Guzzle monitor tab 
-< In this tab Guzzle gives all details about job which is running in progress or completed before. >
 
 and give information about how to filter job, view job logs, graphs and monitor status of job.
 
@@ -7,19 +6,19 @@ In monitor Guzzle listing all your job which we you have run before or currently
 
 you can filter jobs to search specific jobs through different cases 
 
-Guzzle monitor have many filter options which you can use it to filter jobs and they are listed below :-
+Guzzle monitor have many filter options which you can use it to filter jobs by below filters :-
 
-1. Business Date -  < By date >
-2. Batch            < By Batches that you have created > 
-3. Pipeline         < By pipeline that you have created >
-4. Activity         < By activities that you have created >
-5. Schedule         < By schedules > 
-6. Start Date       < Date when you have started job >
-7. End Date         < By using end date of job >
-8. Status           < By selecting status like "Success", "Aborted", "Failed", "Running", "Not started", "Warning". >
-9. Job Id           < By job Id >
-10. Parameter       < By using name and value pair. >
-11. Message         < By using messages. >
+1. Business Date 
+2. Batch        
+3. Pipeline         
+4. Activity        
+5. Schedule        
+6. Start Date       
+7. End Date         
+8. Status          
+9. Job Id           
+10. Parameter       
+11. Message 
 
 Guzzle Gives you ability to download all jobs listing through click on excel (![image alt text](/img/docs/how-to-guides/monitor/monitor0.png)) or csv (![image alt text](/img/docs/how-to-guides/monitor/monitor1.png)) for format
 
@@ -144,12 +143,10 @@ To view Graph of job
 User can do below actions as well from monitor 
 
 ## Stop Running Job
-< To stop job we can use this symbol. >
 1. Filter you job from dropdowns
 2. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor5.png))
 
 ## Rerun job
-< To run again this job we can use this symbol. >
 1. Filter you job from dropdowns
 2. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor6.png))
 

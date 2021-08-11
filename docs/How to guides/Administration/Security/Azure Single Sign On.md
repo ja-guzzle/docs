@@ -94,4 +94,3 @@ Step 7 : Create User
 :::note
 Once SSO is enabled, the native login gets disabled. User can only login via SSO
 :::
-< File is correct No need changes. >

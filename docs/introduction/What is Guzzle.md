@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 Guzzle enables analytics engineers to build data pipelines consisting of extraction, transformation, loading, validation and reconciliation for their data warehouses and data lakes by specifying a set of simple configurations. As a Guzzle user, you remain focused on specifying high level configurations settings and business logic for data pipelines, and let Guzzle handle the low level implementation details for you.
 
 Built on the foundation of Apache Spark, Guzzle leverages the Spark connectors to extract and load data at massive scale on most common datastores (both relational data warehouses or data lakes). All the transformation and validation rules in Guzzle are specified in SQL, lingua franca of the data. 
