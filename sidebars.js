@@ -47,7 +47,8 @@ module.exports = {
           'How to guides/Author/Author',
           'How to guides/Author/External',
           'How to guides/Author/Git Integration and Version Control',
-          'How to guides/Author/Schedule'
+          'How to guides/Author/Schedule',
+          'How to guides/Author/Copy Data Tool'
         ]
       },
       {

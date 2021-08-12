@@ -15,18 +15,8 @@ Rest Api is service call where user can access via URI and can gather data from 
 
 4. Enter the additional properties for the Rest API as described below and you can check the connection by clicking Test Connection :
 
-<table>
-  <tr>
-    <th>Property </th>
-    <th>Description</th>
-    <th>Required</th>
-  </tr>
-  <tr>
-    <td>HTTP URL</td>
-    <td>Specify the Http URL where your data lies</td>
-    <td>Yes</td>
-  </tr>
-</table>
-
+|Property|Description|Required|
+|--- |--- |--- |
+|HTTP URL|Specify the Http URL where your data lies|Yes|
 
 ![image alt text](/img/docs/how-to-guides/datastores/rest_1.png)

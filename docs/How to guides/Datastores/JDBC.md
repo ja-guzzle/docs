@@ -15,59 +15,17 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 5. Enter the connection details properties as described below:
 
 ## **If Standard is chosen : **
-
-<table>
-  <tr>
-    <th>Property </th>
-    <th>Description</th>
-    <th>Required</th>
-  </tr>
-  <tr>
-    <td>Vendor</td>
-    <td>Users have to choose sql server from given options like SQL server, MySQL, Oracle, PostgreSQL.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Driver Class</td>
-    <td>Selecting Vendor this property is automatically field by Guzzle</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Hostname</td>
-    <td>Hostname of selected server</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Port</td>
-    <td>On which port selected server is running</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Database </td>
-    <td>Name of Database</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td>Username of server</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Password (If manual is selected)</td>
-    <td>Password of server</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>KeyVault name(if keyvault is chosen)</td>
-    <td>Name of keyvault where password is saved.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Secret Name (If keyvault is chosen)</td>
-    <td>Secret name from keyvault where password is saved.</td>
-    <td>Yes</td>
-  </tr>
-</table>
+|Property|Description|Required|
+|--- |--- |--- |
+|Vendor|Users have to choose sql server from given options like SQL server, MySQL, Oracle, PostgreSQL.|Yes|
+|Driver Class|Selecting Vendor this property is automatically field by Guzzle|Yes|
+|Hostname|Hostname of selected server|Yes|
+|Port|On which port selected server is running|Yes|
+|Database|Name of Database|Yes|
+|Username|Username of server|Yes|
+|Password (If manual is selected)|Password of server|Yes|
+|KeyVault name(if keyvault is chosen)|Name of keyvault where password is saved.|Yes|
+|Secret Name (If keyvault is chosen)|Secret name from keyvault where password is saved.|Yes|
 
 
  Below gif represents created JDBC datastore :
@@ -76,50 +34,16 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 ## **If Custom is chosen :** 
 
-<table>
-  <tr>
-    <th>Property </th>
-    <th>Description</th>
-    <th>Required</th>
-  </tr>
-  <tr>
-    <td>Driver Class</td>
-    <td>Selecting Vendor this property is automatically field by Guzzle</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Hostname</td>
-    <td>Hostname of selected server</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Jdbc URL</td>
-    <td>JDBC URL for connecting to SQL server
-        Example: jdbc:mysql://&lt;hostname&gt;/ &lt;databaseName&gt;
-        The URL can optionally contain database name, user name and other connection properties.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td>Username of server</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Password (If manual is selected)</td>
-    <td>Password of server</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>KeyVault name(if keyvault is chosen)</td>
-    <td>Name of keyvault where password is saved.</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Secret Name (If keyvault is chosen)</td>
-    <td>Secret name from keyvault where password is saved.</td>
-    <td>No</td>
-  </tr>
-</table>
+|Property|Description|Required|
+|--- |--- |--- |
+|Driver Class|Selecting Vendor this property is automatically field by Guzzle|Yes|
+|Hostname|Hostname of selected server|Yes|
+|Jdbc URL|JDBC URL for connecting to SQL server<br /> Example: jdbc:mysql://&lt;hostname&gt;/ &lt;databaseName&gt;<br /> The URL can optionally contain database name, user name and other connection properties.|Yes|
+|Username|Username of server|Yes|
+|Password (If manual is selected)|Password of server|No|
+|KeyVault name(if keyvault is chosen)|Name of keyvault where password is saved.|No|
+|Secret Name (If keyvault is chosen)|Secret name from keyvault where password is saved.|No|
+
 
 
 ![image alt text](/img/docs/how-to-guides/datastores/jdbc_2.gif)

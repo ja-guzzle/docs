@@ -16,10 +16,7 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 ||||
 |--- |--- |--- |
 |Property|Description|Required|
-|Database URL|JDBC URL for connecting to SQL server.
-      Database URL - you can find URL from Azure portal it will be in this form jdbc:sqlserver://:1433;database=;user=;password=;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-Example: jdbc:sqlserver://< sql server name >.
-The URL can optionally contain database name, user name and other connection properties.|Yes|
+|Database URL|JDBC URL for connecting to SQL server.<br /><br />Users can find URL from Azure portal it will be in this form jdbc:sqlserver://:1433database=;user=;password=;encrypt=true;<br />trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;<br />Example:jdbc:sqlserver://&lt; sql server name &gt;<br /><br />The URL can optionally contain database name, user name and other connection properties.|Yes|
 |Database|Database name of the  SQL Server (this property can be skipped if its specified as part of Database URL)|yes|
 |Username|User name of SQL server|yes|
 |Password|Password of SQL server|yes|

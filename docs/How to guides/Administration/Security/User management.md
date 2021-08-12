@@ -20,36 +20,14 @@ Below are the steps to create new user
 
 4. Provide below details and click "Create" or “Update” button
 
-<table>
-  <tr>
-    <td>Property</td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>First Name</td>
-    <td>First name of the user</td>
-  </tr>
-  <tr>
-    <td>Last Name</td>
-    <td>Last name of the user</td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td>This is the user name that shall be used for login into Guzzle. For Azure SSO this should be AAD user name which generally is the email address (also referred as user principal name)</td>
-  </tr>
-  <tr>
-    <td>Password (only applies for Native user)</td>
-    <td>The password of the user</td>
-  </tr>
-  <tr>
-    <td>Email </td>
-    <td>This is the email of the native user. For Azure SSO this field is automatically populated from username</td>
-  </tr>
-  <tr>
-    <td>Security Role</td>
-    <td>Choose one or more roles: There are three roles Data Analytics, Operator and Admin which is describe below </td>
-  </tr>
-</table>
+|Property|Description|
+|--- |--- |
+|First Name|First name of the user|
+|Last Name|Last name of the user|
+|Username|This is the user name that shall be used for login into Guzzle. For Azure SSO this should be AAD user name which generally is the email address (also referred as user principal name)|
+|Password (only applies for Native user)|The password of the user|
+|Email|This is the email of the native user. For Azure SSO this field is automatically populated from username|
+|Security Role|Choose one or more roles: There are three roles Data Analytics, Operator and Admin which is describe below|
 
 
 :::note

@@ -7,52 +7,16 @@ For scheduling jobs users can schedule by GUI or Cron settings
 
 Guzzle provider below functionality and parameters for Schedule
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Default Value</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Recurrence by</td>
-    <td>Specify the recurrence to follow by which rules. It is mainly contains By Months, Week Days, Days, Hours, Minutes, Seconds </td>
-    <td>Days</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Every </td>
-    <td>Specify to continue cycle on every period</td>
-    <td>True</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Exactly</td>
-    <td>Specify for follow exact time period</td>
-    <td>False</td>
-    <td>As per requirements.</td>
-  </tr>
-  <tr>
-    <td>Activated</td>
-    <td>Specify if you want to activate the schedule from now.</td>
-    <td>True</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Allow Concurrent Runs</td>
-    <td>Specify to run jobs concurrently </td>
-    <td>False</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Runs Jobs in</td>
-    <td>Sequential : 
+|Property|Description|Default Value|Required|
+|--- |--- |--- |--- |
+|Recurrence by|Specify the recurrence to follow by which rules. It is mainly contains By Months, Week Days, Days, Hours, Minutes, Seconds|Days|Yes|
+|Every|Specify to continue cycle on every period|True|Yes|
+|Exactly|Specify for follow exact time period|False|As per requirements.|
+|Activated|Specify if you want to activate the schedule from now.|True|No|
+|Allow Concurrent Runs|Specify to run jobs concurrently|False|No|
+|Runs Jobs in|Sequential : 
 Jobs will run in sequential manner user have to specify the continue on failure as true or false
-Parallel : Jobs will run in a parallel manner.</td>
-    <td>Sequential</td>
-    <td>Yes</td>
-  </tr>
-</table>
+Parallel : Jobs will run in a parallel manner.|Sequential|Yes|
 
 
 ## Jobs to run

@@ -25,59 +25,15 @@ Once shared storage is enabled, you will not be able to disable it any more
 
 ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage1.png)
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Default Value</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Account Name</td>
-    <td>Specify the Azure Storage Account Name. </td>
-    <td>None</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Container</td>
-    <td>Specify the Azure storage container name</td>
-    <td>None</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Access Key</td>
-    <td>Manual: Enter the storage storage access key.
-Key Vault: Specify the Keyvault name and Secret</td>
-    <td>None</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Container Directory</td>
-    <td>Specify directory inside the container where GUZZLE_HOME has to be setup
-You can specify / (or root directory) if the GUZZLE_HOME  has to be setup in the root directory of the container</td>
-    <td>None</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Force Clean</td>
-    <td>You can check this option to cleanup existing files in the container before initializing the GUZZLE_HOME
-If kept unchecked, guzzle_will merge the files of GUZZLE_HOME with the existing ones in that directory</td>
-    <td>False</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Databricks Secret</td>
-    <td>Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks Workspace is covered  here.
-      
-Secret Scope: This is the secret scope defined in databricks workspace.
-      
-Secret Key: This is the secret containing the access key for the storage account that is to be used for shared storage.
-      
-Refer to this articles to create Databricks Secret Scope and secrets</td>
-    <td>None</td>
-    <td>No</td>
-  </tr>
-</table>
+|Property|Description|Default Value|Required|
+|--- |--- |--- |--- |
+|Account Name|Specify the Azure Storage Account Name.|None|Yes|
+|Container|Specify the Azure storage container name|None|Yes|
+|Access Key|Manual: Enter the storage storage access key.
+Key Vault: Specify the Keyvault name and Secret|None|Yes|
+|Container Directory|Specify directory inside the container where GUZZLE_HOME has to be setup<br />You can specify / (or root directory) if the GUZZLE_HOME  has to be setup in the root directory of the container|None|Yes|
+|Force Clean|You can check this option to cleanup existing files in the container before initializing the GUZZLE_HOME<br />If kept unchecked, guzzle_will merge the files of GUZZLE_HOME with the existing ones in that directory|False|No|
+|Databricks Secret|Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks <br/>Workspace is covered  here.<br /><br />Secret Scope: This is the secret scope defined in databricks workspace.<br /><br />Secret Key: This is the secret containing the access key for the storage account that is to be used for shared storage.<br /><br />Refer to this articles to create Databricks Secret Scope and secrets|None|No|
 
 
 Guzzle will validate the shared storage configuration ensuring the storage account, container, access key, and folder are valid before enabling the shared storage.

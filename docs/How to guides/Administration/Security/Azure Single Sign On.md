@@ -24,33 +24,14 @@ You can also use existing App registration in AAD and add the redirect URL of th
 
 
 Guzzle internally uses below scopes for Azure Active Directory single sign-on:
-<table>
-  <tr>
-    <td>Scopes</td>
-    <td>Purpose</td>
-  </tr>
-  <tr>
-    <td>499b84ac-1321-427f-aa17-267ca6975798/user_impersonation
-(Azure DevOps)</td>
-    <td>Guzzle create Access token for azure devops when users are logged in to achieve this user have to give azure devops scope to Azure Active Directory sso.</td>
-  </tr>
-  <tr>
-    <td>openid</td>
-    <td>To retrieve email</td>
-  </tr>
-  <tr>
-    <td>profile</td>
-    <td>To retrieve username</td>
-  </tr>
-  <tr>
-    <td>offline_access </td>
-    <td>To retrieve refresh token</td>
-  </tr>
-  <tr>
-    <td>https://management.azure.com/user_impersonation</td>
-    <td>To retrieve user profile</td>
-  </tr>
-</table>
+|Scopes|Purpose|
+|--- |--- |
+|499b84ac-1321-427f-aa17-267ca6975798/user_impersonation
+(Azure DevOps)|Guzzle create Access token for azure devops when users are logged in to achieve this user have to give azure devops scope to Azure Active Directory sso.|
+|openid|To retrieve email|
+|profile|To retrieve username|
+|offline_access|To retrieve refresh token|
+|https://management.azure.com/user_impersonation|To retrieve user profile|
 
 
 ## Enabling Azure SSO in Guzzle

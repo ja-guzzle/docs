@@ -4,9 +4,8 @@ In this article default timeout for syncing job configs are given you can change
 Guzzle use below default timeout for syncing job configs.
 ## Sync Job Azure Databricks Configuration
 
-|||
-|--- |--- |
 |Properties|Timeout (MilliSeconds)|
+|--- |--- |
 |Sync Interval|5000|
 |Sync Interval on Error|30000|
 |Sync Timeout On Error|900000|
@@ -15,68 +14,31 @@ Guzzle use below default timeout for syncing job configs.
 
 ## Job Heartbeat Configuration
 
-<table>
-  <tr>
-    <td>Properties</td>
-    <td>Timeout (MilliSeconds)</td>
-  </tr>
-  <tr>
-    <td>Heartbeat Update Interval</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Job Aborted Timeout</td>
-    <td>60000</td>
-  </tr>
-</table>
+|Properties|Timeout (MilliSeconds)|
+|--- |--- |
+|Heartbeat Update Interval|5000|
+|Job Aborted Timeout|60000|
+
 
 
 ## Data Sampling Configuration
 
-<table>
-  <tr>
-    <td>Properties</td>
-    <td>Timeout (MilliSeconds)</td>
-  </tr>
-  <tr>
-    <td>Sample Job Check Interval</td>
-    <td>1000</td>
-  </tr>
-  <tr>
-    <td>Cluster Heartbeat Update Interval</td>
-    <td>1000</td>
-  </tr>
-</table>
+|Properties|Timeout (MilliSeconds)|
+|--- |--- |
+|Sample Job Check Interval|1000|
+|Cluster Heartbeat Update Interval|1000|
+
 
 
 ## Sync Azure Data Factory Configuration
 
-<table>
-  <tr>
-    <td>Properties</td>
-    <td>Timeout (MilliSeconds)</td>
-  </tr>
-  <tr>
-    <td>Sync Interval</td>
-    <td>5000</td>
-  </tr>
-  <tr>
-    <td>Sync Interval on Error</td>
-    <td>30000</td>
-  </tr>
-  <tr>
-    <td>Sync Timeout On Error</td>
-    <td>900000</td>
-  </tr>
-  <tr>
-    <td>Job Submit Interval On Error</td>
-    <td>60000</td>
-  </tr>
-  <tr>
-    <td>Job Submit Timeout On Error</td>
-    <td>900000</td>
-  </tr>
-</table>
+|Properties|Timeout (MilliSeconds)|
+|--- |--- |
+|Sync Interval|5000|
+|Sync Interval on Error|30000|
+|Sync Timeout On Error|900000|
+|Job Submit Interval On Error|60000|
+|Job Submit Timeout On Error|900000|
 
 
 Guzzle will give you the ability to change this default setting. You can follow below steps to change the default setting
