@@ -1,10 +1,10 @@
 Guzzle software gets deployed on a virtual machine using the pre-built image on the Microsoft Azure cloud. You can deploy Guzzle on an existing VNet or a new Virtual network. You can apply standard 
 
-# Prerequisites
+## Prerequisites
 
 You need an Azure account to proceed. You will be billed only for the virtual machine instance. The Guzzle image itself is free. 
 
-# Deployment of Guzzle Virtual Machine
+## Deployment of Guzzle Virtual Machine
 
 1. Create Guzzle virtual machine using the Azure Marketplace offer
 

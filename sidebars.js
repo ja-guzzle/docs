@@ -32,26 +32,14 @@ module.exports = {
       items: [ 
       {
         'Administration': [
-          {
-            'Environment config' : [
               'How to guides/Administration/Environment config/Repository database',
               'How to guides/Administration/Environment config/Setup Shared Storage',
-              'How to guides/Administration/Environment config/Timeout and Sync'
-            ]
-          },
-          {
-            'Maintenance': [
+              'How to guides/Administration/Environment config/Timeout and Sync',
               'How to guides/Administration/Maintenance/JWT',
               'How to guides/Administration/Maintenance/Schedule',
-              'How to guides/Administration/Maintenance/View service log'
-            ]
-          },
-          {
-            'Security' : [
+              'How to guides/Administration/Maintenance/View service log',
               'How to guides/Administration/Security/Azure Single Sign On',
               'How to guides/Administration/Security/User management'
-            ]
-          }
         ]
       },
       {
@@ -91,13 +79,25 @@ module.exports = {
         ]
       },
       {
+        Pipelines: [
+          'How to guides/Ingest data/Pipeline',
+        ]
+      },
+      {
+        Batches: ['How to guides/Batch/Batch']
+      },
+      {
+        Housekeeping: ['How to guides/Ingest data/Housekeeping']
+      },
+      {
+        Parameter: ['How to guides/Parameters/Parameters',]
+      },
+      {
         'Ingest data': [
           'How to guides/Ingest data/Column Restrictions - Exclude and Include Columns',
           'How to guides/Ingest data/Configure Control File',
-          'How to guides/Ingest data/Housekeeping',
           'How to guides/Ingest data/Ingest Data from Local file system to MySQL Database',
           'How to guides/Ingest data/Moving Processed Files',
-          'How to guides/Ingest data/Pipeline',
           'How to guides/Ingest data/Pre-SQL and Post-SQL for Source and Target in Ingestion',
           'How to guides/Ingest data/Processing',
           'How to guides/Ingest data/Watermark',
