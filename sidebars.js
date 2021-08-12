@@ -68,7 +68,10 @@ module.exports = {
           'How to guides/Datastores/Delta Lake',
           'How to guides/Datastores/HDFS',
           'How to guides/Datastores/Hive',
-          'How to guides/Datastores/Server file system'
+          'How to guides/Datastores/Server file system',
+          'How to guides/Datastores/Rest',
+          'How to guides/Datastores/JDBC',
+          'How to guides/Datastores/Azure Synapse Analytics'
         ]
       },
       {
@@ -114,6 +117,7 @@ module.exports = {
           'How to guides/Ingest data/Working with Multiple files',
           'How to guides/Ingest data/Working with Text and Log Files',
           'How to guides/Ingest data/Working with XML files', 
+          'How to guides/Ingest data/Rest as Source and Target'
         ]
       },
       {
