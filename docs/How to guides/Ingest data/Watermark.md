@@ -20,37 +20,11 @@ Guzzle supports Watermark for all the 5 types of Database Connectors namely:
 
 "Configure Watermark" section in Source Tab contains following properties for configuring  incremental loading for a source table: 
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Default Value</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Watermark Columns</td>
-    <td>Specify one or more columns that shall be used for watermark tracking Once specified, it will track the maximum value of each of this columns based on incoming source data</td>
-    <td>None</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Watermark filter</td>
-    <td>To specify custom watermark filter using the watermark columns When left blank Ingestion activity generates automatic filter which  is series of AND condition with column value > watermark value
-
-Example: 
-last_modified_dt > '2021-06-17 04:01:46' AND id > '4'
-
-</td>
-    <td>None</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Additional identifier for tracking watermark</td>
-    <td>If watermark </td>
-    <td>None</td>
-    <td>No</td>
-  </tr>
-</table>
+|Property|Description|Default Value|Required|
+|--- |--- |--- |--- |
+|Watermark Columns|Specify one or more columns that shall be used for watermark tracking Once specified, it will track the maximum value of each of this columns based on incoming source data|None|Yes|
+|Watermark filter|To specify custom watermark filter using the watermark columns When left blank Ingestion activity generates automatic filter which  is series of AND condition with column value > watermark value<br/><br/>Example: last_modified_dt > '2021-06-17 04:01:46' AND id > '4'|None|No|
+|Additional identifier for tracking watermark|If watermark|None|No|
 
 
 Guzzle first retrieves the old watermark value and compares it with the current watermark value. After that, it copies only the changes from the source database, based on a comparison between the two watermark values. Finally, it stores the new high-watermark value to the target table for Data loading next time.

@@ -2,65 +2,15 @@ This article outlines how to work with Excel (.xls or .xlsx)  for source and tar
 
 ## Excel File Properties in Guzzle
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Default Value</td>
-    <td>Available in Source Section</td>
-    <td>Available in Target Section</td>
-  </tr>
-  <tr>
-    <td>Character Set</td>
-    <td>It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.</td>
-    <td>UTF-8</td>
-    <td>✔</td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>Sheet Name</td>
-    <td>The name of the Excel Worksheet from where we read our Data.</td>
-    <td>None</td>
-    <td>✔</td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>Cell Address/Range</td>
-    <td>It is used to specify the Cell Range in the given worksheet to locate some selective data. If it is not specified Guzzle reads the whole worksheet.
-For Example: If range is B3, Guzzle will read the Data starting from the given cell.</td>
-    <td>A1</td>
-    <td>✔</td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>Contains Headers</td>
-    <td>Specifies whether to treat the first row in the given worksheet/range as a header line with names of columns.</td>
-    <td>True</td>
-    <td>✔</td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>Consider Empty as Null</td>
-    <td>It can be used to define whether to consider an Empty String as a Null Value.</td>
-    <td>True</td>
-    <td>✔</td>
-    <td>X</td>
-  </tr>
-  <tr>
-    <td>Workbook Password</td>
-    <td>Here we can specify a password for our excel workbook. This is done to protect the structure of our worksheet which contains our data and prevents other users from modifying our data.</td>
-    <td>None</td>
-    <td>✔</td>
-    <td>X</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>This is used to specify the File Path where we would like to store our Data.</td>
-    <td>None</td>
-    <td>X</td>
-    <td>✔</td>
-  </tr>
-</table>
+|Property|Description|Default Value|Available in Source Section|Available in Target Section|
+|--- |--- |--- |--- |--- |
+|Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|✔|
+|Sheet Name|The name of the Excel Worksheet from where we read our Data.|None|✔|✔|
+|Cell Address/Range|It is used to specify the Cell Range in the given worksheet to locate some selective data. If it is not specified Guzzle reads the whole worksheet.<br/>For Example: If range is B3, Guzzle will read the Data starting from the given cell.|A1|✔|✔|
+|Contains Headers|Specifies whether to treat the first row in the given worksheet/range as a header line with names of columns.|True|✔|✔|
+|Consider Empty as Null|It can be used to define whether to consider an Empty String as a Null Value.|True|✔|X|
+|Workbook Password|Here we can specify a password for our excel workbook. This is done to protect the structure of our worksheet which contains our data and prevents other users from modifying our data.|None|✔|X|
+|Path|This is used to specify the File Path where we would like to store our Data.|None|X|✔|
 
 
 The Interface for the Excel File Format can be seen in the figure below.

@@ -6,38 +6,13 @@ Guzzle supports Pre-SQL and Post-SQL for Source and Target and their execution i
 
 Guzzle supports Pre and Post SQL statements for Source and Target in Ingestion for different Datastore Technologies as listed in the table below: 
 
-<table>
-  <tr>
-    <td>Datastore technologies</td>
-    <td>Pre/Post SQL for source</td>
-    <td>Pre/Post SQL for target</td>
-  </tr>
-  <tr>
-    <td>Delta</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Hive</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Azure SQL</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Azure Synapse Analytics</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>JDBC</td>
-    <td>Yes</td>
-    <td>Yes</td>
-  </tr>
-</table>
+|Datastore technologies|Pre/Post SQL for source|Pre/Post SQL for target|
+|--- |--- |--- |
+|Delta|Yes|Yes|
+|Hive|Yes|Yes|
+|Azure SQL|Yes|Yes|
+|Azure Synapse Analytics|Yes|Yes|
+|JDBC|Yes|Yes|
 
 
 Guzzle follows the following order of execution for Pre and Post SQL statements:

@@ -4,10 +4,10 @@ When we select any of the five databases as our Datastore, Guzzle provides us wi
 
 * In order to use Column Restrictions in Guzzle all we need to do is mention the Column Names and choose between the Exclude and Include Column options.
 
-#### Why we want to use this feature?
+## Why we want to use this feature?
 
-     - sometimes Users want to ignore some columns in source data so by selecting "Exclud Columns" we can achive this task. it will exclude mentioned columns.
-     - And if we want to include some specific columns in source data so we can achieve this by "Include Columns"
+- sometimes Users want to ignore some columns in source data so by selecting "Exclud Columns" we can achive this task. it will exclude mentioned columns.
+- And if we want to include some specific columns in source data so we can achieve this by "Include Columns"
 
 1. **Include Columns**:This is chosen when we would only like the mentioned columns to be present in our Source Table. The rest of the columns will not be visible in the Table. This can be seen in the images below:
 
@@ -19,7 +19,7 @@ When we select any of the five databases as our Datastore, Guzzle provides us wi
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/Recording-7.gif)
 
-     In this case only the first_name column is visible in the Table.
+In this case only the first_name column is visible in the Table.
 
 2. **Exclude Columns: **This is chosen when we want all the columns except those which are mentioned to be present in our Source Table. All the remaining columns will be visible in the Sample Table. This can be seen below:
 

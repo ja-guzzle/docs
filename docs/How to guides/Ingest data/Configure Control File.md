@@ -24,7 +24,7 @@ customer.ctl is our control file in order to validate our Delimited File and wil
 
 1. **Correct no. of records:** 
 
-count, 5
+ count, 5
 
 In this case the file will be validated as the Control File counts the same no. of records that are there in the csv file.
 

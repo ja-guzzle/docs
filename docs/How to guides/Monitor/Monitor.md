@@ -44,78 +44,23 @@ Guzzle creates multiple logs file for long file size guzzle follow below convenv
 
     <job name>_<job instance id>.log.<n> where n is the number of file counts.
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>Guzzle job config name</td>
-  </tr>
-  <tr>
-    <td>Module</td>
-    <td>In which Module this job falls</td>
-  </tr>
-  <tr>
-    <td>Job Id</td>
-    <td>Guzzle creates a unique job instance id for every running job.</td>
-  </tr>
-  <tr>
-    <td>Business Date</td>
-    <td>Selected business date while run job from user</td>
-  </tr>
-  <tr>
-    <td>Start Time</td>
-    <td>Start time of job run</td>
-  </tr>
-  <tr>
-    <td>End Time</td>
-    <td>End Time of job run completed</td>
-  </tr>
-  <tr>
-    <td>Status </td>
-    <td>Status of the job guzzle come up with below status <br/>
-1. Not Started<br/>
-2. Running<br/>
-3. Success<br/>
-4. Failed<br/>
-5. Warning
-</td>
-  </tr>
-  <tr>
-    <td>Message</td>
-    <td>Once a job is completed successfully it shows the message as total and partial and failed count. If the job failed with some exception or error then it will show error as a message.</td>
-  </tr>
-  <tr>
-    <td>Batch Id</td>
-    <td>Guzzle creates Uniquely batch id for batch</td>
-  </tr>
-  <tr>
-    <td>Stage id</td>
-    <td>Guzzle creates Uniquely stage id for stages</td>
-  </tr>
-  <tr>
-    <td>Duration</td>
-    <td>Total taken time to run job</td>
-  </tr>
-  <tr>
-    <td>Previous Business Date</td>
-    <td>Previously completed business job dates </td>
-  </tr>
-  <tr>
-    <td>Environment</td>
-    <td>In which environment job going to run</td>
-  </tr>
-  <tr>
-    <td>Pipeline</td>
-    <td>Showing pipeline name if job is part of pipeline</td>
-  </tr>
-  <tr>
-    <td>Compute</td>
-    <td>Compute name on which job is going to run</td>
-  </tr>
-</table>
+|Property|Description|
+|--- |--- |
+|Name|Guzzle job config name|
+|Module|In which Module this job falls|
+|Job Id|Guzzle creates a unique job instance id for every running job.|
+|Business Date|Selected business date while run job from user|
+|Start Time|Start time of job run|
+|End Time|End Time of job run completed|
+|Status|Status of the job guzzle come up with below status <br/>1. Not Started<br/>2. Running<br/>3. Success<br/>4. Failed<br/>5. Warning|
+|Message|Once a job is completed successfully it shows the message as total and partial and failed count. If the job failed with some exception or error then it will show error as a message.|
+|Batch Id|Guzzle creates Uniquely batch id for batch|
+|Stage id|Guzzle creates Uniquely stage id for stages|
+|Duration|Total taken time to run job|
+|Previous Business Date|Previously completed business job dates|
+|Environment|In which environment job going to run|
+|Pipeline|Showing pipeline name if job is part of pipeline|
+|Compute|Compute name on which job is going to run|
 
 
 ## Gantt chart

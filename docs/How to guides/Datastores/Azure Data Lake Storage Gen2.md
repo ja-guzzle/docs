@@ -19,64 +19,17 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < targe
 
 4. Enter the additional properties for the storage account as described below:
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Account Name</td>
-    <td>storage account name</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Container name</td>
-    <td>Name of the ADLS Gen2 Container to connect</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Credential Type</td>
-    <td>Authentication type to use when connecting to ADLS. 
-Following mechanisms are supported:
-Service principal : To uses Service principal which to access selected container or folder in the storage account. Follow the steps at Register your application with an Azure AD tenant to create Application Registration and capture following information:
-Application (client) ID, 
-Client secret,
-Directory (Tenant) ID.
-Also ensure following permission:
-As source: Grant Execute permission for all  parent folders, along with Read permission for the files to copy. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Reader role at container or storage account level
-As sink target: Grant Execute permission for all parents folders, along with Write permission for the sink folders. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Contributor role at container or storage account level.
-      
-Access Key:  To use storage account access keys to access  the data. provide access key from azure portal. Which is available in storage account
-Recommendation is to use service principal</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Client ID*</td>
-    <td>Service principal’s client id</td>
-    <td>Yes (for Credential type of Service Principal)</td>
-  </tr>
-  <tr>
-    <td>Client Secret</td>
-    <td>Service principal secret</td>
-    <td>Yes (for Credential type of Service Principal)</td>
-  </tr>
-  <tr>
-    <td>Tenant ID</td>
-    <td>Directory id of of the service principal </td>
-    <td>Yes (for Credential type of Service Principal)</td>
-  </tr>
-  <tr>
-    <td>Access Key</td>
-    <td>Account access key</td>
-    <td>Yes (for Credential Type : Access Key)</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>This is the folder path within the ADLS container. You can specify  / (root path) to point to entire container</td>
-    <td>Yes</td>
-  </tr>
-</table>
+|Property|Description|Required|
+|--- |--- |--- |
+|Account Name|storage account name|Yes|
+|Container name|Name of the ADLS Gen2 Container to connect|Yes|
+|Credential Type|Authentication type to use when connecting to ADLS. Two options are provided Service Principal and Access Key. <br/>Following mechanisms are supported:<br/>**Service principal :** To uses Service principal which to access selected container or folder in the storage account. Follow the steps at Register your application with an Azure AD tenant to create Application Registration and capture following information Application (client) ID, Client secret,Directory (Tenant) ID.<br/>Also ensure following permission:<br/>**As source:** Grant Execute permission for all  parent folders, along with Read permission for the files to copy. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Reader role at container or storage account level.<br/>**As sink target:** Grant Execute permission for all parents folders, along with Write permission for the sink folders. Alternatively, in Access control (IAM), grant at least the Storage Blob Data Contributor role at container or storage account level.<br/><br/>**Access Key:**  To use storage account access keys to access  the data. provide access key from azure portal. Which is available in storage account.<br/><br/>Recommendation is to use **Service principal.**|Yes|
+|Client ID*|Service principal’s client id|Yes (for Credential type of Service Principal)|
+|Client Secret|Service principal secret|Yes (for Credential type of Service Principal)|
+|Tenant ID|Directory id of of the service principal|Yes (for Credential type of Service Principal)|
+|Access Key|Account access key|Yes (for Credential Type : Access Key)|
+|Path|This is the folder path within the ADLS container. You can specify  / (root path) to point to entire container|Yes|
+
 
 
 5. Save the Datastore config. Optionally you can also Test the connection. 

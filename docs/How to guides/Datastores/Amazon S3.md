@@ -19,38 +19,14 @@ This datastore is use for both source and target tabs.
 
 4. Enter the additional properties for the storage account as described below:
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Access Key ID</td>
-    <td>AWS access key ID </td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Secret Key</td>
-    <td>AWS secret access key</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Region</td>
-    <td>Region of the S3 bucket</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Bucket</td>
-    <td>S3 Bucket name</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>Path</td>
-    <td>This is the folder path within the S3 bucket. You can specify  / (root path) to point to entire container</td>
-    <td>Yes</td>
-  </tr>
-</table>
+|Property|Description|Required|
+|--- |--- |--- |
+|Access Key ID|AWS access key ID|Yes|
+|Secret Key|AWS secret access key|Yes|
+|Region|Region of the S3 bucket|No|
+|Bucket|S3 Bucket name|Yes|
+|Path|This is the folder path within the S3 bucket. You can specify  / (root path) to point to entire container|Yes|
+
 
 
 ![image alt text](/img/docs/how-to-guides/datastores/amazon_s3_1.gif)

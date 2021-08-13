@@ -18,25 +18,9 @@ In the image below we run a pipeline with two activities json_multi_line_false a
 
 Guzzle provides below parameter and configs for Pipeline
 
-<table>
-  <tr>
-    <td>Property </td>
-    <td>Description</td>
-    <td>Default Value</td>
-    <td>Required</td>
-  </tr>
-  <tr>
-    <td>Parallel Run</td>
-    <td>Specify number which determines the number of activities to run simultaneously in the given Pipeline.</td>
-    <td>1</td>
-    <td>No</td>
-  </tr>
-  <tr>
-    <td>Auto Dependency</td>
-    <td>Auto Dependency defines how subsequent activities depend on previous activities, determining the condition of whether to continue executing the next task. If we want to perform a second activity on the data generated in the output of the first activity we must select the Auto Dependency option.</td>
-    <td>False</td>
-    <td>No</td>
-  </tr>
-</table>
+|Property|Description|Default Value|Required|
+|--- |--- |--- |--- |
+|Parallel Run|Specify number which determines the number of activities to run simultaneously in the given Pipeline.|1|No|
+|Auto Dependency|Auto Dependency defines how subsequent activities depend on previous activities, determining the condition of whether to continue executing the next task. If we want to perform a second activity on the data generated in the output of the first activity we must select the Auto Dependency option.|False|No|
 
 

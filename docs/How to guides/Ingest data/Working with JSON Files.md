@@ -1,6 +1,6 @@
 JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications. JSON is a language-independent data format.
 
-:::tip Json File tip
+:::note
 
 JSON file support in Guzzle provides extensive features to specify file format details and many other properties which make it easier to work with our Data. This article outlines how to work with JSON files for source and target in Ingestion activity.  
 
@@ -56,7 +56,7 @@ every object in that array or object is separated by commas ( because that singl
 
  for example:
 
-[
+  [
 
     {"id": 0001, "name": "john", "address": “broward county” }
 
@@ -64,27 +64,13 @@ every object in that array or object is separated by commas ( because that singl
 
     {"id": 0003, "name": "roan", "address": “tarell street”}
 
-]
+  ]
 
 	**Fig 1.1** Entire file is a singular Json Array
 
-{
+  {
 
-	"Addresse1": {
-
-			"address":
-
-				[
-
-					{ "id": "1001", "street": "broward county" },
-
-					{ "id": "1002", "street": "valcore line" }
-
-				]
-
-		},
-
-  	 "Addresses2": {
+	  "Addresse1": {
 
 			"address":
 
@@ -98,7 +84,21 @@ every object in that array or object is separated by commas ( because that singl
 
 		},
 
-	"Addresses3": {
+    "Addresses2": {
+
+			"address":
+
+				[
+
+					{ "id": "1001", "street": "broward county" },
+
+					{ "id": "1002", "street": "valcore line" }
+
+				]
+
+		},
+
+	  "Addresses3": {
 
 			"address":
 
@@ -112,13 +112,11 @@ every object in that array or object is separated by commas ( because that singl
 
 		}
 
-}
+  }
 
 	**Fig 1.2**  File as Singular Json object
 
 # Illustrations
-<!-- < confusing !!! 
-  I have tried and got opposite result so this illustration is confusing.... > -->
 
 **Json file containing with single object separated **
 
@@ -128,48 +126,22 @@ every object in that array or object is separated by commas ( because that singl
 
   {"id": 0003, "name": "roan", "address": “tarell street”}
 
-Multiline : false
+Multiline : true
 
-Sample Output when multiline is false is shown below:
+Sample Output when multiline is **true** is shown below:
 
-<table>
-  <tr>
-    <td>id</td>
-    <td>name</td>
-    <td>address</td>
-  </tr>
-  <tr>
-    <td>001</td>
-    <td>john</td>
-    <td>Broward county</td>
-  </tr>
-</table>
+|id|name|address|
+|--- |--- |--- |
+|001|john|Broward county|
 
 
-Sample Output when multiline is True is shown below:
+Sample Output when multiline is **false** is shown below:
 
-<table>
-  <tr>
-    <td>id</td>
-    <td>name</td>
-    <td>address</td>
-  </tr>
-  <tr>
-    <td>001</td>
-    <td>john</td>
-    <td>Broward county</td>
-  </tr>
-  <tr>
-    <td>002</td>
-    <td>lynda</td>
-    <td>Velcro line</td>
-  </tr>
-  <tr>
-    <td>003</td>
-    <td>roan</td>
-    <td>Tarell street</td>
-  </tr>
-</table>
+|id|name|address|
+|--- |--- |--- |
+|001|john|Broward county|
+|002|lynda|Velcro line|
+|003|roan|Tarell street|
 
 
 ## JSON file containing array with multi line
@@ -257,60 +229,31 @@ When multiline is set to false Guzzle will treat the entire file like a single J
 
 Job Config (json_with_multiline_false): 
 
-
 version: 1
-
 job:
-
   type: ingestion
-
 source:
-
   endpoint: localfiles
-
   properties:
-
-    source_file_pattern: json/customer1.json
-
-    format: json
-
-    charset: UTF-8
-
-    partial_load: false
-
-    format_properties:
-
-      clean_column_name: false
-
-      multiline: false
+   source_file_pattern: json/customer1.json
+   format: json
+   charset: UTF-8
+   partial_load: false
+   format_properties:
+    clean_column_name: false
+    multiline: false
 
 Sample Output when multiline is false is shown below:
 
-<table>
-  <tr>
-    <td>id</td>
-    <td>name</td>
-    <td>addresses</td>
-  </tr>
-  <tr>
-    <td>0001</td>
-    <td>john</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+|id|name|addresses|
+|--- |--- |--- |
+|0001|john|[[1001, broward county],   [1002, valcore line]]|
+||||
 
-
-When multiline is set to true Guzzle will treat the entire file.
 
 When multiline is set to true Guzzle will treat the entire file like a single JSON object.
 
 Job Config (json_with_multiline_true): 
-
 
 version: 1
 
@@ -340,28 +283,13 @@ source:
 
 Sample Output when multiline is True is shown below:
 
-<table>
-  <tr>
-    <td>id</td>
-    <td>name</td>
-    <td>addresses</td>
-  </tr>
-  <tr>
-    <td>0001</td>
-    <td>john</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-  <tr>
-    <td>0002</td>
-    <td>lynda</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-  <tr>
-    <td>0003</td>
-    <td>roan</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-</table>
+||||
+|--- |--- |--- |
+|id|name|addresses|
+|0001|john|[[1001, broward county],   [1002, valcore line]]|
+|0002|lynda|[[1001, broward county],   [1002, valcore line]]|
+|0003|roan|[[1001, broward county],   [1002, valcore line]]|
+
 
 
 :::note
@@ -424,28 +352,11 @@ Sample output:
 
 	
 
-<table>
-  <tr>
-    <td>customer_id</td>
-    <td>first_name</td>
-    <td>address_line1</td>
-  </tr>
-  <tr>
-    <td>0001</td>
-    <td>john</td>
-    <td>broward county</td>
-  </tr>
-  <tr>
-    <td>0002</td>
-    <td>lynda</td>
-    <td>Valcore line</td>
-  </tr>
-  <tr>
-    <td>0003</td>
-    <td>roan</td>
-    <td>Tarrel street</td>
-  </tr>
-</table>
+|customer_id|first_name|address_line1|
+|--- |--- |--- |
+|0001|john|broward county|
+|0002|lynda|Valcore line|
+|0003|roan|Tarrel street|
 
 
 ## If file has multiline (Customer.json)
@@ -456,29 +367,8 @@ Sample output:
 
 Sample Output
 
-<table>
-  <tr>
-    <td>id</td>
-    <td>name</td>
-    <td>address_line1</td>
-    <td>addresses</td>
-  </tr>
-  <tr>
-    <td>0001</td>
-    <td>john</td>
-    <td>broward county</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-  <tr>
-    <td>0002</td>
-    <td>lynda</td>
-    <td>Valcore line</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-  <tr>
-    <td>0003</td>
-    <td>roan</td>
-    <td>Tarrel street</td>
-    <td>[[1001, broward county],   [1002, valcore line]]</td>
-  </tr>
-</table>
+|id|name|address_line1|addresses|
+|--- |--- |--- |--- |
+|0001|john|broward county|[[1001, broward county],   [1002, valcore line]]|
+|0002|lynda|Valcore line|[[1001, broward county],   [1002, valcore line]]|
+|0003|roan|Tarrel street|[[1001, broward county],   [1002, valcore line]]|
