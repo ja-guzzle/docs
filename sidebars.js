@@ -24,7 +24,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Tutorial',
-      items: ['Tutorials/test']
+      items: []
     },
     {
       type: 'category',
