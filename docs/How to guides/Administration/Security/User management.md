@@ -8,7 +8,16 @@ Guzzle provides two types of Authentication namely:
 
 2. [Azure Active Directory SSO](/docs/How to guides/Administration/Security/Azure%Single%Sign%On). We can add new users and consider single sign on with azure. 
 
-Users Maintenance
+## Users Maintenance
+
+By navigating Admin tab and than to Security -> Users.
+User can see list of users and from them admin can manage user by esiting and deleting it.
+ 
+Interface of Users list and how to manage is below 
+
+![image alt text](/img/docs/how-to-guides/administrator/security/manage_users_1.jpg)
+
+## Create Users
 
 Below are the steps to create new user 
 

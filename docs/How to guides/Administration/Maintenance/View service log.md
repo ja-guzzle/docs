@@ -10,3 +10,7 @@ To view logs follow below steps
 2 : Goto Maintenance and click on View service log.
 
 Also you can download the service log by clicking on App service log.
+
+** Interface for Service logs page is **
+
+![image alt text](/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg)
