@@ -22,12 +22,12 @@ stages:
             displayName: "npm install and build"
           - task: CopyFiles@2
             inputs:
-              Contents: 'build/**' 
+              Contents: '**' 
               TargetFolder: '$(Build.ArtifactStagingDirectory)'          
           - task: AzureFileCopy@3
             inputs:
               SourcePath: '$(Build.ArtifactStagingDirectory)'
               Destination: 'AzureBlob'
               storage: 'guzzledocs'
-              ContainerName: '$web'
+              ContainerName: 'docs'
               azureSubscription: "guzzlehosting"
