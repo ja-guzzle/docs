@@ -91,11 +91,11 @@ Publishing the current version of code in the `master` branch to the live docume
 
 * Execute the following command (assuming you have already set GIT_USER environment variable)
 
-`cmd /C "set CURRENT_BRANCH=master && set USE_SSH=true && yarn run publish-gh-pages"`
+`cmd /C "set CURRENT_BRANCH=master && set USE_SSH=true && yarn deploy"`
 
 Linux users can publish using the following command
 
-`CURRENT_BRANCH=master USE_SSH=true yarn run publish-gh-pages`
+`CURRENT_BRANCH=master USE_SSH=true yarn deploy`
 
 The latest version of the website should be published within around a minute to the live website.
 
