@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Guzzle',
   tagline: 'Guzzle Documentation',
-  url: 'https://ja-guzzle.github.io',
+  url: 'https://guzzle.justanalytics.com',
   baseUrl: "/docs/",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
