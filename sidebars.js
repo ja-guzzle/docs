@@ -23,8 +23,8 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Tutorial',
-      items: ['Tutorial/Overview','Tutorial/ingest_local_file_to_mysql']
+      label: 'Tutorials',
+      items: ['Tutorials/overview','Tutorials/ingest_local_file_to_mysql']
     },
     {
       type: 'category',
@@ -130,7 +130,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Resources',
-      items: ['Resources/Overview','Resources/resource'],
+      items: ['Resources/overview','Resources/resource'],
     },
     'changelog'
   ]
