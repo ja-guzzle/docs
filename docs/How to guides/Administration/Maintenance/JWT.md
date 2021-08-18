@@ -1,15 +1,19 @@
-For authentication purposes guzzle uses json web token signature encryption. Guzzle will generate a encrypted token on User login. Generated tokens have 864000000 seconds default expiration time limit but, Users can  set expiration time for Json web tokens. For update expiration time you can follow below steps
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. So, for authentication purposes **Guzzle** uses json web token signature encryption.
+
+Guzzle will generate a encrypted token on User login. Generated tokens have 864000000 seconds default expiration time limit but, Users can  set expiration time for Json web tokens. For update expiration time you can follow below steps :
 
 1 : Goto Admin from top navigation bar
 
 2 : Goto Maintenance and click on JWT
 
-3 : Update Expiration time in seconds
+3 : Enter following configuration details : 
 
 |Properties|Default Value|Description|
 |--- |--- |--- |
-|Passphrase for encrypting JWT, GIT and SSO access token||Guzzle will generate json web token(Secret Key) to authenticate user|
-|Expiration time||Guzzle generated JWT is valid through given Expiration Time|
+|Passphrase for encrypting JWT, GIT and SSO access token<br/>User can choose Manual or Azure Key vault|&lt; encrypted token in password form &gt;|Guzzle will generate json web token(Secret Key) to authenticate user|
+|Expiration time|864000000|Guzzle generated JWT is valid through given Expiration Time|
+|Key Vault Name (If Key Vault is choosen)||Name of Key vault where secret is stored.|
+|Secret Name (If Key Vault is choosen)||Name of secret where token is stored.|
 
 4 : Click on the Update
 
