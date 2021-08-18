@@ -24,7 +24,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Tutorial',
-      items: []
+      items: ['Tutorial/Overview','Tutorial/ingest_local_file_to_mysql']
     },
     {
       type: 'category',
@@ -130,7 +130,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Resources',
-      items: ['Resources/resource'],
+      items: ['Resources/Overview','Resources/resource'],
     },
     'changelog'
   ]

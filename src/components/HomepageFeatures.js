@@ -15,7 +15,7 @@ const GetStartList = [
   },
   {
     title: 'Gettting Started Tutorial',
-    goto: "/Docs/introduction/what%20is%20guzzle",
+    goto: "/docs/tutorial/Overview",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
