@@ -28,5 +28,5 @@ steps:
       GH_NAME: "hars2110"
       GH_EMAIL: "harshil.shah@valensdatalabs.com"
       GH_TOKEN: "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"
-      GH_TERMINAL_PROMPT: 0
+      GH_PASSWORD: "h7778801883"
     displayName: 'yarn install and build'
