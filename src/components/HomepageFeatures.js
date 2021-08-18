@@ -15,7 +15,7 @@ const GetStartList = [
   },
   {
     title: 'Gettting Started Tutorial',
-    goto: "/docs/tutorial/Overview",
+    goto: "/docs/Tutorials/overview",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
