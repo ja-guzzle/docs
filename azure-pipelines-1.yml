@@ -1,0 +1,31 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - checkout: self
+    persistCredentials: true
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      git config --global user.name "hars2110"
+      git config --global user.email "harshil.shah@valensdatalabs.com"
+      git checkout -b main
+      echo "machine github.com login hars2110 password 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" > ~/.netrc
+      yarn && GIT_USER="${GH_NAME}" yarn deploy
+    env:
+      GH_NAME: hars2110
+      GH_EMAIL: harshil.shah@valensdatalabs.com
+      GH_TOKEN: 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
+    displayName: 'yarn install and build'
