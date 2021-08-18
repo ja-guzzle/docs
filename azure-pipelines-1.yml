@@ -21,12 +21,12 @@ steps:
   - script: |
       git config --global user.name "hars2110"
       git config --global user.email "harshil.shah@valensdatalabs.com"
-      git checkout -b main
+      git checkout -b master
       echo "machine github.com login hars2110 password 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" > ~/.netrc
       yarn && GIT_USER="hars2110" yarn deploy
     env:
       GH_NAME: "hars2110"
       GH_EMAIL: "harshil.shah@valensdatalabs.com"
       GH_TOKEN: "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"
-      GH_TERMINAL_PROMPT: 1
+      GH_TERMINAL_PROMPT: 0
     displayName: 'yarn install and build'
