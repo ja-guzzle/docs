@@ -8,6 +8,8 @@ For authentication purposes guzzle uses json web token signature encryption. Guz
 
 |Properties|Default Value|Description|
 |--- |--- |--- |
+|Passphrase for encrypting JWT, GIT and SSO access token||Guzzle will generate json web token(Secret Key) to authenticate user|
+|Expiration time||Guzzle generated JWT is valid through given Expiration Time|
 
 4 : Click on the Update
 
