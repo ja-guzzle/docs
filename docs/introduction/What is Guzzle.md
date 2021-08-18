@@ -53,11 +53,11 @@ Collectively all the above buildings blocks are referred to as **Configs**. Also
 
 1. A analytics engineer logs in to Guzzle UI and defines the datastores, activities and compute 
 
-2. Optionally they can define pipelines or batches to orchestrate multiple activities.
+2. Additional to this, they can define pipelines or batches to orchestrate multiple activities.
 
 3. Finally they will run this activities interactively from UI, schedule it using Guzzle schedule feature or invoke it from external scheduler using Guzzle REST API
 
-4. He can monitor the job runs from Guzzle Monitor UI
+4. User can monitor the job runs from Guzzle Monitor UI or via Guzzle REST API
 
 ## Architecture Overview of Guzzle
 
