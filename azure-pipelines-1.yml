@@ -21,5 +21,5 @@ steps:
     git config user.email "harshil.shah@valensdatalabs.com" 
     git config user.name "hars2110"
     npm install
-    npm run deploy -- -r https://$(github_pat)@github.com/yourrepo.git
+    npm run deploy https://$(github_pat)@github.com/ja-guzzle/docs.git
   displayName: 'npm install and build'
