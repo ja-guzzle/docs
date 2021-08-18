@@ -17,7 +17,7 @@
 
 5. Save the Datastore config. Optionally you can Test the connection. 
 
-![image alt text](/img/docs/how-to-guides/datastores/databricks_file_system_1.gif)
+![image alt text](/img/docs/how-to-guides/datastores/DBFS_1.jpg)
 
 ## Known Limitation
 

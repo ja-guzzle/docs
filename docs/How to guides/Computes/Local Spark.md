@@ -22,4 +22,8 @@ Guzzle provides below parameter and configs for local spark
 |Jars|Put the jar path with comma seperated|None|No|
 |Additional arguments|Specify the spark arguments <br /> Ex: --conf spark.development=true|None|No|
 
+** Interface for Local Spark Compute **
+
+![image alt text](/img/docs/how-to-guides/compute/local_spark_1.jpg)
+
 

@@ -25,3 +25,5 @@ Guzzle only supports ADF as an External job.
 
 5. Save the Datastore config. Optionally you can also Test the connection. 
 
+![image alt text](/img/docs/how-to-guides/datastores/ADF_1.jpg)
+

@@ -23,4 +23,6 @@ Guzzle provides below parameter and configs for Yarn
 |Jars|Put the jar path with comma seperated|None|No|
 |Additional arguments|Specify the Yarn arguments <br />Ex: --conf spark.development=true|None|No|
 
+** Interface for Yarn Compute **
 
+![image alt text](/img/docs/how-to-guides/compute/yarn_1.jpg)

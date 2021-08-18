@@ -22,7 +22,7 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 |Password|Password of SQL server|yes|
 
 
-![image alt text](/img/docs/how-to-guides/datastores/azure_sql_1.gif)
+![image alt text](/img/docs/how-to-guides/datastores/azureSQL_1.jpg)
 
 ## Known Limitation
 

@@ -29,7 +29,7 @@ This datastore is use for both source and target tabs.
 
 
 
-![image alt text](/img/docs/how-to-guides/datastores/amazon_s3_1.gif)
+![image alt text](/img/docs/how-to-guides/datastores/amazons3_1.jpg)
 
 ## Known Limitation
 
