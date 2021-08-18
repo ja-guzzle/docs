@@ -29,5 +29,5 @@ stages:
               SourcePath: '$(Build.ArtifactStagingDirectory)'
               Destination: 'AzureBlob'
               storage: 'guzzledocs'
-              ContainerName: 'docs'
+              ContainerName: '$web'
               azureSubscription: "guzzlehosting"
