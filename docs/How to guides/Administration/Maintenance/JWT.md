@@ -6,7 +6,7 @@ For authentication purposes guzzle uses json web token signature encryption. Guz
 
 3 : Update Expiration time in seconds
 
-4 : Click on the Update
+<!-- 4 : Click on the Update -->
 
 Interface of JWT page is 
 
