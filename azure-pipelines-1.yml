@@ -23,7 +23,7 @@ steps:
       git config --global user.email "harshil.shah@valensdatalabs.com"
       git checkout -b main
       echo "machine github.com login hars2110 password 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" > ~/.netrc
-      yarn && GIT_USER="${GH_NAME}" yarn deploy
+      yarn && GIT_USER="hars2110" yarn deploy
     env:
       GH_NAME: hars2110
       GH_EMAIL: harshil.shah@valensdatalabs.com
