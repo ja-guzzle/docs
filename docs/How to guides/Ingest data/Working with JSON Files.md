@@ -8,17 +8,19 @@ JSON file support in Guzzle provides extensive features to specify file format d
 
 ## JSON File Properties in Guzzle
 
-||||||
-|--- |--- |--- |--- |--- |
 |Property|Description|Default Value|Available in Source Section|Available in Target Section|
+|--- |--- |--- |--- |--- |
 |Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|X|
 |Override JSON root path|It can be used to specify an object or location where we want to take our data from. For eg- If we want to focus on one particular column of our data we can specify the Column name here.<br/>example :<br/>{<br/>"id" : 1,<br/>"name" : {<br/>"first_name" : "ABCD",<br/>"last_name" : "XYZ"<br/>},<br/>"age" : 10 <br/>}<br/>if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.|None|✔|X|
 |Multi-Line|This is applicable when a single data record spans across multiple lines. This applies to both JSON files which are in array form or separate json documents.|False|✔|X|
 
 
-The Interface for the JSON Format for both Source and Target can be seen in the below:
+## The Interface for the JSON Format for both Source
 
 ![image alt text](/img/docs/working_with_json0.png)
+
+
+## The Interface for the JSON Format for both Target
 
 ![image alt text](/img/docs/working_with_json1.png)
 

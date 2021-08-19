@@ -19,7 +19,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Introduction',
-      items: ['introduction/What is Guzzle', 'introduction/Deploying Guzzle on Microsoft Azure']
+      items: ['introduction/overview', 'introduction/Deploying Guzzle on Microsoft Azure']
     },
     {
       type: 'category',
@@ -77,7 +77,7 @@ module.exports = {
       },
       {
         'Governance': [
-          'How to guides/Governance/Consraint Checks',
+          'How to guides/Governance/Constraint Checks',
           'How to guides/Governance/Housekeeping Hive and Delta tables',
           'How to guides/Governance/Reconcilation of data accross two tables'
         ]

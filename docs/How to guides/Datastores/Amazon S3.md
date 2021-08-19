@@ -1,4 +1,4 @@
-[Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is an object storage service that offers industry-leading scalability, data availability, security, and performance. Guzzle 
+[Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3/) is an object storage service that offers industry-leading scalability, data availability, security, and performance. Guzzle provide this feature for reading and writing data from and to AWS.
 
 We can use this datastore for reading data from amazon (aws) and do validation and transformations on that data and write that data on csv, json, xml, excel, etc files.
 

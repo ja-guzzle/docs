@@ -17,6 +17,6 @@ Guzzle will generate a encrypted token on User login. Generated tokens have 8640
 
 4 : Click on the Update
 
-Interface of JWT page is 
+## Interface of JWT page is 
 
 ![image alt text](/img/docs/how-to-guides/administrator/maintenance/jwt_1.jpg)

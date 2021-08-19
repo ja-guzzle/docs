@@ -14,7 +14,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 5. Enter the connection details properties as described below:
 
-## **If Standard is chosen : **
+## If Standard is chosen : 
 |Property|Description|Required|
 |--- |--- |--- |
 |Vendor|Users have to choose sql server from given options like SQL server, MySQL, Oracle, PostgreSQL.|Yes|
@@ -32,7 +32,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 ![image alt text](/img/docs/how-to-guides/datastores/jdbc_1.gif)
 
-## **If Custom is chosen :** 
+## If Custom is chosen :
 
 |Property|Description|Required|
 |--- |--- |--- |

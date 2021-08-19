@@ -24,5 +24,7 @@ The Interface for the Big Data Formats can be seen in the figure below:
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/bigdatafileformat.png)
 
+:::info 
 As this files has binary type data we can see data in table form by clicking on "Sample Data" which is present on right side on the corner of UI.
+:::
 

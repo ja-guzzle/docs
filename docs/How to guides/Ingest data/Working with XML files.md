@@ -11,7 +11,7 @@ XML file support in Guzzle provides extensive features to specify file format de
 |XML Root Tag|The Root tag of your xml files to treat as a root.<br/>It encloses all the other elements and is therefore the sole parent element to all the other elements.For example, in the XML  &lt;books&gt; &lt;books&gt; &lt;books&gt; ...&lt;/books&gt;, the appropriate value would be books.|Rows|✔|✔|
 
 
-The Interface for XML in Guzzle can be seen below:
+## The Interface for XML in Guzzle is :
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/xml.png)
 

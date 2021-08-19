@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+id: overview
+title: What is Guzzle
 ---
 Guzzle enables analytics engineers to build data pipelines consisting of extraction, transformation, loading, validation and reconciliation for their data warehouses and data lakes by specifying a set of simple configurations. As a Guzzle user, you remain focused on specifying high level configurations settings and business logic for data pipelines, and let Guzzle handle the low level implementation details for you.
 

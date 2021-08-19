@@ -20,7 +20,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'introduction/What is Guzzle',
+          docId: 'introduction/overview',
           position: 'left',
           label: 'Docs'
         },

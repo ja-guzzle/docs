@@ -1,4 +1,4 @@
-Guzzle will Perform **Data Quality (DQ)** validation on specific columns and tables, Logging of records and statistics failing the constraint checks and The validation rules applicable for structured data and can currently be specified as SQL.
+Guzzle will Perform **Data Quality (DQ)** validation on specific columns and tables, Logging of records and statistics failing the constraint checks and the validation rules applicable for structured data and can currently be specified as SQL.
 
 Guzzle Support below datastores for Constraint Checks.
 

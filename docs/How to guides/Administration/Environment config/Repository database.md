@@ -1,6 +1,6 @@
-Updating Guzzle Repository Database
+## Updating Guzzle Repository Database
 
-user has to define there databse configs to store guzzle related repository data. once initialiazed the repository database guzzle will create database table in the given config database.
+User has to define there databse configs to store guzzle related repository data. once initialiazed the repository database guzzle will create database table in the given config database.
 
 One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 

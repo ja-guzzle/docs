@@ -13,7 +13,7 @@ This article outlines how to work with Excel (.xls or .xlsx)  for source and tar
 |Path|This is used to specify the File Path where we would like to store our Data.|None|X|✔|
 
 
-The Interface for the Excel File Format can be seen in the figure below.
+## The Interface for the Excel File Format is :
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/excel1.png)
 
