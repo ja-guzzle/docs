@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: 'How-tos',
-    goto: "/Docs/How%20to%20guides/Administration/Environment%20config/Repository%20database",
+    goto: "/Docs/how_to_guides/administration/environment_config/repository_database",
     description: (
       <>
         Some of the very first questions a new user has are covered in this introduction.
