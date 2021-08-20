@@ -21,7 +21,7 @@ Once shared storage is enabled, you will not be able to disable it any more
 
 ## Steps to Enable Shared Storage 
 
-1. Go to the Admin menu from the top navigation bar.
+1. Go to the Manage menu from the top navigation bar.
 
 2. Navigate to Environment-> Shared Storage and click on "Enable" 
 
@@ -44,15 +44,17 @@ Guzzle will validate the shared storage configuration ensuring the storage accou
 
 ## Steps to edit the Shared Storage configuration
 
-Guzzle allows you to update Shared storage configuration when there is a change in the access keys, or if a storage account, container or directory.
+Guzzle allows you to update Shared storage configuration to update any change in the access keys.
 
 :::note 
-When there is change in storage account, container or folder name, Guzzle will copy the configs, logs and Guzzle binaries  from the existing storage account /container container / folder to the new one. This process can take many minutes depending on the size of log files and config directories. 
+1. At this point Guzzle does not allow changing  account, container or directory. 
+2. If there  is need to change  storage account, container or folder name, you will need to copy the configs, logs and Guzzle binaries from the existing storage account /container container / folder to the new one. Post this update the configs in /guzzle/api/guzzle-api.yml
+3. When setting up Shared storage or updating, do ensure that there are no ongoing jobs
 :::
 
 Below are the steps to edit the existing Shared Storage configuration: 
 
-1. Go to the Admin menu from the top navigation bar.
+1. Go to the Manage menu from the top navigation bar.
 
 2. Navigate to Environment-> Shared Storage 
 
