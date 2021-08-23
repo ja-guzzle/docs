@@ -4,13 +4,13 @@ title: Repository Database
 ---
 ## Updating Guzzle Repository Database
 
-User has to define there databse configs to store guzzle related repository data. once initialiazed the repository database guzzle will create database table in the given config database.
+User has to define there database configs to store guzzle related repository data. Once initialized the repository database guzzle will create database table in the given config database.
 
-One of the important components of a Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
+One of the important components of Guzzle instance is the repository database. Guzzle repository contains two types of table as described below: 
 
-1. Audit Metadata: This table comprosises of Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load and `batch` audit tables. Full list of Audit metadata tables can be found here. 
+1. Audit Metadata: This table compromises of Run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load and `batch` audit tables. Full list of Audit metadata tables can be found here. 
 
-2. App Metadata: Metadata tables that are used by  Guzzle App.  This are tables storing user authentication and authorization information, personalizatoin settings and other metadata required by Guzzle app
+2. App Metadata: Metadata tables that are used by Guzzle App.  These are tables storing user authentication and authorization information, personalization settings and other metadata required by Guzzle app
 
 The marketplace deployment of Guzzle comes bundled with a local MySQL database which is meant for trial and development purposes. When using Azure Databricks compute for running activities, it is mandatory to configure an external database to host Guzzle repository. The supported databases are: 
 
@@ -30,7 +30,7 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 
 ## Steps to Update Repository database
 
-1. Go to the Admin menu from the top navigation bar.
+1. Go to the **Manage** menu from the top navigation bar.
 
 2. Navigate to Environment-> Repository Database. Select **Credentials** tab
 
@@ -49,42 +49,42 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 
 4. Click on **Validate** to validate the connection details of the repository database. Its strongly recommended to validate the connection details before updating it, as incorrect repository database details may impact your Guzzle instance to work properly
 
-5. Once succesfully validated, you click on **Update** to update the repository database details. Guzzle initializes  above database with required tables for Guzzle app if these are not present
+5. Once successfully validated, you click on **Update** to update the repository database details. Guzzle initializes  above database with required tables for Guzzle app if these are not present
 
 ## Steps to Initialize Guzzle Repository database
 
 
-As mentioned above, Guzzle repository contains two types of tables. Of this **Guzzle App Metadata** tables are automatically created when Guzzle app is brought up. However **Audit Metadata** has to be explicitly intialized in reposiotry database when using new database. This section describes intializing the **Audit Metadata** tables.
+As mentioned above, Guzzle repository contains two types of tables. Of this **Guzzle App Metadata** tables are automatically created when Guzzle app is brought up. However, **Audit Metadata** has to be explicitly initialized in repository database when using new database. This section describes initializing the **Audit Metadata** tables.
 
-**Audit Metadata** tables contains additional columns which are referred as context columns or context parametres. This context columns are included in all the Guzzle audit tables. Also this context columns will show as additional parameter when running jobs namely: `activity`, `pipeline` or a `batch`. This can be optionally included when running the batches for better tracking of the audit information for the job runs.
+**Audit Metadata** tables contains additional columns which are referred as context columns or context parameters. This context columns are included in all Guzzle audit tables. Also, this context columns will show as additional parameter when running jobs namely: `activity`, `pipeline` or a `batch`. This can be optionally included when running the batches for better tracking of the audit information for the job runs.
  
 ![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png)
 
-**At a minimum, one context columns needs to be defined**. By default Guzzle instance comes with one context column named  **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also captures the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
+**At a minimum, one context columns needs to be defined**. By default, Guzzle instance comes with one context column named **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
 
-More details of Guzzle Batches can be found [here](http://xxx).  Additoinally a Guzzle `batch` is composed of stages. The master list of stages that are avaliable for defining `batch` can be customized for each your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
+More details of Guzzle Batches can be found [here](http://xxx).  Additionally, the Guzzle `batch` is composed of stages. The master list of stages that are available for defining `batch` can be customized for your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
  
 - SRI : Represent source image layer
 - FND : Foundation layer tables or data
 - UCL : Use-case data layer
-- OUT : This are outputfiles
+- OUT : These are output files
 
-Above stages represents a typical stages through which data from particular source system flows through. However you can amend this list and add additional stages. A batch can be compose of one or more stages from this list.
+Above stages represents a typical stage through which data from particular source system flows through. However you can amend this list and add additional stages. A batch can be composed of one or more stages from this list.
 
  ## Steps to Update Repository database
 Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be vanished and create new one.
 
-1. Go to the Admin menu from the top navigation bar.
-2. Navigate to Environment-> Repository Database. Select **Initialize Database** tab
+1. Go to the **Manage** menu from the top navigation bar.
+2. Navigate to Environment → Repository Database. Select **Initialize Database** tab
 3. Update the Context Columns and Stages as per your requirement
-4. The UI shall show either "Intialize" button if repo data does no thave any **Audit Metadata** tables. However if there are existing **Audit Metadata** tables, the UI shall show "Reintialize".  It is **must** to Reintialize the **Audit Metadata** tables if there are amendmnets done to Context coulmns or Stages. 
+4. The UI shall show either "Initialize" button if repo data does not have any **Audit Metadata** tables. However, if there are existing **Audit Metadata** tables, the UI shall show "Reinitialize".  It **must** to Reinitialize the **Audit Metadata** tables if there are amendments done to Context columns or Stages. 
  
 :::note
-Do take note On **Reintialize** of **Audit Metadata**  will drop and re-crate these tables. Any existing audit information shall get deleted in this database. Its recommended not to take neccessary backup before doing the "Reintialize"
+Do take note On **Reinitialize** of **Audit Metadata** will drop and re-crate these tables. Any existing audit information shall get deleted in this database. Its recommended not to take necessary backup before doing the "Reinitialize".
  
-Also its mandatory to have minimum one Context Columns and one Stage defined
+Also, it's mandatory to have minimum one Context Columns and one Stage defined
  
-When doing "Reintialize", do ensure ther are running jobs and batches.
+When doing "Reinitialize", do ensure there are running jobs and batches.
 On Initialize guzzle will create a database table related to guzzle jobs if the database is already initialized then guzzle will show an option as reinitialize to reinitialize the database.
 
 :::
