@@ -8,8 +8,7 @@ const GetStartList = [
     goto: "/Docs/introduction/overview",
     description: (
       <>
-        Some of the very first questions a new user has are covered in this introduction.
-        Some of the very first questions a new user has are covered in this introduction.
+        Some of the very first questions you may have on Guzzle are covered in this introduction. 
       </>
     ),
   },
@@ -18,18 +17,16 @@ const GetStartList = [
     goto: "/docs/Tutorials/overview",
     description: (
       <>
-        Some of the very first questions a new user has are covered in this introduction.
-        Some of the very first questions a new user has are covered in this introduction.
+        The tuorials are designed to provide end to end steps of designing and running a data pipeline.
       </>
     ),
   },
   {
-    title: 'Guzzle docs',
-    goto: "/Docs/introduction/overview",
+    title: 'How-tos',
+    goto: "/Docs/how_to_guides/ingest_data/working_with_delimited_files",
     description: (
       <>
-        Some of the very first questions a new user has are covered in this introduction.
-        Some of the very first questions a new user has are covered in this introduction.
+        The detail How To Guides provides deep dive on individual features and configurations
       </>
     ),
   },
@@ -90,15 +87,6 @@ export default function HomepageFeatures() {
           {GetStartList.map((props, index) => 
             <InfoCard key={index} {...props}/>
           )}
-        </div>
-        <div style={{marginTop: "5%"}}>
-          <h1><b>Build your projects</b></h1>
-          <p>If you peeked Guzzle, remember these resources! They’ll help you level up quickly. </p>
-          <div className={`row`}>
-            {projects.map((props, index) => 
-              <InfoCard key={index} {...props}/>
-            )}
-          </div>
         </div>
       </div>
     </section>
