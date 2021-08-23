@@ -1,6 +1,6 @@
 ## Ingest Data from Local file system to MySQL Database
 
-This tutorial will be covering an end to end use-case of loading data from a local file system to a table in MySQL.  It will be using Guzzle’s ingestion activity which allows to move data from any source dataset to a target dataset applying various validations, transformations and rejections.
+This tutorial will be covering an end to end use-case of loading data from a local file system to a table in MySQL.  It will be using Guzzle’s ingestion activity which allows moving data from any source dataset to a target dataset applying various validations, transformations and rejections.
 
 In this tutorial we cover
 
@@ -13,10 +13,10 @@ Applying a Failure Threshold to the Loaded Data to check the consistency and via
 
 Pre-Requisites
 
-Guzzle instnace setup using Azure Marketplace VM
+Guzzle instance setup using Azure Marketplace VM
 Ensure that the file is saved in an available Source Location. This is essential as the Data will be ingested from this Local File System.
 Ensure that the Target Location is available in order to prevent any errors after the Data has been Transformed and Validated.
-Guzzle should be configured to support Azure Databricks and MYSQL. This is essential as we will be using a MYSQL Database in this tutorial. It will also help in exploiting all of Guzzle’s Features.
+Guzzle should be configured to support Azure Databricks and MySQL. This is essential as we will be using a MYSQL Database in this tutorial. It will also help in exploiting all of Guzzle’s Features.
 
 Load Dataset from Local File to the Guzzle Platform through its Source Section
 Load Dataset from Local File to the Guzzle Platform through its Source Section
@@ -31,17 +31,17 @@ Guzzle also provides a feature to Sample your Data. This option can be seen in t
 
           
 
-As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
+As mention above we have chosen the Delimited Format with the CSV file pattern. The option to Sample Data can also be seen in the Top Right Corner.
 
 Perform Validations and Transformations on the Dataset to check the accuracy of Data 
 
 The next step would be to perform Validations and Transformations on the Data . This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Integration a much quicker process as it Automates the Validation Process.
 
 Enter the Name of the Column you would like to perform the Validation or Transformation on.
-For Transformations you can enter the Transformation you would like to perform on the chosen Column. For Example- If the distance is in miles you can convert it to kilometers by entering distance*1.6 in the Transformation Section.
+For Transformations, you can enter the Transformation you would like to perform on the chosen Column. For Example- If the distance is in miles you can convert it to kilometers by entering distance*1.6 in the Transformation Section.
 You may also choose to Validate the Data Type of the Column. In the Data Type Section choose the Data Type you would like to Validate the Column with.  Also tick the Validate Data Type box located next to it.
 You may also Validate the Column to be either Unique or Nullable. Just tick the respective boxes.
-In the SQL Validation you may enter a condition in order to Partition the Columns depending on whether or not they satisfy the given condition. You can run your validations by clicking the tick at the top of your interface.
+In the SQL Validation you may enter a condition in order to Partition the Columns depending on whether they satisfy the given condition. You can run your validations by clicking the tick at the top of your interface.
 
 
 

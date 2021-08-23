@@ -7,7 +7,7 @@ This article provides information about External support in Guzzle and what are 
 
 Guzzle supports External Framework and tools. 
 
-Guzzle External supports below datastores
+Guzzle External supports below Datastore
 
 1. Databricks
 
@@ -19,11 +19,11 @@ Guzzle provider below functionality and parameters for External
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
-|Datastore|You can choose any of the available datastore from drop-down (as appropriate). If the connection is not available in drop-down then you can create new data store|None|Yes|
+|Datastore|You can choose any of the available Datastore from drop-down (as appropriate). If the connection is not available in drop-down then you can create new data store|None|Yes|
 |Script (Only Applicable for JDBC)|Used to specify script to run as external|None|Yes|
 |Run Name|Used to specify external Run name to identify|None|No|
 |Timeout Seconds|Specify When guzzle tries to connect external tools and how long stick this.|None|No|
-|Task|Used to specify external tool type guzzle supports 1.) Notebook, 2.) Spark Jar, 3.) PySpark|None|No|
+|Task|Used to specify external tool type guzzle supports 1) Notebook, 2) Spark Jar, 3) PySpark|None|No|
 |Notebook Path (only applicable if Task is Notebook)|Used to specify the Databricks Notebook full path|None|Yes|
 |Main Class (only applicable if Task is Spark Jar)|Used to specify the main class name of the spark jar file.|None|Yes|
 |Script Path (Only applicable if Task is PySpark)|Used to specify the script path of an external file.|None|Yes|
@@ -38,7 +38,7 @@ Guzzle User can add a new library by click on click to add library, Guzzle suppo
 
 1. DBFS
 
-2. PyPI
+2. PyPi
 
 3. Maven
 
@@ -50,11 +50,11 @@ Guzzle used to know dependency between lineages so while the user ran the job un
 
 Users can specify source and target dependency by clicking on dependency tab.
 
-Users has to specify 
+User has to specify 
 
-Endpoints : Select dependent endpoint from dropdowns
+Endpoints : Select dependent endpoint from dropdowns.
 
-Property : it is auto populated based on selected endpoints
+Property : it is autopopulated based on selected endpoints.
 
 Value : Specify dependent value it may be table, files ...
 

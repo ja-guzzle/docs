@@ -11,29 +11,29 @@ Guzzle supports GIT integration to enable code versioning which eventually also 
 
 Guzzle provides two git provider supports
 
-1. Github
+1. GitHub
 
 2. Azure DevOps Git
 
 :::note 
-1. Once GIT integration is enabled, user will not be able to update make any config change in github
+1. Once GIT integration is enabled, user will not be able to update make any config change in GitHub
 
 2. As a best practice the collaboration branch should have branch policy setup to prevent direct commit
 :::
 
-## Configured Github Repo
+## Configured GitHub Repo
 
-Github is a development platform that allows you to host and review code, manage projects and build software alongside millions of other developers from open source to business.
+GitHub is a development platform that allows you to host and review code, manage projects and build software alongside millions of other developers from open source to business.
 
 You can now integrate Guzzle with Github. The Guzzle Git integration with Github allows you to collaborate with other developers, do version control, versioning of your Guzzle configs (activities, pipelines, datastores, batches).
 
-Guzzle Git integration with Github allows you to use either public or private repositories belonging to individuals or organizations. Using an OAuth application to login to your Github account. Guzzle automatically pulls the repositories in your Github account that you can select. You can then choose the branch that developers in your team can use to do collaboration.
+Guzzle Git integration with Github allows you to use either public or private repositories belonging to individuals or organizations. Using an OAuth application to login to your GitHub account. Guzzle automatically pulls the repositories in your GitHub account that you can select. You can then choose the branch that developers in your team can use to do collaboration.
 
 Integrating a git repository for your Guzzle installation will entail following:
 
-Step 1 : Registering OAuth application in Github
+Step 1 : Registering OAuth application in GitHub
 
-1. For every Guzzle instance (or Guzzle installation) you will be required to register OAuth application in Github ![image alt text](/img/docs/how-to-guides/author/gitintegrations0.png)
+1. For every Guzzle instance (or Guzzle installation) you will be required to register OAuth application in GitHub ![image alt text](/img/docs/how-to-guides/author/gitintegrations0.png)
 
 2. Enter all the required details namely:
 
@@ -45,17 +45,17 @@ Step 1 : Registering OAuth application in Github
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations1.png)
 
-3. Once Application is registered, Github shall provide you the details of Client ID and Client Secret ![image alt text](/img/docs/how-to-guides/author/gitintegrations2.png)
+3. Once Application is registered, GitHub shall provide you the details of Client ID and Client Secret ![image alt text](/img/docs/how-to-guides/author/gitintegrations2.png)
 
 Step 2: Creating the repository
 
-1. You can create a repository in Github or use an existing repository.
+1. You can create a repository in GitHub or use an existing repository.
 
 2. The repository can be created under individual's account or organization
 
 3. Guzzle supports both private and public repositories
 
-4. To create a repository, login to Github account, go to Repositories and click New. Ensure the repository is initialized. ![image alt text](/img/docs/how-to-guides/author/gitintegrations3.png)
+4. To create a repository, login to GitHub account, go to Repositories and click New. Ensure the repository is initialized. ![image alt text](/img/docs/how-to-guides/author/gitintegrations3.png)
 
 5. Also ensure that user account that shall be used to integrate git with Guzzle should have "Name" defined in public profile: ![image alt text](/img/docs/how-to-guides/author/gitintegrations4.png) 
 
@@ -63,7 +63,7 @@ Step 2: Creating the repository
 This repository can be either in the same user or organization as the OAuth Application or not. Both OAuth and repository are independent component of the setup
 :::
 
-Step 3 : Integrating Github with Guzzle Git Integration
+Step 3 : Integrating GitHub with Guzzle Git Integration
 
 1. Login to Guzzle
 
@@ -71,13 +71,13 @@ Step 3 : Integrating Github with Guzzle Git Integration
 
 3. Click on Default Mode 
 
-4. Choose the provider as Github from dropdown
+4. Choose the provider as GitHub from dropdown
 
 5. Enter the Client Id and Client Secret And Click on Enable
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations5.png)
 
-6. This will redirect you to login to Github and authorize the OAuth application: guzzle-dev to be able to access the public and private repositories in your account (personal repository) or those owned by your organization. Permit this access ![image alt text](/img/docs/how-to-guides/author/gitintegrations6.png)
+6. This will redirect you to login to GitHub and authorize the OAuth application: guzzle-dev to be able to access the public and private repositories in your account (personal repository) or those owned by your organization. Permit this access ![image alt text](/img/docs/how-to-guides/author/gitintegrations6.png)
 
 7. After OAuth flow (authorization), you will be directed to Guzzle. Enter the repository owner (this could be an individual's account or organization) and tab-out. This will pull a list of repositories that are accessible under that owner.
 
@@ -91,7 +91,7 @@ Step 3 : Integrating Github with Guzzle Git Integration
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations9.png)
 
-10. Also Guzzle will commit all the existing configs into the github repository and you should see the following folders showing up in the repo. Do take note that Guzzle will only clone the files in $GUZZLE_HOME/conf/default configs (which does not include spark, physical end point and schedules)
+10. Also Guzzle will commit all the existing configs into the GitHub repository and you should see the following folders showing up in the repo. Do take note that Guzzle will only clone the files in $GUZZLE_HOME/conf/default configs (which does not include spark, physical end point and schedules)
 
 ## Configured git for Azure DevOps Git
 
@@ -164,7 +164,7 @@ Users can manually pull branches by clicking Pull Branch in the Top Nav Git drop
 
 ### Create Pull Request
 
-Users can manually create pull Requests by clicking Create pull request in the Top Nav Git dropdown. This will show appropriate merge request UI of github or azure devops
+Users can manually create pull Requests by clicking Create pull request in the Top Nav Git dropdown. This will show appropriate merge request UI of GitHub or azure devops
 
 ![image alt text](/img/docs/how-to-guides/author/gitintegrations14.png)
 
