@@ -10,7 +10,7 @@ Rest Api is service call where user can access via URI and can gather data from 
 2. This datastore is available while reading data not for writing data.
 :::
 
-# Steps to create Datastore  for Rest
+# Steps to create Datastore for Rest
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/server_file_system_0.png)) from the **Datastores **section in Left Navigation and select **Rest **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
@@ -22,8 +22,8 @@ Rest Api is service call where user can access via URI and can gather data from 
 
 |Property|Description|Required|
 |--- |--- |--- |
-|HTTP URL|Specify the Http URL where your data lies|Yes|
+|HTTP URL|Specify the HTTP URL where your data lies|Yes|
 
-## Interface for Rest api page
+## Interface for Rest API page
 
 ![image alt text](/img/docs/how-to-guides/datastores/rest_1.png)

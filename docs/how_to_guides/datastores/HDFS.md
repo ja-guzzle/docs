@@ -7,7 +7,7 @@ Hadoop Distributed File System (HDFS) is a distributed file system that provides
 
 :::note
 1. Supported only with Local Spark and Yarn
-2. Ensure hadoop core site file are setup correctly on the yarn or local spark cluster
+2. Ensure Hadoop core site file are set up correctly on the yarn or local spark cluster
 :::
 
 ## Steps to create Datastore  for HDFS

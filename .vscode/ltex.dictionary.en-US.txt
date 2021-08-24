@@ -4,3 +4,14 @@ Whitespaces
 Azure%Single%Sign%On
 DBFS
 CRAN
+YML
+conf
+ADLS
+metastore
+datastore
+Datastores
+datastores
+HDFS
+dataframe
+KeyVault
+keyvault

@@ -7,7 +7,7 @@ Using Watermark for Databases
 
 A watermark represents tracking the last loaded value for one or more columns for a given source table or source SQL to enable loading data incrementally. Using watermark columns is one of the mechanisms used for changed data capture (CDC). 
 
-Ingestion activity in Guzzle provides an automated mechanism to track last loaded maximum value for the specified columns which are stored in the **watermark **table in Guzzle repository. Ingestion activity will include additional predicate on the source table or query to to capture the values 
+Ingestion activity in Guzzle provides an automated mechanism to track last loaded maximum value for the specified columns which are stored in the **watermark **table in Guzzle repository. Ingestion activity will include additional predicate on the source table or query to capture the values 
 
 Guzzle supports Watermark for all the 5 types of Database Connectors namely: 
 
@@ -23,24 +23,24 @@ Guzzle supports Watermark for all the 5 types of Database Connectors namely:
 
 ## How Does a Watermark Work in Guzzle
 
-"Configure Watermark" section in Source Tab contains following properties for configuring  incremental loading for a source table: 
+"Configure Watermark" section in Source Tab contains following properties for configuring incremental loading for a source table: 
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
-|Watermark Columns|Specify one or more columns that shall be used for watermark tracking Once specified, it will track the maximum value of each of this columns based on incoming source data|None|Yes|
-|Watermark filter|To specify custom watermark filter using the watermark columns When left blank Ingestion activity generates automatic filter which  is series of AND condition with column value > watermark value<br/><br/>Example: last_modified_dt > '2021-06-17 04:01:46' AND id > '4'|None|No|
+|Watermark Columns|Specify one or more columns that shall be used for watermark tracking Once specified, it will track the maximum value of each of these columns based on incoming source data|None|Yes|
+|Watermark filter|To specify custom watermark filter using the watermark columns When left blank Ingestion activity generates automatic filter which is series of AND condition with column value > watermark value.<br/><br/> Example: last_modified_dt > '2021-06-17 04:01:46' AND id > '4'|None|No|
 |Additional identifier for tracking watermark|If watermark|None|No|
 
 
 Guzzle first retrieves the old watermark value and compares it with the current watermark value. After that, it copies only the changes from the source database, based on a comparison between the two watermark values. Finally, it stores the new high-watermark value to the target table for Data loading next time.
 
-1. In the Configure Watermark Section specify the Column Name you would like to apply the Watermark to. The allowed values are Timestamps, Dates and Integers.
+1. In Configure Watermark Section specify the Column Name you would like to apply the Watermark to. The allowed values are Timestamps, Dates and Integers.
 
 2. In the first job cycle Guzzle will load all the Data from the Source table into the Target table and record the maximum value of the specified column.
 
 3. Now when the next job cycle is run and Guzzle tries to read the Source Table, it will only load the Source Data which is greater than the recorded value in the previous step. **(Note: Only when Load type is Incremental which is our Default choice)**.
 
-4. The new highest value in the Second Job Cycle will be recorded and thus the Watermark value will be updated accordingly.
+4. The new highest value in the Second Job Cycle will be recorded, and thus the Watermark value will be updated accordingly.
 
 5. If the user wants to completely refresh the Data the Load Type can be changed to Full.
 
@@ -76,13 +76,12 @@ Depending on the typecast database Guzzle passes the values as string to the und
 
 An example of applying the Watermark technique in MySQL can also be seen in the example below:
 
-insert into customer1_src values (11,'abc','xyz','Male',40,'2021-06-17 03:52:25');  
+insert into customer1_src values (11,'ABC','XYZ','Male',40,'2021-06-17 03:52:25');  
 
-​
 
-create table customer1_tgt(id int, first_name varchar(100), last_name varchar(100), gender varchar(100), age int, last_modified_dt timestamp,refresh_ts timestamp);   
+create table customer1_tgt(id int, first_name varchar(100), last_name varchar(100), gender varchar(100), age int, last_modified_dt timestamp, refresh_ts timestamp);   
 
-Here the insert into statement is used to insert a new record into our table. 
+Here the insert into statement is used to insert a record into our table. 
 
 The second statement uses 2 watermark columns: last_modified_dt timestamp and refresh_ts timestamp.
 
@@ -92,5 +91,5 @@ In the above example we can apply the custom watermark to only the last_modified
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/watermark4.png)
 
-The cast function will convert our max value into a Date and we then subtract 7. Whatever is the max value it will fetch Data for the last 7 days.
+The cast function will convert our max value into a Date, and we then subtract 7. Whatever is the max value it will fetch Data for the last 7 days.
 

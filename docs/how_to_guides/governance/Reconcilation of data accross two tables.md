@@ -7,7 +7,7 @@ title: Reconcilation of data accross two tables
 
 Guzzle Support below datastores for reconciliations.
 
-1. Jdbc
+1. JDBC
 2. Hive
 3. Delta
 
@@ -16,7 +16,7 @@ Guzzle provides below functionality and parameters for reconciliation of data ac
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Datastore|You can choose any of the available datastore from drop-down (as appropriate). If the connection is not available in drop-down then you have to create new.|None|Yes|
-|Table + Filter|Specify the table from where to read data. The table can contain schema and also database name. We can specify the Schema Name along with the Table Name. If it is not specified it is taken from the Datastore.<br/><br/>Also when the Table option is selected, you can also specify the Filter. The filter can be used to select only a part of the table. We may basically enter a condition and only the part of the table that satisfies the condition will be seen in the Target Section.|None|Yes|
+|Table + Filter|Specify the table from where to read data. The table can contain schema and also database name. We can specify the Schema Name along with the Table Name. If it is not specified it is taken from the Datastore.<br/><br/> Also, when the Table option is selected, you can also specify the Filter. The filter can be used to select only a part of the table. We may basically enter a condition and only the part of the table that satisfies the condition will be seen in the Target Section.|None|Yes|
 |SQL|Alternatively Specify the SQL query which will be run as-is on the source|None|Yes|
 
 
@@ -49,13 +49,13 @@ Guzzle follow below Partial Match Conventions to show status of job
 
 ## Recon Metrics
 
-You can specify the source aggregation column and target aggregation column which will be compared and recon results will be stored in the Guzzle repository table recon_summary and recon_detail.
+You can specify the source aggregation column and target aggregation column which will be compared, and recon results will be stored in the Guzzle repository table recon_summary and recon_detail.
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Name|Specify the name of the recon metrics|None|Yes|
 |Source Aggregation|Specify source aggregation function|None|Yes|
 |Target Aggregation|Specify Target aggregation function|None|Yes|
-|Detail Check Enabled|Specify if you want to bring detailed information on reconciliation records, if it’s true then guzzle will calculate results for the mis-mathced records and store them in the guzzle repository table recon_detail.|False|No|
+|Detail Check Enabled|Specify if you want to bring detailed information on reconciliation records, if it’s true then guzzle will calculate results for the mismathced records and store them in the Guzzle repository table recon_detail.|False|No|
 
 

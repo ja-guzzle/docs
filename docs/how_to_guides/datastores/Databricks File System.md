@@ -3,7 +3,7 @@ id: databricks_file_system
 title: Databricks File System
 ---
 
-[Databricks File System (DBFS)](https://docs.microsoft.com/en-us/azure/databricks/data/databricks-file-system) is an abstraction provided by Azure Databricks to seamlessly access cloud object stores like Azure Blob, ADLS Gen2 and Amazon S3. With the ability to mount cloud file object stores as DBFS mounts on databricks workspace, one can access this object stores seamlessly from Guzzle jobs as well as from Databricks notebook and spark application deployed in this workspace without providing credentials or storage URLs
+[Databricks File System (DBFS)](https://docs.microsoft.com/en-us/azure/databricks/data/databricks-file-system) is an abstraction provided by Azure Databricks to seamlessly access cloud object stores like Azure Blob, ADLS Gen2 and Amazon S3. With the ability to mount cloud file object stores as DBFS mounts on Databricks workspace, one can access this object stores seamlessly from Guzzle jobs as well as from Databricks notebook and spark application deployed in this workspace without providing credentials or storage URLs
 
 :::note
 1. Only Ingestion activity supports File based connectors. 

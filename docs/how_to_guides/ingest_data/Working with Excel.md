@@ -11,10 +11,10 @@ This article outlines how to work with Excel (.xls or .xlsx)  for source and tar
 |--- |--- |--- |--- |--- |
 |Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|✔|
 |Sheet Name|The name of the Excel Worksheet from where we read our Data.|None|✔|✔|
-|Cell Address/Range|It is used to specify the Cell Range in the given worksheet to locate some selective data. If it is not specified Guzzle reads the whole worksheet.<br/>For Example: If range is B3, Guzzle will read the Data starting from the given cell.|A1|✔|✔|
+|Cell Address/Range|It is used to specify the Cell Range in the given worksheet to locate some selective data. If it is not specified Guzzle reads the whole worksheet.<br/> For Example: If range is B3, Guzzle will read the Data starting from the given cell.|A1|✔|✔|
 |Contains Headers|Specifies whether to treat the first row in the given worksheet/range as a header line with names of columns.|True|✔|✔|
 |Consider Empty as Null|It can be used to define whether to consider an Empty String as a Null Value.|True|✔|X|
-|Workbook Password|Here we can specify a password for our excel workbook. This is done to protect the structure of our worksheet which contains our data and prevents other users from modifying our data.|None|✔|X|
+|Workbook Password|Here we can specify a password for our Excel workbook. This is done to protect the structure of our worksheet which contains our data and prevents other users from modifying our data.|None|✔|X|
 |Path|This is used to specify the File Path where we would like to store our Data.|None|X|✔|
 
 

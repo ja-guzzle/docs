@@ -15,8 +15,8 @@ In the Datastore section we can choose to read full Data either as a Table name 
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
-|Table + Filter|Specify the table from where to read data.<br/>[database name].[schema name].[table name]<br/>Note: Depending on the database technology used: [database name] and [schema name] can be optionally specified along with the table name. <br/>Database name and jdbc url all this will be stored in datastore.<br/>In source or target section we have to select datastore name and give table name and give filter (if required). 
-Along with the Table option, you can also specify the Filter property - which is SQL filter condition in native SQL of the underlying JDBC technology to filter  subset of records from the table|None|Yes.|
+|Table + Filter|Specify the table from where to read data.<br/>[database name].[schema name].[table name]<br/>Note: Depending on the database technology used: [database name] and [schema name] can be optionally specified along with the table name. <br/>Database name and JDBC URL all this will be stored in datastore.<br/> In source or target section we have to select datastore name and give table name and give filter (if required). 
+Along with the Table option, you can also specify the Filter property — which is SQL filter condition in native SQL of the underlying JDBC technology to filter subset of records from the table|None|Yes.|
 |SQL|Specify the SQL query which will be run as-is on the source|None|Yes|
 
 

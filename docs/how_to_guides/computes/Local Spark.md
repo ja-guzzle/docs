@@ -5,7 +5,7 @@ title: Local Spark
 
 This article provides information about Local spark support in Guzzle.
 
-Local spark users will only use it for development, learning and light weight purposes.
+Local spark users will only use it for development, learning and lightweight purposes.
 
 Local spark does not support various features like : 
 
@@ -19,12 +19,12 @@ Guzzle provides below parameter and configs for local spark
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Number of executors|Specify the number of spark executor on you want to run job|2|No|
-|Driver memory|Specify the allocated driver memory for running jobs|512m|No|
-|Executor memory|Specify the allocated executor memory for running jobs|512m|No|
+|Driver memory|Specify the allocated driver memory for running jobs|512 m|No|
+|Executor memory|Specify the allocated executor memory for running jobs|512 m|No|
 |Driver classpath|Specify the driver classpath of jobs|None|No|
 |Executor classpath|Specify the executor classpath|None|No|
-|Jars|Put the jar path with comma seperated|None|No|
-|Additional arguments|Specify the spark arguments <br /> Ex: --conf spark.development=true|None|No|
+|Jars|Put the jar path with comma separated|None|No|
+|Additional arguments|Specify the spark arguments. <br/> Ex: --conf spark.development=true|None|No|
 
 ** Interface for Local Spark Compute **
 

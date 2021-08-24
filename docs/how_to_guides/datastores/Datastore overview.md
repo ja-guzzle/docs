@@ -3,13 +3,13 @@ id: datastore_overview
 title: Datastore Overview
 ---
 
-Datastore in Guzzle represents either on premise or cloud data service which can either act as source or sink (target) for Guzzle **activities**. A datastore can either be cloud files services like S3, Azure Blob, DBFS or databases like  Azure SQL, MySQL or apps which are accessible via Rest API.
+Datastore in Guzzle represents either on premise or cloud data service which can either act as source or sink (target) for Guzzle **activities**. A datastore can either be cloud files services like S3, Azure Blob, DBFS or databases like Azure SQL, MySQL or apps which are accessible via Rest API.
 
-Additionally Guzzle supports datastore to run external activities like procedure, Azure Data Facotry pipeline or notebook. 
+Additionally Guzzle supports datastore to run external activities like procedure, Azure Data Factory pipeline or notebook. 
 
 ## Supported Datastores 
 
-Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores - across different activity types and Computes
+Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores — across different activity types and Computes
 
 			
 
@@ -40,7 +40,7 @@ Guzzle supports running external procedures, scripts, notebook and pipelines on 
 
 |Connector|Remark|
 |--- |--- |
-|Databricks|To call Notebook, Databricks jar  or Python task|
+|Databricks|To call Notebook, Databricks jar or Python task|
 |Azure Data Factory (ADF)|To call ADF pipeline|
 |JDBC|To trigger stored procedure or run a JDBC datastore|
 

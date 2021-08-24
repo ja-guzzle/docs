@@ -19,7 +19,7 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 * Click on "Create" which will take you to Azure Portal, Create virtual machine blade
 
-* Enter a name for your Virtual machine and select your user name and password (do not use "guzzle" as user name)
+* Enter a name for your Virtual machine and select your username and password (do not use "guzzle" as username)
 
 * Enter a new Resource group name or use existing one
 
@@ -31,7 +31,7 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 * Wait a few minutes for the instance to start
 
-* Launch browser with the URL  https://INSTANCE_PUBLIC_ADDRESS OR DNS name where INSTANCE_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
+* Launch browser with the URL https://INSTANCE_PUBLIC_ADDRESS OR DNS name where INSTANCE_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
 
 **Note **that only Chrome browser is supported.
 
@@ -39,33 +39,33 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 ## How do I use Guzzle?
 
-Guzzle is available on HTTPS, on the port 443 on  the Azure VM instance. Guzzle is preloaded with a self-signed certificate, so you will get a security error. You can replace the VM to use a real certificate.
+Guzzle is available on HTTPS, on the port 443 on the Azure VM instance. Guzzle is preloaded with a self-signed certificate, so you will get a security error. You can replace the VM to use a real certificate.
 
 ## How do I log into the virtual machine instance?
 
-Administrative (command-line) access can be obtained by logging-in through SSH using the credentials specified when creating the virutal machine.
+Administrative (command-line) access can be obtained by logging-in through SSH using the credentials specified when creating the virtual machine.
 
-Note: Guzzle does not run under this VM adminstirator account, but under the guzzle account. The administrative account is sudoer, so from its shell, you can use `sudo su - guzzle` to get a shell as the guzzle user.
+Note: Guzzle does not run under this VM administrator account, but under Guzzle account. The administrative account is sudoer, so from its shell, you can use `sudo su — guzzle` to get a shell as Guzzle user.
 
-You cannot directly login as the `guzzle` user. Also 'guzzle' user is not sudoer.
+You cannot directly login as the `Guzzle` user. Also, 'guzzle' user is not sudoer.
 
-What are the Guzzle  directories?
+What are the Guzzle directories?
 
-The Guzzle has two key directories that gets deployed on the Azure VM instance. This are referred in Guzzle software using the environment variables. 
+The Guzzle has two key directories that gets deployed on the Azure VM instance. These are referred in Guzzle software using the environment variables. 
 
 * GUZZLE_PRODUCT_HOME : This is located the path **/guzzle **and contains binaries and static files of Guzzle app 
 
-* GUZZLE_HOME: This is located at path **/guzzle/guzzlehome **and contains all the Guzzle binaries and configuration files. 
+* GUZZLE_HOME: This is located at path **/guzzle/guzzlehome **and contains all Guzzle binaries and configuration files. 
 
-All operations on these directories (like installing JDBC drivers, …) must be performed as the guzzle user.
+All operations on these directories (like installing JDBC drivers, …) must be performed as Guzzle user.
 
 ## What is installed by default?
 
-The Guzzle image is based on Cent OS 8. It contains:
+Guzzle image is based on Cent OS 8. It contains:
 
 - A standard installation of Guzzle running under Linux user account "guzzle".
 
-- A local MySQL database, with a connection to it pre-configured in DSS. MySQL is only .
+- A local MySQL database, with a connection to it pre-configured in DSS. MySQL is only.
 
 - Blobfuse
 
@@ -77,5 +77,5 @@ The Guzzle image is based on Cent OS 8. It contains:
 
 JDBC and external libraries drivers must be installed by copying the relevant files in the "$GUZZLE_HOME/lib/ext" folder of the DSS data directory (See Installing database drivers).
 
-You can either download files from the instance or upload them using SSH. Copy into the "$GUZZLE_HOME/lib/ext" folder must be done as the guzzle user.
+You can either download files from the instance or upload them using SSH. Copy into the "$GUZZLE_HOME/lib/ext" folder must be done as Guzzle user.
 

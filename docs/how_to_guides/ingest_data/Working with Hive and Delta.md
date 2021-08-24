@@ -3,11 +3,11 @@ id: working_with_hive_and_delta
 title: Working with Hive and Delta
 ---
 
-Have separate article for hive an delta
+Have separate article for hive a delta
 
-1. In schema section we have Partitoin indicator. This indicator is used when guzzle auto creates table for Hive and Delta to decide the partition column
+1. In schema section we have Partition indicator. This indicator is used when guzzle auto creates table for Hive and Delta to decide the partition column
 
-    1. The order of parititon column will be as per how it appears in schema sectoin
+    1. The order of partition column will be as per how it appears in schema section.
 
 ![image alt text](/img/docs/how-to-guides/ingest_data/hive_delta.png)
 

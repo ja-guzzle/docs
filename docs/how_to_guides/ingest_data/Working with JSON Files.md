@@ -16,8 +16,8 @@ JSON file support in Guzzle provides extensive features to specify file format d
 |Property|Description|Default Value|Available in Source Section|Available in Target Section|
 |--- |--- |--- |--- |--- |
 |Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|X|
-|Override JSON root path|It can be used to specify an object or location where we want to take our data from. For eg- If we want to focus on one particular column of our data we can specify the Column name here.<br/>example :<br/>{<br/>"id" : 1,<br/>"name" : {<br/>"first_name" : "ABCD",<br/>"last_name" : "XYZ"<br/>},<br/>"age" : 10 <br/>}<br/>if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.|None|✔|X|
-|Multi-Line|This is applicable when a single data record spans across multiple lines. This applies to both JSON files which are in array form or separate json documents.|False|✔|X|
+|Override JSON root path|It can be used to specify an object or location where we want to take our data from. For e.g.- If we want to focus on one particular column of our data we can specify the Column name here.<br/> Example :<br/>{<br/>"id" : 1,<br/>"name" : {<br/>"first_name" : "ABCD",<br/>"last_name" : "XYZ"<br/>},<br/>"age" : 10 <br/>}<br/>if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.|None|✔|X|
+|Multi-Line|This is applicable when a single data record spans across multiple lines. This applies to both JSON files which are in array form or separate JSON documents.|False|✔|X|
 
 
 ## The Interface for the JSON Format for both Source
@@ -33,13 +33,13 @@ JSON file support in Guzzle provides extensive features to specify file format d
 
 Each line must contain a separate, self-contained valid JSON object. 
 
-example:
+Example:
 
-    {"id": 0001, "name": "john", "address": “broward county” }
+    {"id": 0001, "name": "John", "address": “Broward County” }
 
-    {"id": 0002, "name": "lynda", "address": “velcore line”}
+    {"id": 0002, "name": "Lynda", "address": “Velcore line”}
 
-    {"id": 0003, "name": "roan", "address": “tarell street”}
+    {"id": 0003, "name": "Roan", "address": “Tarell street”}
 
 When Multi-line is true Guzzle expects Data in the following way:
 
@@ -48,18 +48,18 @@ When Multi-line is true Guzzle expects Data in the following way:
 *  it should be one singular valid JSON object / array
 
 :::note
-every object in that array or object is separated by commas ( because that single JSON object/array should valid)
+every object in that array or object is separated by commas (because that single JSON object/array should valid)
 :::
 
  for example:
 
   [
 
-    {"id": 0001, "name": "john", "address": “broward county” }
+    {"id": 0001, "name": "Lynda", "address": “Broward County” }
 
-    {"id": 0002, "name": "lynda", "address": “velcore line”}
+    {"id": 0002, "name": "Lynda", "address": “Velcore line”}
 
-    {"id": 0003, "name": "roan", "address": “tarell street”}
+    {"id": 0003, "name": "Roan", "address": “Tarell street”}
 
   ]
 
@@ -73,9 +73,9 @@ every object in that array or object is separated by commas ( because that singl
 
 				[
 
-					{ "id": "1001", "street": "broward county" },
+					{ "id": "1001", "street": "Broward County" },
 
-					{ "id": "1002", "street": "valcore line" }
+					{ "id": "1002", "street": "Velcore line" }
 
 				]
 
@@ -87,9 +87,9 @@ every object in that array or object is separated by commas ( because that singl
 
 				[
 
-					{ "id": "1001", "street": "broward county" },
+					{ "id": "1001", "street": "Broward County" },
 
-					{ "id": "1002", "street": "valcore line" }
+					{ "id": "1002", "street": "Velcore line" }
 
 				]
 
@@ -101,9 +101,9 @@ every object in that array or object is separated by commas ( because that singl
 
 				[
 
-					{ "id": "1001", "street": "broward county" },
+					{ "id": "1001", "street": "Broward County" },
 
-					{ "id": "1002", "street": "valcore line" }
+					{ "id": "1002", "street": "Velcore line" }
 
 				]
 
@@ -115,30 +115,30 @@ every object in that array or object is separated by commas ( because that singl
 
 # Illustrations
 
-**Json file containing with single object separated **
+**JSON file containing with single object separated**
 
-  {"id": 0001, "name": "john", "address": “broward county” }
+  {"id": 0001, "name": "John", "address": “Broward County”}
 
-  {"id": 0002, "name": "lynda", "address": “velcore line”}
+  {"id": 0002, "name": "Lynda", "address": “Velcore line”}
 
-  {"id": 0003, "name": "roan", "address": “tarell street”}
+  {"id": 0003, "name": "Roan", "address": “Tarbell street”}
 
 Multiline : true
 
 Sample Output when multiline is **true** is shown below:
 
-|id|name|address|
+|ID|name|address|
 |--- |--- |--- |
-|001|john|Broward county|
+|001|John|Broward County|
 
 
 Sample Output when multiline is **false** is shown below:
 
-|id|name|address|
+|ID|name|address|
 |--- |--- |--- |
-|001|john|Broward county|
-|002|lynda|Velcro line|
-|003|roan|Tarell street|
+|001|John|Broward County|
+|002|Lynda|Velcore line|
+|003|Roan|Tarbell street|
 
 
 ## JSON file containing array with multi line
@@ -152,7 +152,7 @@ Sample source data (Customer.json) :
 
 		"id": "0001",
 
-		"name": "john",
+		"name": "John",
 
 		"addresses":
 
@@ -162,9 +162,9 @@ Sample source data (Customer.json) :
 
 				[
 
-					{ "id": "1001", "street": "broward county" },
+					{ "id": "1001", "street": "Broward County" },
 
-					{ "id": "1002", "street": "valcore line" }
+					{ "id": "1002", "street": "Velcore line" }
 
 				]
 
@@ -176,7 +176,7 @@ Sample source data (Customer.json) :
 
 		"id": "0002",
 
-		"name": "lynda",
+		"name": "Lynda",
 
 		"addresses":
 
@@ -186,9 +186,9 @@ Sample source data (Customer.json) :
 
 					[
 
-						{ "id": "1001", "street": "broward county" },
+						{ "id": "1001", "street": "Broward County" },
 
-						{ "id": "1002", "street": "valcore line" }
+						{ "id": "1002", "street": "Velcore line" }
 
 					]
 
@@ -200,7 +200,7 @@ Sample source data (Customer.json) :
 
 		"id": "0003",
 
-		"name": "roan",
+		"name": "Roan",
 
 		"addresses":
 
@@ -210,9 +210,9 @@ Sample source data (Customer.json) :
 
 					[
 
-						{ "id": "1001", "street": "broward county" },
+						{ "id": "1001", "street": "Broward County" },
 
-						{ "id": "1002", "street": "valcore line" }
+						{ "id": "1002", "street": "Velcore line" }
 
 					]
 
@@ -230,7 +230,7 @@ version: 1
 job:
   type: ingestion
 source:
-  endpoint: localfiles
+  endpoint: local files
   properties:
    source_file_pattern: json/customer1.json
    format: json
@@ -242,9 +242,9 @@ source:
 
 Sample Output when multiline is false is shown below:
 
-|id|name|addresses|
+|ID|name|addresses|
 |--- |--- |--- |
-|0001|john|[[1001, broward county],   [1002, valcore line]]|
+|0001|John|[[1001, Broward County],[1002, Velcore line]]|
 ||||
 
 
@@ -260,7 +260,7 @@ job:
 
 source:
 
-  endpoint: localfiles
+  endpoint: local files
 
   properties:
 
@@ -282,10 +282,10 @@ Sample Output when multiline is True is shown below:
 
 ||||
 |--- |--- |--- |
-|id|name|addresses|
-|0001|john|[[1001, broward county],   [1002, valcore line]]|
-|0002|lynda|[[1001, broward county],   [1002, valcore line]]|
-|0003|roan|[[1001, broward county],   [1002, valcore line]]|
+|ID|name|addresses|
+|0001|John|[[1001, Broward County],   [1002, Velcore line]]|
+|0002|Lynda|[[1001, Broward County],   [1002, Velcore line]]|
+|0003|Roan|[[1001, Broward County],   [1002, Velcore line]]|
 
 
 
@@ -303,11 +303,11 @@ We can also add Column Mapping to specify how to map columns in the source file.
 
 x
 
- {"id": 0001, "name": "john", "address": “broward county” }
+ {"id": 0001, "name": "John", "address": “Broward County”}
 
- {"id": 0002, "name": "lynda", "address": “velcore line”}
+ {"id": 0002, "name": "Lynda", "address": “Velcore line”}
 
- {"id": 0003, "name": "roan", "address": “tarell street”}
+ {"id": 0003, "name": "Roan", "address": “Tarell street”}
 
 Config: 
 
@@ -351,9 +351,9 @@ Sample output:
 
 |customer_id|first_name|address_line1|
 |--- |--- |--- |
-|0001|john|broward county|
-|0002|lynda|Valcore line|
-|0003|roan|Tarrel street|
+|0001|John|Broward County|
+|0002|Lynda|Velcore line|
+|0003|Roan|Tarrel street|
 
 
 ## If file has multiline (Customer.json)
@@ -364,8 +364,8 @@ Sample output:
 
 Sample Output
 
-|id|name|address_line1|addresses|
+|ID|name|address_line1|addresses|
 |--- |--- |--- |--- |
-|0001|john|broward county|[[1001, broward county],   [1002, valcore line]]|
-|0002|lynda|Valcore line|[[1001, broward county],   [1002, valcore line]]|
-|0003|roan|Tarrel street|[[1001, broward county],   [1002, valcore line]]|
+|0001|John|Broward County|[[1001, Broward County],   [1002, Velcore line]]|
+|0002|Lynda|Velcore line|[[1001, Broward County],   [1002, Velcore line]]|
+|0003|Roan|Tarrel street|[[1001, Broward County],   [1002, Velcore line]]|

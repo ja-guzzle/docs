@@ -22,13 +22,13 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 ## If Standard is chosen : 
 |Property|Description|Required|
 |--- |--- |--- |
-|Vendor|Users have to choose sql server from given options like SQL server, MySQL, Oracle, PostgreSQL.|Yes|
-|Driver Class|Selecting Vendor this property is automatically field by Guzzle|Yes|
-|Hostname|Hostname of selected server|Yes|
-|Port|On which port selected server is running|Yes|
-|Database|Name of Database|Yes|
-|Username|Username of server|Yes|
-|Password (If manual is selected)|Password of server|Yes|
+|Vendor|Users have to choose SQL server from given options like SQL server, MySQL, Oracle, PostgreSQL.|Yes|
+|Driver Class|Selecting Vendor this property is automatically fielded by Guzzle.|Yes|
+|Hostname|Hostname of selected server.|Yes|
+|Port|On which port selected server is running.|Yes|
+|Database|Name of Database.|Yes|
+|Username|Username of server.|Yes|
+|Password (If manual is selected)|Password of server.|Yes|
 |KeyVault name(if keyvault is chosen)|Name of keyvault where password is saved.|Yes|
 |Secret Name (If keyvault is chosen)|Secret name from keyvault where password is saved.|Yes|
 
@@ -41,9 +41,9 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 |Property|Description|Required|
 |--- |--- |--- |
-|Driver Class|Selecting Vendor this property is automatically field by Guzzle|Yes|
+|Driver Class|Selecting Vendor this property is automatically fielded by Guzzle|Yes|
 |Hostname|Hostname of selected server|Yes|
-|Jdbc URL|JDBC URL for connecting to SQL server<br /> Example: jdbc:mysql://&lt;hostname&gt;/ &lt;databaseName&gt;<br /> The URL can optionally contain database name, user name and other connection properties.|Yes|
+|Jdbc URL|JDBC URL for connecting to SQL server<br /> Example: jdbc:mysql://&lt;hostname&gt;/ &lt;databaseName&gt;<br /> The URL can optionally contain database name, username and other connection properties.|Yes|
 |Username|Username of server|Yes|
 |Password (If manual is selected)|Password of server|No|
 |KeyVault name(if keyvault is chosen)|Name of keyvault where password is saved.|No|
