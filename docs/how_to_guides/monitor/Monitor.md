@@ -3,16 +3,20 @@ id: monitor
 title: Monitor
 ---
 
-This Article provides information about Guzzle monitor tab and give information about how to filter job, view job logs, graphs and monitor status of job.
+This Article provides information about Guzzle monitor tab and gives information about how to filter job, view job logs, graphs and monitor status of job.
 
-In monitor Guzzle list all your job which you have run before or currently running, and you can filter jobs to search specific jobs through different cases. 
+In monitor Guzzle lists all your job which you have run before or currently running. You can filter jobs to search specific jobs through different. Broadly Guzzle provides viewing the jobs by four different views. You can see the batches, pipeline, activties and scehdules and drill-down the subsequent jobs within each of them:
+1. Batches
+2. Pipeline
+3. Activties
 
-Guzzle monitor have many filter options which you can use it to filter jobs by below filters :-
 
-1. Business Date 
-2. Batch        
-3. Pipeline         
-4. Activity        
+Guzzle monitor hsa following filter options which you can use  to filter jobs by below filters :-
+
+1. **Business Date** : This is to filter the jobs for particular business date
+2. **Batch**: This lets you specify the batch name under which te job were run. In **Pipeline** and **Activties** view, it will show only those jobs which ran under the  filterd batch
+3. **Pipeline**: This lets you specify the pipeline under which a given job were run. In **Activties** view, it will show only those jobs which ran under the  filterd batch. In **Batch** view it will only show batches which included the filtered pipeline as one of the job
+4. Activity: This lets you specify the activties In **Activties** view, it will show only those jobs which ran under the  filterd batch. In **Batch** view it will only show batches which included the filtered pipeline as one of the job        
 5. Schedule        
 6. Start Date       
 7. End Date         
