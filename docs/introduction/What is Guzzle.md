@@ -47,9 +47,9 @@ Guzzle is a data integration workbench that automates the movement and transform
 
 **Computes: **These are the Apache Spark environment that will run the **activities **and carry out actual data ingestion, processing, reconciliation and other tasks
 
-**Schedules : **A** **schedule enables you to run one or more activities, pipeline or batches either sequentially or concurrently at a specific interval
+**Schedules :** A schedule enables you to run one or more activities, pipeline or batches either sequentially or concurrently at a specific interval
 
-Collectively all the above buildings blocks are referred to as **Configs** wich gets stored as yml files. Also, activities, pipelines and batches are specifically referred to as **jobs **as they are executables and can be individually run.
+Collectively all the above buildings blocks are referred to as **Configs** which gets stored as YML files. Also, activities, pipelines and batches are specifically referred to as **jobs** as they are executables and can be individually run.
 
 ## What is the typical Workflow of using?
 
@@ -71,6 +71,6 @@ Guzzle architecture consist of following components:
 
 **Guzzle App: **This consist of Guzzle REST API and Web app which allows users to author Guzzle configs, Run and monitor jobs, and administer Guzzle environment configurations 
 
-**Repository database : **This stores run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values for  incremental data load and other metadata for Guzzle app
+**Repository database : **This stores run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values for incremental data load and other metadata for Guzzle app
 
 ![image alt text](/img/docs/introduction/introduction0.png)

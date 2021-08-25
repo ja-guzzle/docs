@@ -6,9 +6,9 @@ author_title: guzzle
 tags: [api, guzzle-docs]
 ---
 
-# Guzzle Service Rest Api
+# Guzzle Service Rest API
 
-welcome to the Guzzle Serices Rest Api Reference.
+Welcome to the Guzzle Services Rest API Reference.
 
 Representational State Transfer (REST) APIs are service endpoints that support sets of HTTP operations (methods), which provide create, retrieve, update, or delete access to the service's resources. This article walks you through:
 
@@ -34,7 +34,7 @@ export const Highlight = ({children, color}) => (
 
 ## Run Activity
 
-Run Activity job via Guzzle Service Rest Api. below Endpoints allows users to run activity with given parameter  
+Run Activity job via Guzzle Service Rest API,below Endpoints allows users to run activity with given parameter  
 ### <Highlight> PUT </Highlight> Run Activity
 
 ```
@@ -42,65 +42,40 @@ http://<GUZZLE_API_URL>/api/execute/job?mode=default
 ```
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
 
 ### Body Parameter
-<table>
-  <tr>
-    <td>name</td>
-    <td>String</td>
-    <td>activity name which you want to run</td>
-  </tr>
-  <tr>
-  <th>jobPatameters</th>
-  </tr>
-  <tr>
-    <td>system</td>
-    <td>String</td>
-    <td>Specify the system name</td>
-  </tr>
-  <tr>
-    <td>location</td>
-    <td>String</td>
-    <td>Specify the location column name</td>
-  </tr>
-  <tr>
-    <td>business_date</td>
-    <td>String</td>
-    <td>Specify the business_date for running activity job</td>
-  </tr>
-  <tr>
-    <td>environment</td>
-    <td>String</td>
-    <td>Specify the environment name on which you want to run this batch</td>
-  </tr>
-  <tr>
-    <td>guzzle.spark.name</td>
-    <td>String</td>
-    <td>Specify the spark name, guzzle will run batch on specified spark compute</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**name**|String|activity name which you want to run|
+|**Job Parameters**|||
+|**system**|String|Specify the system name|
+|**location**|String|Specify the location column name|
+|**business_date**|String|Specify the business_date for running activity job|
+|**environment**|String|Specify the environment name on which you want to run this batch|
+|**guzzle.spark.name**|String|Specify the spark name, guzzle will run batch on specified spark compute|
+
 
 ### Responses
-<table>
-  <tr>
-    <td>jobInstanceId</td>
-    <td>String</td>
-    <td>Unique ID of the running activity job</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**jobInstanceId**|String|Unique ID of the running activity job|
+
 
 ### Sample Request
 
 ```
 PUT https://guzzle315.southeastasia.cloudapp.azure.com/api/execute/job?mode=default
 
+```
+Request Body
+
+```json
 body: {
     "name":"csv_lfs_demo",
     "jobParameters": {
@@ -116,7 +91,7 @@ body: {
 
 ### Sample Response
 
-```
+```json
 {
   "jobInstanceId":"210727113805146347"
 }
@@ -130,7 +105,7 @@ body: {
 
 ## Run Pipeline
 
-Run pipeline job via Guzzle Service Rest Api. below Endpoints allows users to run activity with given parameter  
+Run pipeline job via Guzzle Service Rest API. below Endpoints allows users to run activity with given parameter  
 ### <Highlight> POST </Highlight> Run Pipeline
 
 ```
@@ -138,53 +113,37 @@ http://<GUZZLE_API_URL>/api/batches/run_job_group?mode=<mode>
 ```
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the Guzzle mode whether it is **git** or **default**|
+
 
 ### Body Parameter
-<table>
-  <th>Parameters</th>
-  <tr>
-    <td>job_group</td>
-    <td>String</td>
-    <td>Specify the job group (also known as pipeline) name</td>
-  </tr>
-  <tr>
-    <td>business_date</td>
-    <td>String</td>
-    <td>Specify the business_date for running pipeline job</td>
-  </tr>
-  <tr>
-    <td>environment</td>
-    <td>String</td>
-    <td>Specify the environment name on which you want to run this pipeline jobs</td>
-  </tr>
-  <tr>
-    <td>guzzle.spark.name</td>
-    <td>String</td>
-    <td>Specify the spark name, guzzle will run pipeline on specified spark compute</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**Parameters**|||
+|**job_group**|String|Specify the job group (also known as pipeline) name|
+|**business_date**|String|Specify the business_date for running pipeline job|
+|**environment**|String|Specify the environment name on which you want to run this pipeline jobs|
+|**guzzle.spark.name**|String|Specify the spark name, guzzle will run pipeline on specified spark compute|
 
 ### Responses
-<table>
-  <tr>
-    <td>jobInstanceId</td>
-    <td>String</td>
-    <td>Unique ID of the running pipeline</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**jobInstanceId**|String|Unique ID of the running pipeline|
+
 
 ### Sample Request
 
 ```
 PUT https://guzzle315.southeastasia.cloudapp.azure.com/api/batches/run_job_group?mode=default
+```
 
+Request Body
+
+```json
 body: {
   "parameters":{
     "business_date":"2021-07-29 12:54:59",
@@ -197,7 +156,7 @@ body: {
 
 ### Sample Response
 
-```
+```json
 {
   "jobInstanceId":"210729072509451509"
 }
@@ -210,7 +169,7 @@ body: {
 
 ## Init Batch
 
-To initialize the Batch via Guzzle Service Rest Api. below Endpoints allows users to initialize the Batch with given parameter  
+To initialize the Batch via Guzzle Service Rest API. below Endpoints allows users to initialize the Batch with given parameter  
 ### <Highlight> POST </Highlight> Init Batch
 
 ```
@@ -218,53 +177,36 @@ http://<GUZZLE_API_URL>/api/batches/initialize?mode=<mode>
 ```
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
+
 
 ### Body Parameter
-<table>
-  <th>contextParams</th>
-  <tr>
-    <td>system</td>
-    <td>String</td>
-    <td>Specify the system batch name</td>
-  </tr>
-  <tr>
-    <td>business_date</td>
-    <td>String</td>
-    <td>Specify the business_date for initiate batch job</td>
-  </tr>
-  <tr>
-    <td>environment</td>
-    <td>String</td>
-    <td>Specify the environment name on which you want to initiate the batch</td>
-  </tr>
-  <th>parameters</th>
-  <tr>
-    <td>guzzle.batch.catchup</td>
-    <td>String</td>
-    <td>Specify the batch catchup whether true or false, this is optional field</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**contextParams**|||
+|**system**|String|Specify the system batch name|
+|**business_date**|String|Specify the business_date for initiate batch job|
+|**environment**|String|Specify the environment name on which you want to initiate the batch|
+|**parameters**|||
+|**guzzle.batch.catchup**|String|Specify the batch catchup whether true or false, this is optional field|
+
 
 ### Responses
-<table>
-  <tr>
-    <td>jobInstanceId</td>
-    <td>String</td>
-    <td>Unique ID of the running stage</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**jobInstanceId**|String|Unique ID of the running stage|
+
 
 ### Sample Request
 
 ```
 PUT https://guzzle315.southeastasia.cloudapp.azure.com/api/batches/initialize?mode=default
+```
+Request Body
+
+```json
 
 body: {
   "contextParams":{
@@ -276,12 +218,11 @@ body: {
     "guzzle.batch.catchup":"true"
   },
 }
-
 ```    
 
 ### Sample Response
 
-```
+```json
 {
   "status":"SUCCESS",
   "batches":[
@@ -314,52 +255,36 @@ https://<GUZZLE_API_URL>/api/batches/run_stage?mode=<mode>
 ```
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
+
 
 ### Body Parameter
-<table>
-  <tr>
-    <td>environment</td>
-    <td>String</td>
-    <td>Specify the environment name on which you want to run this batch</td>
-  </tr>
-    <tr>
-    <td>guzzle.spark.name</td>
-    <td>String</td>
-    <td>Specify the spark name, guzzle will run batch on specified spark compute</td>
-  </tr>
-  <tr>
-    <td>stage</td>
-    <td>String</td>
-    <td>Specify the stages, for multiple stages are comma seperative ex: "STG,FND"</td>
-  </tr>
-  <tr>
-    <td>system</td>
-    <td>String</td>
-    <td>Specify the system name</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**environment**|String|Specify the environment name on which you want to run this batch|
+|**guzzle.spark.name**|String|Specify the spark name, guzzle will run batch on specified spark compute|
+|**stage**|String|Specify the stages, for multiple stages are comma separative ex: "STG,FND"|
+|**system**|String|Specify the system name|
+
 
 ### Responses
-<table>
-  <tr>
-    <td>jobInstanceId</td>
-    <td>String</td>
-    <td>Unique ID of the running stage</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**jobInstanceId**|String|Unique ID of the running stage|
+
 
 ### Sample Request
 
 ```
 POST https://guzzle315.southeastasia.cloudapp.azure.com/api/batches/run_stage?mode=default
+```
+Request Body
 
+```json
 body: {
   environment: "test"
   guzzle.spark.name: "azure-databricks"
@@ -371,7 +296,7 @@ body: {
 
 ### Sample Response
 
-```
+```json
 {
   "jobInstanceId":"210727113805146347"
 }
@@ -391,36 +316,24 @@ http://<GUZZLE_API_URL>/api/job/{jobInstanceId}/status?mode=<mode>
 ```
 
 ### Path Parameter
-<table>
-  <tr>
-    <td>job_instance_id</td>
-    <td>String</td>
-    <td>Specify the job instance id.</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**job_instance_id**|String|Specify the job instance id.|
+
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
 
 ### Responses
-<table>
-  <tr>
-    <td>status</td>
-    <td>String</td>
-    <td>Status of the running job</td>
-  </tr>
-  <tr>
-    <td>message</td>
-    <td>String</td>
-    <td>Job specific messages</td>
-  </tr>
-</table>
+|Name|Type|Description|
+|--- |--- |--- |
+|**status**|String|Status of the running job|
+|**message**|String|Job specific messages|
+
 
 ### Sample Request
 
@@ -430,7 +343,7 @@ GET https://guzzle315.southeastasia.cloudapp.azure.com/api/job/{jobInstanceId}/s
 
 ### Sample Response
 
-```
+```json
 {
   "status": "FAILED",
   "message": "null"
@@ -450,36 +363,25 @@ http://<GUZZLE_API_URL>/api/batches/run_stage_status/{job_instance_id}?mode=<mod
 ```
 
 ### Path Parameter
-<table>
-  <tr>
-    <td>job_instance_id</td>
-    <td>String</td>
-    <td>Specify the job instance id.</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**job_instance_id**|String|Specify the job instance id.|
+
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
+
 
 ### Responses
-<table>
-  <tr>
-    <td>status</td>
-    <td>String</td>
-    <td>Status of the running job</td>
-  </tr>
-  <tr>
-    <td>message</td>
-    <td>String</td>
-    <td>Job specific messages</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**status**|String|Status of the running job|
+|**message**|String|Job specific messages|
 
 ### Sample Request
 
@@ -489,7 +391,7 @@ GET https://guzzle315.southeastasia.cloudapp.azure.com/api/batches/run_stage_sta
 
 ### Sample Response
 
-```
+```json
 {
   "status": "FAILED",
   "message": "null"
@@ -508,61 +410,30 @@ http://<GUZZLE_API_URL>/api/job_audits/<job_instance_id>?mode=<mode>
 ```
 
 ### Path Parameter
-<table>
-  <tr>
-    <td>job_instance_id</td>
-    <td>String</td>
-    <td>Specify the job instance id.</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**job_instance_id**|String|Specify the job instance id.|
+
 
 ### Query Parameter
-<table>
-  <tr>
-    <td>mode</td>
-    <td>String</td>
-    <td>Specify the guzzle mode whether it is git or default</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**mode**|String|Specify the guzzle mode whether it is **git** or **default**|
 
 ### Responses
-<table>
-  <tr>
-    <td>batchId</td>
-    <td>String</td>
-    <td>Unique ID of the running batch</td>
-  </tr>
-  <tr>
-    <td>contextParams</td>
-    <td>Object</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>business_date</td>
-    <td>String</td>
-    <td>business_date of running job</td>
-  </tr>
-  <tr>
-    <td>jobInstanceId</td>
-    <td>String</td>
-    <td>Unique ID of the running stage</td>
-  </tr>
-  <tr>
-    <td>name</td>
-    <td>String</td>
-    <td>running job name</td>
-  </tr>
-  <tr>
-    <td>module</td>
-    <td>String</td>
-    <td>running job module</td>
-  </tr>
-  <tr>
-    <td>tag</td>
-    <td>String</td>
-    <td>give job tag</td>
-  </tr>
-</table>
+
+|Name|Type|Description|
+|--- |--- |--- |
+|**batchId**|String|Unique ID of the running batch|
+|**contextParams**|Object||
+|**business_date**|String|business_date of running job|
+|**jobInstanceId**|String|Unique ID of the running stage|
+|**name**|String|running job name|
+|**module**|String|running job module|
+|**tag**|String|give job tag|
+
 
 ### Sample Request
 
@@ -572,7 +443,7 @@ GET https://guzzle315.southeastasia.cloudapp.azure.com/api/job_audits/<job_insta
 
 ### Sample Response
 
-```
+```json
 {
   "job":{
     "jobId":{

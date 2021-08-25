@@ -17,25 +17,27 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 ![image alt text](/img/docs/introduction/introduction1.png)
 
-* Click on "Create" which will take you to Azure Portal, Create virtual machine blade
+* Click on "Create" which will take you to Azure Portal, Create virtual machine blade.
 
-* Enter a name for your Virtual machine and select your username and password or SSH key (do not use "guzzle" as username)
+* Enter a name for your Virtual machine and select your username and password or SSH key (do not use "guzzle" as username).
 
-* Enter a new Resource group name or use existing one
+* Enter a new Resource group name or use existing one.
 
-* You can retain default values for remaining VM Settings or override them suitably as per your requirement. Guzz
+* You can retain default values for remaining VM Settings or override them suitable as per your requirement.
 
-* You can deploy Guzzle VM on existing VNET or a new VNET, restrict network access of Guzzle VM to only allow required inbound and outboudn traffic and apply additional best practices to secure VM as per your organization policy
+* You can deploy Guzzle VM on existing VNET or a new VNET, restrict network access of Guzzle VM to only allow required inbound and outbound traffic and apply additional best practices securing VM as per your organization policy.
 
-* A D2 image (2 vCPUs, 7 GB RAM) should be enough for the initial deployment
+* A D2 image (2 vCPUs, 7 GB RAM) should be enough for the initial deployment.
 
 2. Connect to Guzzle
 
-* Wait a few minutes for the instance to start
+* Wait a few minutes for the instance to start.
 
 * Launch browser with the URL https://INSTANCE_PUBLIC_ADDRESS OR DNS name where INSTANCE_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
 
-**Note **that only Chrome browser is supported.
+:::note
+that only Chrome browser is supported.
+:::
 
 # How to
 
@@ -47,7 +49,7 @@ Guzzle is available on HTTPS, on the port 443 on the Azure VM instance. Guzzle i
 
 Administrative (command-line) access can be obtained by logging-in through SSH using the credentials specified when creating the virtual machine.
 
-Note: Guzzle does not run under this VM administrator account, but under `guzzle` user id. The administrative account is sudoer, so from its shell, you can use `sudo su — guzzle` to get a shell as `guzzle` user.
+**Note:** Guzzle does not run under this VM administrator account, but under `guzzle` user id. The administrative account is sudoer, so from its shell, you can use `sudo su — guzzle` to get a shell as `guzzle` user.
 
 You cannot directly login as the `guzzle` user. Also, 'guzzle' user is not sudoer.
 
