@@ -1,5 +1,5 @@
 ---
-id: example_ingest_data
+id: ingest_data_from_lfs_to_mysql
 title: Ingest Data from Local file System to MySQL Database
 ---
 

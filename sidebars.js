@@ -24,7 +24,11 @@ module.exports = {
     {
       type: 'category',
       label: 'Tutorials',
-      items: ['Tutorials/overview','Tutorials/ingest_local_file_to_mysql']
+      items: [
+        'Tutorials/overview',
+        'Tutorials/ingest_data_from_lfs_to_mysql',
+        'Tutorials/ingest_data_from_azure_blob_storage_to_delta_table'
+      ]
     },
     {
       type: 'category',
