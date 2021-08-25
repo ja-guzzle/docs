@@ -31,11 +31,11 @@ Guzzle is a data integration workbench that automates the movement and transform
 
 * ingest data 
 
-* process it (using SQL) 
+* process the data (processing logic defined as SQL) 
 
 * perform reconciliation of data between any two tables/SQL across same or different datastores
 
-* do constraint (data quality) checks in your data
+* do constraint (data quality) checks of your data in a standard way
 
 * house keep any historical data
 
@@ -49,7 +49,7 @@ Guzzle is a data integration workbench that automates the movement and transform
 
 **Schedules : **A** **schedule enables you to run one or more activities, pipeline or batches either sequentially or concurrently at a specific interval
 
-Collectively all the above buildings blocks are referred to as **Configs**. Also, activities, pipelines and batches are specifically referred to as **jobs **as they are executables and can be individually run.
+Collectively all the above buildings blocks are referred to as **Configs** wich gets stored as yml files. Also, activities, pipelines and batches are specifically referred to as **jobs **as they are executables and can be individually run.
 
 ## What is the typical Workflow of using?
 
@@ -69,8 +69,8 @@ Guzzle architecture consist of following components:
 
 **Guzzle binaries : **These are core binaries of Guzzle which perform specific task of ingesting data, processing, reconciliation, etc.
 
-**Guzzle App: **This consist of Guzzle REST API and Web app which allows users to author Guzzle configs, users to edit and tuor
+**Guzzle App: **This consist of Guzzle REST API and Web app which allows users to author Guzzle configs, Run and monitor jobs, and administer Guzzle environment configurations 
 
-**Repository database : **This stores run time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values of incremental data load and other metadata for Guzzle app
+**Repository database : **This stores run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values for  incremental data load and other metadata for Guzzle app
 
 ![image alt text](/img/docs/introduction/introduction0.png)
