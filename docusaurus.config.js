@@ -50,7 +50,7 @@ module.exports = {
     // },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Guzzle, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Just Analytics, Inc.`,
     }
   },
   presets: [
