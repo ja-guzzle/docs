@@ -3,7 +3,7 @@ id: azure_sql
 title: Azure SQL
 ---
 
-Azure SQL is a cloud native and fully managed database management system (DBMS) from Azure, running the latest stable version of SQL Server Database. Guzzle leverages [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15) which is a high performance connector to read and write from Azure SQL and SQL Server. 
+[Azure SQL](https://docs.microsoft.com/en-us/azure/azure-sql/) is a cloud native and fully managed database management system (DBMS) from Azure, running the latest stable version of SQL Server Database. Guzzle leverages [Apache Spark connector: SQL Server & Azure SQL](https://docs.microsoft.com/en-us/sql/connect/spark/connector?view=sql-server-ver15) which is a high performance connector to read and write from Azure SQL and SQL Server. 
 
 The connector can be used for SQL databases, on-premises or in the cloud (both Azure SQL and SQL Server Managed Instance), as an input data source or output data sink for Spark jobs.
 
@@ -14,7 +14,7 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
 
 4. Enter the connection details properties as described below:
 

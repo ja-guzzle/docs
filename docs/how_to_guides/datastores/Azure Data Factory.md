@@ -3,7 +3,7 @@ id: azure_data_factory
 title: Azure Data Factory
 ---
 
-Azure Data Factory is the platform that solves such data scenarios. It is the cloud-based ETL and data integration service that allows you to create data-driven workflows for orchestrating data movement and transforming data at scale.
+[Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/) is the platform that solves such data scenarios. It is the cloud-based ETL and data integration service that allows you to create data-driven workflows for orchestrating data movement and transforming data at scale.
 
 Guzzle only supports ADF as an External job. 
 
@@ -13,7 +13,7 @@ Guzzle only supports ADF as an External job.
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
 
 4. Enter the additional properties for the ADF as described below:
 

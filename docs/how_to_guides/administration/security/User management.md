@@ -57,5 +57,5 @@ It’s not possible to convert the native user to External (also referred as SSO
 3. Admin — Edit /create users ; edit job configs.
 
 
-Some features are not applicable anymore (atlas and file templates).
+Some features are not applicable any more (atlas and file templates).
 

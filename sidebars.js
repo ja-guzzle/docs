@@ -38,7 +38,12 @@ module.exports = {
       label: 'How to Guides',
       items: [ 
       {
-        'Administration': [
+        'Connection and Environment':[
+          'how_to_guides/connection_and_environment/connection_and_environment'
+        ]
+      },
+      {
+       'Administration': [
               'how_to_guides/administration/environment_config/repository_database',
               'how_to_guides/administration/environment_config/setup_shared_storage',
               'how_to_guides/administration/environment_config/timeout_and_sync',
@@ -113,7 +118,7 @@ module.exports = {
           'how_to_guides/ingest_data/working_with_fixed_length_files',
           'how_to_guides/ingest_data/working_with_big_data',
           'how_to_guides/ingest_data/working_with_multiple_files',
-          'how_to_guides/ingest_data/working_with_hive_and_delta',
+          'how_to_guides/ingest_data/working_with_delta_lake',
           'how_to_guides/ingest_data/working_with_jdbc',
           'how_to_guides/ingest_data/working_with_azureSQL',
           'how_to_guides/ingest_data/working_with_azure_synapse_analytics',

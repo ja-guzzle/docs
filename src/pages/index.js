@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Guzzle Docs`}
-      description="Data integration workbench based on Apache Spark">
+      description="Data Engineering Workbench based on Apache Spark">
       <main>
         <HomepageFeatures />
       </main>

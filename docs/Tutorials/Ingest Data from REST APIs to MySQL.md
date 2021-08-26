@@ -17,7 +17,7 @@ This tutorial will be covering an end to end use-case of loading data from a RES
 
 ## Pre-Requisites
 
-* Since we use Guzzle as our Data Integration Workbench for movement and transformation we must ensure it is set up and configured properly. Guzzle supports both on-premise and cloud deployment.
+* Since we use Guzzle as our Data Engineering Workbench for movement and transformation we must ensure it is set up and configured properly. Guzzle supports both on-premise and cloud deployment.
 
 * Ensure that the file is saved in an available Source Location. This is essential as the Data will be ingested from REST api’s.
 

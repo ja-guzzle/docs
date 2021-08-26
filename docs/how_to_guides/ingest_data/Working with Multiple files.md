@@ -28,12 +28,11 @@ For optimal performance and to utilize the service-side filter, it is recommende
 
 Ingestion activity provides following properties which determines how the files and folders are generated when using File datastore as target. 
 
-|Property|Description|Required|
-|--- |--- |--- |
-|Path|This is the directory in which the target files and folder shall be created. This path is relative to the root path that is specified when defining the File datastore|Yes|
-|Generate Single File|When set as true, this will generate a single file corresponding to each source file. Similarly, for when the source is a table it will generate one file for entire table for non-partitioned table or one data file per each partition in the respective partition folder
-If the settings is set to false, it will create a folder for each source file or source table and generate multiple part files as an output in these folders. For partitioned table it will contain generate multiple part files within the partition folder|No(default value: is false)|
-|Preserve Hierarchy|When set to true, it will mirror the folder structure as per source folder structure inside the target directory specified as per File Path. The entire folder structure of source as per "File Pattern" is mirrored.|No(default value: is false)|
+|Property|Description|Required|Default Value|
+|--- |--- |--- |--- |
+|Path|This is the directory in which the target files and folder shall be created. This path is relative to the root path that is specified when defining the File datastore|Yes|NULL|
+|Generate Single File|When set as true, this will generate a single file corresponding to each source file. Similarly, for when the source is a table it will generate one file for entire table for non-partitioned table or one data file per each partition in the respective partition folder. If the settings is set to false, it will create a folder for each source file or source table and generate multiple part files as an output in these folders. For partitioned table it will contain generate multiple part files within the partition folder|No|False|
+|Preserve Hierarchy|When set to true, it will mirror the folder structure as per source folder structure inside the target directory specified as per File Path. The entire folder structure of source as per "File Pattern" is mirrored.|No|False|
 
 
 Apart from the above properties, there are additional settings that are meant to specify File Format and its associated properties. This is covered in detail in section :

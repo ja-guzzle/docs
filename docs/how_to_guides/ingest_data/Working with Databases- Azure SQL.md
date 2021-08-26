@@ -12,6 +12,10 @@ Azure SQL is a family of managed, secure, and intelligent products that use the 
 |Table + Filter|Specify the table from where to read data. The table can contain schema or even database name. If you select Table as input, data flow fetches all the data from the table specified in the dataset.<br/> Example: <br/>customerdb.[dbo].[customer]<br/>[customer] (default schema name dbo will be assumed)<br/>[dbo].[customer] (database name shall be as per Datastore config)<br/><br/>Also when the Table option is selected, you can also specify the Filter which needs to be included when querying data from synapse. The filter can be used to select only a part of the table. We may basically enter a condition and only the part of the table that satisfies the condition will be seen in the Target Section.|None|Yes.|
 |SQL|Specify the SQL query which will be run as-is on the source.|||
 
+## Interface for Azure Source
+
+![image alt text](/img/docs/how-to-guides/ingest_data/azureSQL_1.jpg)
+
 
 
 ## Azure SQL as a Target or Reject
@@ -24,3 +28,7 @@ Azure SQL is a family of managed, secure, and intelligent products that use the 
 |Isolation Level|Specifies the transaction locking behavior for the SQL source. The allowed values are: Recommitted, ReadUncommitted, RepeatableRead and Serializable. If not specified, the database's default isolation level is used.<br/> Refer to this doc for more details.|READ_COMMITTED|Yes|
 |Batch Size|We can use this to specify how many rows are being written in each batch. Larger batch sizes may improve memory optimization.<br/> Allowed values are Integers.|2500|Yes|
 |Bulk Copy Timeout|This property specifies the wait time for the insert operation for each batch to complete before time runs out.|600|Yes|
+
+## Interface for Azure Target
+
+![image alt text](/img/docs/how-to-guides/ingest_data/azureSQL_2.jpg)

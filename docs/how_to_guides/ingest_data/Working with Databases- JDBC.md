@@ -37,8 +37,7 @@ In the animation below, we add a filter to the column ID that is ID>3. In the Sa
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
-|Table (In Target /Reject Section)|To specify the Target Table where the data from source is loaded
-The data is always appended to target table|None|Yes|
+|Table (In Target /Reject Section)|To specify the Target Table where the data from source is loaded.<br/> The data is always appended to target table|None|Yes|
 
 
  

@@ -3,7 +3,7 @@ id: jdbc
 title: JDBC
 ---
 
-The **Java Database Connectivity** (JDBC) API provides universal data access from the Java programming language. Using the JDBC API, you can access virtually any data source, from relational databases.
+The [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/tutorial/jdbc/basics/index.html) API provides universal data access from the Java programming language. Using the JDBC API, you can access virtually any data source, from relational databases.
 
 The connector can be used for SQL databases, on-premise (SQL Server Managed Instance), as an input data source or output data sink for Spark jobs.
 
@@ -13,7 +13,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
 
 4. Users have to choose from two options like Custom or Standard.
 

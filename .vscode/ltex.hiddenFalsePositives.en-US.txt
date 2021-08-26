@@ -1,0 +1,2 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QDelta Lake on Databricks allows you to configure Delta Lake\\E$"}
+{"rule":"A_INFINITIVE","sentence":"^\\QNone Yes\nOperation Provides two options that determines whether the content of source or reject data is expected to be -append: To append the existing data in the Hive Table.**overwrite:**This will do an overwrite of data for a subset of partitions that are present in the source.\\E$"}

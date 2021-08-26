@@ -3,7 +3,9 @@ id: working_with_hive
 title: Working with Hive Database
 ---
 
-**Only supported on Databricks compute**
+:::note
+Only supported on Databricks compute
+:::
 
 Apache Hive is a data warehouse software project built on top of Apache Hadoop for providing data query and analysis. Hive gives an SQL-like interface to query data stored in various databases and file systems that integrate with Hadoop.
 

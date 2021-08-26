@@ -62,7 +62,7 @@ As mentioned above, Guzzle repository contains two types of tables. Of this **Gu
 
 **At a minimum, one context columns needs to be defined**. By default, Guzzle instance comes with one context column named **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
 
-More details of Guzzle Batches can be found [here](http://xxx).  Additionally, the Guzzle `batch` is composed of stages. The master list of stages that are available for defining `batch` can be customized for your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
+More details of Guzzle Batches can be found [here](https://guzzle.justanalytics.com/docs/how_to_guides/batch/batch).  Additionally, the Guzzle `batch` is composed of stages. The master list of stages that are available for defining `batch` can be customized for your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
  
 - SRI : Represent source image layer
 - FND : Foundation layer tables or data

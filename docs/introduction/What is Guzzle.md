@@ -11,7 +11,7 @@ Guzzle is **only **available on [Azure Marketplace] and gets deployed as virtual
 
 ## What makes Guzzle powerful?
 
-Guzzle is a data integration workbench that automates the movement and transformation of data. It allows the creation, deployment, and monitoring of data pipelines which consist of ingestion, processing, reconciliation, data quality and house-keeping activities.
+Guzzle is a Data Engineering Workbench that automates the movement and transformation of data. It allows the creation, deployment, and monitoring of data pipelines which consist of ingestion, processing, reconciliation, data quality and house-keeping activities.
 
 1. Native to Apache Spark and big data
 

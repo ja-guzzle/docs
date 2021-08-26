@@ -12,7 +12,7 @@ Only supported on Databricks compute
 When we want to read big data such as blob files, log files, IoT data, click streams, large datasets from cloud or write data to cloud we can use this datastore.
 This contains folders, which in turn contains data stored as files.
 
-Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < target > and allows copy data to/from using storage access keys or service principal. 
+Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink(target) and allows copy data to/from using storage access keys or service principal. 
 
 ## Steps to create Datastore  for ADLS Gen2
 
@@ -20,7 +20,7 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink < targe
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](http://http) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
 
 4. Enter the additional properties for the storage account as described below:
 

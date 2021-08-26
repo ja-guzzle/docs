@@ -21,7 +21,7 @@ This tutorial will be covering an end to end use-case of loading data from a Azu
 
 # Pre-Requisites
 
-* Since we use Guzzle as our Data Integration Workbench for movement and transformation we must ensure it is set up and configured properly. Guzzle supports both on-premise and cloud deployment.
+* Since we use Guzzle as our Data Engineering Workbench for movement and transformation we must ensure it is set up and configured properly. Guzzle supports both on-premise and cloud deployment.
 
 * Ensure that the file is saved in an available Source Location. This is essential as the Data will be ingested from Azure Blob storage.
 
@@ -53,7 +53,7 @@ After previewing the data can be seen.
 
 # Perform Validations and Transformations on the Dataset to check the accuracy of Data 
 
-The next step would be to perform Validations and Transformations on the Data . This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Integration a much quicker process as it Automates the Validation Process.
+The next step would be to perform Validations and Transformations on the Data. This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Engineering a much quicker process as it Automates the Validation Process.
 
 1. Enter the Name of the Column you would like to perform the Validation or Transformation on.
 
