@@ -27,7 +27,10 @@ module.exports = {
       items: [
         'Tutorials/overview',
         'Tutorials/ingest_data_from_lfs_to_mysql',
-        'Tutorials/ingest_data_from_azure_blob_storage_to_delta_table'
+        'Tutorials/ingest_data_from_azure_blob_storage_to_delta_table',
+        'Tutorials/ingest_blob_to_azureSQL',
+        'Tutorials/ingest_data_from_rest_api_to_jdbc',
+        'Tutorials/ingest_data_from_delta_to_adls'
       ]
     },
     {
