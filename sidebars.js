@@ -95,20 +95,6 @@ module.exports = {
         ]
       },
       {
-        Pipelines: [
-          'how_to_guides/ingest_data/pipeline',
-        ]
-      },
-      {
-        Batches: ['how_to_guides/batch/batch']
-      },
-      {
-        Housekeeping: ['how_to_guides/ingest_data/housekeeping']
-      },
-      {
-        Parameter: ['how_to_guides/parameters/Parameters',]
-      },
-      {
         'Ingest Data': [
           'how_to_guides/ingest_data/working_with_delimited_files',
           'how_to_guides/ingest_data/working_with_json_files',
@@ -124,14 +110,29 @@ module.exports = {
           'how_to_guides/ingest_data/working_with_azure_synapse_analytics',
           'how_to_guides/ingest_data/working_with_hive',
           'how_to_guides/ingest_data/working_with_rest_api',
+          'how_to_guides/ingest_data/validation_and_transformation',
           'how_to_guides/ingest_data/column_restrictions',
           'how_to_guides/ingest_data/configure_control_file',
           'how_to_guides/ingest_data/moving_processed_files',
           'how_to_guides/ingest_data/processing',
           'how_to_guides/ingest_data/watermark',
-          'how_to_guides/ingest_data/pre-SQL_and post-SQL_in_ingestion',
+          'how_to_guides/ingest_data/pre-SQL_and_post-SQL_in_ingestion',
           'how_to_guides/ingest_data/example_ingest_data'
         ]
+      },
+      {
+        Pipelines: [
+          'how_to_guides/ingest_data/pipeline',
+        ]
+      },
+      {
+        Batches: ['how_to_guides/batch/batch']
+      },
+      {
+        Housekeeping: ['how_to_guides/ingest_data/housekeeping']
+      },
+      {
+        Parameter: ['how_to_guides/parameters/Parameters',]
       },
       {
         'Monitor': [

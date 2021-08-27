@@ -1,5 +1,5 @@
 ---
-id: pre-SQL_and post-SQL_in_ingestion
+id: pre-SQL_and_post-SQL_in_ingestion
 title: Pre-SQL and Post-SQL for Source and Target in Ingestion
 ---
 

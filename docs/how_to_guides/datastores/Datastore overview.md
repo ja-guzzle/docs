@@ -13,9 +13,9 @@ Guzzle broadly supports three types of datastores: File, Database and API. Below
 
 			
 
-|||Computes|||Activities|||||
+|||**Computes**|||**Activities**|||||
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|Category|Connector|Databricks|Apache Spark (on Yarn)|Apache Spark (on Local mode)|Ingestion(source/target)|Processing(source/target)|Reconciliation(source/target)|Constraint Checks|Housekeeping|
+|Category|Connector|**Azure Databricks**|**Apache Spark (on Yarn)**|**Apache Spark (on Local mode)**|**Ingestion(source/target)**|**Processing(source/target)**|**Reconciliation (source/target)**|**Constraint Checks**|**Housekeeping**|
 |File|DBFS|✓|||✓/✓|x|x|x|x|
 ||ADLS Gen2|✓|x|x|✓/✓|x|x|x|x|
 ||Server file system|✓|✓|✓|✓/✓|x|x|x|x|

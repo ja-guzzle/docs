@@ -18,6 +18,9 @@ JSON file support in Guzzle provides extensive features to specify file format d
 |Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|X|
 |Override JSON root path|It can be used to specify an object or location where we want to take our data from. For e.g.- If we want to focus on one particular column of our data we can specify the Column name here.<br/> Example :<br/>{<br/>"id" : 1,<br/>"name" : {<br/>"first_name" : "ABCD",<br/>"last_name" : "XYZ"<br/>},<br/>"age" : 10 <br/>}<br/>if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.|None|✔|X|
 |Multi-Line|This is applicable when a single data record spans across multiple lines. This applies to both JSON files which are in array form or separate JSON documents.|False|✔|X|
+|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/moving_processed_files).|NULL|✔|X|  
+|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/configure_control_file). |NULL|✔|✔|
+|Partial Load|Specify partial loading of files.|False|✔|X|
 
 
 ## The Interface for the JSON Format for both Source

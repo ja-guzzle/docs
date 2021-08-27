@@ -28,6 +28,7 @@ Below are the different properties to create API ingest activity :
 |Timeout|Timeout in second|300|No|
 |Retry Interval|Retry interval in seconds. Ex on HTTP response status code:500 do retry interval every given seconds.|5|No|
 |Config Response Storage|Users can select the response endpoint after expanding this property.|None|No|
+|Add Column Mapping|To override the column names for a file. This is applicable for cases when the file contains header but the header are not consistent with the target filed names or contain or file does not contain header at all. The column mapping also allows to filter only certain column which are relevant for ingesting into the target. Selecting this option will ignore the existing column names from header or default column header of col1, col2. For more information click [here.](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/working_with_delimited_files#column-mapping-in-delimited-files) |NULL|No|
 
 
 ## The interface for API format is shown in following gif :

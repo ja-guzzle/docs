@@ -18,6 +18,9 @@ Delimited file support in Guzzle provides extensive features to specify file for
 |Trim Whitespace|You may choose to Trim Whitespaces on any one end or both ends of the Characters. This will be applied to all the columns irrespective of their values or data type.<br/> It includes four options like<br/> 1. none -> no trimming whitespace.<br/>2. both -> remove whitespace on both side.<br/>3.leading -> remove whitespace on front of the data.<br/>4. trailing -> remove whitespace at the end of data.|None|
 |Contains Headers|Choose whether to include headings for columns.|Yes|
 |Infer Schema|Choose whether to apply a schema.|No|
+|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/moving_processed_files).|NULL|No|  
+|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/configure_control_file). |NULL|No|
+|Partial Load|Specify partial loading of files.|False|No|
 
 
 

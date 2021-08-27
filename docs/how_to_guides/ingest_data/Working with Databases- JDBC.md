@@ -18,6 +18,11 @@ In the Datastore section we can choose to read full Data either as a Table name 
 |Table + Filter|Specify the table from where to read data.<br/>[database name].[schema name].[table name]<br/>Note: Depending on the database technology used: [database name] and [schema name] can be optionally specified along with the table name. <br/>Database name and JDBC URL all this will be stored in datastore.<br/> In source or target section we have to select datastore name and give table name and give filter (if required). 
 Along with the Table option, you can also specify the Filter property — which is SQL filter condition in native SQL of the underlying JDBC technology to filter subset of records from the table|None|Yes.|
 |SQL|Specify the SQL query which will be run as-is on the source|None|Yes|
+|Clean Column Name|To specify whether to clean the column names of source data (both file headers and column names from table). All the characters other than alphanumeric will be converted to _.<br/>Ex. 'col.1' will become 'col_1', 'col@1' will become 'col_1'|False|No|
+|Configure Pre and Post SQL|Guzzle supports Pre-SQL and Post-SQL for source and target and their execution in ingestion. It is mainly used for pre and post formatting of data in database.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/pre-SQL_and%20post-SQL_in_ingestion). |NULL|No|
+|Configure watermark|A watermark represents tracking the last loaded value for one or more columns for a given source table or source SQL to enable loading data incrementally. Using watermark columns is one of the mechanisms used for changed data capture (CDC). <br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/watermark). |NULL|No|
+|Configure columns restriction|Mention column names and choose from the options to exclude and include columns. <br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/column_restrictions).|NULL|No|
+|Configure table dependency| |NULL|No|
 
 
 
