@@ -49,7 +49,7 @@ As seen above we have chosen the Delimited Format with the csv file pattern. The
 
 ## Perform Validations and Transformations on the Dataset to check the accuracy of Data 
 
-The next step would be to perform Validations and Transformations on the Data. This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Engineering a much quicker process as it Automates the Validation Process.
+The next step would be to perform Validations and Transformations on the Data. This is done to mitigate any project defects and will produce the best results possible. Guzzle helps in making Data Integration a much quicker process as it Automates the Validation Process.
 
 1. Enter the Name of the Column you would like to perform the Validation or Transformation on.
 

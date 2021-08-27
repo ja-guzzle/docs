@@ -44,20 +44,254 @@ Any existing file within the same folder and file name shall be overwritten
 
 Assuming that source file pattern results below files:
 
-customer/
-
-   customer1.csv
-
-   customer2.csv
+    source
+    |
+    ├── folder1
+    │   └── users1.csv
+    |
+    └── folder2
+        ├── users2.csv
+        |
+        └── folder2_a
+            └── users2_a.csv
 
 the folders and files that shall be generated in the target folder path (which is root path in Data store + File path specified in target section) shall be as per below: 
 
-|||Generate Single File||
-|--- |--- |--- |--- |
-|||true|false|
-|Preserve Hierarchy|true|customer/customer1.csv customer2.csv|customer/customer1.csv\part_001.csv part_002.csv customer2.csv\part_001.csv part_002.csv|
-||false|customer1.csv.12321312213213 customer2.csv.12321312213214|customer1.csv.12321312213213 part_001.csv part_002.csv customer2.csv.12321312213214 part_001.csv part_002.csv|
+<table>
+  <tr>
+    <td><b>Target Config </b></td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+  </tr>
+  <tr>
+    <td align="center"> <b>Properties</b> </td>
+    <td colspan="12" > <b>Values</b> </td>
+  </tr>
+  <tr>
+    <td><b>Preserve Hierarchy </b></td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+  </tr>
+  <tr>
+    <td> <b>Merge Part File/ Generate Single FIle </b></td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+  </tr>
+  <tr>
+    <td><b>Partition defined in tranform tab ? </b></td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+  </tr>
+  <tr>
+    <td><b>Target FileName</b> </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+  </tr>
 
+  <tr>
+    <td colspan="13"><b>Expected Output</b> </td>
+  </tr>
+  <tr>
+  <td></td>
+ <td>
+    <code>
+
+      target 
+      | 
+      └── data.json 
+	        ├── part-00000-xxxxxx.json 
+	        ├── part-00000-xxxxxx.json 
+          └── _SUCCESS
+
+  </code>
+  </td>
+
+  <td>
+
+      target 
+      | 
+      └── data.json 
+  </td>
+
+  <td>
+
+      target 
+      | 
+      ├── folder1 
+      │   └── users1.json 
+      |   	├── part-00000-xxxxxx.json 
+      │   	└── _SUCCESS 
+      | 
+      └── folder2 
+          ├── users2.json 
+          |   ├── part-00000-xxxxxx.json 
+          |   └── _SUCCESS 
+          | 
+          └── folder2_a 
+                  └── users2_a.json 
+                  ├── part-00000-xxxxxx.json 
+                  └── _SUCCESS
+  </td>
+
+  <td>
+
+    target 
+    | 
+    ├── folder1 
+    │   └── users1.json 
+    | 
+    └── folder2 
+      ├── users2.json 
+      | 
+      └── folder2_a 
+          └── users2_a.json 
+ 
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── data.json 
+      ├── part-00000-xxxxxx.json 
+      ├── part-00000-xxxxxx.json 
+      └── _SUCCESS 
+ 
+  </td>
+
+  <td>
+
+      target 
+      | 
+      └── data.json 
+  </td>
+
+  <td>
+
+      target
+      | 
+      └── data.json 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        └── city=c 
+            ├── part-00000-xxxxxx.json 
+            └── _SUCCESS
+  </td>
+
+  <td>
+
+      target
+      | 
+      └── data.json 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        └── city=c 
+            ├── part-00000-xxxxxx.json 
+            └── _SUCCESS
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── data.json 
+      ├── part-00000-xxxxxx.json 
+      ├── part-00000-xxxxxx.json 
+      └── _SUCCESS 
+ 
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── target_file.json   
+ 
+  </td>
+  
+
+  <td>
+
+    target 
+    | 
+    └── data.json 
+      ├── part-00000-xxxxxx.json 
+      ├── part-00000-xxxxxx.json 
+      └── _SUCCESS 
+ 
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── target_file.json   
+ 
+  </td>
+  </tr>
+</table>
 
 
 :::note
@@ -67,16 +301,117 @@ the folders and files that shall be generated in the target folder path (which i
 
 ## Illustration of how table based source are copied in target
 
-Assuming the source table **customer **is non partitioned, it shall generate the files as per below
+Assuming the source table is non partitioned, it shall generate the files as per below
 
-|||Generate Single File||
-|--- |--- |--- |--- |
-|||true|false|
-|Preserve Hierarchy|true or false|customer.csv|customer/ part_001.csv part_002.csv|
+<table>
+  
+  <tr>
+    <td><b>Target Config</b> </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+    <td>Target Path = "/target/" 
+Target File Name  = "target_file.json" </td>
+  </tr>
+  <tr>
+    <td> Properties </td>
+    <td colspan="5"> Values </td>
+  </tr>
+  <tr>
+    <td><b>Preserve Hierarchy </b></td>
+    <td>TRUE / FALSE </td>
+    <td>TRUE / FALSE </td>
+    <td>TRUE / FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+  </tr>
+  <tr>
+    <td> <b>Merge Part File/ Generate Single FIle </b></td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE / FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+  </tr>
+  <tr>
+    <td><b>Partition defined in tranform tab ? </b></td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE / FALSE </td>
+    <td>TRUE / FALSE </td>
+  </tr>
+  <tr>
+    <td><b>Target FileName </b></td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>FALSE </td>
+    <td>TRUE </td>
+    <td>TRUE </td>
+  </tr>
 
+  <tr>
+    <td><b>Source Files</b> </td>
+    <td colspan="5"><b>Expected Output </b></td>
+  </tr>
+  <tr>
+    <td>source_table/ SQL </td>
 
+  <td>
 
-Considering the source table, the customer** **is partitioned with two levels at **region **and **country **level with below as sample set of partitions:
+    target 
+    | 
+    └── data.json 
+      ├── part-00000-xxxxxx.json 
+      ├── part-00000-xxxxxx.json 
+      └── _SUCCESS 
+ 
+  </td>
+
+  <td>
+
+      target 
+      | 
+      └── data.json 
+  </td>
+
+  <td>
+
+      target
+      | 
+      └── data.json 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        ├── city=b
+            ├── part-00000-xxxxxx.json 
+            └── _SUCCESS 
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── data.json 
+      ├── part-00000-xxxxxx.json 
+      ├── part-00000-xxxxxx.json 
+      └── _SUCCESS 
+ 
+  </td>
+
+  <td>
+
+    target 
+    | 
+    └── target_file.json   
+ 
+  </td>
+  </tr>
+</table>
+
+<!-- Considering the source table, the customer** **is partitioned with two levels at **region **and **country **level with below as sample set of partitions:
 
 customer
 
@@ -97,14 +432,13 @@ The target files and folder will follow below structure as per different setting
 |--- |--- |--- |--- |
 |||true|false|
 |Preserve Hierarchy|true|customer/region=Asia/country=sg/customer.csv country=my/customer.csv region=Europe/country=fr/customer.csv|customer/region=Asia/country=sg/part_001.csv part_002.csv country=my/part_001.csv part_002.csv region=Europe/country=fr/part_001.csv part_002.csv|
-||false|customer.csv|customer/part_001.csvpart_002.csv|
+||false|customer.csv|customer/part_001.csvpart_002.csv| -->
 
-
-   
 
 :::note 
 The partitioned settings of the tales are taken from the table metadata (and not from Ingestion config)
 :::
+
 ## Parallel Processing of Files
 
 When ingesting data from multiple source files, Ingestion activity will read and process individual files in separate threads. It will spawn a fixed number of threads which will pick one file at a time once it's done processing the previous file. Each of this thread will read the file, perform control total and schema validations and apply transformation before publishing it to target. 
@@ -115,11 +449,11 @@ The number of threads that Ingestion activity spawns to process the files concur
 
 When processing multiple source files, Ingestion Activity will process individual files in separate threads. It reads the files, performs control total and schema validations and applies transformation before publishing it to target. A subset of files can fail during this process due to one of the below reasons: :
 
-1. When the control total of the file does not match with the actual file content
+1. When the control total of the file does not match with the actual file content.
 
-2. If validations are specified the number of records failing the validation breaches the reject threshold set for a given file
+2. If validations are specified the number of records failing the validation breaches the reject threshold set for a given file.
 
-3. The file becomes unavailable when Ingestion activity is trying to process it
+3. The file becomes unavailable when Ingestion activity is trying to process it.
 
 **Partial Load** setting in Source section determines whether Ingestion activity should write the data to Target if a subset of files has failed the validations. Below describes the behavior of this setting:. 
 
