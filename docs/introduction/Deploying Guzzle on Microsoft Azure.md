@@ -31,9 +31,15 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 2. Connect to Guzzle
 
-* Wait a few minutes for the instance to start.
+* Wait for a few minutes for the instance to start.
 
-* Launch browser with the URL https://VM_PUBLIC_ADDRESS OR DNS name where INSTANCE_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
+* Launch browser with the URL https://VM_PUBLIC_ADDRESS_OR_DNS_NAME where VM_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
+
+* Since Guzzle services starts with self-signed certificates you may receive warning in the browser when accessing above URL. You can accept the warning and proceed to the guzzle.
+
+* Guzzle App comes with default user. You can use following credentials for the access-  
+**Username** : admin  
+**Password** : admin  
 
 2. Before starting to use Guzzle its recommended to upgrade Guzzle to latest avaliable version. This can be done by going to top menu Manage and further Maintenance->Upgrade
 
