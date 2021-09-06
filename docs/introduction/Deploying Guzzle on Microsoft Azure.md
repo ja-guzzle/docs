@@ -3,7 +3,7 @@ id: deploying_guzzle_on_microsoft_azure
 title: Deploying Guzzle on Microsoft Azure
 ---
 
-Guzzle software gets deployed on a virtual machine using the pre-built image on the Microsoft Azure cloud. You can deploy Guzzle on an existing VNet or a new Virtual network. You can apply standard 
+Guzzle software gets deployed on a virtual machine using the pre-built image on the Microsoft Azure cloud. You can deploy Guzzle on an existing VNet or a new Virtual network.
 
 ## Prerequisites
 
