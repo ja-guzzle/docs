@@ -13,9 +13,9 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 1. Create Guzzle virtual machine using the Azure Marketplace offer
 
-* Open the Guzzle page on Azure marketplace [here](https://portal.azure.com). Alternatively you can login to Azure Portal, go to Marketplace and search **Guzzle: Data Engineering Workbench**
+* You can login to Azure Portal, go to Marketplace and search **Guzzle: Data Engineering Workbench V2**
 
-![image alt text](/img/docs/introduction/introduction1.png)
+<img width="548" alt="Screenshot 2021-09-06 at 6 09 15 PM" src="https://user-images.githubusercontent.com/23651302/132218886-9136053a-d366-4078-9cc8-7a1437373de1.png">
 
 * Click on "Create" which will take you to Azure Portal, Create virtual machine blade.
 
