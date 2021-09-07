@@ -25,7 +25,7 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 * You can deploy Guzzle VM on existing VNET or a new VNET, restrict network access of Guzzle VM to only allow required inbound and outbound traffic and apply additional best practices for securing VM as per your organization policy.
 
-* D family size with 2 vCPUs and 8 GB RAM should be enough for the initial deployment.
+* D family size with 2 vCPUs and 8 GB RAM for the virtual machine should be enough for the initial deployment.
 
 * Review and create virtual machine. Wait for a few minutes for the instance to start.
 
@@ -35,7 +35,11 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 * Guzzle is available on HTTPS, on the port 443 on the Azure VM instance. 
 
-* To access Guzzle - Launch browser with the URL https://VM_PUBLIC_ADDRESS_OR_DNS_NAME where VM_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine). Guzzle is pre-loaded with a self-signed certificate, so you will get a security warning when you launch it for the first time. You can replace the VM to use a valid certificate. The default user and password for the guzzle instance is admin/admin
+* To access Guzzle - Launch browser with the URL https://VM_PUBLIC_ADDRESS where VM_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine). If you have domain name associated for your VM then we can access guzzle using the URL https://DNS_NAME. 
+
+* Guzzle is pre-loaded with a self-signed certificate, so you will get a security warning when you launch it for the first time. Later on you can replace this self-signed certificate with the valid certificate in the VM. 
+
+* The default user and password for the guzzle instance is admin/admin.
 
 :::note
 Only Chrome browser is supported.
@@ -50,17 +54,21 @@ Administrative (command-line) access can be obtained by logging-in through SSH u
 
 **Note:** Guzzle app does not run under this VM administrator account, but under `guzzle` user id. The administrative account is sudoer, so from its shell, you can use `sudo su — guzzle` to get a shell as `guzzle` user.
 
-You cannot directly login as the `guzzle` user. Also, 'guzzle' user is not sudoer.
+You cannot directly login as the `guzzle` user. Also `guzzle` user is not sudoer.
 
 ## What are the Guzzle directories?
 
-The Guzzle has two key directories that gets deployed on the VM. These are referred in Guzzle software using the environment variables. 
+The Guzzle has two key directories that gets deployed on the VM. These are referred in Guzzle App using the environment variables. 
 
-* GUZZLE_PRODUCT_HOME : This is locatedin  the path **/guzzle **and contains binaries and static files of Guzzle app 
+* GUZZLE_PRODUCT_HOME: This is located in the path **/guzzle**
 
-* GUZZLE_HOME: This is located at path **/guzzle/guzzlehome **and contains all Guzzle binaries and configuration files. 
+* GUZZLE_HOME: This is located in the path **/guzzle/guzzlehome**
 
-All operations on these directories (like installing JDBC drivers, …) must be performed as Guzzle user.
+:::note
+Environment variables GUZZLE_PRODUCT_HOME and GUZZLE_HOME are defined in guzzle service startup related configuration. These environment variables are accessible to Guzzle App but they are not available by default when you are on shell as `guzzle` user.
+:::
+
+All operations on these directories (like installing JDBC drivers, …) must be performed as `guzzle` user.
 
 ## What is installed by default?
 
