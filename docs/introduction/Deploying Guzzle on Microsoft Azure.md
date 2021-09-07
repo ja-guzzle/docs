@@ -83,7 +83,7 @@ Guzzle image is based on Ubuntu Server 20.04 LTS. It contains:
 
 ## How do I install JDBC drivers and other third party libraries?
 
-JDBC and external libraries drivers must be installed by copying the relevant files in the "$GUZZLE_HOME/lib/ext" folder of the DSS data directory (See Installing database drivers).
+JDBC drivers and external libraries must be installed by copying the relevant files in the "$GUZZLE_HOME/libs/ext" folder (See Installing database drivers).
 
-You can either download files from the instance or upload them using SSH. Copy into the "$GUZZLE_HOME/lib/ext" folder must be done as Guzzle user.
+You can either download files from the virtual machine instance or upload them using SSH. Copying into the "$GUZZLE_HOME/libs/ext" folder must be done as Guzzle user.
 
