@@ -3,7 +3,7 @@ id: deploying_guzzle_on_microsoft_azure
 title: Deploying Guzzle on Microsoft Azure
 ---
 
-Guzzle software gets deployed on a virtual machine using the pre-built image on the Microsoft Azure cloud. You can deploy Guzzle on an existing VNet or a new Virtual network.
+Guzzle software gets deployed on a virtual machine using the pre-built image on the Microsoft Azure cloud. You can deploy Guzzle on an existing Virtual Network or a new Virtual Network.
 
 ## Prerequisites
 
@@ -11,47 +11,38 @@ You need an Azure account to proceed. You will be billed only for the virtual ma
 
 ## Deployment of Guzzle Virtual Machine
 
-1. Create Guzzle virtual machine using the Azure Marketplace offer
-
 * You can login to Azure Portal, go to Marketplace and search **Guzzle: Data Engineering Workbench V2**
 
 <img width="548" alt="Screenshot 2021-09-06 at 6 09 15 PM" src="https://user-images.githubusercontent.com/23651302/132218886-9136053a-d366-4078-9cc8-7a1437373de1.png">
 
 * Click on "Create" which will take you to Azure Portal, Create virtual machine blade.
 
-* Enter a name for your Virtual machine and select your username and password or SSH key (do not use "guzzle" as username).
+* Enter a name for your Virtual Machine and select your Username and Password or SSH key (do not use "guzzle" as username).
 
 * Enter a new Resource group name or use existing one.
 
 * You can retain default values for remaining VM Settings or override them suitable as per your requirement.
 
-* You can deploy Guzzle VM on existing VNET or a new VNET, restrict network access of Guzzle VM to only allow required inbound and outbound traffic and apply additional best practices securing VM as per your organization policy.
+* You can deploy Guzzle VM on existing VNET or a new VNET, restrict network access of Guzzle VM to only allow required inbound and outbound traffic and apply additional best practices for securing VM as per your organization policy.
 
-* A D2 image (2 vCPUs, 7 GB RAM) should be enough for the initial deployment.
+* D family size with 2 vCPUs and 8 GB RAM should be enough for the initial deployment.
 
-2. Connect to Guzzle
-
-* Wait for a few minutes for the instance to start.
-
-* Launch browser with the URL https://VM_PUBLIC_ADDRESS_OR_DNS_NAME where VM_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine)
-
-* Since Guzzle services starts with self-signed certificates you may receive warning in the browser when accessing above URL. You can accept the warning and proceed to the guzzle.
-
-* Guzzle App comes with default user. You can use following credentials for the access-  
-**Username** : admin  
-**Password** : admin  
-
-2. Before starting to use Guzzle its recommended to upgrade Guzzle to latest avaliable version. This can be done by going to top menu Manage and further Maintenance->Upgrade
-
-:::note
-that only Chrome browser is supported.
-:::
+* Review and create virtual machine. Wait for a few minutes for the instance to start.
 
 # How tos
 
 ## How do I use Guzzle?
 
-Guzzle is available on HTTPS, on the port 443 on the Azure VM instance. Guzzle is preloaded with a self-signed certificate, so you will get a security warning when you launch it first time. You can replace the VM to use a valid certificate. The default user and password for the guzzle instance is admin/admin
+* Guzzle is available on HTTPS, on the port 443 on the Azure VM instance. 
+
+* To access Guzzle - Launch browser with the URL https://VM_PUBLIC_ADDRESS_OR_DNS_NAME where VM_PUBLIC_ADDRESS is the instance public IP address (available in the details of your virtual machine). Guzzle is pre-loaded with a self-signed certificate, so you will get a security warning when you launch it for the first time. You can replace the VM to use a valid certificate. The default user and password for the guzzle instance is admin/admin
+
+:::note
+Only Chrome browser is supported.
+:::
+
+* Before starting to use Guzzle it is recommended to upgrade Guzzle to latest avaliable version. This can be done by going to top menu Manage and further navigate to Maintenance->Upgrade
+
 
 ## How do I log into the shell of virtual machine instance?
 
