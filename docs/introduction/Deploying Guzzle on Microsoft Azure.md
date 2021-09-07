@@ -58,31 +58,28 @@ You cannot directly login as the `guzzle` user. Also `guzzle` user is not sudoer
 
 ## What are the Guzzle directories?
 
-The Guzzle has two key directories that gets deployed on the VM. These are referred in Guzzle App using the environment variables. 
+The Guzzle has two key directories that gets deployed on the VM. These are referred in Guzzle App using following environment variables. 
 
 * GUZZLE_PRODUCT_HOME: This is located in the path **/guzzle**
 
 * GUZZLE_HOME: This is located in the path **/guzzle/guzzlehome**
 
 :::note
-Environment variables GUZZLE_PRODUCT_HOME and GUZZLE_HOME are defined in guzzle service startup related configuration. These environment variables are accessible to Guzzle App but they are not available by default when you are on shell as `guzzle` user.
+Environment variables GUZZLE_PRODUCT_HOME and GUZZLE_HOME are defined in guzzle service startup related configuration. These environment variables are accessible to Guzzle App but by default they are not available when you are on shell as `guzzle` user.
 :::
 
 All operations on these directories (like installing JDBC drivers, …) must be performed as `guzzle` user.
 
 ## What is installed by default?
 
-Guzzle image is based on based Ubuntu Server 20.04 LTS. It contains:
+Guzzle image is based on Ubuntu Server 20.04 LTS. It contains:
 
-- A standard installation of Guzzle running under Linux user account `guzzle`.
-
-- A local MySQL database, with a connection to it pre-configured in DSS. MySQL is only.
-
-- Blobfuse
-
-- JDK xxx
-
-- A nginx reverse proxy exposing Guzzle API server and Guzzle static resources on the standard HTTPS port 443 using a self-signed certificate. For better security, you can provide your own certificate in directory /guzzle/cacerts.
+- Guzzle (2.0.1) - A standard installation of Guzzle App running under Linux user account `guzzle`.
+- MySQL Server (8.0) - A local MySQL server database, with a connection to it pre-configured in Guzzle App.
+- OpenJDK (1.8.0_292)
+- Blobfuse (1.3.8)
+- Nginx (1.18) - Nginx reverse proxy exposing Guzzle API server and Guzzle static resources on the standard HTTPS port 443 using a self-signed certificate. For better security, you can provide your own certificate in the directory /guzzle/cacerts.
+- Apache Spark (3.1.2)
 
 ## How do I install JDBC drivers and other third party libraries?
 
