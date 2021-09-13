@@ -1,6 +1,28 @@
 # Guzzle Changelog
 
-### Guzzle v2.0.1 (August 30, 2020) 
+### Guzzle v2.0.2 (September 13, 2021)
+#### Features
+- show manual client secret value on sso page
+- added batch_id support in resume pipeline
+- add validations for enable sso flow
+- added caching support for azure key vault secrets
+- renamed Retry Option label to Configure Retry When Job Submit Fails in compute UI
+- removed learn more link from login screen
+- removed data enginnering light support from databricks compute
+- renamed compute editor title
+- updated move to folder and latest job run icon
+- marked tenent id as mandatory field in single sign-on screen
+- removed compute detail section from default compute tab in user profile drawer
+
+#### Bugs
+- fixed schema issue in copy data tool
+- azure key vault component fixes
+- shared storage page - cancel button functionality fixes
+- updated tooltip description for key vault field and fixed tooltip position 
+- fixed copy paste issue in shared storage configuration
+- fixed selection issue of Azure Service Principal credential type in repository database
+
+### Guzzle v2.0.1 (August 30, 2021) 
 #### Features
 - atlas-plugin.jar removed
 - sample config cleanup (removed control file)
