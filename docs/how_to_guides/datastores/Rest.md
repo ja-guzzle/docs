@@ -16,7 +16,7 @@ Rest Api is service call where user can access via URI and can gather data from 
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Enter the additional properties for the Rest API as described below and you can check the connection by clicking Test Connection :
 
@@ -28,4 +28,7 @@ Rest Api is service call where user can access via URI and can gather data from 
 
 ## Interface for Rest API page
 
-![image alt text](/img/docs/how-to-guides/datastores/rest_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/rest_1.jpg) -->
+<a href="/img/docs/how-to-guides/datastores/Rest_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/datastores/Rest_1.png" />
+</a>

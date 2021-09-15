@@ -27,48 +27,26 @@ And after running this job in the target table a new column is created with "ful
 
 **In this section following properties are included : **
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>It include name of column</td>
-  </tr>
-  <tr>
-    <td>Transformation</td>
-    <td>Transformation rule</td>
-  </tr>
-  <tr>
-    <td>Data Type</td>
-    <td>Data type of column for validation (Guzzle gives suggestions for data type like int, string, bigint, smallint,ect).</td>
-  </tr>
-  <tr>
-    <td>Validate Data Type</td>
-    <td>If the user wants to validate the data type then check this box.</td>
-  </tr>
-  <tr>
-    <td>Uniqueness</td>
-    <td>Check for uniqueness of column</td>
-  </tr>
-  <tr>
-    <td>Nullable</td>
-    <td>Validates value in this column is nullable if it is checked.</td>
-  </tr>
-  <tr>
-    <td>SQL Validation</td>
-    <td>For validation of SQL table</td>
-  </tr>
-  <tr>
-    <td>Partition Column</td>
-    <td></td>
-  </tr>
-</table>
+|Property|Description|
+|--- |--- |
+|Name|It include name of column|
+|Transformation|Transformation rule|
+|Data Type|Data type of column for validation (Guzzle gives suggestions for data type like int, string, bigint, smallint,ect).|
+|Validate Data Type|If the user wants to validate the data type then check this box.|
+|Uniqueness|Check for uniqueness of column|
+|Nullable|Validates value in this column is nullable if it is checked.|
+|SQL Validation|For validation of SQL table|
+|Partition Column||
+
 
 
 ## Interface for Validation and Transformation section is given below:
 
-![image alt text](/img/docs/how-to-guides/ingest_data/transformation_validation_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/transformation_validation_1.jpg) -->
+
+<a href="/img/docs/how-to-guides/ingest_data/validation_&_transformation_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/validation_&_transformation_1.png" />
+</a>
+
 
 

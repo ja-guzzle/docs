@@ -51,7 +51,10 @@ This order of execution applies across all connectors in Guzzle.
 
 In case of multiple SQL statements, the statements will be executed in the order the user sees them in the Interface.
 
-![image alt text](/img/docs/how-to-guides/ingest_data/image_1.png)          
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/image_1.png)    -->
+<a href="/img/docs/how-to-guides/ingest_data/preSQL_and_postSQL.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/preSQL_and_postSQL.png" />
+</a>       
 
 If we want to execute multiple SQL statement we can do by adding it in next input text, and they will execute all in sequence as first in first out. Example, In the above figure there are 2 Pre-SQL statements. The INSERT INTO statement will be executed first followed by the DELETE FROM statement.
 

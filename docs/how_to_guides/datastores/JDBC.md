@@ -13,7 +13,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Users have to choose from two options like Custom or Standard.
 
@@ -35,7 +35,11 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
  Below gif represents created JDBC datastore :
 
-![image alt text](/img/docs/how-to-guides/datastores/jdbc_1.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/jdbc_1.gif) -->
+
+<a href="/img/docs/how-to-guides/datastores/jdbc_1.gif" target="_self" >
+    <img width="825" src="/img/docs/how-to-guides/datastores/jdbc_1.gif" />
+</a>
 
 ## If Custom is chosen :
 
@@ -51,5 +55,8 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
 
 
-![image alt text](/img/docs/how-to-guides/datastores/jdbc_2.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/jdbc_2.gif) -->
 
+<a href="/img/docs/how-to-guides/datastores/jdbc_2.gif" target="_self" >
+    <img width="825" src="/img/docs/how-to-guides/datastores/jdbc_2.gif" />
+</a>

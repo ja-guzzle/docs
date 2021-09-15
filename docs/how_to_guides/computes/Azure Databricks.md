@@ -39,13 +39,21 @@ On click of setup workspace guzzle will create a notebook known as setup-guzzle.
 
 In the notebook guzzle programmatically mount shared storage in the Databricks environment.
 
-** Interface for Azure Databricks compute for cluster type : Data Engineering and Data Engineering Light. **
+** Interface of Azure Databricks compute for cluster type : Data Engineering and Data Engineering Light. **
 
-![imaeg alt text](/img/docs/how-to-guides/compute/azuredatabricks_1.jpg)
+<!-- ![imaeg alt text](/img/docs/how-to-guides/compute/azuredatabricks_1.jpg) -->
+<a href="/img/docs/how-to-guides/compute/azuredatabricks_1.jpg" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/compute/azuredatabricks_1.jpg" />
+</a>
 
-** Interface for Azure Databricks compute for cluster type : Data Analytics. **
+** Interface of Azure Databricks compute for cluster type : Data Analytics. **
 
-![imaeg alt text](/img/docs/how-to-guides/compute/azure_databricks_2.jpg)
+<a href="/img/docs/how-to-guides/compute/azure_databricks_2.jpg" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/compute/azure_databricks_2.jpg" />
+</a>
+
+<!-- ![imaeg alt text](/img/docs/how-to-guides/compute/azure_databricks_2.jpg) -->
+
 ## how to setup external metastore
 
 One can use init script or spark configs. More details of can be found here

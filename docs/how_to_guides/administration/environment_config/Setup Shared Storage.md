@@ -7,7 +7,10 @@ title: Setup Shared Storage
 
 Guzzle home (also referred as GUZZLE_HOME) is stores the binaries, configs and logs on a file system which should be accessible to both the Guzzle VM and the `compute` where the **activities ** will run. Below architecture diagram explains this further 
 
-![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png) -->
+<a href="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" />
+</a>
 
 When using Azure Databricks `compute` for running activities, it is mandatory to enable shared storage using Azure blob storage. A shared storage simply means mounting the same Azure blob storage account on both Guzzle VM and Azure Databricks Workspace so that both this component can point to the same GUZZLE_HOME which contains the Guzzle configs, logs, and binaries. 
 
@@ -23,11 +26,17 @@ Once shared storage is enabled, you will not be able to disable it anymore.
 
 1. Go to the **Manage** menu from the top navigation bar.
 
-2. Navigate to Environment -> Shared Storage and click on "Enable" .
+2. Navigate to Environment Config -> Shared Storage and click on "Enable".
 
 3. Enter following configuration details:
 
-![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage1.png)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage1.png) -->
+
+<a href="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />
+</a>
+
+## Properties to Setup Shared Storage
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
@@ -56,7 +65,7 @@ Below are the steps to edit the existing Shared Storage configuration:
 
 1. Go to the **Manage** menu from the top navigation bar.
 
-2. Navigate to Environment -> Shared Storage 
+2. Navigate to Environment Config -> Shared Storage 
 
 3. Update the required configuration details
 

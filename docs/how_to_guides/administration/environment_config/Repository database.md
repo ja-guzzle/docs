@@ -29,15 +29,15 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 <!-- ![repository database](/img/docs/how-to-guides/administrator/environment-config/repository_db01.png) -->
 
 
-<a href="https://guzzle.justanalytics.com/assets/images/repository_db01-60256e22f3b323f2c442e0631178d2d8.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" />
+<a href="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" />
 </a>
 
 ## Steps to Update Repository database
 
 1. Go to the **Manage** menu from the top navigation bar.
 
-2. Navigate to Environment-> Repository Database. Select **Credentials** tab
+2. Navigate to Environment Config -> Repository Database. Select **Credentials** tab
 
 3. Enter following configuration details:
 
@@ -62,10 +62,17 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 As mentioned above, Guzzle repository contains two types of tables. Of this **Guzzle App Metadata** tables are automatically created when Guzzle app is brought up. However, **Audit Metadata** has to be explicitly initialized in repository database when using new database. This section describes initializing the **Audit Metadata** tables.
 
 **Audit Metadata** tables contains additional columns which are referred as context columns or context parameters. This context columns are included in all Guzzle audit tables. Also, this context columns will show as additional parameter when running jobs namely: `activity`, `pipeline` or a `batch`. This can be optionally included when running the batches for better tracking of the audit information for the job runs.
- 
-![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png)
-<a href="https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" />
+
+## Repository Databse Credentials 
+<!-- ![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png) -->
+<a href="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" />
+</a>
+
+## Repository Databse Initilize Audit Metadata
+
+<a href="/img/docs/how-to-guides/administrator/environment-config/repository_database_2.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_database_2.png" />
 </a>
 
 **At a minimum, one context columns needs to be defined**. By default, Guzzle instance comes with one context column named **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 

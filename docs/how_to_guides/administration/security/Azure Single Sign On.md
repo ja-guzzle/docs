@@ -20,7 +20,10 @@ To use create a new one that shall be used by Guzzle to perform SSO- [for more](
       http://&ltdomain of guzzle app&gt/oauth/microsoft. 
     2. Only Single tenant is supported
 
-![image alt text](/img/docs/how-to-guides/administrator/security/sso0.png)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso0.png) -->
+<a href="/img/docs/how-to-guides/administrator/security/sso0.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso0.png" />
+</a>
 
 :::note
 You can also use existing App registration in AAD and add the redirect URL of the Guzzle instance you are integrating. However, as a best practice, each Guzzle instance should have its own App registration for better segregation
@@ -48,7 +51,11 @@ Step 3. Click on Azure Single Sign On
 
 Step 4. Click on Enable to enable SSO
 
-![image alt text](/img/docs/how-to-guides/administrator/security/sso1.png)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso1.png) -->
+<a href="/img/docs/how-to-guides/administrator/security/sso1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso1.png" />
+</a>
+
 
 Step 5 : Enter all below necessary details 
 
@@ -74,7 +81,10 @@ Step 7 : Create User
 
 5. Click on Create
 
-![image alt text](/img/docs/how-to-guides/administrator/security/sso2.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso2.gif) -->
+<a href="/img/docs/how-to-guides/administrator/security/sso2.gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso2.gif" />
+</a>
 
 :::note
 Once SSO is enabled, the native login gets disabled. User can only log in via SSO

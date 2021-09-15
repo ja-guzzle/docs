@@ -18,11 +18,19 @@ When we select any of the five databases as our Datastore, Guzzle provides us wi
 
 **Table before Include Column:**
 
-![image alt text](/img/docs/how-to-guides/ingest_data/Recording-6.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/Recording-6.gif) -->
+
+<a href="/img/docs/how-to-guides/ingest_data/Recording-6.gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/Recording-6.gif" />
+</a>
+
 
 **Table after Include Column:**
 
-![image alt text](/img/docs/how-to-guides/ingest_data/Recording-7.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/Recording-7.gif) -->
+<a href="/img/docs/how-to-guides/ingest_data/Recording-7.gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/Recording-7.gif" />
+</a>
 
 In this case only the first_name column is visible in the Table.
 
@@ -30,11 +38,17 @@ In this case only the first_name column is visible in the Table.
 
 **Table before Exclude Column:**
 
-![image alt text](/img/docs/how-to-guides/ingest_data/Recording-6(1).gif)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/Recording-6(1).gif) -->
+<a href="/img/docs/how-to-guides/ingest_data/Recording-6(1).gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/Recording-6(1).gif" />
+</a>
 
 **Table after Exclude Column:**
 
-![image alt text](/img/docs/how-to-guides/ingest_data/Recording-8.gif)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/Recording-8.gif) -->
+<a href="/img/docs/how-to-guides/ingest_data/Recording-8.gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/Recording-8.gif" />
+</a>
 
 In this case all columns except first_name and age are visible in the Table.
 

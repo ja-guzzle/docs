@@ -16,5 +16,8 @@ When creating a schedule you can specify the name and value of the resources.
 
 ** Interface is for Schedule page is **
 
-![image alt text](/img/docs/how-to-guides/administrator/maintenance/schedule_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/maintenance/schedule_1.jpg) -->
 
+<a href="/img/docs/how-to-guides/administrator/maintenance/schedule_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/maintenance/schedule_1.png" />
+</a>

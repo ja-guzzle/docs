@@ -46,11 +46,17 @@ Guzzle first retrieves the old watermark value and compares it with the current 
 
 The Working of the Watermark function can be understood through the Flow Diagram below:
 
-![image alt text](/img/docs/how-to-guides/ingest_data/watermark1.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/watermark1.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/watermark1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/ingest_data/watermark1.png" />
+</a> 
 
 In the image below we consider 2 columns of our Data last_modified_dt which is a Date timestamp and id which is an integer. If we use incremental as our Load Type, in the first job Guzzle will read the entire Data and record the highest values of both columns and use them as incrementing values. If there is no change in the table before the second run then Guzzle will read 0 Parameters or Values in the second run.
 
-![image alt text](/img/docs/how-to-guides/ingest_data/watermark2.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/watermark2.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/watermark2.png" target="_self" >
+    <img src="/img/docs/how-to-guides/ingest_data/watermark2.png" />
+</a> 
 
 ## Custom Watermarks or Watermark Filter
 
@@ -70,7 +76,10 @@ The cast function is used in the second test case to ensure that Guzzle reads id
 
 If Custom Watermark is applied to multiple columns the and condition is used as shown above.
 
-![image alt text](/img/docs/how-to-guides/ingest_data/watermark3.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/watermark3.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/watermark3.png" target="_self" >
+    <img  src="/img/docs/how-to-guides/ingest_data/watermark3.png" />
+</a> 
 
 Depending on the typecast database Guzzle passes the values as string to the underlying database for the watermark column.
 
@@ -89,7 +98,10 @@ Custom Watermarks can also be applied to a single column. Instead of applying a 
 
 In the above example we can apply the custom watermark to only the last_modified_dt column to fetch Data for let's say the last 7 days. This can be done using the statement below:
 
-![image alt text](/img/docs/how-to-guides/ingest_data/watermark4.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/watermark4.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/watermark4.png" target="_self" >
+    <img src="/img/docs/how-to-guides/ingest_data/watermark4.png" />
+</a> 
 
 The cast function will convert our max value into a Date, and we then subtract 7. Whatever is the max value it will fetch Data for the last 7 days.
 

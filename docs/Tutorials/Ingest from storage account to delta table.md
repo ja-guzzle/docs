@@ -44,8 +44,8 @@ The first step in the Ingestion Process would be to deal with the Source Section
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_1.jpg) -->
-<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_blob_to_delta_1-e87601ff7404f084226e2f2706bc70e0.jpg" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_blob_to_delta_1.jpg" />
+<a href="/img/docs/tutorials/ingest_data_from_blob_to_delta_1.jpg" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_blob_to_delta_1.jpg" />
 </a>
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Preview Data can also be seen in the Top Right Corner.
@@ -54,7 +54,7 @@ After previewing the data can be seen.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg) -->
 <a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_blob_to_delta_2-9e8f1b73d368e376fd1a9e39a03b8a70.jpg" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg" />
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg" />
 </a>
 
 # Perform Validations and Transformations on the Dataset to check the accuracy of Data 
@@ -72,8 +72,8 @@ The next step would be to perform Validations and Transformations on the Data. T
 5. In the SQL Validation you may enter a condition in order to Partition the Columns depending on whether or not they satisfy the given condition. You can run your validations by clicking the tick at the top of your interface.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_3.png) -->
-<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_1-6ff21d01fea063dca30e43fdb06c6291.png" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" />
+<a href="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" />
 </a>
 
 Here we have Validated the Columns first_name and age for their data types and entered a condition to partition the column age while validating its Nullability.
@@ -91,8 +91,8 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 4. We can now give any name to the Target in the Table Section. We can again Sample the Data through the Sample Data or Preview Data option given in the top right corner.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_4.jpg) -->
-<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_blob_to_delta_4-39d089ba3796f5b2fb43b5d3104216de.jpg" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_blob_to_delta_4.jpg" />
+<a href="/img/docs/tutorials/ingest_data_from_blob_to_delta_4.jpg" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_blob_to_delta_4.jpg" />
 </a>
 
 Here we have chosen Delta table as our Datastore and assigned the name customer to our Table.
@@ -108,8 +108,8 @@ We now move onto the Reject Section where we deal with the Data which does not p
 	
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_5.png) -->
-<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_blob_to_delta_1-e87601ff7404f084226e2f2706bc70e0.jpg" target="_self" >
-    <img src="/img/docs/tutorials/reject_section_0.png" />
+<a href="/img/docs/tutorials/reject_section_0.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/reject_section_0.png" />
 </a>
 
 Here we store our rejects in a Local File in the Delimited Format and apply a Failure Threshold of 25%.

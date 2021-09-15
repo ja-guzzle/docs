@@ -41,7 +41,10 @@ In this case the file will not be validated as the Control file counts 6 records
 
 * **Checksum:** Guzzle also supports the Checksum feature. Checksum helps in a row count and enables total file level validation. If enabled it matches the file with Checksum. If the required condition is not met the entire file is rejected.
 
-![image alt text](/img/docs/how-to-guides/ingest_data/image_0.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/image_0.png) -->
+ <a href="/img/docs/how-to-guides/ingest_data/image_0.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/image_0.png" />
+</a>
 
 This will validate a control file with the same name as the file pattern mentioned above with the extension .ctl
 

@@ -45,7 +45,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg) -->
 <a href="https://guzzle.justanalytics.com/assets/images/ingest_data_lfs_to_mysql_0-97071915e112865aba3396124c696953.jpg" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg" />
+    <img width="1000" src="/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg" />
 </a>
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
@@ -66,7 +66,7 @@ The next step would be to perform Validations and Transformations on the Data. T
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png) -->
 <a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_1-6ff21d01fea063dca30e43fdb06c6291.png" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" />
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" />
 </a>
 Here we have Validated the Columns first_name and age for their data types and entered a condition to partition the column age while validating its Nullability.
 
@@ -80,7 +80,7 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png) -->
 <a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_2-eaa21a2a017c5abcb45067ec68bf62a1.png" target="_self" >
-    <img src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png" />
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png" />
 </a>
 
 Here we have chosen MySQL as our Datastore and assigned the name customer to our Table.
@@ -97,7 +97,7 @@ We now move onto the Reject Section where we deal with the Data which does not p
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_3.png) -->
 <a href="https://guzzle.justanalytics.com/img/docs/tutorials/reject_section_0.png" target="_self" >
-    <img src="/img/docs/tutorials/reject_section_0.png" />
+    <img width="1000" src="/img/docs/tutorials/reject_section_0.png" />
 </a>
 
 Here we store our rejects in a Local File in the Delimited Format and apply a Failure Threshold of 25%.

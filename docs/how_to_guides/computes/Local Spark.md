@@ -28,6 +28,9 @@ Guzzle provides below parameter and configs for local spark
 
 ** Interface for Local Spark Compute **
 
-![image alt text](/img/docs/how-to-guides/compute/local_spark_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/compute/local_spark_1.jpg) -->
+<a href="/img/docs/how-to-guides/compute/local_spark_1.jpg" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/compute/local_spark_1.jpg" />
+</a>
 
 

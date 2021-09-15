@@ -20,7 +20,7 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink(target)
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Enter the additional properties for the storage account as described below:
 
@@ -41,11 +41,19 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink(target)
 
 ## Interface for ADLS Gen2 datastore
 
-Sample config when using Credential Type as : Service Principal ![image alt text](/img/docs/how-to-guides/datastores/Azure_Data_Lake_Storage_1.png)
+**Sample config when using Credential Type as : Service Principal**
 
-Sample config when using Credential Type as : Access Key
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/ADLS_1.png) -->
+<a href="/img/docs/how-to-guides/datastores/ADLS_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/datastores/ADLS_1.png" />
+</a>
 
-![image alt text](/img/docs/how-to-guides/datastores/Azure_Data_Lake_Storage_2.png)
+**Sample config when using Credential Type as : Access Key**
+
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/ADLS_2.png) -->
+<a href="/img/docs/how-to-guides/datastores/ADLS_2.png" target="_self" >
+    <img src="/img/docs/how-to-guides/datastores/ADLS_2.png" />
+</a>
 
 ## Known Limitation
 

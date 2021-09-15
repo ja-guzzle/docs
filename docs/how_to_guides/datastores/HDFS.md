@@ -16,7 +16,7 @@ title: HDFS
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Enter the **Path **that shall be used as base directory for reading or writing files 
 
@@ -24,6 +24,10 @@ title: HDFS
 
 ## Interface for HDFS datastore
 
-![image alt text](/img/docs/how-to-guides/datastores/HDFS_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/HDFS_1.jpg) -->
+
+<a href="/img/docs/how-to-guides/datastores/HDFS_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/datastores/HDFS_1.png" />
+</a>
 
 ## Known Limitation

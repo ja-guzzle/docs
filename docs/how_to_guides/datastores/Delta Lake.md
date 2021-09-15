@@ -30,7 +30,7 @@ Only supported on Databricks compute
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments](../connection_and_environment/connection_and_environment) for more details
 
 4. Optionally enter the **Database. **This shall be used as schema name for source or target/reject tables in all the activities if schema name is not provided along with table name. This property is ignored if SQL is used for source or target; schema name prefix is provided along with table name or delta path is used.
 
@@ -38,6 +38,10 @@ Only supported on Databricks compute
 
 ## Interface for Delta Lake Datastore
 
-![image alt text](/img/docs/how-to-guides/datastores/delta_lake_1.png)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/delta_lake_1.png) -->
+
+<a href="/img/docs/how-to-guides/datastores/Delta_Lake_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/datastores/Delta_Lake_1.png" />
+</a>
 
 ## Known Limitation

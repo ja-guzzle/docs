@@ -14,7 +14,7 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 
 2. Enter the Datastore name for the new datastore and click Ok
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Enter the connection details properties as described below:
 
@@ -27,7 +27,11 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 |Password|Password of SQL server|yes|
 
 ## Interface for Azure SQL datastore
-![image alt text](/img/docs/how-to-guides/datastores/azureSQL_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/AzureSQL_1.png) -->
+
+<a href="/img/docs/how-to-guides/datastores/AzureSQL_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/datastores/AzureSQL_1.png" />
+</a>
 
 ## Known Limitation
 

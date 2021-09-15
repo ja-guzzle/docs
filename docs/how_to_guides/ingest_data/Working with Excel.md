@@ -16,13 +16,16 @@ This article outlines how to work with Excel (.xls or .xlsx)  for source and tar
 |Consider Empty as Null|It can be used to define whether to consider an Empty String as a Null Value.|True|✔|X|
 |Workbook Password|Here we can specify a password for our Excel workbook. This is done to protect the structure of our worksheet which contains our data and prevents other users from modifying our data.|None|✔|X|
 |Path|This is used to specify the File Path where we would like to store our Data.|None|X|✔|
-|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/moving_processed_files).|NULL|✔|X|  
-|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/configure_control_file). |NULL|✔|✔|
+|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](moving_processed_files).|NULL|✔|X|  
+|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](configure_control_file). |NULL|✔|✔|
 |Partial Load|Specify partial loading of files.|False|✔|X|
 
 ## The Interface for the Excel File Format is :
 
-![image alt text](/img/docs/how-to-guides/ingest_data/excel1.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/excel_1.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/excel_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/excel_1.png" />
+</a> 
 
 ## Column Mapping in Excel Files
 
@@ -34,6 +37,10 @@ Column Mapping in Excel Files are very similar to Delimited Files. We can add Co
 
 All we need to do is add the Column Name and the Index we would like to Map the Column to.
 
-![image alt text](/img/docs/how-to-guides/ingest_data/excel2.png)
+<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/excel2.png) -->
+
+<a href="/img/docs/how-to-guides/ingest_data/excel2.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/excel2.png" />
+</a> 
 
 Here the column first_name is mapped to index 4 while age is mapped to index 1.

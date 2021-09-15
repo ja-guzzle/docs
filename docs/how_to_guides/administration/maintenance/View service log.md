@@ -18,6 +18,10 @@ Also, you can download the service log by clicking on App service log.
 
 ** Interface for Service logs page is **
 
-![image alt text](/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg) -->
+<a href="/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg" />
+</a>
+
 
 Note: Guzzle API log file is rotated on daily basis, and hence the log file you download will contain logs from current day only. Additional days log file can be directly retrieved from Guzzle VM at /guzzle/API/logs directory

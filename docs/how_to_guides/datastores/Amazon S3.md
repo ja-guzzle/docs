@@ -16,11 +16,11 @@ This datastore is use for both source and target tabs.
 
 ## Steps to create Datastore for S3
 
-1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png) from the **Datastores **section in Left Navigation and select **Amazon S3 **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
+1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/action_button.png)) from the **Datastores **section in Left Navigation and select **Amazon S3 **connector. Alternatively user can launch from **Create New Datastore **link in Activity authoring UI or Copy Data tool
 
 2. Enter the Datastore name for the new datastore and click OK
 
-3. Update the connection name or leave the default. You can refer to [Connection and Environments ](https://guzzle.justanalytics.com/docs/how_to_guides/connection_and_environment/connection_and_environment) for more details
+3. Update the connection name or leave the default. You can refer to [Connection and Environments ](../connection_and_environment/connection_and_environment) for more details
 
 4. Enter the additional properties for the storage account as described below:
 
@@ -34,7 +34,11 @@ This datastore is use for both source and target tabs.
 
 ## Interface for Amazon S3 datastore
 
-![image alt text](/img/docs/how-to-guides/datastores/amazons3_1.jpg)
+<!-- ![image alt text](/img/docs/how-to-guides/datastores/amazons3_1.jpg) -->
+
+<a href="/img/docs/how-to-guides/datastores/amazons3_1.jpg" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/datastores/amazons3_1.jpg" />
+</a>
 
 ## Known Limitation
 

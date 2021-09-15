@@ -18,19 +18,26 @@ JSON file support in Guzzle provides extensive features to specify file format d
 |Character Set|It refers to the Set of Characters used to Read/Write test files. Allowed Values include: UTF-8, UTF-16 etc.|UTF-8|✔|X|
 |Override JSON root path|It can be used to specify an object or location where we want to take our data from. For e.g.- If we want to focus on one particular column of our data we can specify the Column name here.<br/> Example :<br/>{<br/>"id" : 1,<br/>"name" : {<br/>"first_name" : "ABCD",<br/>"last_name" : "XYZ"<br/>},<br/>"age" : 10 <br/>}<br/>if we give name as a value than it will fetch data first_name and last_name and consider name as a root node.|None|✔|X|
 |Multi-Line|This is applicable when a single data record spans across multiple lines. This applies to both JSON files which are in array form or separate JSON documents.|False|✔|X|
-|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/moving_processed_files).|NULL|✔|X|  
-|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](https://guzzle.justanalytics.com/docs/how_to_guides/ingest_data/configure_control_file). |NULL|✔|✔|
+|Configure processed path|The Configure Processed Paths feature allows the user to specify the directory and Guzzle moves the Data into that directory. When creating a processed file path Guzzle creates 3 subfolders: processed, rejected and partial.<br/> For more information click [here](moving_processed_files).|NULL|✔|X|  
+|Configure control file settings|The Configure Control File feature cross check whether a file is valid or not. It compares the number of records in the original file and the control file extension. Guzzle provides the Configure Control File feature for all local file formats including Delimited, JSON, XML, Excel and Fixed Length Files.<br/> For more information click [here](configure_control_file). |NULL|✔|✔|
 |Partial Load|Specify partial loading of files.|False|✔|X|
 
 
 ## The Interface for the JSON Format for both Source
 
-![image alt text](/img/docs/working_with_json0.png)
+<!-- ![image alt text](/img/docs/working_with_json0.png) -->
 
+<a href="/img/docs/working_with_json0.png" target="_self" >
+    <img width="1000" src="/img/docs/working_with_json0.png" />
+</a> 
 
 ## The Interface for the JSON Format for both Target
 
-![image alt text](/img/docs/working_with_json1.png)
+<!-- ![image alt text](/img/docs/working_with_json1.png) -->
+
+<a href="/img/docs/how-to-guides/ingest_data/working_with_json1.png" target="_self" >
+    <img width="1000" src="/img/docs/working_with_json1.png" />
+</a> 
 
 ## Multiline: 
 
@@ -248,7 +255,6 @@ Sample Output when multiline is false is shown below:
 |ID|name|addresses|
 |--- |--- |--- |
 |0001|John|[[1001, Broward County],[1002, Velcore line]]|
-||||
 
 
 When multiline is set to true Guzzle will treat the entire file like a single JSON object.
@@ -300,7 +306,10 @@ Every object in the array is separated by a comma
 
 We can also add Column Mapping to specify how to map columns in the source file. This is applicable for files which are having headers or without header. Column Mapping in JSON helps in mapping the columns to a new Column Name as shown here:
 
-![image alt text](/img/docs/working_with_json2.png)
+<!-- ![image alt text](/img/docs/working_with_json2.png) -->
+<a href="/img/docs/how-to-guides/ingest_data/working_with_json2.png" target="_self" >
+    <img width="1000" src="/img/docs/working_with_json2.png" />
+</a> 
 
 ## Here we have mapped the columns to a new Column Name. name is mapped to first_name and created_time is mapped to time.
 
