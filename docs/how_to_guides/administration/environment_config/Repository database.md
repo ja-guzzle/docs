@@ -26,7 +26,12 @@ You will need to ensure the database used for Guzzle repository is accessible by
 
 Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle repository.  
 
-![repository database](/img/docs/how-to-guides/administrator/environment-config/repository_db01.png)
+<!-- ![repository database](/img/docs/how-to-guides/administrator/environment-config/repository_db01.png) -->
+
+
+<a href="https://guzzle.justanalytics.com/assets/images/repository_db01-60256e22f3b323f2c442e0631178d2d8.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" />
+</a>
 
 ## Steps to Update Repository database
 
@@ -59,6 +64,9 @@ As mentioned above, Guzzle repository contains two types of tables. Of this **Gu
 **Audit Metadata** tables contains additional columns which are referred as context columns or context parameters. This context columns are included in all Guzzle audit tables. Also, this context columns will show as additional parameter when running jobs namely: `activity`, `pipeline` or a `batch`. This can be optionally included when running the batches for better tracking of the audit information for the job runs.
  
 ![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png)
+<a href="https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" />
+</a>
 
 **At a minimum, one context columns needs to be defined**. By default, Guzzle instance comes with one context column named **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
 
@@ -75,7 +83,7 @@ Above stages represents a typical stage through which data from particular sourc
 Guzzle UI will auto-detect if the repository tables are present or not and if it is present than Guzzle will show option as reinitialize database. If you reinitialize your all existing data in guzzle tables will be vanished and create new one.
 
 1. Go to the **Manage** menu from the top navigation bar.
-2. Navigate to Environment → Repository Database. Select **Initialize Database** tab
+2. Navigate to Environment Config → Repository Database. Select **Initialize Database** tab
 3. Update the Context Columns and Stages as per your requirement
 4. The UI shall show either "Initialize" button if repo data does not have any **Audit Metadata** tables. However, if there are existing **Audit Metadata** tables, the UI shall show "Reinitialize".  It **must** to Reinitialize the **Audit Metadata** tables if there are amendments done to Context columns or Stages. 
  

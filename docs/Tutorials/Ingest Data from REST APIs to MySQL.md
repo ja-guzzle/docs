@@ -39,12 +39,18 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 5. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_1.jpg)
+<!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_1.jpg) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_from_rest_mysql_1-e565e28eb920a32bb31e5fe4a1871767.jpg" target="_self" >
+    <img src="/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" />
+</a>
 
 As seen above we have chosen the JSON Format with the json file pattern. The option to Preview Data can also be seen in the Top Right Corner.
 
 After previewing the data can be seen.
-![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_2.jpg)
+<!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_2.jpg) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_from_rest_mysql_2-9b6944147f4b48d0fe487509062317d2.jpg" target="_self" >
+    <img src="/img/docs/tutorials/ingest_from_rest_mysql_2.jpg" />
+</a>
 
 ## Loading or configuring the Source Dataset to a Target Dataset or Table
 
@@ -54,7 +60,11 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 2. We can now give any name to the Target in the Table Section. We can again Sample the Data through the Sample Data or Preview Data option given in the top right corner.
 
-![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_3.jpg)
+<!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_3.jpg) -->
+
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_from_rest_mysql_3-fc5b89240df83fb8def7690eed243c4e.jpg" target="_self" >
+    <img src="/img/docs/tutorials/ingest_from_rest_mysql_3.jpg" />
+</a>
 
 Here we have chosen a MySQL or JDBC table as our Datastore and assigned the name posts to our Table.
 

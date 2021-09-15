@@ -43,7 +43,10 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-![image alt text](/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg)
+<!-- ![image alt text](/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_lfs_to_mysql_0-97071915e112865aba3396124c696953.jpg" target="_self" >
+    <img src="/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg" />
+</a>
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
 
@@ -61,8 +64,10 @@ The next step would be to perform Validations and Transformations on the Data. T
 
 5. In the SQL Validation you may enter a condition in order to Partition the Columns depending on whether they satisfy the given condition. You can run your validations by clicking the tick at the top of your interface.
 
-![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png)
-
+<!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_1-6ff21d01fea063dca30e43fdb06c6291.png" target="_self" >
+    <img src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_1.png" />
+</a>
 Here we have Validated the Columns first_name and age for their data types and entered a condition to partition the column age while validating its Nullability.
 
 ## Loading or configuring the Source Dataset to a Target Dataset or Table
@@ -73,7 +78,10 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 2. We can now give any name to the Target in the Table Section. We can again Sample the Data through the Sample Data option given in the top right corner.
 
-![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png)
+<!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_2-eaa21a2a017c5abcb45067ec68bf62a1.png" target="_self" >
+    <img src="/img/docs/tutorials/ingest_data_from_lfs_to_mysql_2.png" />
+</a>
 
 Here we have chosen MySQL as our Datastore and assigned the name customer to our Table.
 
@@ -87,6 +95,9 @@ We now move onto the Reject Section where we deal with the Data which does not p
 
 	
 
-![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_3.png)
+<!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_3.png) -->
+<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_lfs_to_mysql_3-db0661ea2981440cec24d22dc1b27ca7.png" target="_self" >
+    <img src="/img/docs/tutorials/reject_section_0.png" />
+</a>
 
 Here we store our rejects in a Local File in the Delimited Format and apply a Failure Threshold of 25%.

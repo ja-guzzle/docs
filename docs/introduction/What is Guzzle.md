@@ -73,4 +73,6 @@ Guzzle architecture consist of following components:
 
 **Repository database : **This stores run-time audits of job runs, output of reconciliation, data quality checks and housekeeping, watermark values for incremental data load and other metadata for Guzzle app
 
-![image alt text](/img/docs/introduction/introduction0.png)
+<a href="https://guzzle.justanalytics.com/assets/images/introduction0-b696e32182bbff8bdc6b8bc65919c9de.png" target="_self">
+    <img src="/img/docs/introduction/introduction0.png"  />
+</a>
