@@ -96,7 +96,7 @@ We now move onto the Reject Section where we deal with the Data which does not p
 	
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_lfs_to_mysql_3.png) -->
-<a href="/img/docs/tutorials/reject_section_0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/reject_section_0.png" target="_self" >
     <img src="/img/docs/tutorials/reject_section_0.png" />
 </a>
 
