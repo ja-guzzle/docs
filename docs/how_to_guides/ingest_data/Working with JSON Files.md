@@ -25,17 +25,14 @@ JSON file support in Guzzle provides extensive features to specify file format d
 
 ## The Interface for the JSON Format for both Source
 
-<!-- ![image alt text](/img/docs/working_with_json0.png) -->
 
-<a href="/img/docs/working_with_json0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/working_with_json0.png" target="_self" >
     <img width="1000" src="/img/docs/working_with_json0.png" />
 </a> 
 
 ## The Interface for the JSON Format for both Target
 
-<!-- ![image alt text](/img/docs/working_with_json1.png) -->
-
-<a href="/img/docs/working_with_json1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/working_with_json1.png" target="_self" >
     <img width="1000" src="/img/docs/working_with_json1.png" />
 </a> 
 
@@ -306,8 +303,7 @@ Every object in the array is separated by a comma
 
 We can also add Column Mapping to specify how to map columns in the source file. This is applicable for files which are having headers or without header. Column Mapping in JSON helps in mapping the columns to a new Column Name as shown here:
 
-<!-- ![image alt text](/img/docs/working_with_json2.png) -->
-<a href="/img/docs/working_with_json2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/working_with_json2.png" target="_self" >
     <img width="1000" src="/img/docs/working_with_json2.png" />
 </a> 
 

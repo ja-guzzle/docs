@@ -28,8 +28,7 @@ Along with the Table option, you can also specify the Filter property — which 
 
 ## Example of a JDBC source without a filter:
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/jdbc1.gif) -->
-<a href="/img/docs/how-to-guides/ingest_data/jdbc1.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/jdbc1.gif" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/jdbc1.gif" />
 </a> 
 
@@ -39,8 +38,7 @@ In the animation above, no filter has been applied to our JDBC source. Hence, th
 
 In the animation below, we add a filter to the column ID that is ID>3. In the Sample Data we now only see the Data entries which satisfy this condition. 
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/jdbc2.gif) -->
-<a href="/img/docs/how-to-guides/ingest_data/jdbc2.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/jdbc2.gif" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/jdbc2.gif" />
 </a> 
 

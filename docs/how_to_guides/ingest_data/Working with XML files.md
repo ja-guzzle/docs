@@ -21,8 +21,7 @@ XML file support in Guzzle provides extensive features to specify file format de
 
 ## The Interface for XML in Guzzle is :
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/xml.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/xml.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/xml.png" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/xml.png" />
 </a> 
 

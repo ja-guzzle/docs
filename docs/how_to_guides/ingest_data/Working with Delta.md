@@ -23,9 +23,7 @@ Only supported on Databricks compute
 
 ## Interface for Delta Lake Source
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delta_1.png) -->
-
-<a href="/img/docs/how-to-guides/ingest_data/delta_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delta_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/delta_1.png" />
 </a> 
 
@@ -41,7 +39,6 @@ Only supported on Databricks compute
 
 ## Interface for Delta Lake as Target and Reject
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delta_2.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/delta_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delta_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/delta_2.png" />
 </a> 

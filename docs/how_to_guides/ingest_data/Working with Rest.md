@@ -33,8 +33,7 @@ Below are the different properties to create API ingest activity :
 
 ## The interface for API format is shown in following gif :
 
-![image alt text](/img/docs/how-to-guides/ingest_data/rest_1.gif)
-<a href="/img/docs/how-to-guides/ingest_data/rest_1.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/rest_1.gif" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/rest_1.gif" />
 </a> 
 

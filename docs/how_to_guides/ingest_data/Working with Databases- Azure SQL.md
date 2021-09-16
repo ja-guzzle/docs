@@ -19,9 +19,7 @@ Azure SQL is a family of managed, secure, and intelligent products that use the 
 
 ## Interface for Azure Source
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/azureSQL_1.png) -->
-
-<a href="/img/docs/how-to-guides/ingest_data/azureSQL_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/azureSQL_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/azureSQL_1.png" />
 </a> 
 
@@ -39,7 +37,6 @@ Azure SQL is a family of managed, secure, and intelligent products that use the 
 
 ## Interface for Azure Target
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/azureSQL_2.jpg) -->
-<a href="/img/docs/how-to-guides/ingest_data/azureSQL_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/azureSQL_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/azureSQL_2.png" />
 </a> 

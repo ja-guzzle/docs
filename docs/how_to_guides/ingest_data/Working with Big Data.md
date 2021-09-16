@@ -17,9 +17,8 @@ This article outlines how to work with Big Data file formats namely: Parquet, Av
 
 ## Interface for Big Data format
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/big_data_1.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/big_data_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/big_data_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/big_data_1.png" />
 </a> 
 
@@ -37,9 +36,8 @@ This article outlines how to work with Big Data file formats namely: Parquet, Av
 
 ## The Interface for the Big Data Formats is
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/big_data_2.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/big_data_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/big_data_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/big_data_2.png" />
 </a> 
 

@@ -35,9 +35,8 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 
  Below gif represents created JDBC datastore :
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/jdbc_1.gif) -->
 
-<a href="/img/docs/how-to-guides/datastores/jdbc_1.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/jdbc_1.gif" target="_self" >
     <img width="825" src="/img/docs/how-to-guides/datastores/jdbc_1.gif" />
 </a>
 
@@ -53,10 +52,6 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 |KeyVault name(if keyvault is chosen)|Name of keyvault where password is saved.|No|
 |Secret Name (If keyvault is chosen)|Secret name from keyvault where password is saved.|No|
 
-
-
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/jdbc_2.gif) -->
-
-<a href="/img/docs/how-to-guides/datastores/jdbc_2.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/jdbc_2.gif" target="_self" >
     <img width="825" src="/img/docs/how-to-guides/datastores/jdbc_2.gif" />
 </a>

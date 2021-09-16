@@ -28,7 +28,6 @@ Rest Api is service call where user can access via URI and can gather data from 
 
 ## Interface for Rest API page
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/rest_1.jpg) -->
-<a href="/img/docs/how-to-guides/datastores/Rest_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/Rest_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/datastores/Rest_1.png" />
 </a>

@@ -24,9 +24,8 @@ title: HDFS
 
 ## Interface for HDFS datastore
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/HDFS_1.jpg) -->
 
-<a href="/img/docs/how-to-guides/datastores/HDFS_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/HDFS_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/datastores/HDFS_1.png" />
 </a>
 

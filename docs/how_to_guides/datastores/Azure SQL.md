@@ -27,9 +27,8 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 |Password|Password of SQL server|yes|
 
 ## Interface for Azure SQL datastore
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/AzureSQL_1.png) -->
 
-<a href="/img/docs/how-to-guides/datastores/AzureSQL_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/AzureSQL_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/datastores/AzureSQL_1.png" />
 </a>
 

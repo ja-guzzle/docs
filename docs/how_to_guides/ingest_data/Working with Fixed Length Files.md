@@ -22,7 +22,6 @@ Fixed Length Files are supported only as a Source and not a Target in Guzzle.
 
 ## Interface for fixed length file is
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/fixedlength.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/fixedlength.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/fixedlength.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/fixedlength.png" />
 </a> 

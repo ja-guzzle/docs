@@ -32,8 +32,7 @@ Guzzle only supports ADF as an External job.
 
 ## Interface for ADF datastore
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/ADF_1.jpg) -->
-<a href="/img/docs/how-to-guides/datastores/ADF_0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/ADF_0.png" target="_self" >
     <img  width="1000" src="/img/docs/how-to-guides/datastores/ADF_0.png" />
 </a>
 

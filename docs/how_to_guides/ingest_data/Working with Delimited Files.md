@@ -26,9 +26,8 @@ Delimited file support in Guzzle provides extensive features to specify file for
 
 ## The Interface for the Delimited File Format is
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delimited_1.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/delimited_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delimited_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/delimited_1.png" />
 </a> 
 
@@ -43,25 +42,21 @@ We can also add Column Mapping to specify how to map columns in the source file.
 All we need to do is add the Column Name and the Index we would like to Map the Column to.
 Example : In example "first_name" is indexed with 4th column which is "gender" and "age" is indexed with 1st column which is "id". 
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delimited2.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/delimited2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delimited2.png" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/delimited2.png" />
 </a> 
 
 ## Before Column Mapping:
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delimited3.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/delimited3.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delimited3.png" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/delimited3.png" />
 </a> 
 
 ## After Column Mapping:
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/delimited4.png) -->
-
-<a href="/img/docs/how-to-guides/ingest_data/delimited4.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/delimited4.png" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/delimited4.png" />
 </a> 
 

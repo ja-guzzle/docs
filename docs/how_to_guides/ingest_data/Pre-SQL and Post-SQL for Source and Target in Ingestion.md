@@ -51,8 +51,7 @@ This order of execution applies across all connectors in Guzzle.
 
 In case of multiple SQL statements, the statements will be executed in the order the user sees them in the Interface.
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/image_1.png)    -->
-<a href="/img/docs/how-to-guides/ingest_data/preSQL_and_postSQL.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/preSQL_and_postSQL.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/preSQL_and_postSQL.png" />
 </a>       
 

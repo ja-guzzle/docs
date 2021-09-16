@@ -22,8 +22,7 @@ This article outlines how to work with Excel (.xls or .xlsx)  for source and tar
 
 ## The Interface for the Excel File Format is :
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/excel_1.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/excel_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/excel_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/excel_1.png" />
 </a> 
 
@@ -37,9 +36,7 @@ Column Mapping in Excel Files are very similar to Delimited Files. We can add Co
 
 All we need to do is add the Column Name and the Index we would like to Map the Column to.
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/excel2.png) -->
-
-<a href="/img/docs/how-to-guides/ingest_data/excel2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/excel2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/excel2.png" />
 </a> 
 

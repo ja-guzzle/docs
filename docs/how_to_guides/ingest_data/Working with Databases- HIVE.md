@@ -29,7 +29,7 @@ In the Datastore section we can choose to read four Data either as a Table or th
 
 ## Interface for Hive database as source is
 
-<a href="/img/docs/how-to-guides/ingest_data/hive_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/hive_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/hive_1.png" />
 </a> 
 
@@ -44,8 +44,7 @@ In the Datastore section we can choose to read four Data either as a Table or th
 
 ## Interface for Hive database as target is
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/hive_delta.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/hive_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/hive_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/hive_2.png" />
 </a> 
 

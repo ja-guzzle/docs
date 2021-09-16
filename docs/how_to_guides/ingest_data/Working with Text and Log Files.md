@@ -22,9 +22,8 @@ Text and Log Files are supported only as a Source and not a Target in Guzzle.
 
 ## An Example of using the Grok Parser in Guzzle is :
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/textandlog.gif) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/textandlog.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/textandlog.gif" target="_self" >
     <img src="/img/docs/how-to-guides/ingest_data/textandlog.gif" />
 </a> 
 

@@ -19,8 +19,7 @@ Pipelines in Guzzle are used to run multiple activities simultaneously. A pipeli
 
 In the image below we run a pipeline with two activities json_multi_line_false and csv_to_json and generate a Pipeline Dependency Graph for the two activities.
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/ezgif.com-gif-maker(4).gif) -->
-<a href="/img/docs/how-to-guides/ingest_data/pipeline.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/pipeline.gif" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/pipeline.gif" />
 </a> 
 

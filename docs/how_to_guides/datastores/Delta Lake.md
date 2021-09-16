@@ -38,9 +38,8 @@ Only supported on Databricks compute
 
 ## Interface for Delta Lake Datastore
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/delta_lake_1.png) -->
 
-<a href="/img/docs/how-to-guides/datastores/Delta_Lake_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/Delta_Lake_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/datastores/Delta_Lake_1.png" />
 </a>
 

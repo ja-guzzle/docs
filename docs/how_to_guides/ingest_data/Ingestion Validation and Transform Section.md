@@ -42,9 +42,7 @@ And after running this job in the target table a new column is created with "ful
 
 ## Interface for Validation and Transformation section is given below:
 
-<!-- ![image alt text](/img/docs/how-to-guides/ingest_data/transformation_validation_1.jpg) -->
-
-<a href="/img/docs/how-to-guides/ingest_data/validation_&_transformation_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/validation_&_transformation_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/validation_&_transformation_1.png" />
 </a>
 

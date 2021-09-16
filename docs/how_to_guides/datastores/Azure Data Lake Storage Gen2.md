@@ -43,15 +43,13 @@ Guzzle’s Ingestion activity supports ADLS Gen2 as both source and sink(target)
 
 **Sample config when using Credential Type as : Service Principal**
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/ADLS_1.png) -->
-<a href="/img/docs/how-to-guides/datastores/ADLS_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/ADLS_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/datastores/ADLS_1.png" />
 </a>
 
 **Sample config when using Credential Type as : Access Key**
 
-<!-- ![image alt text](/img/docs/how-to-guides/datastores/ADLS_2.png) -->
-<a href="/img/docs/how-to-guides/datastores/ADLS_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/ADLS_2.png" target="_self" >
     <img src="/img/docs/how-to-guides/datastores/ADLS_2.png" />
 </a>
 
