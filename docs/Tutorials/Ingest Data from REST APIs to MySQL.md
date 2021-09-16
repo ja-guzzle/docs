@@ -40,8 +40,8 @@ The first step in the Ingestion Process would be to deal with the Source Section
 5. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_1.jpg) -->
-<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" target="_self" >
-    <img width="1000" src="/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_rest_mysql_1.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_from_rest_mysql_1.png" />
 </a>
 
 As seen above we have chosen the JSON Format with the json file pattern. The option to Preview Data can also be seen in the Top Right Corner.

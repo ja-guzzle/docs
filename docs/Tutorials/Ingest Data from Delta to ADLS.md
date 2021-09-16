@@ -41,8 +41,8 @@ The first step in the Ingestion Process would be to deal with the Source Section
 5. User can also Configure Pre and Post SQL, Watermark, Configure columns restriction and Configure table dependency.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_delta_to_adls_1.jpg) -->
-<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_delta_to_adls_1.jpg" target="_self" >
-    <img width="1000" src="/img/docs/tutorials/ingest_from_delta_to_adls_1.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_delta_to_adls_1.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_from_delta_to_adls_1.png" />
 </a>
 
 As seen above we have chosen the table option and table name is users. The option to Preview Data can also be seen in the Top Right Corner.
@@ -64,8 +64,8 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 3. We can now give any name to the Target File. We can again Sample the Data through the Sample Data or Preview Data option given in the top right corner.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_delta_to_adls_3.jpg) -->
-<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_delta_to_adls_3.jpg" target="_self" >
-    <img width="1000" src="/img/docs/tutorials/ingest_from_delta_to_adls_3.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_delta_to_adls_3.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_from_delta_to_adls_3.png" />
 </a>
 
 Here we have chosen ADLS as our Datastore and assigned the name users to our file name.

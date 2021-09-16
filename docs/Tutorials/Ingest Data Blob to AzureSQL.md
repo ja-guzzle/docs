@@ -43,8 +43,8 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_1.jpg" target="_self" >
-    <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_1.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_data_from_blob_to_delta_1.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_data_from_blob_to_delta_1.png" />
 </a>
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Preview Data can also be seen in the Top Right Corner.
@@ -88,8 +88,8 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 4. We can now give any name to the Target in the Table Section. We can again Sample the Data through the Sample Data or Preview Data option given in the top right corner.
 
-<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_4.jpg" target="_self" >
-    <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_4.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_4.png" target="_self" >
+    <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_4.png" />
 </a>
 
 Here we have chosen Azure SQL as our Datastore and assigned the name stocks to our Table.

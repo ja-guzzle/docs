@@ -43,7 +43,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-![image alt text](/img/docs/tutorials/ingest_data_lfs_to_mysql_0.jpg)
+![image alt text](/img/docs/tutorials/ingest_data_lfs_to_mysql_0.png)
 
 As seen above we have chosen the Delimited Format with the csv file pattern. The option to Sample Data can also be seen in the Top Right Corner.
 

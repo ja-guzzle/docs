@@ -31,7 +31,7 @@ Guzzle provides below parameter and configs for Yarn
 ** Interface for Yarn Compute **
 
 <!-- ![image alt text](/img/docs/how-to-guides/compute/yarn_1.jpg) -->
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/compute/yarn_1.jpg" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/compute/yarn_1.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/compute/yarn_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/compute/yarn_1.png" />
 </a>
 

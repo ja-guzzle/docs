@@ -34,8 +34,8 @@ This datastore is use for both source and target tabs.
 
 ## Interface for Amazon S3 datastore
 
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/amazons3_1.jpg" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/datastores/amazons3_1.jpg" />
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/amazons3_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/datastores/amazons3_1.png" />
 </a>
 
 ## Known Limitation
