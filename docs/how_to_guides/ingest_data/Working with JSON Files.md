@@ -307,7 +307,7 @@ Every object in the array is separated by a comma
 We can also add Column Mapping to specify how to map columns in the source file. This is applicable for files which are having headers or without header. Column Mapping in JSON helps in mapping the columns to a new Column Name as shown here:
 
 <!-- ![image alt text](/img/docs/working_with_json2.png) -->
-<a href="/img/docs/how-to-guides/ingest_data/working_with_json2.png" target="_self" >
+<a href="/img/docs/working_with_json2.png" target="_self" >
     <img width="1000" src="/img/docs/working_with_json2.png" />
 </a> 
 

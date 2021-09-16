@@ -40,7 +40,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 5. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_1.jpg) -->
-<a href="/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_from_rest_mysql_1.jpg" />
 </a>
 
@@ -48,7 +48,7 @@ As seen above we have chosen the JSON Format with the json file pattern. The opt
 
 After previewing the data can be seen.
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_2.jpg) -->
-<a href="/img/docs/tutorials/ingest_from_rest_mysql_2.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_rest_mysql_2.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_from_rest_mysql_2.jpg" />
 </a>
 
@@ -62,7 +62,7 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_from_rest_mysql_3.jpg) -->
 
-<a href="/img/docs/tutorials/ingest_from_rest_mysql_3.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_from_rest_mysql_3.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_from_rest_mysql_3.jpg" />
 </a>
 

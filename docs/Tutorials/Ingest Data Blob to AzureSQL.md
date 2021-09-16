@@ -43,7 +43,7 @@ The first step in the Ingestion Process would be to deal with the Source Section
 
 4. Guzzle also provides a feature to Sample your Data. This option can be seen in the top right corner of the Interface.
 
-<a href="/img/docs/tutorials/ingest_blob_to_azuresql_1.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_1.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_1.jpg" />
 </a>
 
@@ -52,7 +52,7 @@ As seen above we have chosen the Delimited Format with the csv file pattern. The
 After clicking on preview data : 
 
 
-<a href="/img/docs/tutorials/ingest_blob_to_azuresql_2.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_2.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_2.jpg" />
 </a>
 
@@ -70,7 +70,7 @@ The next step would be to perform Validations and Transformations on the Data . 
 
 5. In the SQL Validation you may enter a condition in order to Partition the Columns depending on whether or not they satisfy the given condition. You can run your validations by clicking the tick at the top of your interface.
 
-<a href="/img/docs/tutorials/ingest_blob_to_azuresql_3.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_3.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_3.jpg" />
 </a>
 
@@ -88,7 +88,7 @@ We now have to load the Source Dataset to a Target Dataset or Table. Guzzle prov
 
 4. We can now give any name to the Target in the Table Section. We can again Sample the Data through the Sample Data or Preview Data option given in the top right corner.
 
-<a href="/img/docs/tutorials/ingest_blob_to_azuresql_4.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_blob_to_azuresql_4.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_blob_to_azuresql_4.jpg" />
 </a>
 
@@ -104,7 +104,7 @@ We now move onto the Reject Section where we deal with the Data which does not p
 
 	
 
-<a href="/img/docs/tutorials/reject_section_0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/reject_section_0.png" target="_self" >
     <img width="1000" src="/img/docs/tutorials/reject_section_0.png" />
 </a>
 
