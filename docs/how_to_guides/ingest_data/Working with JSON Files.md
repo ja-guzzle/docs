@@ -35,7 +35,7 @@ JSON file support in Guzzle provides extensive features to specify file format d
 
 <!-- ![image alt text](/img/docs/working_with_json1.png) -->
 
-<a href="/img/docs/how-to-guides/ingest_data/working_with_json1.png" target="_self" >
+<a href="/img/docs/working_with_json1.png" target="_self" >
     <img width="1000" src="/img/docs/working_with_json1.png" />
 </a> 
 

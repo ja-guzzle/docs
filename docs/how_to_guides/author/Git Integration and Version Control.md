@@ -239,8 +239,8 @@ To switch to a different Git Provider, go to the Git Settings from the Top Nav b
 (![image alt text](/img/docs/how-to-guides/author/gitintegrations15.png)) of the tab bar. 
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations16.gif) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations_16.gif" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations_16.gif" />
+<a href="/img/docs/how-to-guides/author/gitintegrations16.gif" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations16.gif" />
 </a>
 
 
