@@ -19,7 +19,7 @@ Also, you can download the service log by clicking on App service log.
 ** Interface for Service logs page is **
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg) -->
-<a href="/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/maintenance/service_logs_1.jpg" />
 </a>
 

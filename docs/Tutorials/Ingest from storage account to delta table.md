@@ -53,7 +53,7 @@ As seen above we have chosen the Delimited Format with the csv file pattern. The
 After previewing the data can be seen.
 
 <!-- ![image alt text](/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg) -->
-<a href="https://guzzle.justanalytics.com/assets/images/ingest_data_from_blob_to_delta_2-9e8f1b73d368e376fd1a9e39a03b8a70.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg" target="_self" >
     <img width="1000" src="/img/docs/tutorials/ingest_data_from_blob_to_delta_2.jpg" />
 </a>
 

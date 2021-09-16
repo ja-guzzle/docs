@@ -8,7 +8,7 @@ title: Setup Shared Storage
 Guzzle home (also referred as GUZZLE_HOME) is stores the binaries, configs and logs on a file system which should be accessible to both the Guzzle VM and the `compute` where the **activities ** will run. Below architecture diagram explains this further 
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png) -->
-<a href="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" target="_self" >
     <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" />
 </a>
 
@@ -32,7 +32,7 @@ Once shared storage is enabled, you will not be able to disable it anymore.
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage1.png) -->
 
-<a href="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />
 </a>
 

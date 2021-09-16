@@ -29,7 +29,7 @@ Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle 
 <!-- ![repository database](/img/docs/how-to-guides/administrator/environment-config/repository_db01.png) -->
 
 
-<a href="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" />
 </a>
 
@@ -65,19 +65,19 @@ As mentioned above, Guzzle repository contains two types of tables. Of this **Gu
 
 ## Repository Databse Credentials 
 <!-- ![image](https://user-images.githubusercontent.com/35588903/127739053-2a803845-9d13-4c0d-a90b-9f8674bc03ba.png) -->
-<a href="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_database_1.png" />
 </a>
 
 ## Repository Databse Initilize Audit Metadata
 
-<a href="/img/docs/how-to-guides/administrator/environment-config/repository_database_2.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/repository_database_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_database_2.png" />
 </a>
 
 **At a minimum, one context columns needs to be defined**. By default, Guzzle instance comes with one context column named **batch**. For most of the Guzzle deployment this default context column can be left as is.  This column shall also capture the `batch` name when an `activity` or `pipeline` is run as part of a `batch`. 
 
-More details of Guzzle Batches can be found [here](https://guzzle.justanalytics.com/docs/how_to_guides/batch/batch).  Additionally, the Guzzle `batch` is composed of stages. The master list of stages that are available for defining `batch` can be customized for your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
+More details of Guzzle Batches can be found [here](../../batch/batch).  Additionally, the Guzzle `batch` is composed of stages. The master list of stages that are available for defining `batch` can be customized for your Guzzle instance. The default list of stages that are provided in Guzzle instance are below. 
  
 - SRI : Represent source image layer
 - FND : Foundation layer tables or data

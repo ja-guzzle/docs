@@ -18,6 +18,6 @@ When creating a schedule you can specify the name and value of the resources.
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/maintenance/schedule_1.jpg) -->
 
-<a href="/img/docs/how-to-guides/administrator/maintenance/schedule_1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/maintenance/schedule_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/maintenance/schedule_1.png" />
 </a>

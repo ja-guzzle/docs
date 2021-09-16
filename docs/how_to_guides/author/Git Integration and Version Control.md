@@ -34,8 +34,8 @@ Integrating a git repository for your Guzzle installation will entail following:
 Step 1 : Registering OAuth application in GitHub
 
 1. For every Guzzle instance (or Guzzle installation) you will be required to register OAuth application in GitHub.
-<!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations0.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations0.png" target="_self" >
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations0.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations0.png" />
 </a>
 
@@ -47,16 +47,15 @@ Step 1 : Registering OAuth application in GitHub
 
     Redirect URL : https://guzzle.asia.cloudapp.azure.com:8082/integration/git
 
-<!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations1.png) -->
 
-<a href="/img/docs/how-to-guides/author/gitintegrations1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations1.png" />
 </a>
 
 
 3. Once Application is registered, GitHub shall provide you the details of Client ID and Client Secret.
-<!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations2.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations2.png" target="_self" >
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations2.png" />
 </a>
 
@@ -71,14 +70,14 @@ Step 2: Creating the repository
 
 4. To create a repository, login to GitHub account, go to Repositories and click New. Ensure the repository is initialized.
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations3.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations3.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations3.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations3.png" />
 </a>
 
 
 5. Also ensure that user account that shall be used to integrate git with Guzzle should have "Name" defined in public profile: 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations4.png)  -->
-<a href="/img/docs/how-to-guides/author/gitintegrations4.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations4.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations4.png" />
 </a>
 
@@ -100,14 +99,14 @@ Step 3 : Integrating GitHub with Guzzle Git Integration
 5. Enter the Client Id and Client Secret And Click on Enable
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations5.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations5.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations5.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations5.png" />
 </a>
 
 
 6. This will redirect you to login to GitHub and authorize the OAuth application: guzzle-dev to be able to access the public and private repositories in your account (personal repository) or those owned by your organization. Permit this access 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations6.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations6.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations6.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations6.png" />
 </a>
 
@@ -115,7 +114,7 @@ Step 3 : Integrating GitHub with Guzzle Git Integration
 7. After OAuth flow (authorization), you will be directed to Guzzle. Enter the repository owner (this could be an individual's account or organization) and tab-out. This will pull a list of repositories that are accessible under that owner.
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations7.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations7.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations7.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations7.png" />
 </a>
 
@@ -123,7 +122,7 @@ Step 3 : Integrating GitHub with Guzzle Git Integration
 8. After you select a repository, Guzzle will prompt you to select the Collaboration branches to be used. Once done click on Save icon to save.
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations8.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations8.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations8.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations8.png" />
 </a>
 
@@ -131,7 +130,7 @@ Step 3 : Integrating GitHub with Guzzle Git Integration
 9. Once enabled you will notice in top navigation bar, Guzzle shall show Git setting option on Top navigation bar
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations9.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations9.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations9.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations9.png" />
 </a>
 
@@ -173,7 +172,7 @@ Step 2: integrating Azure DevOps Git with Guzzle.
 7. Select project name, repository name and branch name and click on save to integrate Azure DevOps.
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations10.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations10.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations10.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations10.png" />
 </a>
 
@@ -198,7 +197,7 @@ Following are not part of version control:
 Each Git repository that's associated with a Guzzle has a collaboration branch. (main) is the default collaboration branch. Users can also create feature branches by clicking + New Branch in the Top Nav Git dropdown. Once the new branch Dialogue  appears, enter the name of your feature branch.
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations11.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations11.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations11.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations11.png" />
 </a>
 
@@ -208,7 +207,7 @@ Each Git repository that's associated with a Guzzle has a collaboration branch. 
 After you have merged changes to the collaboration branch (main is the default), click Publish to manually publish your code changes in the main branch to the Guzzle default configs.Users can publish branches by clicking Publish Branch in the Top Nav Git dropdown.
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations12.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations12.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations12.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations12.png" />
 </a>
 
@@ -218,7 +217,7 @@ After you have merged changes to the collaboration branch (main is the default),
 Users can manually pull branches by clicking Pull Branch in the Top Nav Git dropdown. To get the updated version of the branch from git repo
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations13.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations13.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations13.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations13.png" />
 </a>
 
@@ -228,7 +227,7 @@ Users can manually pull branches by clicking Pull Branch in the Top Nav Git drop
 Users can manually create pull Requests by clicking Create pull request in the Top Nav Git dropdown. This will show appropriate merge request UI of GitHub or azure devops
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations14.png) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations14.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations14.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations14.png" />
 </a>
 
@@ -239,7 +238,7 @@ To switch to a different Git Provider, go to the Git Settings from the Top Nav b
 (![image alt text](/img/docs/how-to-guides/author/gitintegrations15.png)) of the tab bar. 
 
 <!-- ![image alt text](/img/docs/how-to-guides/author/gitintegrations16.gif) -->
-<a href="/img/docs/how-to-guides/author/gitintegrations16.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/author/gitintegrations16.gif" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/author/gitintegrations16.gif" />
 </a>
 

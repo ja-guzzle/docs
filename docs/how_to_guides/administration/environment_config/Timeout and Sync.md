@@ -59,6 +59,6 @@ Step 3 : Update the timeout settings.
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/environment-config/timeout_&_sync_1.gif) -->
 
-<a href="/img/docs/how-to-guides/administrator/environment-config/timeout_and_sync_1.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/timeout_and_sync_1.gif" target="_self" >
     <img width="1600" src="/img/docs/how-to-guides/administrator/environment-config/timeout_and_sync_1.gif" />
 </a>

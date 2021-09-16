@@ -21,7 +21,7 @@ To use create a new one that shall be used by Guzzle to perform SSO- [for more](
     2. Only Single tenant is supported
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso0.png) -->
-<a href="/img/docs/how-to-guides/administrator/security/sso0.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/security/sso0.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso0.png" />
 </a>
 
@@ -52,7 +52,7 @@ Step 3. Click on Azure Single Sign On
 Step 4. Click on Enable to enable SSO
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso1.png) -->
-<a href="/img/docs/how-to-guides/administrator/security/sso1.png" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/security/sso1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso1.png" />
 </a>
 
@@ -82,7 +82,7 @@ Step 7 : Create User
 5. Click on Create
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/security/sso2.gif) -->
-<a href="/img/docs/how-to-guides/administrator/security/sso2.gif" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/security/sso2.gif" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/security/sso2.gif" />
 </a>
 

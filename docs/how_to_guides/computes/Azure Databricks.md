@@ -42,13 +42,13 @@ In the notebook guzzle programmatically mount shared storage in the Databricks e
 ** Interface of Azure Databricks compute for cluster type : Data Engineering and Data Engineering Light. **
 
 <!-- ![imaeg alt text](/img/docs/how-to-guides/compute/azuredatabricks_1.jpg) -->
-<a href="/img/docs/how-to-guides/compute/azuredatabricks_1.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/compute/azuredatabricks_1.jpg" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/compute/azuredatabricks_1.jpg" />
 </a>
 
 ** Interface of Azure Databricks compute for cluster type : Data Analytics. **
 
-<a href="/img/docs/how-to-guides/compute/azure_databricks_2.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/compute/azure_databricks_2.jpg" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/compute/azure_databricks_2.jpg" />
 </a>
 

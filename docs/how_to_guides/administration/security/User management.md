@@ -23,7 +23,7 @@ User can see list of users and from their admin can manage user by editing and d
 Interface of Users list and how to manage is below 
 
 <!-- ![image alt text](/img/docs/how-to-guides/administrator/security/manage_users_1.jpg) -->
-<a href="/img/docs/how-to-guides/administrator/security/manage_users_1.jpg" target="_self" >
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/security/manage_users_1.jpg" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/administrator/security/manage_users_1.jpg" />
 </a>
 
