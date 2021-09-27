@@ -1,5 +1,21 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.3 (September 27, 2021)
+#### Features
+updated theme of start/stop button and detail section title for Default Compute tab
+add option for spark engine for delta technology in processing activity
+keep generated access token expiry time as 90 days by default
+added support of user parameter, batch_id, stage_id and environment parameters in pipeline resume
+removed prev_business_ts parameter support
+
+#### Bugs
+fixed shared storage mount/unmount behavior for azure key vault config
+retain api token key vault values when switching cluster type
+fixed column mapping issue in fix length file format
+fixed column mapping issue when source file is empty
+fixed source generated column issue for hive and delta source
+fixed firstname and lastname issue in user module
+
 ### Guzzle v2.0.2 (September 13, 2021)
 #### Features
 - show manual client secret value on sso page
