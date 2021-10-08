@@ -1,5 +1,16 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.4 (October 8, 2021)
+#### Features
+- Added support of service principal in guzzle storage
+- Enhanced exception handling in ingestion module
+- Enhancement in auto refresh in monitor screen 
+
+#### Bugs
+- UI Fixes : expand/collapse component sharing state across tabs, improve author create new page, renamed azure blob and adls gen 2 technology name
+- Disabled batch additional column for single context column
+- Fixed source generated column issue in jdbc, azure sql and azure synapse source
+
 ### Guzzle v2.0.3 (September 27, 2021)
 #### Features
 - Support for spark engine for delta technology in processing activity
