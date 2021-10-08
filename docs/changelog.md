@@ -1,6 +1,6 @@
 # Guzzle Changelog
 
-### Guzzle v2.0.4 (October 8, 2021)
+### Guzzle v2.0.4 (October 11, 2021)
 #### Features
 - Added support of service principal in guzzle storage
 - Enhanced exception handling in ingestion module
