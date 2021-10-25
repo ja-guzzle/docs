@@ -1,5 +1,18 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.5 (October 25, 2021)
+#### Features
+- Redesigned run activity, pipeline, stage and batch init dialogs
+- Improve performance when using git on blob storage with large number of configs
+- Drag and Drop enhancement in Author UI
+
+#### Bugs
+- UI Fixes : Table Dependency component sharing same table name while switching tabs, SingleParametersInput component sharing same state, show error messages on login screen for invalid JWT key vault config, fix issues for jwt settings page
+- Fixed repository database page issues - disable cancel button when any action is in progress, make driver class input optional
+- Fixed ADLS Gen2 datastore editor while switching between service principal and access key credential type
+- Corrected login error messages
+- Fixed issue in job_params api call
+
 ### Guzzle v2.0.4 (October 11, 2021)
 #### Features
 - Added support of service principal in guzzle storage
