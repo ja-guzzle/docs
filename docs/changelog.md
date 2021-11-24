@@ -14,7 +14,7 @@
 - Updated run job, pipeline and batch api
 
 #### Bugs
-- Fixed issues in create datastore from activity editor - connection is created with name undefined.yml, if there is existing connection with same name new connection name is not generated properly
+- Fixed issues in create datastore from activity editor - connection is created with name undefined.yml, if there is existing connection with same name as datastore name then new connection name is not generated properly
 - Fixed issue of timeout and sync page when guzzle API is down
 
 ### Guzzle v2.0.5 (October 25, 2021)
