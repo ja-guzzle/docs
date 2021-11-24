@@ -1,5 +1,22 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.7 (November 22, 2021)
+#### Bugs
+- Fixed issue in handling response of databricks run job api
+- Fixed issue in databricks notebook task status
+- Fixed issue in exceeding open file limits
+
+### Guzzle v2.0.6 (November 8, 2021)
+#### Features
+- Allowed user password change in edit user screen
+- Added warning message for target preserve hierarchy option when partition columns are configured
+- Updated Labels and Captions in UI
+- Updated run job, pipeline and batch api
+
+#### Bugs
+- Fixed issues in create datastore from activity editor 
+- Fixed issue of timeout and sync page when guzzle API is down
+
 ### Guzzle v2.0.5 (October 25, 2021)
 #### Features
 - Redesigned run activity, pipeline, stage and batch init dialogs
