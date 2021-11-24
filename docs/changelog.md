@@ -11,7 +11,7 @@
 - Allowed user password change in edit user screen
 - Added warning message for target preserve hierarchy option when partition columns are configured
 - Updated Labels and Captions in UI
-- Updated run job, pipeline and batch api
+- Added validations in run job, pipeline and batch api
 
 #### Bugs
 - Fixed issues in create datastore from activity editor - connection is created with name undefined.yml, if there is existing connection with same name as datastore name then new connection name is not generated properly
