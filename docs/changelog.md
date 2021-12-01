@@ -46,7 +46,7 @@
 - Support for spark engine for delta technology in processing activity
 - Keep generated access token expiry time as 90 days by default
 - Added support of user parameter, batch_id, stage_id and environment parameters in pipeline resume (this params will be supported when resuming)
-- Removed prev_business_ts parameter support
+- Breaking change: Removal of prev_business_ts. An alternate will be pass this explicitly when running stages or in pipeline this can be deduced by passing business date - 1 minute to child jobs
 
 #### Bugs
 - UI Fixes: Labeel renames and look and feel update, fixed shared storage mount/unmount behavior for azure key vault config, Compute UI (retain key)
