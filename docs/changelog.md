@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.8 (December 7, 2021)
+### Features
+- Introduced new user roles and added authorization support
+
 ### Guzzle v2.0.7 (November 22, 2021)
 #### Bugs
 - Fixed issue in handling response of databricks run job api
