@@ -6,3 +6,4 @@
 - Processing template engine was treating specified value of additional column as column from source. This behavior is now changed and made consistent with processing spark engine. All value specified in additional columns are now treated as literal (constant) values
 - Processing module usage and behavior of some framework column is now updated. Refer to clarifications sheet from [processing module](https://justanalytics.sharepoint.com/:x:/r/teams/Guzzle/Shared%20Documents/Guzzle%20Devt/Specs/Backend/processing%20module.xlsx?d=wbcea376cdeed435ba5664772975b74db&csf=1&web=1&e=WOElaT) for details
 - When using spark engine - statistics of processing job run like inserted, updated,soft deleted etc are stored in job_info record. Values in these columns might not be correct
+- When using template engine - if the strings are provided as single quotes in existing configs, we need to remove quotes manually
