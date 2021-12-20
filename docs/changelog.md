@@ -9,6 +9,9 @@
 - Fixed error while changing Xml root tag and Xml row tag parameters in ingestion activity editor
 - Fixed activity validation git branch issue
 
+#### Notes
+- If malformed yaml configs are present in guzzle deployment, then whenever guzzle reads that config it will fail and it will keep doing retries until exhausted. Due to this, affected operations will complete more slowly
+
 ### Guzzle v2.0.8 (December 7, 2021)
 ### Features
 - Introduced new user roles and added authorization support
