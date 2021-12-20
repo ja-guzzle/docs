@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.0.9 (December 17, 2021)
+#### Bugs
+- Correctly compute datastore connection name when creating new datastore using '+ New' button
+- Fixed issue in using data sampling feature with processing module when hive database is different than default
+- Fixed preview data ui issues
+- Fixed empty yaml file issue by adding retry support
+- Fixed error while changing Xml root tag and Xml row tag parameters in ingestion activity editor
+- Fixed activity validation git branch issue
+
 ### Guzzle v2.0.8 (December 7, 2021)
 ### Features
 - Introduced new user roles and added authorization support
