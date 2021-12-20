@@ -1,6 +1,6 @@
 # Guzzle Changelog
 
-### Guzzle v2.0.9 (December 17, 2021)
+### Guzzle v2.0.9 (December 20, 2021)
 #### Bugs
 - Correctly compute datastore connection name when creating new datastore using '+ New' button
 - Fixed issue in using data sampling feature with processing module when hive database is different than default
