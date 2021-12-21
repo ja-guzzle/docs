@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.0 (December 21, 2021)
+#### Features
+- Processing module enhancements. [Click Here](/docs/releases/2_1_0/processing-changes) to view details
+
 ### Guzzle v2.0.9 (December 20, 2021)
 #### Bugs
 - Correctly compute datastore connection name when creating new datastore using '+ New' button
