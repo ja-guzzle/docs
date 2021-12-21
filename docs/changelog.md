@@ -17,7 +17,7 @@
 - If malformed yaml configs are present in guzzle deployment, then whenever guzzle reads that config it will fail and it will keep doing retries until exhausted (currently its 20 second). Due to this, affected operations will respond slowly. Example of affected operatoins are:  login/reloaded page/git pull/  new branch when git is enabled, refresh of config in API which happens in background)
 
 ### Guzzle v2.0.8 (December 7, 2021)
-### Features
+#### Features
 - Introduced new user roles and added authorization support
 
 ### Guzzle v2.0.7 (November 22, 2021)
