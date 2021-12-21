@@ -4,13 +4,13 @@
 #### Bugs
 - Correctly compute datastore connection name when creating new datastore using '+ New' button
 - Fixed issue in using data sampling feature with processing module when hive database is different than default
-- Fixed preview data ui issues
+- Fixed preview data ui issues which was introduced after support of authorization roles in 2.0.8
 - Fixed empty yaml file issue by adding retry support
 - Fixed error while changing Xml root tag and Xml row tag parameters in ingestion activity editor
 - Fixed activity validation git branch issue
 
 #### Notes
-- If malformed yaml configs are present in guzzle deployment, then whenever guzzle reads that config it will fail and it will keep doing retries until exhausted. Due to this, affected operations will complete more slowly
+- If malformed yaml configs are present in guzzle deployment, then whenever guzzle reads that config it will fail and it will keep doing retries until exhausted (currently its 20 second). Due to this, affected operations will respond slowly. Example of affected operatoins are:  login/reloaded page/git pull/  new branch when git is enabled, refresh of config in API which happens in background)
 
 ### Guzzle v2.0.8 (December 7, 2021)
 ### Features
