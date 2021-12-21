@@ -143,7 +143,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Resources',
-      items: ['Resources/overview','Resources/resource'],
+      items: ['Resources/overview'],
     },
     'changelog'
   ]
