@@ -1,5 +1,12 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.1 (December 31, 2021)
+#### Features
+- Reduced yaml retry to 5 times and added file absolute path and last modified time in log
+
+#### Bugs
+- Removed support for generating aggregation element in recon activity editor
+
 ### Guzzle v2.1.0 (December 21, 2021)
 #### Features
 - Processing module enhancements. [Click Here](/docs/releases/2_1_0/processing-changes) to view details
