@@ -29,24 +29,35 @@ Once shared storage is enabled, you will not be able to disable it anymore.
 
 3. Enter following configuration details:
 
-
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />
-</a>
-
 ## Properties to Setup Shared Storage
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Account Name|Specify the Azure Storage Account Name.|None|Yes|
 |Container|Specify the Azure storage container name|None|Yes|
+|Authentication Type|Select the Authentication Type: <br/>1. Access Key <br/>- If this option is selected then access key of storage account is required.<br/>2. Service Principle <br/>- If this option is selected then tenant id, client id and client secret is required|None|Yes|
 |Access Key|Specify the access key of storage account.<br/> For specify access key the following options are available:<br/>1. **Manual**: Provide access key directly. <br/>2. **Azure Key Vault**: For this user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where access key is stored in Azure Key Vault instance.|None|Yes|
+|Tenant Id|Specify the service principle tenant id|None|Yes|
+|Client id|Specify the service principle client id|None|Yes|
+|Client Secret|Specify the client secret.<br/> For specify client secret the following options are available:<br/>1. **Manual**: Provide client secret directly. <br/>2. **Azure Key Vault**: For this user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where client secret is stored in Azure Key Vault instance.|None|Yes|
 |Container Directory|Specify directory inside the container where GUZZLE_HOME has to be setup. <br/> You can specify / (or root directory) if the GUZZLE_HOME has to be setup in the root directory of the container|None|Yes|
 |Force Clean|You can check this option to clean up existing files in the container before initializing the GUZZLE_HOME. <br/> If kept unchecked, guzzle_will merge the files of GUZZLE_HOME with the existing ones in that directory|False|No|
 |Databricks Secret|Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks <br/>Workspace is covered here.<br/><br/> Secret Scope: This is the secret scope defined in Databricks workspace.<br /><br/> Secret Key: This is the secret containing the access key for the storage account that is to be used for shared storage.<br/><br/> Refer to these articles to create Databricks Secret Scope and secrets. <br/><br/> How to create secret scope is defined **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**.|None|No|
 
 
 Guzzle will validate the shared storage configuration ensuring the storage account, container, access key, and folder are valid before enabling the shared storage.
+
+### Setup Shared Storage using Servie Principle
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />
+</a>
+
+### Setup Shared Storage using Access Key
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_2.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_2.png" />
+</a>
 
 ## Steps to edit the Shared Storage configuration
 
