@@ -44,7 +44,7 @@ Below are the steps to create new user
 |Last Name|Last name of the user|
 |Username|This is the username that shall be used for login into Guzzle. For Azure SSO this should be AAD user name which generally is the email address (also referred to as user principal name)|
 |Password (only applies for Native users)|The password of the user|
-|Email (This field is not applicable for non external users)|This is the email of the native user. For Azure SSO this field is automatically populated from username|
+|Email (This field is not applicable for external users)|This is the email of the native user. For Azure SSO this field is automatically populated from username|
 |Security Role|Choose one or more roles: There are four roles Reader, Operator, Contributor and Admin which is described below|
 
 
