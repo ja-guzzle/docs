@@ -38,14 +38,14 @@ Below are the steps to create new user
 
 4. Provide below details and click "Create" or “Update” button
 
-|Property|Description|
-|--- |--- |
-|First Name|First name of the user|
-|Last Name|Last name of the user|
-|Username|This is the username that shall be used for login into Guzzle. For Azure SSO this should be AAD user name which generally is the email address (also referred to as user principal name)|
-|Password (only applies for Native users)|The password of the user|
-|Email (This field is not applicable for external users)|This is the email of the native user. For Azure SSO this field is automatically populated from username|
-|Security Role|Choose one or more roles: There are four roles Reader, Operator, Contributor and Admin which is described below|
+|Property| Description                                                                                                                                                                              |
+|--- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|First Name| First name of the user                                                                                                                                                                   |
+|Last Name| Last name of the user                                                                                                                                                                    |
+|Username| This is the username that shall be used for login into Guzzle. For Azure SSO this should be AAD user name which generally is the email address (also referred to as user principal name) |
+|Password| The password of the user <br/> - only applies for Native users                                                                                                                           |
+|Email | This is the email of the native user. For Azure SSO this field is automatically populated from username <br/> - This field is not applicable for external users                          |
+|Security Role| Choose one or more roles: There are four roles Reader, Operator, Contributor and Admin which is described below                                                                          |
 
 
 :::note

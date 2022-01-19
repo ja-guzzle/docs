@@ -47,7 +47,7 @@ Once shared storage is enabled, you will not be able to disable it anymore.
 
 Guzzle will validate the shared storage configuration ensuring the storage account, container, access key, and folder are valid before enabling the shared storage.
 
-### Setup Shared Storage using Servie Principle
+### Setup Shared Storage using Service Principle
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
     <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />

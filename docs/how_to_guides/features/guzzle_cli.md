@@ -3,88 +3,138 @@ id: guzzle_cli
 title: Guzzle CLI
 ---
 
-- Users can use Guzzle from terminal by Guzzle CLI feature. Users have to download guzzlecli package
 
-## Intstallation
+Guzzle command-line interface (CLI) provides an easy-to-use interface to Guzzle platform. The CLI is built on top of the Guzzle REST API and is organized into command groups like activity, pipeline, batch, schedule, compute, datastore, connection, environment, access-token and user.
 
-Coming soon
+:::caution Experimental
+This CLI is under active development and is released as an Experimental client. This means that interfaces are still subject to change.
+:::
 
-## Groups
+## Set up the CLI
+This section shows how to install and configure your environment to run the CLI.
 
-- Guzzle CLI has total 12 module like 
-    - profile
-    - activity
-    - pipeline
-    - batch
-    - schedule
-    - compute
-    - datastore
-    - connection
-    - environment
-    - access-token
-    - user
-    - export
 
-- From Guzzle CLI users can perform several operations like create user profile, run activity, run pipeline, init batch, run stage and export metadata
+### Download CLI
+Download Guzzle CLI package from https://guzzle-downloads.justanalytics.com/guzzle-cli-release/guzzlecli-0.0.1.zip and unzip it.
 
-## Profile
+```
+wget https://guzzle-downloads.justanalytics.com/guzzle-cli-release/guzzlecli-0.0.1.zip
+unzip guzzlecli.zip
+```
 
-- For creating profile user has to give values for following parameter
+run Guzzle CLI help command
+```
+cd guzzlecli/bin
+./guzzlecli -h
+```
 
-|parameter | description|
-|--------- | ---------- |
-|name      | profile name, if profile is already exist it will update its credentials | 
-|host      | guzzle instance url. ex, https://&lt;guzzle-instance-url&gt;, user can specify its value by setting up the environment variable GUZZLE_CLI_HOST |
-|token     | guzzle access token, user can generate token using My Profile -> Access Token -> Generate Token option in Guzzle UI. user can configure its value by setting up the environment variable GUZZLE_CLI_TOKEN |
-|default   | use this profile as default profile or not |
+### Set up authentication
+Before you can run CLI commands, you must set up authentication. To authenticate to the CLI you use a Guzzle personal access token.
+To configure the CLI to use a personal access token, run below command.
 
-- User can also see all availables profile and also can delete profile.
-- Profile is used to create new profile and update existing profile access credentials. which are stored in ~/.guzzlecliconf file on Unix, Linux, or macOS. user can change the path of this file by setting the environment variable GUZZLE_CLI_CONFIG_FILE. Encrypted Credentials required passphrase value. which are stored in ~/.guzzleclipassphrase file. User can change the path of file by setting environment varialbe GUZZLE_CLI_PASSPHRASE_FILE. file will be auto created by guzzle if it is not available.
+```
+./guzzlecli profile configure -n <PROFILE_NAME> -H <GUZZLE_HOST_URL> -t <PERSONAL_ACCESS_TOKEN> -d
+```
 
-## Activity
+- Replace `PROFILE_NAME` with actual profile name. if that profile is already configured it will update its values.
+- Replace `GUZZLE_HOST_URL` URL with your Guzzle instance URL in `https://guzzlevm.southeastasia.cloudapp.azure.com` format.
+- Replace `PERSONAL_ACCESS_TOKEN` with actual token value that you can generate from `Guzzle UI -> My Profile -> Access Token -> Generate Token`
 
-In this module user can run job individually.
-- There are some features for activity module like they can create activity, run activity, edit, delete, rerun, check run status, and view run history
+After you complete the configuration of profile, you can view list of configured profiles using below command.
 
-## Pipeline
+```
+./guzzlecli profile list
+```
 
-In this module user can run multiple job simultaneously.
-- There are some features for pipeline module like user can create pipeline, run pipeline, edit pipeline, delete pipeline, rerun pipeline, check run status, and view run history.
+your access credentials are stored in the file `~/.guzzlecliconf` on Unix, Linux, or macOS, or `<USER_HOME>\.guzzlecliconf` on Windows. The file contains a profile configurations:
 
-## Batch
+```
+profiles:
+- name: "guzzledev"
+  host: "https://guzzlevm-dev.southeastasia.cloudapp.azure.com"
+  token: "{ENC}t76ZTWuVkrrEe0Ic+SErglBZQ2zPy9TaeWUkpCEzUg7r1Ak6raF8D56i2nOG+X0z"
+  default: true
+- name: "guzzleprod"
+  host: "https://guzzlevm-prod.southeastasia.cloudapp.azure.com"
+  token: "{ENC}cJbJIa2KnOq+XRLDYLDPRODVpdzUr80McsOzPds+1Jl6GCsOITRdfp/SGzufDLUm"
+  default: false
+```
 
-In this module user can run multiple job groups.
-- There are some features for batch module like user can create batch, initialize it, run it, check status of run, view run history.
+you can change the path of this file by setting the environment variable `GUZZLE_CLI_CONFIG_FILE`.
 
-## Schedule
+```
+export GUZZLE_CLI_CONFIG_FILE=<path-to-file>
+```
+for window,
+```
+setx GUZZLE_CLI_CONFIG_FILE "<path-to-file>" /M
+```
 
-In this module user can schedule job when to run it.
-- There are some features for schedule module like user can create schedule, edit it, check status of run, view run history.
+Guzzle encrypt CLI token using SHA-1 algorithm, it stores passphrase in the file `~/.guzzleclipassphrase` on Unix, Linux, or macOS, or `<USER_HOME>\.guzzleclipassphrase` on Windows. The file contains a passphrase value to encrypt and decrypt profile token. you can change the path of this file by setting the environment variable `GUZZLE_CLI_PASSPHRASE_FILE`.
 
-## Compute 
+```
+export GUZZLE_CLI_PASSPHRASE_FILE=<path-to-file>
+```
+for window,
+```
+setx GUZZLE_CLI_PASSPHRASE_FILE "<path-to-file>" /M
+```
 
-- In this module user can create compute, edit it, delete it, list it, set-default.
 
-## Datastore
+Guzzle CLI supports the following environment variables:
+- GUZZLE_CLI_HOST
+- GUZZLE_CLI_TOKEN
 
-- In this module user can create datastore, edit it, delete it, list it, set-default
+An environment variable setting takes precedence over the setting in the configuration file.
 
-## Environment
+By default, CLI uses the default profile from config file. you can mark any configured profile as default profile using below command.
+```
+./guzzlecli profile set-default -n guzzledev
+```
 
-- In this module they can create environment, add-mapping, delete-mapping, add-parameter, delete-parameter
+## Use the CLI
+This section shows you how to get CLI help and invoke commands in each command group.
 
-## Access Token
+### Display CLI command group help
+You list the subcommands for any command group by running `./guzzlecli <group> --help` (or `./guzzlecli <group> -h`). For example, you list the Activity CLI subcommands by running `./guzzlecli activity -h`.
 
-- They can create it, list it and delete it
+### Display CLI subcommand help
+You list the help for a subcommand by running `./guzzlecli <group> <subcommand> --help` (or `./guzzlecli <group> <subcommand> -h`). For example, you list the help for the Activity run  subcommand by running `./guzzlecli activity run -h`.
 
-## User
+## CLI commands: 
+- profile
+- activity
+- pipeline
+- batch
+- schedule
+- compute
+- datastore
+- connection
+- environment
+- access-token
+- user
+- export
 
-- User can create user, edit it, delete it, get it and list it
+### Profile
 
-## Export 
+- Profile command is used to create, update, delete, list and view the user profiles.
 
-- User can export metadata in this module
+### Activity
+
+- Activity command is used to create, edit, delete activity. User can also run, rerun, stop and view status and run history of activity. 
+
+### Pipeline
+
+- Pipeline command is used to create, edit, delete pipeline. User can also run, stop and view status and run history of pipeline.
+
+### Batch
+
+- Batch command is used to create, edit, delete batch. User can also initialise, run, stop and view status and run history of batch.
+
+### Schedule
+
+- Schedule command is used to view status and run history of schedule.
 
 :::note 
-For more information like which commands and short options is used for which operation visit this **[spreadsheet.](/documents/guzzle_cli.xlsx)**
+For more information about command, subcommand and supported options view this **[file](/documents/guzzle_cli.xlsx)**
 :::
