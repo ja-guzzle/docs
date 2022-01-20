@@ -1,58 +1,63 @@
 ---
 id: how_key_vault_is_used_to_integrate_guzzle
-title: How key vault is used to integrate Guzzle
+title: Use Azure Key Vault with Guzzle
 ---
 
-### how to integrate key vault with Guzzle
 
-Azure Key Vault is a cloud-based service that helps to store cryptographic keys and secrets used by apps and services. 
+## Azure Key Vault
 
-Guzzle has a feature to integrate Azure Key Vault with Guzzle Virtual Machine. This allows users to use secrets in Guzzle in different places like to accesse secrets of database or in computes. There are some requirements for this feature
+[Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/overview) is a cloud-based service that helps to store cryptographic keys and secrets used by apps and services. 
+It is centralizing storage of application secrets that allows user to control their distribution.
 
-Prerequisite: 
+## Integrate key vault with Guzzle
+
+When using Key Vault, Guzzle no longer need to store secrets and passwords value in application. User can configure Key Vault name and Secret key instead of native secrets and password in Guzzle.
+Azure key vault requires proper authentication and authorization to get access of secrets. Guzzle uses the managed identity to access Azure Key Vault resource.
+
+### Prerequisite:
 1. Guzzle VM
-2. Databricks
+2. User-Assigned Managed Identity
+3. Azure Key Vault
+4. Databricks Workspace
 
-After creating these resources do the following steps: 
+### User-Assigned Managed Identity: 
 
-1. In created Guzzle VM enables manage identity by selecting identity option from the side menu from Azure UI and after enabling, copy that object id.
+1. Create user-assigned managed identity in resource group by click on `+Create` button. 
+2. Assign a user-assigned managed identity to Guzzle VM by navigating to the Guzzle VM and click Identity, User assigned and then `+Add`. for more detailed steps click [here](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#assign-a-user-assigned-managed-identity-to-an-existing-vm)
 
-2. Create Key Vault in the resource group, then permit the virtual machine from access policies from the side tab of Azure UI.
+### Azure Key Vault:
 
-3. In access policies click on Add Access Policy button to add access to the virtual machine. After clicking on this button below page will renderd.
-
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/features/kv_2.png" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/features/kv_2.png"/>
+1. Create azure key vault in resource group by click on `+Create` button.
+2. Add Access Policy for user-assigned managed identity and databricks workspace by navigating to Azure Key Vault and click on Access Policy, `+ Add Access Policy`.
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/features/kv_create_access_policy.png" target="_self" >
+   <img width="1000" src="/img/docs/how-to-guides/features/kv_create_access_policy.png"/>
+</a>
+4. Select Configure from template as Secret Management and Select user-assigned managed identity as Principle click on `Add` to create access policy.
+5. Do same thing for AzureDatabricks principle.
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/features/kv_access_policies.png" target="_self" >
+   <img width="1000" src="/img/docs/how-to-guides/features/kv_access_policies.png"/>
 </a>
 
-4. In configure from template some options are available so user can select directly from their. Or user can select permissions manually for VM and select principal of Guzzle VM.
+### Databricks Workspace
 
-5. Then after selecting add it and save it. For more information visit [here](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad).
- 
+1. Create Databricks Workspace in resource group by click on `+Create` button.
+2. After that we create an Azure Key Vault-backed secret scope using the UI.
+3. Go to `https://<databricks-instance>#secrets/createScope`. replace databricks-instance with your databricks instance url.
 
-### For creating Secret Scope  
-
-1. For creating secret scope Azure Databricks must be created.
-
-2. After creating the key vault and giving access to VM, create databricks secret scope using created key vault by going to URL like this https://&lt;databricks-instance&gt;#secrets/createScope. databricks-instance = Your databricks instance id. Then below page will be rendered.
-
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/features/kv_1.png" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/features/kv_1.png"/>
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/features/kv_db_workspace_scope.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/features/kv_db_workspace_scope.png"/>
 </a> 
 
-3. On this page, enter the name of the secret scope. Secret scope names are case insensitive. And use the name of secret scope as the name of the key vault. Then use the Manage Principal drop-down to specify whether All Users have MANAGE permission for this secret scope or only the Creator of the secret scope.
-
-4. Enter the DNS Name (for example, &lt;https://keyvault_name.vault.azure.net/&gt;) and Resource ID, for example: 
-        
-        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/databricks-rg/providers/Microsoft.KeyVault/vaults/databricksKV
-
-    These properties are available from the Properties tab of an Azure Key Vault in your Azure portal.
-
-5. Then click on create button to create secret scope and save the scope name for future use. For more information visit the official site for [creating secret scope.](https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes)
+4. Enter azure key vault name in scope name field. Scope name must be same as key vault name.
+5. Enter the DNS Name and Resource ID of Key Vault. These properties you will find by navigating to Azure Key Vault and click on Properties.
+6. Click `Create` button to create secret scope. For more information visit the [databricks create secret scope](https://docs.microsoft.com/en-us/azure/databricks/security/secrets/secret-scopes#--create-an-azure-key-vault-backed-secret-scope) documentation.
 
 
-### Where Databricks secret scope is used and the key vault is used in Guzzle?
+## Azure Key Vault vs Databricks secret scope use: 
 
-|Databricks Secret Scope|Key Vault|
-|---------------------- |-------- |
-|When user ran jobs in databricks cluster it will take secrets value using databricks key vault instance.| When the secret value is required inside API, Batch, and Pipeline Execution it will use Microsoft key vault API to fetch the secret value.|
+
+### Azure Key Vault
+When the secret value is required inside API, Batch, and Pipeline Execution it will use Microsoft Azure Key Vault API to fetch the secret value.
+
+### Databricks Secret Scope
+When jobs in running in databricks cluster and requires secrets value, it will get it using databricks key vault instance.
