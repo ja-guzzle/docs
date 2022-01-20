@@ -1,5 +1,16 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.2 (January 17, 2022)
+#### Features
+- ingestion - retain inferred data types from ingestion source and use them to prepare effective schema
+- show only supported technologies in create datastore dialog opened from activity editor
+- provide auto-fill of the columns for PK, Grouping columns and other fields which are to take column name or sql expression
+
+#### Bugs
+- fixed drag and drop name visibility issue in author page
+- fixed multiple job dependency issue in gantt chart
+- removed undefined values and fixed num_workers issue in compute detail section in my proflie
+
 ### Guzzle v2.1.1 (December 31, 2021)
 #### Features
 - Reduced yaml retry to 5 times and added file absolute path and last modified time in log
