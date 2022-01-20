@@ -15,11 +15,11 @@ This section shows how to install and configure your environment to run the CLI.
 
 
 ### Download CLI
-Download Guzzle CLI package from https://guzzle-downloads.justanalytics.com/guzzle-cli-release/guzzlecli-0.0.1.zip and unzip it.
+Download Guzzle CLI package from https://guzzle-downloads.justanalytics.com/guzzle-release/cli/guzzlecli-0.0.1.zip and unzip it.
 
 ```
-wget https://guzzle-downloads.justanalytics.com/guzzle-cli-release/guzzlecli-0.0.1.zip
-unzip guzzlecli.zip
+wget https://guzzle-downloads.justanalytics.com/guzzle-release/cli/guzzlecli-0.0.1.zip
+unzip guzzlecli-0.0.1.zip
 ```
 
 run Guzzle CLI help command
