@@ -37,6 +37,7 @@ module.exports = {
       type: 'category',
       label: 'How to Guides',
       items: [ 
+      'how_to_guides/features/guzzle_cli',
       'how_to_guides/features/how_key_vault_is_used_to_integrate_guzzle',
       {
         'Connection and Environment':[

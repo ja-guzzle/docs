@@ -12,12 +12,10 @@ Guzzle will generate a encrypted token on User login. Generated tokens have 8640
 
 3 : Enter following configuration details : 
 
-|Properties|Default Value|Description|
+|Properties|Description|Default Value|
 |--- |--- |--- |
-|Passphrase for encrypting JWT, GIT and SSO access token. <br/> User can choose Manual or Azure Key vault|&lt; encrypted token in password form &gt;|Guzzle will generate JSON web token(Secret Key) to authenticate user|
-|Expiration time|864000000|Guzzle generated JWT is valid through given Expiration Time|
-|Key Vault Name (If Key Vault is chosen)||Name of Key vault where secret is stored.|
-|Secret Name (If Key Vault is chosen)||Name of secret where token is stored.|
+|Passphrase for encrypting JWT, GIT and SSO access token. <br/> User can choose Manual or Azure Key vault|Guzzle will generate JSON web token(Secret Key) to authenticate user. <br/>Specify the access token for GIT or SSO <br/>For specify access token the following options are available:<br/>1. **Manual**: Provide token directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where token is stored in Azure Key Vault instance. |&lt; encrypted token in password form &gt;|
+|Expiration time|Guzzle generated JWT is valid through given Expiration Time|864000000|
 
 4 : Click on the Update
 

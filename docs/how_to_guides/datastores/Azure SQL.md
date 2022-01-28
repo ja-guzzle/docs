@@ -21,10 +21,10 @@ The connector can be used for SQL databases, on-premises or in the cloud (both A
 
 |Property|Description|Required|
 |--- |--- |--- |
-|Database URL|JDBC URL for connecting to SQL server.<br /><br /> Users can find URL from Azure portal it will be in this form jdbc:sqlserver://:1433database=;user=;password=;encrypt=true;<br />trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;<br />Example:jdbc:sqlserver://&lt; sql server name &gt;<br /><br />The URL can optionally contain database name, user name and other connection properties.|Yes|
+|Database URL|JDBC URL for connecting to SQL server.<br /><br /> Users can find URL from Azure portal it will be in this form jdbc:sqlserver://:1433database=;user=;password=;encrypt=true;<br />trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;<br />Example:jdbc:sqlserver://&lt; sql server name &gt;<br /><br />The URL can optionally contain database name, user name and other connection properties.For specify URL the following options are available:<br/>1. **Manual**: Provide URL directly<br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where URL is stored in Azure Key Vault instance.|Yes|
 |Database|Database name of the SQL Server (this property can be skipped if it's specified as part of Database URL)|yes|
 |Username|Username of SQL server|yes|
-|Password|Password of SQL server|yes|
+|Password|Password to connect to SQL server.<br/> For specify password the following options are available:<br/>1. **Manual**: Provide password directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where password is stored in Azure Key Vault instance. |yes|
 
 ## Interface for Azure SQL datastore
 
