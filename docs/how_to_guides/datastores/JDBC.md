@@ -28,7 +28,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 |Port|On which port selected server is running.|Yes|
 |Database|Name of Database.|Yes|
 |Username|Username of server.|Yes|
-|Password|Password to connect to MySQL server.<br/> For specify password the following options are available:<br/>1. **Manual**: Provide password directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where password is stored in Azure Key Vault instance.|Yes|
+|Password|Password to connect to MySQL server.<br/> For specify password the following options are available:<br/>1. **Manual**: Provide password directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where password is stored in Azure Key Vault instance.|Yes|
 
 
  Below gif represents created JDBC datastore :
