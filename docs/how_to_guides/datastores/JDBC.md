@@ -46,7 +46,7 @@ The connector can be used for SQL databases, on-premise (SQL Server Managed Inst
 |Hostname|Hostname of selected server|Yes|
 |Jdbc URL|JDBC URL for connecting to SQL server<br /> Example: jdbc:mysql://&lt;hostname&gt;/ &lt;databaseName&gt;<br /> The URL can optionally contain database name, username and other connection properties.|Yes|
 |Username|Username of server|Yes|
-|Password|Password to connect to MySQL server.<br/> For specify password the following options are available:<br/>1. **Manual**: Provide password directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where password is stored in Azure Key Vault instance.|Yes|
+|Password|Password to connect to MySQL server.<br/> For specify password the following options are available:<br/>1. **Manual**: Provide password directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where password is stored in Azure Key Vault instance.|Yes|
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/datastores/jdbc_2.gif" target="_self" >
     <img width="825" src="/img/docs/how-to-guides/datastores/jdbc_2.gif" />

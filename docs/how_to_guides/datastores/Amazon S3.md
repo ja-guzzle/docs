@@ -27,7 +27,7 @@ This datastore is use for both source and target tabs.
 |Property|Description|Required|
 |--- |--- |--- |
 |Access Key ID|AWS access key ID|Yes|
-|Secret Key|AWS secret access key.<br/>Specify the secret key.<br/> For specify secret key the following options are available:<br/>1. **Manual**: Provide secret key directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where secret key is stored in Azure Key Vault instance.|Yes|
+|Secret Key|AWS secret access key.<br/>Specify the secret key.<br/> For specify secret key the following options are available:<br/>1. **Manual**: Provide secret key directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where secret key is stored in Azure Key Vault instance.|Yes|
 |Region|Region of the S3 bucket|No|
 |Bucket|S3 Bucket name|Yes|
 |Path|This is the folder path within the S3 bucket. You can specify  / (root path) to point to entire container|Yes|
