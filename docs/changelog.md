@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.3 (January 28, 2022)
+#### Features
+- Added multiline textboxes in config editor and enhancement in dropdown
+- ingestion - add schema drift feature for delta target and reject table
+- Guzzle CLI initial version 0.0.1 released. [Click Here](/docs/how_to_guides/features/guzzle_cli) to view details
+- Added overriden spark properties in log screen and fixed job not submitted issue in databricks compute
+
+#### Bugs
+- Fixed parameter update issue in batch execution
+
 ### Guzzle v2.1.2 (January 17, 2022)
 #### Features
 - ingestion - retain inferred data types from ingestion source and use them to prepare effective schema
