@@ -2,13 +2,14 @@
 
 ### Guzzle v2.1.3 (January 28, 2022)
 #### Features
-- Added multiline textboxes in config editor and enhancement in dropdown
+- Replaced single-line textbox with multiline textbox in config editor and added resize and selected option support in dropdown
 - ingestion - add schema drift feature for delta target and reject table
 - Guzzle CLI initial version 0.0.1 released. [Click Here](/docs/how_to_guides/features/guzzle_cli) to view details
-- Added overriden spark properties in log screen and fixed job not submitted issue in databricks compute
+- Added Pipeline and Activity level overriden spark properties in log screen
 
 #### Bugs
-- Fixed parameter update issue in batch execution
+- Activity was remained in NOT_STARTED phase if it failed to submit, now it is marked as FAILED
+- Batch parameter was not showing the latest/updated parameter value, fixed it, now it is showing the latest parameter value
 
 ### Guzzle v2.1.2 (January 17, 2022)
 #### Features
