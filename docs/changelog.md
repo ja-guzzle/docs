@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.4 (February 14, 2022)
+#### Features
+- Updated source column title from sampleData to source and color from gray to blue
+- Added environment filter in monitor screen
+- Added feature to clone physical connection while cloning datastore
+
+#### Bugs
+- Fixed direct use of parameters in SQL query
+- Copy data tool was showing list of tables from default database always, now it is showing from configured database
+
 ### Guzzle v2.1.3 (January 28, 2022)
 #### Features
 - Replaced single-line textbox with multiline textbox in config editor and added resize and selected option support in dropdown
