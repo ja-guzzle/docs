@@ -2,8 +2,8 @@
 
 ### Guzzle v2.1.4 (February 14, 2022)
 #### Features
-- Updated source column title from sampleData to source and color from gray to blue
-- Added environment filter in monitor screen
+- Updated source column tooltip from sampleData to source and color from gray to blue, wherever it is showing column name suggestion in editor
+- Added environment filter in monitor screen, it's similar to Author ui
 - Added feature to clone physical connection while cloning datastore
 
 #### Bugs
