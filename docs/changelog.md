@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.5 (February 28, 2022)
+#### Features
+- Support Synapse spark pool as a compute in backend
+- Running batch, pipeline and external activity as Guzzle API thread instead of separate JVM process
+- When we pass parameters to external process it gets evaluated and can generate some side-effect. Fixed this issue, Now we are passing parameter in single quotes and escaping $ with a backslash to prevent evaluation
+
+#### Bugs
+- The batch stage was not marked as ABORTED when batch execution terminated abnormally, fixed this issue, It will be marked as ABORTED when batch execution terminate abnormally
+
 ### Guzzle v2.1.4 (February 14, 2022)
 #### Features
 - Updated source column tooltip from sampleData to source and color from gray to blue, wherever it is showing column name suggestion in editor
