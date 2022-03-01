@@ -69,7 +69,8 @@ module.exports = {
         'Computes': [
           'how_to_guides/computes/azure_databricks',
           'how_to_guides/computes/local_spark',
-          'how_to_guides/computes/yarn'
+          'how_to_guides/computes/yarn',
+          'how_to_guides/computes/azure_synapse_spark'
         ]
       },
       {
