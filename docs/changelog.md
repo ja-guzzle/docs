@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.6 (March 14, 2022)
+#### Features
+- Added retry support if key vault secret api failed to fetch secret value. It will perform max 5 retry with interval of 5 seconds
+- Override spark settings in pipeline was loading spark configuration data using system default compute which is configured inside guzzle.yml. now it is loading spark configuration data using user's default compute, which is configured using My Profile -> Default Compute option.
+
 ### Guzzle v2.1.5 (February 28, 2022)
 #### Features
 - Support Synapse spark pool as a compute in backend
