@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.7 (April 1, 2022)
+#### Features
+- Use alternate approach to retrieve columns for hive and delta tables. Existing approach was not working for delta tables on Azure Synapse Spark
+- Azure Synapse Spark compute editor UI
+
 ### Guzzle v2.1.6 (March 14, 2022)
 #### Features
 - Added retry support if key vault secret api failed to fetch secret value. It will perform max 5 retry with interval of 5 seconds
