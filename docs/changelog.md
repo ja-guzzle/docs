@@ -1,5 +1,18 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.8 (May 9, 2022)
+#### Features
+- Added Databricks multitask job support as a Guzzle multitask pipeline
+- Guzzle was support retry for FAILED and WARNING activity in the pipeline. Now retry is supported for FAILED activity only
+- For each retry Guzzle was creating a new job info record, Now it uses the same job info record to perform retry
+- In Guzzle pipeline, when an auto dependency is enabled and Activity failed it will stop only the dependent ones, other activities will continue their execution. earlier it stopped the execution of pending activities as soon as the first activity failed
+- Encrypted JWT token secret value while showing it in UI and storing it in a config file
+- Added infer schema support for XML and JSON file source in ingestion activity
+
+#### Bugs
+- UI Fixes: Active tab goes hidden issue when there are too many open tabs in UI, Extra space issue in author config tab bar UI, Updated layout for Rest datastore, Removed duplicate tooltip from select components
+- Added fix for spring vulnerability cve-2010-1622
+
 ### Guzzle v2.1.7 (April 1, 2022)
 #### Features
 - Use alternate approach to retrieve columns for hive and delta tables. Existing approach was not working for delta tables on Azure Synapse Spark
