@@ -33,7 +33,7 @@ Only supported on Databricks compute
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Table|This is used to specify the Target Table we would like to create based on our Source.|None|Yes|
-|Operation|Provides two options that determines whether the content of source or reject data is expected to be -<br/>**append:** To append the existing data in the Hive Table.<br/>**overwrite:**This will do an overwrite of data for a subset of partitions that are present in the source. The Partition columns are detected based on the source.|Append|Yes|
+|Operation|Provides two options that determines whether the content of source or reject data is expected to be -<br/>**append:** To append the existing data in the Hive Table.<br/>**overwrite:**This will do an overwrite of data for a subset of partitions that are present in the source. The Partition columns are detected based on the source.|Append|No|
 |Auto create table|Guzzle provides the Auto Create Table feature in the Target Section. When selected it will automatically create a Target Table for us with the name as specified in the Table section above. In the schema section we have the Partition indicator. This indicator is used when guzzle auto creates a table for Hive to decide the partition column. The order of partition columns will be according to how it appears in the Schema Section.<br/> This can be seen in the figure below:|True|Yes|
 
 
