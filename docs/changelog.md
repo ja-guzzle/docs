@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.1.9 (May 20, 2022)
+#### Features
+- Added feature in monitor screen to mark OPEN or FAILED batch as ABORTED
+- Guzzle was marking Batch, Stage and Pipeline status as ABORTED for crashed orchestration jobs, now It is marked as FAILED so that it can rerun again
+
+#### Bugs
+- UI Fixes: Fixed business date selection issue in monitor screen filter, Fixed duration field issue in monitor screen also added support of years, months and days units and showing only relevant duration units instead of all units 
+- Batch init catchup parameter was marking successfully ran job as ABORTED for given business date, fixed issue, now it marks only OPEN and FAILED batches as ABORTED
+- When doing sampling for ingestion job, It was showing epoch seconds for timestamp column value, fixed issue, now it shows formatted value for timestamp column
+
 ### Guzzle v2.1.8 (May 9, 2022)
 #### Features
 - Added Databricks multitask job support as a Guzzle multitask pipeline
