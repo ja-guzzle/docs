@@ -120,6 +120,8 @@ module.exports = {
           'how_to_guides/ingest_data/processing',
           'how_to_guides/ingest_data/watermark',
           'how_to_guides/ingest_data/pre-SQL_and_post-SQL_in_ingestion',
+          'how_to_guides/ingest_data/overwrite_and_append_operatoins',
+          'how_to_guides/ingest_data/configure_truncate_partition_columns',
           'how_to_guides/ingest_data/example_ingest_data'
         ]
       },

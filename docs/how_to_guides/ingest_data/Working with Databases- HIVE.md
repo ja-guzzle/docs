@@ -39,8 +39,10 @@ In the Datastore section we can choose to read four Data either as a Table or th
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Table|This is used to specify the Target Table we would like to create based on our Source.|None|Yes|
-|Operation|Provides two options that determines whether the content of source or reject data is expected to be -<br/>**append:** To append the existing data in the Hive Table.<br/>**overwrite:**This will do an overwrite of data for a subset of partitions that are present in the source. The Partition columns are detected based on the source.|Append|Yes|
+|Operation|Provides two options that determines whether the source content or records are expected to be appended or overwritten in order to disallow existing data-<br/>**Append:** To atomically add new data to an existing target table.<br/>**Overwrite:** To atomically replace the data in a target table with source table. The partition columns are detected based on the source.<br/>For more information click [here.](overwrite_and_append_operatoins)|Append|Yes|
 |Auto create table|Guzzle provides the Auto Create Table feature in the Target Section. When selected it will automatically create a Target Table for us with the name as specified in the Table section above. In the schema section we have the Partition indicator. This indicator is used when guzzle auto creates a table for Hive to decide the partition column. The order of partition columns will be according to how it appears in the Schema Section.<br/> This can be seen in the figure below:|True|Yes|
+|Configure truncate partition columns|Specify the target table partition column names and its values to truncate(delete) the target table partitions before writing into the table.<br/> For more information click [here](configure_truncate_partition_columns).|NULL|No|
+|Configure pre and post sql|Guzzle supports Pre-SQL and Post-SQL for source and target and their execution in ingestion. It is mainly used for pre and post formatting of data in database.<br/> For more information click [here](pre-SQL_and_post-SQL_in_ingestion).|NULL|No|
 
 ## Interface for Hive database as target is
 
