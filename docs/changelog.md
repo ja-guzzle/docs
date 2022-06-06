@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.2.0 (June 6, 2022)
+#### Features
+- Guzzle data type handling improvements and optimizations for ingestion module
+
 ### Guzzle v2.1.9 (May 20, 2022)
 #### Features
 - Added feature in monitor screen to mark OPEN or FAILED batch as ABORTED
