@@ -59,115 +59,53 @@ the folders and files that shall be generated in the target folder path (which i
 
 <table>
   <tr>
-    <td><b>Target Config </b></td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
+  	<th colspan="6">Target config and its properties</th>
   </tr>
   <tr>
-    <td align="center"> <b>Properties</b> </td>
-    <td colspan="12" > <b>Values</b> </td>
+  	<th>Target Path</th>
+  	<th>Preserve Hierarchy</th>
+  	<th>Merge Part File/ Generate Single FIle</th>
+  	<th>Partition defined in tranform tab ?</th>
+  	<th>Target FileName</th>
+  	<th>Expected Output</th>
   </tr>
   <tr>
-    <td><b>Preserve Hierarchy </b></td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-  </tr>
-  <tr>
-    <td> <b>Merge Part File/ Generate Single FIle </b></td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-  </tr>
-  <tr>
-    <td><b>Partition defined in tranform tab ? </b></td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-  </tr>
-  <tr>
-    <td><b>Target FileName</b> </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-  </tr>
-
-  <tr>
-    <td colspan="13"><b>Expected Output</b> </td>
-  </tr>
-  <tr>
-  <td></td>
- <td>
-    <code>
+    <td>/target/</td>
+    <td>False</td>
+    <td>False</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
       target 
       | 
       └── data.json 
 	        ├── part-00000-xxxxxx.json 
 	        ├── part-00000-xxxxxx.json 
-          └── _SUCCESS
-
-  </code>
+            └── _SUCCESS      
+	  
   </td>
-
-  <td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>True</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
       target 
       | 
       └── data.json 
-  </td>
-
-  <td>
+  	</td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>True</td>
+    <td>False</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
       target 
       | 
@@ -185,58 +123,66 @@ Target File Name  = "target_file.json" </td>
                   └── users2_a.json 
                   ├── part-00000-xxxxxx.json 
                   └── _SUCCESS
-  </td>
+  	</td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>True</td>
+    <td>True</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
-  <td>
-
-    target 
-    | 
-    ├── folder1 
-    │   └── users1.json 
-    | 
-    └── folder2 
-      ├── users2.json 
-      | 
-      └── folder2_a 
-          └── users2_a.json 
+	    target 
+	    | 
+	    ├── folder1 
+	    │   └── users1.json 
+	    | 
+	    └── folder2 
+	      ├── users2.json 
+	      | 
+	      └── folder2_a 
+	          └── users2_a.json 
  
-  </td>
+  	</td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>False</td>
+    <td>True</td>
+    <td>NULL</td>
+    <td>
 
-  <td>
-
-    target 
-    | 
-    └── data.json 
-      ├── part-00000-xxxxxx.json 
-      ├── part-00000-xxxxxx.json 
-      └── _SUCCESS 
+	    target 
+	    | 
+	    └── data.json 
+	      ├── part-00000-xxxxxx.json 
+	      ├── part-00000-xxxxxx.json 
+	      └── _SUCCESS 
  
-  </td>
-
-  <td>
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>True</td>
+    <td>True</td>
+    <td>NULL</td>
+    <td>
 
       target 
       | 
       └── data.json 
-  </td>
-
-  <td>
-
-      target
-      | 
-      └── data.json 
-        ├── city=a 
-        |   ├── part-00000-xxxxxx.json 
-        |   └── _SUCCESS 
-        ├── city=a 
-        |   ├── part-00000-xxxxxx.json 
-        |   └── _SUCCESS 
-        └── city=c 
-            ├── part-00000-xxxxxx.json 
-            └── _SUCCESS
-  </td>
-
-  <td>
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>True</td>
+    <td>False</td>
+    <td>True</td>
+    <td>NULL</td>
+    <td>
 
       target
       | 
@@ -244,58 +190,103 @@ Target File Name  = "target_file.json" </td>
         ├── city=a 
         |   ├── part-00000-xxxxxx.json 
         |   └── _SUCCESS 
-        ├── city=a 
+        ├── city=b 
         |   ├── part-00000-xxxxxx.json 
         |   └── _SUCCESS 
         └── city=c 
             ├── part-00000-xxxxxx.json 
             └── _SUCCESS
-  </td>
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>True</td>
+    <td>True</td>
+    <td>True</td>
+    <td>NULL</td>
+    <td>
 
-  <td>
+      target
+      | 
+      └── data.json 
+        ├── city=a 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        ├── city=b 
+        |   ├── part-00000-xxxxxx.json 
+        |   └── _SUCCESS 
+        └── city=c 
+            ├── part-00000-xxxxxx.json 
+            └── _SUCCESS
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>False</td>
+    <td>False</td>
+    <td>target_file.json</td>
+    <td>
 
-    target 
-    | 
-    └── data.json 
-      ├── part-00000-xxxxxx.json 
-      ├── part-00000-xxxxxx.json 
-      └── _SUCCESS 
+	    target 
+	    | 
+	    └── data.json 
+	      ├── part-00000-xxxxxx.json 
+	      ├── part-00000-xxxxxx.json 
+	      └── _SUCCESS 
  
-  </td>
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>True</td>
+    <td>False</td>
+    <td>target_file.json</td>
+    <td>
 
-  <td>
+	    target 
+		| 
+		└── target_file.json   
+		 
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>False</td>
+    <td>True</td>
+    <td>target_file.json</td>
+    <td>
 
-    target 
-    | 
-    └── target_file.json   
+	    target 
+	    | 
+	    └── data.json 
+	      ├── part-00000-xxxxxx.json 
+	      ├── part-00000-xxxxxx.json 
+	      └── _SUCCESS 
  
+  	</td>
+   </tr>
+   <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>True</td>
+    <td>True</td>
+    <td>target_file.json</td>
+    <td>
+
+	    target 
+	    | 
+	    └── target_file.json   
+	
   </td>
-  
-
-  <td>
-
-    target 
-    | 
-    └── data.json 
-      ├── part-00000-xxxxxx.json 
-      ├── part-00000-xxxxxx.json 
-      └── _SUCCESS 
- 
-  </td>
-
-  <td>
-
-    target 
-    | 
-    └── target_file.json   
- 
-  </td>
-  </tr>
+   </tr>
 </table>
 
 
 :::note
-1. The suffix files or folder when peserver hierarchy is not selected is published ID that is generated 
+1. The suffix files or folder when preserve hierarchy is not selected is published ID that is generated 
 2. The part file are generated by spark and the naming convention will depend on implementation of Spark connector
 :::
 
@@ -304,111 +295,95 @@ Target File Name  = "target_file.json" </td>
 Assuming the source table is non partitioned, it shall generate the files as per below
 
 <table>
-  
   <tr>
-    <td><b>Target Config</b> </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
-    <td>Target Path = "/target/" 
-Target File Name  = "target_file.json" </td>
+  	<th colspan="6">Target Config and its properties values</th>
   </tr>
   <tr>
-    <td> Properties </td>
-    <td colspan="5"> Values </td>
+  	<th>Target Path</th>
+  	<th>Preserve Hierarchy</th>
+  	<th>Merge Part File/ Generate Single FIle</th>
+  	<th>Partition defined in tranform tab ?</th>
+  	<th>Target FileName</th>
+  	<th>Expected Output</th>
   </tr>
   <tr>
-    <td><b>Preserve Hierarchy </b></td>
-    <td>TRUE / FALSE </td>
-    <td>TRUE / FALSE </td>
-    <td>TRUE / FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-  </tr>
-  <tr>
-    <td> <b>Merge Part File/ Generate Single FIle </b></td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE / FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-  </tr>
-  <tr>
-    <td><b>Partition defined in tranform tab ? </b></td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE / FALSE </td>
-    <td>TRUE / FALSE </td>
-  </tr>
-  <tr>
-    <td><b>Target FileName </b></td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>FALSE </td>
-    <td>TRUE </td>
-    <td>TRUE </td>
-  </tr>
+    <td>/target/</td>
+    <td>True/False</td>
+    <td>False</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
-  <tr>
-    <td><b>Source Files</b> </td>
-    <td colspan="5"><b>Expected Output </b></td>
-  </tr>
-  <tr>
-    <td>source_table/ SQL </td>
-
-  <td>
-
-    target 
-    | 
-    └── data.json 
-      ├── part-00000-xxxxxx.json 
-      ├── part-00000-xxxxxx.json 
-      └── _SUCCESS 
- 
+      target 
+      | 
+      └── data.json 
+	        ├── part-00000-xxxxxx.json 
+	        ├── part-00000-xxxxxx.json 
+            └── _SUCCESS
   </td>
-
-  <td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>True/False</td>
+    <td>True</td>
+    <td>False</td>
+    <td>NULL</td>
+    <td>
 
       target 
       | 
       └── data.json 
   </td>
-
-  <td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>True/False</td>
+    <td>True</td>
+    <td>True</td>
+    <td>NULL</td>
+    <td>
 
       target
       | 
       └── data.json 
-        ├── city=a 
-        |   ├── part-00000-xxxxxx.json 
-        |   └── _SUCCESS 
-        ├── city=b
-            ├── part-00000-xxxxxx.json 
-            └── _SUCCESS 
-  </td>
-
-  <td>
-
-    target 
-    | 
-    └── data.json 
-      ├── part-00000-xxxxxx.json 
-      ├── part-00000-xxxxxx.json 
-      └── _SUCCESS 
- 
-  </td>
-
-  <td>
-
-    target 
-    | 
-    └── target_file.json   
- 
+          ├── city=a 
+          |   ├── part-00000-xxxxxx.json 
+          |   └── _SUCCESS 
+          ├── city=b 
+              ├── part-00000-xxxxxx.json 
+              └── _SUCCESS
   </td>
   </tr>
+  <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>False</td>
+    <td>True</td>
+    <td>target_files.json</td>
+    <td>
+
+      target
+      | 
+      └── data.json
+          ├── part-00000-xxxxxx.json 
+          ├── part-00000-xxxxxx.json 
+          └── _SUCCESS
+  </td>
+  </tr>
+  <tr>
+    <td>/target/</td>
+    <td>False</td>
+    <td>True</td>
+    <td>True</td>
+    <td>target_files.json</td>
+    <td>
+
+      target
+      | 
+      └── target_files.json
+  </td>
+  </tr>
+  
 </table>
 
 <!-- Considering the source table, the customer** **is partitioned with two levels at **region **and **country **level with below as sample set of partitions:

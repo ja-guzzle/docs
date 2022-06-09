@@ -25,16 +25,25 @@ This article outlines how to use Azure Synapse Analytics as source or target in 
 |Configure columns restriction|Mention column names and choose from the options to exclude and include columns. <br/> For more information click [here](column_restrictions).|NULL|No|
 |Configure table dependency| |NULL|No|
 
+## Interface for Azure Synapse Analytics database as source is
 
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/azure_synapse_1.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/azure_synapse_1.png" />
+</a>
 
 ## Azure Synapse Analytics as a Target or Reject
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
 |Table|This is used to specify the Target Table we would like to create based on our Source.|None|Yes|
-|Operation|Provides two options that determines whether the content of source or reject data is expected to be -<br/>**append:** To append the existing data <br/>**overwrite:** Entire data in the synapse table is overwritten|append|Yes|
+|Operation|Provides two options that determines whether the source content or records are expected to be appended or overwritten in order to disallow existing data-<br/>**Append:** To atomically add new data to an existing target table.<br/>**Overwrite:** To atomically replace all the data in a target table with source table.<br/>For more information click [here.](overwrite_and_append_operatoins)|Append|Yes|
 |Max String Length|Max String Length to set the string length for all VARCHAR/NVARCHAR type columns when writing data into Azure Synapse.
 Any data which is greater than this will be clipped|4000|Yes|
 |Write Semantics|There are two possible values that can be selected :<br/>**Polybase:**This option shall use Polybase feature of Azure Synapse to load or unload data to from common Blob storage. <br/>**Copy:**The Copy statement offers a more convenient way of loading data into Azure Synapse without the need to create an external table, requires fewer permissions to load data, and provides an improved performance for high-throughput data ingestion into Azure Synapse.|Polybase|Yes|
+|Configure pre and post sql|Guzzle supports Pre-SQL and Post-SQL for source and target and their execution in ingestion. It is mainly used for pre and post formatting of data in database.<br/> For more information click [here](pre-SQL_and_post-SQL_in_ingestion).|NULL|No|
 
+## Interface for Azure Synapse Analytics database as targte is
 
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/azure_synapse_2.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/ingest_data/azure_synapse_2.png" />
+</a>
