@@ -19,12 +19,15 @@ title: Schema Derivation Strategies
 ## Source
 
 * If schema derivation strategy is **source** then, columns and data types will be inherited from the source files/table and, validation of data types will be performed based on source data types.
-* If the user does not specify the column name in the transformation and validation section then validation for that column will be performed and if the user specifies the source's column name in the transformation and validation section then the validation will be performed based on validate data type flag.
-* Additionally, an effective schema will be created using source columns and data types and columns and data types specified in the **validation and transformation** section of the ingestion job. And this effective schema will be used to create a table if an auto-create table flag is true in the target section and in the reject section.
+* If the user does not specify the column name in the transformation and validation section then validation for that column will be performed and if the user specifies the source's column name in the transformation and validation section then the validation will be performed based on validate data type checkbox.
+* Additionally, an effective schema will be created using 
+    1. Source columns and their respective data types.
+    2. Columns and data types are specified in the **validation and transformation** section of the ingestion job.
+* And this effective schema will be used to create a table if an auto-create table checkbox is checked in the target section and in the reject section.
 
 ### Example
 
-* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema flag is true. In target, the datastore is the delta table and the auto-create table flag is true and the name of table is **demo_schema_derivation**.
+* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema checkbox is checked in the source section. In target, the datastore is the delta table and the auto-create table checkbox is checked and the name of table is **demo_schema_derivation**.
 
 * The source data are like this 
 ```
@@ -42,8 +45,8 @@ id,name
 id_1004,n4
 ```
 * In the validation and transformation section, we have defined 
-1. A new column **full_name** is doing concatenation of **name** column and "_new" string. If we do not provide any data type then Guzzle will take a string as the data type for this column and if the data type field has a value then it will take that data type for that column. As you can see from the below image.
-2. **name** column but a validate data type flag is **false**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the source as the name column is present in the source.
+1. A new column **full_name** is doing concatenation of **name** column and "_new" string. Since the full_name column does not exist in the source data, and we have provided data type value in the validation and transformation section so, Guzzle will respect that data type value and take that data type for the defined column. If the user does not provide the value of the data type then Guzzle will take **string** as a data type value.
+2. **name** column but a validate data type checkbox is **unchecked**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the source as the name column is present in the source.
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/schema_derivation_1.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/schema_derivation_1.png" />
@@ -71,12 +74,15 @@ demo_schema_derivation
 ## Inherit source data type and do not apply validation
 
 * If the schema derivation strategy is **Inherit source data type and do not apply validation** then, columns and data types will be inherited from the source files/table, but the validation of data types will not be performed automatically. This will be based on the validation and transformation section.
-* If the user does not specify the column name in the transformation and validation section then validation for that column will not be performed and if the user specifies the source's column name in the transformation and validation section then the validation will be performed based on validate data type flag.
-* Additionally, an effective schema will be created using source columns and data types and columns and data types specified in the **validation and transformation** section of the ingestion job. And this effective schema will be used to create a table if an auto-create table flag is true in the target section and in the reject section.
+* If the user does not specify the column name in the transformation and validation section then validation for that column will not be performed and if the user specifies the source's column name in the transformation and validation section then the validation will be performed based on validate data type checkbox.
+* Additionally, an effective schema will be created using 
+    1. Source columns and their respective data types.
+    2. Columns and data types are specified in the **validation and transformation** section of the ingestion job.
+* And this effective schema will be used to create a table if an auto-create table checkbox is checked in the target section and in the reject section.
 
 ### Example
 
-* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema flag is true. In target, the datastore is the delta table and the auto-create table flag is true and the name of the table is **demo_schema_derivation**.
+* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema checkbox is checked in the source section. In target, the datastore is the delta table and the auto-create table checkbox is checked and the name of the table is **demo_schema_derivation**.
 
 * The source data are like this 
 ```
@@ -94,8 +100,8 @@ id,name
 id_1004,n4
 ```
 * In the validation and transformation section, we have defined 
-1. A new column **full_name** is doing concatenation of **name** column and "_new" string. If we do not provide any data type then Guzzle will take a string as the data type for this column and if the data type field has a value then it will take that data type for that column. As you can see from the below image.
-2. **name** column but validate data type flag is **false**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the source as the name column is present in the source.
+1. A new column **full_name** is doing concatenation of **name** column and "_new" string. Since the full_name column does not exist in the source data, and we have provided data type value in the validation and transformation section so, Guzzle will respect that data type value and take that data type for the defined column. If the user does not provide the value of the data type then Guzzle will take **string** as a data type value.
+2. **name** column but a validate data type checkbox is **unchecked**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the source as the name column is present in the source.
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/schema_derivation_2.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/schema_derivation_2.png" />
@@ -103,8 +109,8 @@ id_1004,n4
 
 * As shown in the figure that we have defined the data type for **full_name** column **varchar(20)** so, Guzzle will take this data type for the effective schema.
 
-* While running the ingestion job Guzzle will create the target table using the below query and as schema derivation strategy is the **Inherit source data type and do not apply validation** so, it will not do direct validation of the source column's data. So, Guzzle will take help of the validation and transformation section whether to validate or not.
-* If the user wants to validate the data of the id column then he/she has to define the id column in the transformation and validation section with the validate_data_type = true.
+* While running the ingestion job Guzzle will create the target table using the below query and as schema derivation strategy is the **Inherit source data type and do not apply validation** so, it will not do direct validation of the source column's data. So, Guzzle will take the help of the validation and transformation section on whether to validate or not.
+* If the user wants to validate the data of the id column then the user has to define the id column in the transformation and validation section with the checked validate data type checkbox.
 * And the data that are successfully validated will be stored in the target table and those which are invalid will be stored in the reject table/file.
 
 ```
@@ -126,16 +132,19 @@ demo_schema_derivation
 ## Target
 
 :::note
-If schema derivation strategy is **target** then **auto-create table** flag for target section must be **false**, and target table will be there in the database.
+If schema derivation strategy is **target** then **auto-create table** checkbox for target section must be **unchecked**, and target table will be there in the database.
 :::
 
 * If schema derivation strategy is **target** then, columns and data types will be inherited from the target files/table and, validation of data types will be performed based on target data types.
-* If the user does not specify the column name in the transformation and validation section then validation for that column will be performed and if the user specifies the target's column name in the transformation and validation section then the validation will be performed based on validate data type flag.
-* Additionally, an effective schema will be created using target columns and data types and columns and data types specified in the **validation and transformation** section of the ingestion job. And this effective schema will be used to create a table if an auto-create table flag is true in the reject section.
+* If the user does not specify the column name in the transformation and validation section then validation for that column will be performed and if the user specifies the target's column name in the transformation and validation section then the validation will be performed based on validate data type checkbox.
+* Additionally, an effective schema will be created using
+    1. Target columns and their respective data types.
+    2. Columns and data types are specified in the **validation and transformation** section of the ingestion job.
+* And this effective schema will be used to create a table if an auto-create table checkbox is checked in the reject section.
 
 ### Example
 
-* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema flag is true. In target, the datastore is the delta table and the name of table is **demo_schema_derivation**.
+* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema checkbox is checked in the source section. In target, the datastore is the delta table and the name of the table is **demo_schema_derivation**.
 
 * The source data are like this 
 ```
@@ -160,8 +169,8 @@ demo_schema_derivation
 | 1010    | n10  |
 ```
 * In the validation and transformation section, we have defined 
-1. A new column **full_name** is doing concatenation of **name** column and "_new" string. If we do not provide any data type then Guzzle will take a string as the data type for this column and if the data type field has a value then it will take that data type for that column. As you can see from the below image.
-2. **name** column but a validate data type flag is **false**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the target as the name column is present in the target.
+1. A new column **full_name** is doing concatenation of **name** column and "_new" string. Since the full_name column does not exist in the target table, and we have provided data type value in the validation and transformation section so, Guzzle will respect that data type value and take that data type for the defined column. If the user does not provide the value of the data type then Guzzle will take **string** as a data type value.
+2. **name** column but a validate data type checkbox is **unchecked**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the target as the name column is present in the target.
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/schema_derivation_3.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/schema_derivation_3.png" />
@@ -186,15 +195,18 @@ demo_schema_derivation
 ## Inherit target data types and do not apply validation
 
 :::note
-If schema derivation strategy is **Inherit target data types and do not apply validation** then **auto-create table** flag for target section must be **false**, and target table will be there in the database.
+If schema derivation strategy is **Inherit target data types and do not apply validation** then **auto-create table** checkbox for target section must be **unchecked**, and target table will be there in the database.
 :::
 * If the schema derivation strategy is **Inherit target data types and do not apply validation** then, columns and data types will be inherited from the target files/table and, the validation of data types will not be performed automatically. This will be based on the validation and transformation section.
-* If the user does not specify the column name in the transformation and validation section then validation for that column will not be performed and if the user specifies the target's column name in the transformation and validation section then the validation will be performed based on validate data type flag.
-* Additionally, an effective schema will be created using target columns and data types and columns and data types specified in the **validation and transformation** section of the ingestion job. And this effective schema will be used to create a table if an auto-create table flag is true in the reject section.
+* If the user does not specify the column name in the transformation and validation section then validation for that column will not be performed and if the user specifies the target's column name in the transformation and validation section then the validation will be performed based on validate data type checkbox.
+* Additionally, an effective schema will be created using
+    1. Target columns and their respective data types.
+    2. Columns and data types specified in the **validation and transformation** section of the ingestion job.
+* And this effective schema will be used to create a table if an auto-create table checkbox is checked in the reject section.
 
 ### Example
 
-* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema flag is true. In target, the datastore is the delta table and the name of table is **demo_schema_derivation**.
+* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema checkbox is checked. In target, the datastore is the delta table and the name of the table is **demo_schema_derivation**.
 
 * The source data are like this 
 ```
@@ -219,8 +231,8 @@ demo_schema_derivation
 | 1010    | n10  |
 ```
 * In the validation and transformation section, we have defined 
-1. A new column **full_name** is doing concatenation of **name** column and "_new" string. If we do not provide any data type then Guzzle will take a string as the data type for this column and if the data type field has a value then it will take that data type for that column. As you can see from the below image.
-2. **name** column but a validate data type flag is **false**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the target as the name column is present in the target.
+1. A new column **full_name** is doing concatenation of **name** column and "_new" string. Since the full_name column does not exist in the target table, and we have provided data type value in the validation and transformation section so, Guzzle will respect that data type value and take that data type for the defined column. If the user does not provide the value of the data type then Guzzle will take **string** as a data type value.
+2. **name** column but a validate data type checkbox is **unchecked**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be inherited from the target as the name column is present in the target.
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/schema_derivation_4.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/schema_derivation_4.png" />
@@ -248,12 +260,14 @@ demo_schema_derivation
 
 ## Do not inherit schema from source or target
 
-* If the schema derivation strategy is **Do not inherit schema from source or target** then, columns and data types will be inherited from the transformation and validation section and, the validation of data types will be performed based on the validate data type flag. If the flag is true then validation of that column will be performed, if false then validation will not be performed.
-* Additionally, an effective schema will be created using columns and data types specified in the **validation and transformation** section of the ingestion job. And this effective schema will be used to create a table if an auto-create table flag is true in the target section and in the reject section.
+* If the schema derivation strategy is **Do not inherit schema from source or target** then, columns and data types will be inherited from the transformation and validation section and, the validation of data types will be performed based on the validate data type checkbox. If the checkbox is checked then validation of that column will be performed, if unchecked then validation will not be performed.
+* Additionally, an effective schema will be created using 
+    1. columns and data types specified in the **validation and transformation** section of the ingestion job.
+* And this effective schema will be used to create a table if an auto-create table checkbox is checked in the target section and in the reject section.
 
 ### Example
 
-* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema flag is true. In target, the datastore is the delta table and the auto-create table flag is true and the name of table is demo_schema_derivation.
+* In source, a datastore is a file and format is delimited, and the file pattern includes two files that are file1.csv and file2.csv. And infer schema checkbox is checked. In target, the datastore is the delta table and the auto-create table checkbox is checked and the name of table is demo_schema_derivation.
 
 * The source data are like this 
 ```
@@ -271,9 +285,9 @@ id,name
 id_1004,n4
 ```
 * In the validation and transformation section, we have defined 
-1. A new column **full_name** is doing concatenation of **name** column and "_new" string. If we do not provide any data type then Guzzle will take a string as the data type for this column and if the data type field has a value then it will take that data type for that column. As you can see from the below image.
-2. **name** column, but a validate data type flag is **false**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be a string as there is no data type defined.
-3. **id** column with data type value integer and validate datatype flag is true.
+1. A new column **full_name** is doing concatenation of **name** column and "_new" string. Since the full_name column does not exist in the target table, and we have provided data type value in the validation and transformation section so, Guzzle will respect that data type value and take that data type for the defined column. If the user does not provide the value of the data type then Guzzle will take **string** as a data type value.
+2. **name** column but a validate data type checkbox is **unchecked**, and also we haven't defined any data type so, Guzzle will not validate this column's data and the data type for this column will be **string** as there is no data type defined.
+3. **id** column with data type value integer and validate data type checkbox is checked.
 
 <a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/ingest_data/schema_derivation_5.png" target="_self" >
     <img width="1000" src="/img/docs/how-to-guides/ingest_data/schema_derivation_5.png" />
@@ -299,4 +313,4 @@ demo_schema_derivation
 | 1003 | n3   |
 ```
 
-* Here, id column is defined in the validation and transformation section and validate data type flag is true so, Guzzle will validate the data for that column. So, the data with **id=id_1004** is discarded, and this data is stored in the reject section.
+* Here, id column is defined in the validation and transformation section and validate data type checkbox is checked so, Guzzle will validate the data for that column. So, the data with **id=id_1004** is discarded, and this data is stored in the reject section.

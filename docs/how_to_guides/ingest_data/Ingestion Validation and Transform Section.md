@@ -21,7 +21,7 @@ Validation and transformation section is included in the Ingestion activity only
 |Name|Specify name of the column.|
 |Transformation|Specify the transformation rule.|
 |Data Type|Specify the data type of the column. If data type is not specified then it will inherit from schema derivation strategy, or it will respect that data type.|
-|Validate Data Type|Check the field if you want to do validation of data type.|
+|Validate Data Type|By default this checkbox is unchecked.<br/> Check the field if you want to do validation of data type.|
 |Uniqueness|Check the field if you want to check that the column's data is unique.|
 |Nullable|Check the field if you want to check that the column's data null or not.|
 |SQL Validation|Specify the SQL validation rule.|
