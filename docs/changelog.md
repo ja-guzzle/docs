@@ -2,7 +2,10 @@
 
 ### Guzzle v2.2.0 (June 6, 2022)
 #### Features
-- Guzzle data type handling improvements and optimizations for ingestion module
+- In ingestion, optimize and revise the data type validation section. For validate datatype rules checkout this sheet [ingestion_validate_datatype_rules.xlsx](/documents/releases/2_2_0/ingestion_validate_datatype_rules.xlsx).
+- In ingestion, removed strict schema check feature.
+- In ingestion, revise the existing three schema derivation strategies and add two new schema derivation strategies. For more details checkout this [documentation](/docs/how_to_guides/ingest_data/derivation_strategies).
+- In ingestion, set the default value for `validate data type` checkbox to false in YAML and when the YAML property for this checkbox is missing, then guzzle will interpret it as unchecked.
 
 ### Guzzle v2.1.9 (May 20, 2022)
 #### Features
