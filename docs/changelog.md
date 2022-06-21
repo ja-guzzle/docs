@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.2.1 (June 21, 2022)
+#### Features
+- Added new button in Author UI to validate all activities, pipelines, batches and schedules configurations
+- Added Azure Monitor support to send Guzzle job logs and audit data. For more details checkout this [documentation](/docs/how_to_guides/administration/environment_config/azure_monitor)
+- Added drag and drop support to add new activity and reorder activity in pipeline configuration
+
+#### Bugs
+- UI Fixes: Fixed parameter validation message issue in parameter component
+
 ### Guzzle v2.2.0 (June 6, 2022)
 #### Features
 - In ingestion, optimize and revise the data type validation section. For validate datatype rules checkout this sheet [ingestion_validate_datatype_rules.xlsx](/documents/releases/2_2_0/ingestion_validate_datatype_rules.xlsx).
