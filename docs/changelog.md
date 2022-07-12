@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.2.2 (July 04, 2022)
+#### Bugs
+- UI Fixes: Fixed monitor graph issue and pipeline dependency graph issue 
+- Fixed databricks rest api execution failed issue, added retry support if exception occurred while executing databricks rest api
+
 ### Guzzle v2.2.1 (June 21, 2022)
 #### Features
 - Added new button in Author UI to validate all activities, pipelines, batches and schedules configurations
