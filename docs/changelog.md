@@ -1,5 +1,12 @@
 # Guzzle Changelog
 
+### Guzzle v2.3.0 (M) (August 01, 2022)
+#### Features
+- Deployment structure changes. [Click Here](/docs/releases/2_3_0/deployment-structure-changes) to view details
+- Added sync passphrase in Azure KeyVault feature
+- Restrict permissions for internally generated Guzzle ApiKeys
+- Added auto-create table support for hive and delta technology in processing job
+
 ### Guzzle v2.2.2 (July 04, 2022)
 #### Bugs
 - UI Fixes: Fixed monitor graph issue and pipeline dependency graph issue 
