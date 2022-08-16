@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.3.1 (August 15, 2022)
+#### Features
+- Added azure synapse native connector support for azure synapse analytics compute
+- Added aws secret manager support
+- Added aws s3 shared storage support
+
+#### Bugs
+- Fixed truncate delta table and show partitions operation issue in azure synapse analytics compute
+
 ### Guzzle v2.3.0 (M) (August 01, 2022)
 #### Features
 - Deployment structure changes. [Click Here](/docs/releases/2_3_0/deployment-structure-changes) to view details
