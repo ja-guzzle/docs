@@ -26,8 +26,8 @@ You will need to ensure the database used for Guzzle repository is accessible by
 
 Below diagram explains typical setup of configuring Azure SQL DB to host Guzzle repository.  
 
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" target="_self" >
-    <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/repository_db01.png" />
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/guzzle_network_artitecture.png" target="_self" >
+    <img width="1000" src="/img/docs/how-to-guides/administrator/environment-config/guzzle_network_artitecture.png" />
 </a>
 
 ## Steps to Update Repository database
