@@ -1,35 +1,33 @@
 ---
 id: setup_shared_storage
-title: Setup Shared Storage
+title: Shared Storage
 ---
 
-**Applicable when using Azure Databricks as compute**
+Guzzle Shared storage is used to store guzzle jars, third-party dependency jars and extra deployment specific jars in Azure storage account. This jars will be used when the job is triggered on remote cluster.
 
-Guzzle home (also referred as GUZZLE_HOME) is stores the binaries, configs and logs on a file system which should be accessible to both the Guzzle VM and the `compute` where the **activities ** will run. Below architecture diagram explains this further 
+:::note
+Shared storage would be configured when using remote cluster to run Guzzle jobs.
+:::
 
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage0.png" />
+## Network Architecture for Guzzle on Azure
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/guzzle_network_artitecture.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/guzzle_network_artitecture.png" />
 </a>
 
-When using Azure Databricks `compute` for running activities, it is mandatory to enable shared storage using Azure blob storage. A shared storage simply means mounting the same Azure blob storage account on both Guzzle VM and Azure Databricks Workspace so that both this component can point to the same GUZZLE_HOME which contains the Guzzle configs, logs, and binaries. 
+When using remote compute for running activities, it is mandatory to give all configuration using Azure blob storage. A shared storage simply means storing guzzle jars, third-party dependency jars and extra deployment specific jars in Azure storage account. And the job configs and logs will be saved on local Guzzle VM.
 
-The Guzzle Azure Marketplace VM by default hosts GUZZLE_HOME on local folder in VM at location /guzzle/guzzlehome. When enabling the shared storage first time, Guzzle will do a one time copy of configs, binaries and logs from this directory to the blob storage. It will also mount the Azure blob storage is mounted on Guzzle VM using [Blob fuse](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-how-to-mount-container-linux) and automatically mount and unmount when the Guzzle services on Guzzle VM is restarted. 
+When jobs is triggered on remote cluster Guzzle API will be used to read and write guzzle logs. And the job configs will be referred using Guzzle API. This stored jars will be installed on remote cluster and will use to run the jobs when the job is triggered on remote cluster from Guzzle. 
 
-Similarly, the Azure blob storage container is also mounted on Azure Databricks workspace by running "Setup Workspace" wizard from `compute` UI
+## Setup Shared Storage
 
-:::note 
-Once shared storage is enabled, you will not be able to disable it anymore.
-::: 
+1. Go to the **Manage** menu from the top navigation bar
 
-## Steps to Enable Shared Storage 
-
-1. Go to the **Manage** menu from the top navigation bar.
-
-2. Navigate to Environment Config -> Shared Storage and click on "Enable".
+2. Navigate to Environment Config -> Shared Storage
 
 3. Enter following configuration details:
 
-## Properties to Setup Shared Storage
+## Properties to setup Shared Storage
 
 |Property|Description|Default Value|Required|
 |--- |--- |--- |--- |
@@ -40,41 +38,39 @@ Once shared storage is enabled, you will not be able to disable it anymore.
 |Tenant Id|Specify the service principle tenant id|None|Yes|
 |Client id|Specify the service principle client id|None|Yes|
 |Client Secret|Specify the client secret.<br/> For specify client secret the following options are available:<br/>1. **Manual**: Provide client secret directly. <br/>2. **Azure Key Vault**: To use Azure key vault feature user have to integrate Key Vault with Guzzle for that visit **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**. Give value of the key vault name and secret name where client secret is stored in Azure Key Vault instance.|None|Yes|
-|Container Directory|Specify directory inside the container where GUZZLE_HOME has to be setup. <br/> You can specify / (or root directory) if the GUZZLE_HOME has to be setup in the root directory of the container|None|Yes|
-|Force Clean|You can check this option to clean up existing files in the container before initializing the GUZZLE_HOME. <br/> If kept unchecked, guzzle_will merge the files of GUZZLE_HOME with the existing ones in that directory|False|No|
-|Databricks Secret|Below information is utilized when setting up Databricks Workspace to mount the Azure storage account. The details of setting up Databricks <br/>Workspace is covered here.<br/><br/> Secret Scope: This is the secret scope defined in Databricks workspace.<br /><br/> Secret Key: This is the secret containing the access key for the storage account that is to be used for shared storage.<br/><br/> Refer to these articles to create Databricks Secret Scope and secrets. <br/><br/> How to create secret scope is defined **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**.|None|No|
+|Container Directory|Specify directory inside the container where jars will be saved. <br/> You can specify / (or root directory) if you want to store on root|None|Yes|
+|Databricks Secret|Give below information for sharing the jars with remote cluster from storage account. <br/>**Secret Scope:** This is the secret scope defined in Databricks workspace.<br/> **Secret Key:** This is the secret containing the access key for the storage account that is to be used for shared storage.<br/><br/> Refer to these articles to create keyvault backed Databricks Secret Scope. <br/> How to create secret scope is defined **[here](../../features/how_key_vault_is_used_to_integrate_guzzle)**.|None|No|
+|Sync Storage |This button will be used to sync Guzzle jars, third party dependency jars and extra deployment specific jars to the storage account from Guzzle VM|||
+|Update| This button will be used to update all the properties|||
+|Cancel| To cancel the updated values in property|||
 
+Guzzle will validate the shared storage configuration ensuring the storage account, container, access key, and folder are valid before updating the shared storage information.
 
-Guzzle will validate the shared storage configuration ensuring the storage account, container, access key, and folder are valid before enabling the shared storage.
+As soon as user press the update button, it will verify the credentials and stored in guzzle-api.yml file.
 
-### Setup Shared Storage using Service Principle
+```
+storage:
+  type: "local"
+  properties:
+    auth_type: "access_key"
+    access_key: "XXXXXX"
+    container_directory: "/"
+    container_name: "XXXXXXXXX"
+    account_name: "XXXXX"
+    databricks_secret:
+      key: "XXXXX"
+      scope: "XXXX"
+```
 
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_1.png" />
+### Interface of Shared Storage using Access Key
+
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/shared_storage_1.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/shared_storage_1.png" />
 </a>
 
-### Setup Shared Storage using Access Key
+### Interface of Shared Storage using Service Principle
 
-<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_2.png" target="_self" >
-    <img src="/img/docs/how-to-guides/administrator/environment-config/setup_shared_storage_2.png" />
+<a href="https://guzzle.justanalytics.com/img/docs/how-to-guides/administrator/environment-config/shared_storage_2.png" target="_self" >
+    <img src="/img/docs/how-to-guides/administrator/environment-config/shared_storage_2.png" />
 </a>
 
-## Steps to edit the Shared Storage configuration
-
-Guzzle allows you to update Shared storage configuration to update any change in the access keys.
-
-:::note 
-1. At this point Guzzle does not allow changing account, container or directory. 
-2. If there is need to change storage account, container or folder name, you will need to copy the configs, logs and Guzzle binaries from the existing storage account /container / folder to the new one. Post this update the configs in /guzzle/API/guzzle-api.yml
-3. When setting up Shared storage or updating, do ensure that there are no ongoing jobs
-:::
-
-Below are the steps to edit the existing Shared Storage configuration: 
-
-1. Go to the **Manage** menu from the top navigation bar.
-
-2. Navigate to Environment Config -> Shared Storage 
-
-3. Update the required configuration details
-
-4. Click on Update button

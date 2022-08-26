@@ -54,7 +54,8 @@ module.exports = {
               'how_to_guides/administration/maintenance/view_service_log',
               'how_to_guides/administration/security/azure_single_sign_on',
               'how_to_guides/administration/security/user_management',
-              'how_to_guides/administration/environment_config/azure_monitor'
+              'how_to_guides/administration/environment_config/azure_monitor',
+              'how_to_guides/administration/environment_config/api_settings'
         ]
       },
       {
