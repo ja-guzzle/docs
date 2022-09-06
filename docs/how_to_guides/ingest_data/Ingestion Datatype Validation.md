@@ -264,3 +264,12 @@ datatype validation applies to Ingestion activity only.
   </tr>
 
 </table>
+
+- about range check, the range will be determined by java data type
+  - for instance, tinyint(byte) has range -128 to +127 if integer column value 200 try to validate against tinyint datatype guzzle will mark that record as invalid 
+- about length check, guzzle will simply check the length of the column value
+- about parse check,
+  - for date and timestamp datatype, guzzle will try to parse to spark default formats, in spark 3.3.0 `yyyy-MM-dd` is for date, and `yyyy-MM-dd HH:mm:ss.SSSS` is for timestamp, for more information [click here](https://spark.apache.org/docs/latest/sql-ref-datetime-pattern.html)
+  - for numeric datatype (like BigInt, Double, Int, etc), guzzle will try to parse and also will perform the range check
+- about <img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" />, guzzle will directly allow without touching data
+- about <img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" />, guzzle will directly disallow without touching data
