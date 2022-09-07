@@ -70,114 +70,114 @@ datatype validation applies to Ingestion activity only.
 
   <tr>
     <th scope="row">BigInt</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
     <td>Range check</td>
     <td>Range check</td>
     <td>Range check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Int</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>✓</td>
     <td>Range check</td>
     <td>Range check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Smallint</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
     <td>Range check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Tinyint</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Double</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Range check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Float</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Decimal(p, [s])</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
     <td>Range check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 </table>
 
@@ -201,18 +201,18 @@ datatype validation applies to Ingestion activity only.
 
   <tr>
     <th scope="row">Boolean</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>✓</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>x</td>
+    <td>x</td>
   </tr>
 
   <tr>
@@ -226,41 +226,41 @@ datatype validation applies to Ingestion activity only.
     <td>Parse check</td>
     <td>Parse check</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
     <td>Parse check</td>
     <td>Parse check</td>
   </tr>
 
   <tr>
     <th scope="row">Timestamp</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>x</td>
   </tr>
 
   <tr>
     <th scope="row">Date</th>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" /></td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
+    <td>x</td>
     <td>Length check</td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
-    <td><img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" /></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>✓</td>
   </tr>
 
 </table>
@@ -271,5 +271,5 @@ datatype validation applies to Ingestion activity only.
 - about parse check,
   - for date and timestamp datatype, guzzle will try to parse to spark default formats, in spark 3.3.0 `yyyy-MM-dd` is for date, and `yyyy-MM-dd HH:mm:ss.SSSS` is for timestamp, for more information [click here](https://spark.apache.org/docs/latest/sql-ref-datetime-pattern.html)
   - for numeric datatype (like BigInt, Double, Int, etc), guzzle will try to parse and also will perform the range check
-- about <img src="/img/docs/how-to-guides/ingest_data/check-solid.svg" width="25" height="25" />, guzzle will directly allow without touching data
-- about <img src="/img/docs/how-to-guides/ingest_data/xmark-solid.svg" width="25" height="25" />, guzzle will directly disallow without touching data
+- about ✓, guzzle will directly allow without touching data
+- about x, guzzle will directly disallow without touching data

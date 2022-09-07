@@ -89,7 +89,8 @@ module.exports = {
           'how_to_guides/datastores/server_file_system',
           'how_to_guides/datastores/rest',
           'how_to_guides/datastores/jdbc',
-          'how_to_guides/datastores/azure_synapse_analytics'
+          'how_to_guides/datastores/azure_synapse_analytics',
+          'how_to_guides/datastores/snowflake',
         ]
       },
       {
