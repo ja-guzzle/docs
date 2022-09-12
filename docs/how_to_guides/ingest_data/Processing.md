@@ -42,8 +42,8 @@ Processing module support two types of execution engine
 2. Template
 
 ### Spark
-- In Spark engine, Guzzle loads required source and target data in spark compute and perform operations and write processed data in target table.
-- There are few changes in behaviour from Guzzle v2.4.0. [Click here](docs/releases/2_4_0/processing-behaviour-changes) to view it.
+- In Spark engine, Guzzle loads required source and target data in spark compute, perform operations and write processed data in target table.
+- There are few changes in behaviour from Guzzle v2.4.0. [Click here](../../releases/2_4_0/processing-behaviour-changes.md) to view it.
 
 ### Template
 - In Template engine, Guzzle prepares operation query which will be executed on source technology. It will not load source and target data in compute memory.
