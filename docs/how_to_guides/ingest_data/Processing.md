@@ -35,6 +35,18 @@ As processing is meant for data movement between homogeneous sources and target,
 |Soft Delete|Specify, if you want to perform soft delete onto the target table where the flag column can be maintained into the target table to identify if record is active or deleted. Use this option in conjunction with one of the framework columns w_current_record_flag available in the Additional Columns source section by mapping it to the target table.|None|No|
 |Truncate Partition Columns|Specify target table partition columns and their corresponding values to truncate target table partition before target load. Truncate partition column values can also be passed as a parameter.|None|No|
 
+## Processing execution
+
+Processing module support two types of execution engine
+1. Spark
+2. Template
+
+### Spark
+- In Spark engine, Guzzle loads required source and target data in spark compute and perform operations and write processed data in target table.
+- There are few changes in behaviour from Guzzle v2.4.0. [Click here](docs/releases/2_4_0/processing-behaviour-changes) to view it.
+
+### Template
+- In Template engine, Guzzle prepares operation query which will be executed on source technology. It will not load source and target data in compute memory.
 
 ## Example of the Processing Module:
 
