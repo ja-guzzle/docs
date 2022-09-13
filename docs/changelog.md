@@ -2,8 +2,8 @@
 
 ### Guzzle v2.4.0 (September 09, 2022)
 #### Features
-- Replaced two operations `Truncate Table` and `Insert Into` with single atomic operation `Insert Overwrite` in processing module. [Click here](./releases/2_4_0/processing-behaviour-changes.md) to know behaviour changes. 
-- Added effective column mapping feature in target and reject section of ingestion module. Using this feature user can view the source and target/reject table column mapping.
+- Replaced two operations `Truncate Table` and `Insert Into` with single atomic operation `Insert Overwrite` in processing module. [Click here](/docs/releases/2_4_0/processing-behaviour-changes) to know behaviour changes. 
+- Added [effective column mapping feature](/docs/how_to_guides/ingest_data/effective_column_mapping) in target and reject section of ingestion module
 - Added AWS glue compute support to run guzzle activities 
 - Added job_instance_id column in constraint_check_summary and constraint_check_detail table. Using this column user can distinct data by job and also trace back to the job run.
 - Added housekeeping support for job audit, job logs and service logs. Job audit contains job_info and job_info_param table. It will also create index on parent_job_instance_id column in job_info table to improve housekeeping performance.

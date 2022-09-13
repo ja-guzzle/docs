@@ -89,7 +89,8 @@ module.exports = {
           'how_to_guides/datastores/server_file_system',
           'how_to_guides/datastores/rest',
           'how_to_guides/datastores/jdbc',
-          'how_to_guides/datastores/azure_synapse_analytics'
+          'how_to_guides/datastores/azure_synapse_analytics',
+          'how_to_guides/datastores/snowflake',
         ]
       },
       {
@@ -126,7 +127,10 @@ module.exports = {
           'how_to_guides/ingest_data/overwrite_and_append_operatoins',
           'how_to_guides/ingest_data/schema_drift',
           'how_to_guides/ingest_data/configure_truncate_partition_columns',
-          'how_to_guides/ingest_data/example_ingest_data'
+          'how_to_guides/ingest_data/example_ingest_data',
+          'how_to_guides/ingest_data/ingestion_data_validation',
+          'how_to_guides/ingest_data/ingestion_datatype_validation',
+          'how_to_guides/ingest_data/effective_column_mapping'
         ]
       },
       {

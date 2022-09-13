@@ -11,22 +11,23 @@ Additionally Guzzle supports datastore to run external activities like procedure
 
 Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores — across different activity types and Computes
 
-			
 
-|||**Computes**|||**Activities**|||||
-|--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|Category|Connector|**Azure Databricks**|**Apache Spark (on Yarn)**|**Apache Spark (on Local mode)**|**Ingestion(source/target)**|**Processing(source/target)**|**Reconciliation (source/target)**|**Constraint Checks**|**Housekeeping**|
-|File|DBFS|✓|||✓/✓|x|x|x|x|
-||ADLS Gen2|✓|x|x|✓/✓|x|x|x|x|
-||Server file system|✓|✓|✓|✓/✓|x|x|x|x|
-||HDFS|✓|✓|✓|✓/✓|x|x|x|x|
-||AWS S3|✓|✓|✓|✓/✓|x|x|x|x|
-|Database|Delta|✓|x|x|✓/✓|✓/✓|✓/✓|✓|✓|
-||Hive|✓|✓|✓|✓/✓|✓/✓|✓/✓|✓|✓|
-||Azure SQL|✓|✓|✓|✓/✓|x|x|x|x|
-||Azure Synapse|✓|x|x|✓/✓|x|x|x|x|
-||JDBC|✓|✓|✓|✓/✓|✓/✓|✓/✓|✓|x|
-|API|Rest API|✓|✓|✓|✓/−|x|x|x|x|
+|          |                    | **Computes**         |                            |                                  | **Activities**               |                               |                                    |                       |                  |
+|----------|--------------------|----------------------|----------------------------|----------------------------------|------------------------------|-------------------------------|------------------------------------|-----------------------|------------------|
+| Category | Connector          | **Azure Databricks** | **Apache Synapse Analytics**| **Apache Spark (on Local mode)** | **Ingestion(source/target)** | **Processing(source/target)** | **Reconciliation (source/target)** | **Constraint Checks** | **Housekeeping** |
+| File     | DBFS               | ✓                    | ✓                          |                                  | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | ADLS Gen2          | ✓                    | ✓                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | Server file system | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | HDFS               | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | AWS S3             | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+| Database | Delta              | ✓                    | ✓                          | x                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | ✓                |
+|          | Hive               | ✓                    | ✓                          | ✓                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | ✓                |
+|          | Azure SQL          | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | Azure Synapse      | ✓                    | ✓                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+|          | JDBC               | ✓                    | ✓                          | ✓                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | x                |
+|          | Snowflake          | ✓                    | x                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
+| API      | Rest API           | ✓                    | ✓                          | ✓                                | ✓/−                          | x                             | x                                  | x                     | x                |
+
 
 
 :::note
