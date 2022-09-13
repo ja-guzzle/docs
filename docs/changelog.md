@@ -3,7 +3,7 @@
 ### Guzzle v2.4.0 (September 09, 2022)
 #### Features
 - Replaced two operations `Truncate Table` and `Insert Into` with single atomic operation `Insert Overwrite` in processing module. [Click here](/docs/releases/2_4_0/processing-behaviour-changes) to know behaviour changes. 
-- Added column mapping feature in target and reject section of ingestion module
+- Added [effective column mapping feature](/docs/how_to_guides/ingest_data/effective_column_mapping) in target and reject section of ingestion module
 - Added AWS glue compute support to run guzzle activities 
 - Added job instance id support in constraint check module
 - Added housekeeping support of job audit, job logs and service logs
