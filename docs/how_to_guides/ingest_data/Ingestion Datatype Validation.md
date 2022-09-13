@@ -50,220 +50,25 @@ datatype validation applies to Ingestion activity only.
 * **Do not inherit schema from Source or Target**: user define a schema if data type not specified then guzzle will implicitly take `String`, and guzzle will only consider these columns to flow further
 
 ## Data type validation
-<table>
-  <caption>Numeric</caption>
-  <tr>
-    <th></th>
-    <th scope="col">Bigint</th>
-    <th scope="col">Int</th>
-    <th scope="col">Smallint</th>
-    <th scope="col">Tinyint</th>
-    <th scope="col">Double</th>
-    <th scope="col">Float</th>
-    <th scope="col">decimal(p, [s])</th>
-    <th scope="col">Boolean</th>
-    <th scope="col">Varchar(n)</th>
-    <th scope="col">String</th>
-    <th scope="col">Timestamp</th>
-    <th scope="col">date</th>
-  </tr>
 
-  <tr>
-    <th scope="row">BigInt</th>
-    <td>✓</td>
-    <td>Range check</td>
-    <td>Range check</td>
-    <td>Range check</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
+|                     | **Bigint** | **Int**     | **Smallint** | **Tinyint** | **Double** | **Float**   | **decimal(p, [s])** | **Boolean** | **Varchar(n)** | **String** | **Timestamp** | **date** |
+|---------------------|------------|-------------|--------------|-------------|------------|-------------|---------------------|-------------|----------------|------------|---------------|----------|
+| **BigInt**          | ✓          | Range check | Range check  | Range check | x          | x           | x                   | ✓           | Length check   | ✓          | x             | x        |
+| **Int**             | ✓          | ✓           | Range check  | Range check | x          | x           | x                   | ✓           | Length check   | ✓          | x             | x        |
+| **Smallint**        | ✓          | ✓           | ✓            | Range check | x          | x           | x                   | ✓           | Length check   | ✓          | x             | x        |
+| **Tinyint**         | ✓          | ✓           | ✓            | ✓           | x          | x           | x                   | ✓           | Length check   | ✓          | x             | x        |
+| **Double**          | x          | x           | x            | x           | ✓          | Range check | x                   | x           | Length check   | ✓          | x             | x        |
+| **Float**           | x          | x           | x            | x           | ✓          | ✓           | x                   | x           | Length check   | ✓          | x             | x        |
+| **Decimal(p, [s])** | x          | x           | x            | x           | x          | x           | Range check         | x           | Length check   | ✓          | x             | x        |
 
-  <tr>
-    <th scope="row">Int</th>
-    <td>✓</td>
-    <td>✓</td>
-    <td>Range check</td>
-    <td>Range check</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
 
-  <tr>
-    <th scope="row">Smallint</th>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>Range check</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
+|               | **Bigint**  | **Int**     | **Smallint** | **Tinyint** | **Double**  | **Float**   | **decimal(p, [s])** | **Boolean** | **Varchar(n)** | **String** | **Timestamp** | **date**    |
+|---------------|-------------|-------------|--------------|-------------|-------------|-------------|---------------------|-------------|----------------|------------|---------------|-------------|
+| **Boolean**   | x           | x           | x            | x           | x           | x           | x                   | ✓           | Length check   | ✓          | x             | x           |
+| **String**    | Parse check | Parse check | Parse check  | Parse check | Parse check | Parse check | Parse check         | Parse check | Length check   | ✓          | Parse check   | Parse check |
+| **Timestamp** | x           | x           | x            | x           | x           | x           | x                   | x           | Length check   | ✓          | ✓             | x           |
+| **Date**      | x           | x           | x            | x           | x           | x           | x                   | x           | Length check   | ✓          | ✓             | ✓           |
 
-  <tr>
-    <th scope="row">Tinyint</th>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Double</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Range check</td>
-    <td>x</td>
-    <td>x</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Float</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Decimal(p, [s])</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>Range check</td>
-    <td>x</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
-</table>
-
-<table>
-  <caption>other</caption>
-  <tr>
-    <th></th>
-    <th scope="col">Bigint</th>
-    <th scope="col">Int</th>
-    <th scope="col">Smallint</th>
-    <th scope="col">Tinyint</th>
-    <th scope="col">Double</th>
-    <th scope="col">Float</th>
-    <th scope="col">decimal(p, [s])</th>
-    <th scope="col">Boolean</th>
-    <th scope="col">Varchar(n)</th>
-    <th scope="col">String</th>
-    <th scope="col">Timestamp</th>
-    <th scope="col">date</th>
-  </tr>
-
-  <tr>
-    <th scope="row">Boolean</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>✓</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>x</td>
-    <td>x</td>
-  </tr>
-
-  <tr>
-    <th scope="row">String</th>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>Parse check</td>
-    <td>Parse check</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Timestamp</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>x</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Date</th>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>x</td>
-    <td>Length check</td>
-    <td>✓</td>
-    <td>✓</td>
-    <td>✓</td>
-  </tr>
-
-</table>
 
 - about range check, the range will be determined by java data type
   - for instance, tinyint(byte) has range -128 to +127 if integer column value 200 try to validate against tinyint datatype guzzle will mark that record as invalid 
