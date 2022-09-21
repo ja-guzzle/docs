@@ -55,7 +55,8 @@ module.exports = {
               'how_to_guides/administration/security/azure_single_sign_on',
               'how_to_guides/administration/security/user_management',
               'how_to_guides/administration/environment_config/azure_monitor',
-              'how_to_guides/administration/environment_config/api_settings'
+              'how_to_guides/administration/environment_config/api_settings',
+              'how_to_guides/administration/environment_config/housekeeping'
         ]
       },
       {
@@ -90,6 +91,7 @@ module.exports = {
           'how_to_guides/datastores/rest',
           'how_to_guides/datastores/jdbc',
           'how_to_guides/datastores/azure_synapse_analytics',
+          'how_to_guides/datastores/azure_synapse_analytics_native',
           'how_to_guides/datastores/snowflake',
         ]
       },
