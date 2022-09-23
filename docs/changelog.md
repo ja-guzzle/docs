@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.1 (September 23, 2022)
+#### Features
+- Added snowflake datastore support for ingestion module
+- Added snowflake datastore support for processing module
+
+#### Bugs
+- Fixed auto create secondary table issue in housekeeping job, It was failing due to non-supported sql syntax
+- UI Fixes: Fixed false alert issue when navigating out of api screen without making change, Fixed compute UI doesn't show cluster list option when keyvault or secret is incorrect, Updated azure synapse native connector datastore and ingestion section labels to make it consistent with other labels 
+
 ### Guzzle v2.4.0 (September 09, 2022)
 #### Features
 - Replaced two operations `Truncate Table` and `Insert Into` with single atomic operation `Insert Overwrite` in processing module. [Click here](/docs/releases/2_4_0/processing-behaviour-changes) to know behaviour changes. 
