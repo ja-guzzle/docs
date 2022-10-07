@@ -1,5 +1,16 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.2 (October 07, 2022)
+#### Features
+- Added support of AWS databricks in AWS deployment scheme
+- Added support of azure sql, azure syanpse, azure syanpse native and snowflake datastore in constraint check module
+- Added column mapping support for azure synapse native datastore and added option to download column mapping as csv and excel file
+
+#### Bugs
+- Fixed column mapping issue, It was failing when data_type config is missing in ingestion activity
+- Fixed data sampling issue, It was failing when sql is configured in source and user perform data sampling for processing activity 
+- UI Fixes: Sync passphrase button was not taking updated value from UI, fixed issue not it update api settings and perform sync with updated value
+
 ### Guzzle v2.4.1 (September 23, 2022)
 #### Features
 - Added snowflake datastore support for ingestion module
