@@ -14,11 +14,11 @@ Job audit records that are older than given retention days will be deleted from 
 The `end_time` column will be used for identify whether record is older or not. 
 
 ## Housekeeping Guzzle Job Logs
-Guzzle job log folders that are older than the given retention days will be deleted. The location of the guzzle job logs is $GUZZLE_HOME/logs.
+Guzzle job log folders that are older than the given retention days will be deleted. The location of the guzzle job logs is $GUZZLE_PRODUCT_HOME/logs.
 
 The name of log folder will be used for identify whether log folder is older or not.
 
 ## Housekeeping Service Logs
-Guzzle service logs files that are older than the given retention days will be deleted. The location of the Guzzle service log is $GUZZLE_HOME/api/logs.
+Guzzle service logs files that are older than the given retention days will be deleted. The location of the Guzzle service log is $GUZZLE_PRODUCT_HOME/api/logs.
 
 The name of log file will be used for identify whether log file is older or not.

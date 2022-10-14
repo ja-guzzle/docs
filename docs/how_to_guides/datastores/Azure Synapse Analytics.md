@@ -11,7 +11,7 @@ Guzzle offers azure synapse analytics as compute and datastore compute, and this
 Currently, this datastore is only supported in ingestion and processing activity.
 :::
 
-## Steps to create Datastore for JDBC
+## Steps to create Datastore for Azure Synapse Analytics
 
 1. Click on the action button (![image alt text](/img/docs/how-to-guides/datastores/server_file_system_0.png)) from the **Datastores **section in Left Navigation and select azure synapse analytics. Alternatively, the user can launch from **Create New Datastore **link in the Activity authoring UI or Copy Data tool.
 
