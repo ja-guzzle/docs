@@ -9,26 +9,51 @@ Additionally Guzzle supports datastore to run external activities like procedure
 
 ## Supported Datastores 
 
-Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores — across different activity types and Computes
+Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores — across different Computes
 
 
-|          |                    | **Computes**         |                            |                                  | **Activities**               |                               |                                    |                       |                  |
-|----------|--------------------|----------------------|----------------------------|----------------------------------|------------------------------|-------------------------------|------------------------------------|-----------------------|------------------|
-| Category | Connector          | **Azure Databricks** | **Apache Synapse Analytics**| **Apache Spark (on Local mode)** | **Ingestion(source/target)** | **Processing(source/target)** | **Reconciliation (source/target)** | **Constraint Checks** | **Housekeeping** |
-| File     | DBFS               | ✓                    | ✓                          |                                  | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | ADLS Gen2          | ✓                    | ✓                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | Server file system | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | HDFS               | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | AWS S3             | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-| Database | Delta              | ✓                    | ✓                          | x                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | ✓                |
-|          | Hive               | ✓                    | ✓                          | ✓                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | ✓                |
-|          | Azure SQL          | ✓                    | ✓                          | ✓                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | Azure Synapse      | ✓                    | ✓                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-|          | JDBC               | ✓                    | ✓                          | ✓                                | ✓/✓                          | ✓/✓                           | ✓/✓                                | ✓                     | x                |
-|          | Snowflake          | ✓                    | x                          | x                                | ✓/✓                          | x                             | x                                  | x                     | x                |
-| API      | Rest API           | ✓                    | ✓                          | ✓                                | ✓/−                          | x                             | x                                  | x                     | x                |
+|          |                    |   **Azure**          |                             |              |  **AWS**           |                   |
+|----------|--------------------|----------------------|-----------------------------|--------------|--------------------|-------------------|
+| Category | Connector          | **Azure Databricks** | **Apache Synapse Analytics**| **AWS Glue** | **AWS Databricks** | **AWS EMR (EC2)** |
+| File     | DBFS               | ✓                    | x                           | x            | ✓                  | x                 |  
+|          | ADLS Gen2          | ✓                    | ✓                           | x            | ✓                  | x                 |    
+|          | Server file system | ✓                    | x                           | x            | ✓                  | x                 |
+|          | HDFS               | ✓                    | x                           | x            | ✓                  | x                 |
+|          | AWS S3             | ✓                    | ✓                           | ✓            | ✓                  | ✓                 |
+| Database | Delta              | ✓                    | ✓                           | x            | ✓                  | ✓                 |
+|          | Hive               | ✓                    | ✓                           | ✓            | ✓                  | ✓                 |
+|          | Azure SQL          | ✓                    | ✓                           | x            | ✓                  | ✓                 |
+|          | Azure Synapse Analytics | ✓               | ✓                           | x            | ✓                  | x                 |
+|          | Azure Synapse Analytics Native | x        | ✓                           | x            | x                  | x                 |       
+|          | JDBC               | ✓                    | ✓                           | ✓            | ✓                  | ✓                 |
+|          | Snowflake          | ✓                    | x                           | ✓            | ✓                  | x                 |
+| API      | Rest API           | ✓                    | ✓                           | ✓            | ✓                  | ✓                 |
+|Others    | Azure Data Factory | ✓                    | x                           | ✓            | ✓                  | x                 |
+|          | Databricks         | ✓                    | x                           | ✓            | ✓                  | ✓                 |      
 
 
+Guzzle broadly supports three types of datastores: File, Database and API. Below matrix provides supported Datastores — across different activities
+
+
+| Category | Connector          | **Ingestion**              | **Processing**                | **Reconciliation**                 | **Constraint Checks** | **Housekeeping** |**External**|
+|----------|--------------------|----------------------------|-------------------------------|------------------------------------|-----------------------|------------------| -----------|
+| File     | DBFS               | ✓                          | x                             | x                                  | x                     | x                | x          |
+|          | ADLS Gen2          | ✓                          | x                             | x                                  | x                     | x                | x          |
+|          | Server file system | ✓                          | x                             | x                                  | x                     | x                | x          |
+|          | HDFS               | ✓                          | x                             | x                                  | x                     | x                | x          |
+|          | AWS S3             | ✓                          | x                             | x                                  | x                     | x                | x          |
+| Database | Delta              | ✓                          | ✓                             | ✓                                  | ✓                     | ✓                | x          |
+|          | Hive               | ✓                          | ✓                             | ✓                                  | ✓                     | ✓                | x          |
+|          | Azure SQL          | ✓                          | ✓                             | ✓*                                 | x                     | x                | x          |
+|          | Azure Synapse Analytics     | ✓                 | ✓                             | ✓*                                 | ✓                     | x                | x          |
+|          | Azure Synapse Analytics Native | ✓              | ✓                             | ✓*                                 | ✓                     | x                | x          |      
+|          | JDBC               | ✓                          | ✓                             | ✓                                  | ✓                     | x                | ✓          |
+|          | Snowflake          | ✓                          | ✓                             | ✓*                                 | ✓                     | x                | x          |
+| API      | Rest API           | ✓                          | x                             | x                                  | x                     | x                | x          |
+|Others    | Azure Data Factory | x                          | x                             | x                                  | x                     | x                | ✓          |
+|          | Databricks         | x                          | x                             | x                                  | x                     | x                | ✓          |
+
+*In development phase
 
 :::note
 1. The JDBC connector is a generic connector that lets you connect to any database that supports the JDBC interface. 
