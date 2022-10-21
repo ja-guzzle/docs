@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.3 (October 21, 2022)
+#### Features
+- Added support for AWS EMR compute in AWS deployment scheme
+- Added support of snowflake, azure synapse, azure synapse native and azure SQL datastore in recon module
+
+#### Bugs
+- Utilize schema name when deriving the columns from the table in a processing module
+- Fixed pipeline was kept in running state issue, In case of auto-dependency if parent activity failed it should skip dependent child activities and terminate the pipeline, but it was kept pipeline in running state in some cases when different types of activities are configured, and they have dependencies on each other. Fixed issue, it will skip dependent child activities and terminate the pipeline in case of parent activity failed.
+- Pipeline was triggering activity re-run when it is manually terminated by the User from UI. Fixed issue, It will terminate the activity and not trigger a re-run if it is manually terminated by the User.
+
 ### Guzzle v2.4.2 (October 07, 2022)
 #### Features
 - Added support of AWS databricks in AWS deployment scheme
