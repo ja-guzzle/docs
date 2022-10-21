@@ -13,7 +13,7 @@
 ### Guzzle v2.4.2 (October 07, 2022)
 #### Features
 - Added support of AWS databricks in AWS deployment scheme
-- Added support of azure sql, azure syanpse, azure syanpse native and snowflake datastore in constraint check module
+- Added support of azure sql, azure synapse, azure synapse native and snowflake datastore in constraint check module
 - Added column mapping support for azure synapse native datastore and added option to download column mapping as csv and excel file
 
 #### Bugs
