@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.4 (November 04, 2022)
+#### Features
+- Added support for AWS EMR Serverless compute in AWS deployment scheme
+
 ### Guzzle v2.4.3 (October 21, 2022)
 #### Features
 - Added support for AWS EMR compute in AWS deployment scheme
