@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.5 (November 10, 2022)
+#### Features
+- Added support of azure synapse, azure synapse native and azure sql datastore in processing module
+- Show only supported options in UI for Azure and AWS deployment scheme
+
 ### Guzzle v2.4.4 (November 04, 2022)
 #### Features
 - Added support for AWS EMR Serverless compute in AWS deployment scheme
