@@ -73,7 +73,11 @@ module.exports = {
           'how_to_guides/computes/azure_databricks',
           'how_to_guides/computes/local_spark',
           'how_to_guides/computes/yarn',
-          'how_to_guides/computes/azure_synapse_spark'
+          'how_to_guides/computes/azure_synapse_spark',
+          'how_to_guides/computes/aws_glue',
+          'how_to_guides/computes/aws_emr-ec2',
+          'how_to_guides/computes/aws_emr-serverless',
+          'how_to_guides/computes/aws_databricks'
         ]
       },
       {
