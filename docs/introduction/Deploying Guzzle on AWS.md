@@ -30,12 +30,26 @@ You need an AWS account to proceed. You will be billed only for the EC2 instance
     <img src="/img/docs/introduction/aws_deploy_3.png"/>
 </a>
 
-* Choose action from where you want to launch the website.
-* Select the EC2 instance type for the guzzle vm.
-* Create or select VPC settings.
-* Then select or create new security group with defined firewall rules.
-* Select or create a new key pair value to authenticate the EC2 instance.
-* Click on launch button to launch the website. 
+* Choose action from where you want to launch the product if it is choosen **Launch from website** then follow below steps.
+    - Select the EC2 instance type for the guzzle vm.
+    - Create or select VPC settings.
+    - Then select or create new security group with defined firewall rules.
+    - Select or create a new key pair value to authenticate the EC2 instance.
+    - Click on launch button to launch the website and the instance is deployed on EC2.
+
+<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_4.png" target="_self">
+    <img src="/img/docs/introduction/aws_deploy_4.png"/>
+</a>
+
+* If the action is choosen **Launch from EC2** then follow below steps
+    - Click on **Launch** button.
+    - After that below page will open and define configurations of EC2 instance like the instance type, VPC settings, subnet settings, to define key pair and define security groups with defined firewall rules.
+    - Click on the **Launch instance** button to lauch the vm.
+
+<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_5.png" target="_self">
+    <img src="/img/docs/introduction/aws_deploy_5.png"/>
+</a>
+
 
 # How tos
 
