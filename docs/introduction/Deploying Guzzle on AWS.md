@@ -13,20 +13,21 @@ You need an AWS account to proceed. You will be billed only for the EC2 instance
 
 * Open the Guzzle page on AWS marketplace from [here](https://us-east-1.console.aws.amazon.com/marketplace/home?region=ap-south-1#/subscriptions/8c5d28c9-4ee6-40db-bc9e-a48b8fc6a561). Alternatively, you can login to AWS console, go to **AWS Marketplace Subscriptions -> discover products** and search **Guzzle - DataOps Platform**
 
-<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_1.png" target="_self">
+<a href="http://guzzle.justanalytics.com/img/docs/introduction/aws_deploy_1.png" target="_self">
     <img src="/img/docs/introduction/aws_deploy_1.png"/>
 </a>
 
 * If you are creating guzzle instance for first time you have to subscribe the **Guzzle - DataOps Platform** product by clicking the **Continue to Subscribe** button on right hand side. Then click on continue to configuration and then below page will open.
 
-<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_2.png" target="_self">
+<a href="http://guzzle.justanalytics.com/img/docs/introduction/aws_deploy_2.png" target="_self">
     <img src="/img/docs/introduction/aws_deploy_2.png"/>
 </a>
-
+img/docs/how-to-guides/compute/azuredatabricks_1.png
+img\docs\introduction\aws_deploy_1.png
 * Select fulfillment option, software(guzzle) version and region and then click on **continue to launch** button.
 * After clicking the continue to launch button below page will open.
 
-<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_3.png" target="_self">
+<a href="http://guzzle.justanalytics.com/img/docs/introduction/aws_deploy_3.png" target="_self">
     <img src="/img/docs/introduction/aws_deploy_3.png"/>
 </a>
 
@@ -37,7 +38,7 @@ You need an AWS account to proceed. You will be billed only for the EC2 instance
     - Select or create a new key pair value to authenticate the EC2 instance.
     - Click on launch button to launch the website and the instance is deployed on EC2.
 
-<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_4.png" target="_self">
+<a href="http://guzzle.justanalytics.com/img/docs/introduction/aws_deploy_4.png" target="_self">
     <img src="/img/docs/introduction/aws_deploy_4.png"/>
 </a>
 
@@ -46,7 +47,7 @@ You need an AWS account to proceed. You will be billed only for the EC2 instance
     - After that below page will open and define configurations of EC2 instance like the instance type, VPC settings, subnet settings, to define key pair and define security groups with defined firewall rules.
     - Click on the **Launch instance** button to lauch the vm.
 
-<a href="http://guzzle.justanalytics.com/assets/files/aws_deploy_5.png" target="_self">
+<a href="http://guzzle.justanalytics.com/img/docs/introduction/aws_deploy_5.png" target="_self">
     <img src="/img/docs/introduction/aws_deploy_5.png"/>
 </a>
 
