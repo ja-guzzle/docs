@@ -7,7 +7,10 @@ Guzzle enables analytics engineers to build data pipelines consisting of extract
 
 Built on the foundation of Apache Spark, Guzzle leverages the Spark connectors to extract and load data at massive scale on most common datastores (both relational data warehouses or data lakes). All the transformation and validation rules in Guzzle are specified in SQL, lingua franca of the data. 
 
-Guzzle is only available on [Azure Marketplace](https://portal.azure.com) and gets deployed as virtual machine. It only supports Azure Databricks or bundled local spark in Guzzle VM. Refer to [Deploying Guzzle on Azure](Deploying Guzzle on Microsoft Azure.md) for the details of setting up Guzzle instance.
+Guzzle is available on 
+1. [Azure Marketplace](https://portal.azure.com) and gets deployed as virtual machine. It supports Azure Databricks, Azure synapse spark pool or bundled local spark in Guzzle VM. 
+Refer to [Deploying Guzzle on Azure](./deploying_guzzle_on_microsoft_azure) for the details of setting up Guzzle instance. 
+2. [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-cdai6bjd4gkiw) and gets deployed as EC2 instance. It supports AWS EMR EC2, AWS EMR Serverless, AWS Glue, AWS Databricks and bundled local spark in Guzzle. Refer to [Deploying Guzzle on AWS](./deploying_guzzle_on_aws) for how to set up Guzzle in AWS.
 
 ## What makes Guzzle powerful?
 
