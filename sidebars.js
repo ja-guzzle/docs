@@ -19,7 +19,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Introduction',
-      items: ['introduction/overview', 'introduction/deploying_guzzle_on_microsoft_azure']
+      items: ['introduction/overview', 'introduction/deploying_guzzle_on_microsoft_azure', 'introduction/deploying_guzzle_on_aws']
     },
     {
       type: 'category',
