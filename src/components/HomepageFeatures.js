@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 const GetStartList = [
   {
     title: 'What is Guzzle',
-    goto: "/Docs/introduction/overview",
+    goto: "/docs/",
     description: (
       <>
         Some of the very first questions you may have on Guzzle are covered in this introduction. 
@@ -23,7 +23,7 @@ const GetStartList = [
   },
   {
     title: 'How-tos',
-    goto: "/Docs/how_to_guides/ingest_data/working_with_delimited_files",
+    goto: "/docs/how_to_guides/ingest_data/working_with_delimited_files",
     description: (
       <>
         The detail How To Guides provides deep dive on individual features and configurations
