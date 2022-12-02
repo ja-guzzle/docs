@@ -1,12 +1,19 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.7 (December 02, 2022)
+#### Features
+- Added Delta support for AWS EMR on EC2 compute
+- Added Delta support for AWS EMR on Serverless compute
+- Handled nullable constraint check behaviour for Azure Synapse Native datastore. Earlier activity was failing if source(dataframe) and target column has different null constraint. it is fixed by updating source(dataframe) column nullable property as per target table column value.  
+- Added support of override AWS Databricks compute options at Runtime level, Pipeline level and Activity level.
+
 ### Guzzle v2.4.6 (November 18, 2022)
 #### Features
-- Added delta technology support for glue compute
+- Added Delta technology support for AWS Glue compute
 - JDBC, Snowflake, Azure SQL and Azure synapse analytics Processing activity will run as part of API. It will not require spark compute for execution.
     - If the User is planning to use other JDBC drivers which are not bundled in Guzzle, he/she has to put it inside `${GUZZLE_PRODUCT_HOME}/api/libs` directory along with `${GUZZLE_PRODUCT_HOME}/libs`
     - Databricks multitask pipeline is submitted to databricks compute so the above-mentioned activities are not supported in Databricks multitask pipeline
-- Added support of delta path in all modules so user can pass delta path in table name field like `delta./user/hive/warehouse/tablename` or external storage like `delta.abfss://container@azurestorageacc.dfs.core.windows.net/databricks/tablename`
+- Added support of Delta path in all modules so user can pass delta path in table name field like `delta./user/hive/warehouse/tablename` or external storage like `delta.abfss://container@azurestorageacc.dfs.core.windows.net/databricks/tablename`
 
 ### Guzzle v2.4.5 (November 10, 2022)
 #### Features
