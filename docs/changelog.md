@@ -1,5 +1,13 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.8 (December 19, 2022)
+#### Features
+- Added spark override options support for Azure Synapse, AWS Glue, Emr Serverless and Emr Ec2 computes. User can override spark options at runtime, pipeline level or activity level in pipeline.
+- Added support of Azure Synapse pipeline, User can run Azure Synapse pipeline using `External Activity` and `Azure Data Factory/Azure Synapse Workspace` datastore.
+
+#### Bugs
+- Fixed API service log download issue in view service log page
+
 ### Guzzle v2.4.7 (December 02, 2022)
 #### Features
 - Added Delta support for AWS EMR on EC2 compute
