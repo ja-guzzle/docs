@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.9 (December 30, 2022)
+#### Features
+- Added operation and affected row count details in message for Processing template based activities
+- Added Redshift datastore support for AWS and Azure deployment
+- Added Snowflake datastore support for AWS computes. User can place snowflake related jar files in `/guzzle/libs/<custom_directory_name>` directory and configure relative path in `additional jars` configuration in computes. Azure Synapse Analytics and Databricks has snowflake jars pre-configured so no need to add extra jars.
+
+#### Bugs
+- Fixed table name issue, Guzzle was concatenating database and table name which was generating issue for some JDBC sources. now Guzzle will not concat database and table name.
+- Fixed delta partition column issue for Glue Compute, earlier it was not able to fetch partition columns details.
+
 ### Guzzle v2.4.8 (December 19, 2022)
 #### Features
 - Added spark override options support for Azure Synapse, AWS Glue, Emr Serverless and Emr Ec2 computes. User can override spark options at runtime, pipeline level or activity level in pipeline.
