@@ -4,7 +4,7 @@
 #### Features
 - Added operation and affected row count details in message for Processing template based activities
 - Added Redshift datastore support for AWS and Azure deployment
-- Added Snowflake datastore support for AWS computes. User can place snowflake related jar files in `/guzzle/libs/<custom_directory_name>` directory and configure relative path in `additional jars` configuration in computes. Azure Synapse Analytics and Databricks has snowflake jars pre-configured so no need to add extra jars.
+- Added Snowflake datastore support for AWS computes. User can place snowflake related jar files in `/guzzle/libs/<custom_directory_name>` directory and configure relative path in `additional jars` configuration in computes. Azure Databricks and AWS Databricks has snowflake jars pre-configured so no need to add extra jars.
 
 #### Bugs
 - Fixed table name issue, Guzzle was concatenating database and table name which was generating issue for some JDBC sources. now Guzzle will not concat database and table name.
