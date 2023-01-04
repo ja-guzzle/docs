@@ -25,7 +25,7 @@ Guzzle monitor hsa following filter options which you can use to filter jobs by 
 10. Parameter       
 11. Message 
 
-Guzzle Gives you ability to download all jobs listing through click on Excel (![image alt text](/img/docs/how-to-guides/monitor/monitor0.png)) or CSV (![image alt text](/img/docs/how-to-guides/monitor/monitor1.png)) for format
+Guzzle Gives you ability to download all jobs listing through click on Excel <img width="20" src="/img/docs/how-to-guides/monitor/monitor0.png" /> or CSV <img width="20" src="/img/docs/how-to-guides/monitor/monitor1.png" /> for format
 
 Guzzle monitors have three different aspects to monitor jobs.
 1. Job logs
@@ -39,7 +39,7 @@ Let’s discuss Job logs
 To view job logs 
 1. Goto Monitor from top navigation bar
 2. Filter you job from dropdowns
-3. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor2.png))
+3. Click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor2.png" />
 
 In this section guzzle gives information about job metadata and shows running job logs,
 
@@ -76,7 +76,7 @@ To view Gantt charts of you running job
 
 1. Goto Monitor from top navigation bar
 2. Filter you job from dropdowns
-3. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor3.png)) 
+3. Click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor3.png" /> 
 4. You can see Gantt chart screen
 
 ## Graph
@@ -87,16 +87,27 @@ To view Graph of job
 
 1. Goto Monitor from top navigation bar
 2. Filter you job from dropdowns
-3. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor4.png))
+3. Click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor4.png" />
 4. You can see Job Graph
 
-User can do below actions as well from monitor 
-
-## Stop Running Job
-1. Filter you job from dropdowns
-2. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor5.png))
+User can do below actions as well from monitor
 
 ## Rerun job
 1. Filter you job from dropdowns
-2. Click on (![image alt text](/img/docs/how-to-guides/monitor/monitor6.png))
+2. Click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor6.png" />
 
+## Stop Job
+- User can click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor5.png" /> to terminate the RUNNING job. This option is available for Batch, Stage, Pipeline and Activity.  
+- User can perform stop action at any level from Job hierarchy ( Batch -> Stage -> Pipeline -> Activity ). ex. While Batch is running user can stop entire Batch or specific Stage, Pipeline or Activity.
+- Guzzle follows the child to parent flow, Which means parent job will wait till the child jobs are terminated. ex. When user terminate Batch, It will first terminate running Activities then move to Pipeline, Stage and Batch.
+- Below are the options that user can provide while terminating job:
+    - Status: ABORTED | FAILED
+        - Terminated job and child jobs status.  
+    - Force stop: TRUE | FALSE
+        - When it is force stop, It will terminate the RUNNING and NOT_STARTED Activities as soon as possible. For NOT_STARTED Activities, it will be terminated once the execution start.
+        - When it is not force stop, It will wait till the RUNNING or NOT_STARTED activities completes its execution. It will not submit new activity once the stop action is triggered.
+
+## Abort Job
+- User can click on <img width="20" src="/img/docs/how-to-guides/monitor/monitor7.png" /> to mark Batch as ABORTED when it is in OPEN or FAILED state. This option is available only for Batch.
+- In some scenarios like when user don't want to rerun the FAILED batch or When batch is initialized but don't want to execute it so, he/she can use abort action to update record with ABORTED status.
+- This option marks only batch record as ABORTED it will not update child record status
