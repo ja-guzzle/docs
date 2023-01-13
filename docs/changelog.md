@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.10 (January 13, 2023)
+#### Features
+- Added auto dependency support for azure synapse, redshift and snowflake datastore in pipeline
+
 ### Guzzle v2.4.9 (December 30, 2022)
 #### Features
 - Added operation and affected row count details in message for Processing template based activities
