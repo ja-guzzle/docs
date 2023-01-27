@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.11 (January 27, 2023)
+#### Features
+- Added Hudi support in ingestion activity for AWS Glue compute
+- Added dynamic activity support in pipeline. Using this feature, user can specify datastore, SQL and activity configuration in pipeline. When pipeline will execute, It will prepare an activity list based on the SQL results. For each row, it will add one or more activities. To pass activity name and parameter from query result, User can add placeholder with column name like #{column_name}. for now this feature is only supported for JDBC, Azure Sql, Azure Synapse Analytics, Redshift and Snowflake datastores.
+
 ### Guzzle v2.4.10 (January 13, 2023)
 #### Features
 - Added auto dependency support for Azure Sql, Azure Synapse Analytics, Azure Synapse Analytics Native, Redshift and Snowflake datastore in pipeline
