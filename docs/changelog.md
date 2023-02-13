@@ -1,5 +1,12 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.12 (February 13, 2023)
+#### Features
+- Added new timeout settings for NOT_STARTED activities. If Activity not start execution after 15 min of submission It will be marked as ABORTED. User can change the timeout setting by using `Manage -> Environment Config -> Timeout and Sync -> Job Heartbeat Configuration -> Not started job timeout` option.
+
+#### Bugs
+- When failed to submit activity to cluster it was remained in NOT_STARTED state. Fixed the issue, now it will be marked as FAILED.
+
 ### Guzzle v2.4.11 (January 27, 2023)
 #### Features
 - Added Hudi support in ingestion activity for AWS Glue compute
