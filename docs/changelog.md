@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.13 (February 20, 2023)
+#### Features
+- Added Rest datastore support in External activity. User can perform Rest API call using External activity. It will mark activity successful for 2xx http response code and for other http status codes it will mark it as failed.
+
+#### Bugs
+- Cluster remain in execution state when Guzzle activity is not able to send logs to Guzzle API. Fixed issue, It will terminate the cluster when execution complete even if logs is not sent to Guzzle API.
+- While sending non UTF-8 character in logs request Guzzle was sending 400 response code. Fixed issue. it will process the logs request with non UTF-8 characters.
+- While resuming batch, ADF and Synapse pipeline External activities was not skipped if it was executed successfully. Fixed issue, It will skip successfully ran External activities.
+
 ### Guzzle v2.4.12 (February 13, 2023)
 #### Features
 - Added new timeout settings for NOT_STARTED activities. If Activity not start execution after 15 min of submission It will be marked as ABORTED. User can change the timeout setting by using `Manage -> Environment Config -> Timeout and Sync -> Job Heartbeat Configuration -> Not started job timeout` option.
