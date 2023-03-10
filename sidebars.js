@@ -74,6 +74,7 @@ module.exports = {
           'how_to_guides/computes/local_spark',
           'how_to_guides/computes/yarn',
           'how_to_guides/computes/azure_synapse_spark',
+          // 'how_to_guides/computes/azure_synapse_spark_V2',
           'how_to_guides/computes/aws_glue',
           'how_to_guides/computes/aws_emr-ec2',
           'how_to_guides/computes/aws_emr-serverless',
@@ -142,6 +143,7 @@ module.exports = {
       {
         Pipelines: [
           'how_to_guides/ingest_data/pipeline',
+          'how_to_guides/ingest_data/pipeline_v2'
         ]
       },
       {
@@ -151,7 +153,16 @@ module.exports = {
         Housekeeping: ['how_to_guides/ingest_data/housekeeping']
       },
       {
-        Parameter: ['how_to_guides/parameters/Parameters',]
+        Processing: ['how_to_guides/Processing/Processing']
+      },
+      {
+        // Synapse: ['how_to_guides/Synapse/Synapse']
+      },
+      {
+        'Parameter': ['how_to_guides/parameters/Parameters', 'how_to_guides/parameters/spark_parameters']
+      },
+      {
+        'Running Guzzle Activity': ['how_to_guides/running_guzzle_activity/running_guzzle_activity',]
       },
       {
         'Monitor': [
