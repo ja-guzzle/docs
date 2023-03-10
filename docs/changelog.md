@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.14 (March 10, 2023)
+#### Features
+- Re-engineered constraint check module, constraint check module was loading source data in memory and performing the sql validation on in-memory data. Now it generates sql query and execute it on source. This operation will not load source data in memory.  
+- Added support in External activity to call stored procedure for Azure SQL, Synapse, Snowflake and Redshift
+
+#### Bugs
+- Fixed memory issue in databricks cluster api calls, if user call databricks api multiple time with invalid credentials it was creating heap memory issue. Fixed issue and handle invalid api request more gracefully. 
+- Review and handled api response and sdk client connection more gracefully
+
 ### Guzzle v2.4.13 (February 20, 2023)
 #### Features
 - Added Rest datastore support in External activity. User can perform Rest API call using External activity. It will mark activity successful for 2xx http response code and for other http status codes it will mark it as failed.
