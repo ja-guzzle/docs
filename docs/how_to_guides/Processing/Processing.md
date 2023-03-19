@@ -1,13 +1,13 @@
 ## Introduction
-- The processing module in guzzle is used to apply complex data transformations. 
-- In processing module, for source and target datastore technology should be the same. We can not choose delta as source and hive as target in guzzle. 
+- The Processing module in guzzle is used to apply complex data transformations. 
+- In Processing module, source and target datastore technology **must** be  same. Example: We can not choose Delta as source and hive as target in guzzle. 
 - It provides inbuilt framework columns like Effective start data and end date to handle SCD type 2 efficiently. 
 - It supports common operations like append, overwrite, merge and etc. 
-- For source, We need to choose datastore technology from where we need to bring data for processing. 
+- For source, We need to choose datastore technology from where we need to bring data for Processing. 
 - Guzzle provides flexibility on choosing table or we can write our own SQL query as source. 
-- The processing module provides pre and post SQL to execute SQL. This pre-post SQL will execute before or after and read or writing operation. 
+- The Processing module provides pre and post SQL to execute SQL. This pre-post SQL will execute before or after and read or writing operation. 
 - It provides the feature for overwriting table dependency for tables. 
-- Guzzle provides auto-create table functionality in target section.  If the target table is not present then guzzle will create the target table. For now hive, delta, and hudi are supported in ingestion. Only hive and delta are supported in the processing module.
+- Guzzle provides auto-create table functionality in target section.  If the target table is not present then guzzle will create the target table. For now hive, delta, and hudi are supported in ingestion. Only hive and delta are supported in the Processing module.
 
 ## Spark Engine vs Template
 
@@ -15,7 +15,7 @@
 |--- |--- |
 | - Spark will bring data from the source, apply required tranformation via spark dataframe API and send transformed data as result. |Template will directly compiles at datastore technology end and sends response back to guzzle.|
 | Spark used connector libraries to connect with datastore. | Template uses JDBC connection to connect with data sources. |\
-| We cant not modify behavior processing of spark engine.  | Templates are flexible so user can customize or add new template. |
+| We cant not modify behavior Processing of spark engine.  | Templates are flexible so user can customize or add new template. |
 | Spark engine process data in spark cluster.  | Template execute queries in underlying datastore via JDBC. |
 
 ## Default template for each datastore
@@ -39,7 +39,7 @@
 |Operation|Description|Spark|Template|
 |--- |--- |--- |--- |
 |Append| - Append operation will append data to target table. <br /> - Truncate partition option is not available in append.| - It uses spark to process the data so that it will bring data to spark cluster. <br /> - It uses spark write mode to append the data .| - It uese INSERT INTO <target_table> SELECT statement. <br /> - only single query will execute to append records on target database.|
-|Overwrite| - Overwrite operation is using to overwrite source records into target table. | It will uses temp table to store processed data. <br /> <b> Hive </b> <br /> - If partiton column is configured -> It will use insert overwrite to overwrite that partition data. <br /> - It will use insert overwrite statement to overwrite data in that partition.  <br /> - If partiton column is not configured -> It will truncate only those partitions for which source contains data. <br /> - Other partitions data will remain intact. <br /> - Click <a  href="https://guzzle.justanalytics.com/docs/releases/2_4_0/processing-behaviour-changes/">here</a> for details. <br /> <b>Delta</b> <br /> - If partiton column is configured -> It will use insert overwrite statement to overwrite data in that partition. <br />  - If partiton column is Not configured -> It will truncate full target table and insert source data into target database.| - For <b>synapse, snowflake, and SQL Server</b> template it uses two operations: <br /> - It will truncate target table. <br /> - Uses INSERT INTO <target_table> SELECT statement load data into target table. <br /> <b>Delta template</b> <br /> - It will use INSERT overwrite <targe_table> select operation to update data in target table. |
+|Overwrite| - Overwrite operation is using to overwrite source records into target table. | It will uses temp table to store processed data. <br /> <b> Hive </b> <br /> - If partiton column is configured -> It will use insert overwrite to overwrite that partition data. <br /> - It will use insert overwrite statement to overwrite data in that partition.  <br /> - If partiton column is not configured -> It will truncate only those partitions for which source contains data. <br /> - Other partitions data will remain intact. <br /> - Click <a  href="https://guzzle.justanalytics.com/docs/releases/2_4_0/Processing-behaviour-changes/">here</a> for details. <br /> <b>Delta</b> <br /> - If partiton column is configured -> It will use insert overwrite statement to overwrite data in that partition. <br />  - If partiton column is Not configured -> It will truncate full target table and insert source data into target database.| - For <b>synapse, snowflake, and SQL Server</b> template it uses two operations: <br /> - It will truncate target table. <br /> - Uses INSERT INTO <target_table> SELECT statement load data into target table. <br /> <b>Delta template</b> <br /> - It will use INSERT overwrite <targe_table> select operation to update data in target table. |
 |Merge|<b>Incremental</b> <br /> - Incremental operation, If source data is present in target table then it will update those data in target table. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remining records which are not present in source wil remain as it is in target table. <br /> <b>Full Load</b> <br /> - Incremental operation, If source data is present in target table then it will update those data in target table. <br /> - If source data is not present in target table, it will add those records into target table.  <br /> - Remaining records marks as in active in target table.| - Spark will bring source and target data into memory. <br /> - It will perform merge operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table.  | - Template uses merge statement to perform incremental and full merge operation. |
 |Effective Date Merge|<b> Incremental </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and currect record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remining records which are not present in source will remain as it is in target table. <br /> <b> Full </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and currect record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remining records which are not present in source will be marked as inactive records using effectiveend date and current flag. | - Spark will bring source and target data into memory. It will perform merge operation and write data into temp table. It will truncate target table(Truncate partition) and insert data from temp table to target table. | Template uses merge statement to perform incremental and full merge operation.  |
 |Upate only| - Guzzle will update target table records which are coming from source. It won’t add any new record. | Spark will bring source and target data into memory. It will perform update operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table. | It uses merge opration to update source data into target table. |
@@ -78,18 +78,18 @@
 
 ## How Pre SQL and Post SQL works
 
-- PreSQL and PostSQL are used to execute SQL statements before and after the execution of the processing operation.
+- PreSQL and PostSQL are used to execute SQL statements before and after the execution of the Processing operation.
 
 ### Order of statement execution
 |Operation|Description|
 |--- |--- |
-|Source: pre_sql|When we submit processing job, Guzzle will first executes source - PreSQL|
+|Source: pre_sql|When we submit Processing job, Guzzle will first executes source - PreSQL|
 |Persist source SQL into temp table1||
 |Target: pre_sql|Guzzle will executes PreSQLfor target.|
-|Execute processing operation query and insert data in temp table2|One PreSQL is executed from both the locations, guzzle starts executing actual processing operation. Guzzle will store result of the processing operation to temporary table.|
-|Truncate target table (if applicable)|In certain processing operations, guzzle truncate target table. For example, If we perform overwrite operation using template then guzzle will truncate target table.|
+|Execute Processing operation query and insert data in temp table2|One PreSQL is executed from both the locations, guzzle starts executing actual Processing operation. Guzzle will store result of the Processing operation to temporary table.|
+|Truncate target table (if applicable)|In certain Processing operations, guzzle truncate target table. For example, If we perform overwrite operation using template then guzzle will truncate target table.|
 |Copy from temp table2 to final table|Once we have processed data in target table, guzzle will copy temporary table to target table|
-|Source: post_sql|After complition of processing operation, guzzle will execute PostSQL statement on source.|
+|Source: post_sql|After complition of Processing operation, guzzle will execute PostSQL statement on source.|
 |Target: post_sql|After source PostSQL, guzzle will execute target PostSQL.|
 
 
@@ -321,4 +321,4 @@ Result:
 1. How guzzle behaves when external and internal template are the same? <br />
 Ans. Guzzle will show only one option in UI, external will take priority.
 2. Where Guzzle can place an external template? <br />
-Ans. /guzzle/default/ext/processing/template/{new_temp}.yml|
+Ans. /guzzle/default/ext/Processing/template/{new_temp}.yml|
