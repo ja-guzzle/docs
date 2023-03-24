@@ -1,5 +1,11 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.15 (March 24, 2023)
+#### Bugs
+- UI Fix: While deleting truncate partition column entry in processing activity UI it was deleting multiple entries with same name. Fixed issue, now it delete only selected partition entry
+- Azure synapse analytics connector failed to perform operation with the latest version of Azure Databricks DBR due to database property we were passing to connector. in the latest connector it required database name as part of jdbc url. Fixed issue, We are not passing database property as separate attribute User has to pass it as part of database URL
+- Copy data tool was not able to load the database metadata. Fixed issue, now it is loading database metadata.
+
 ### Guzzle v2.4.14 (March 10, 2023)
 #### Features
 - Re-engineered constraint check module, constraint check module was loading source data in memory and performing the sql validation on in-memory data. Now it generates sql query and execute it on source. This operation will not load source data in memory.  
