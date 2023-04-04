@@ -1,15 +1,33 @@
 ---
-id: pipeline_v2
-title: Pipeline v2
+id: pipeline
+title: Pipeline
 ---
 
 ## Introduction
+
+- A Guzzle Pipeline is a logical grouping of activities that together perform a task. For example, a Pipeline could contain a set of activities that ingest and clean log data, and then kick off a mapping data flow to analyze the log data.
+- The Pipeline allows you to manage the activities as a set instead of each one individually. You deploy and schedule the Pipeline instead of the activities independently.
+- The activities in a Pipeline define actions to perform on your data. For example, you may use a Guzzle Ingestion activity to copy data from an Azure Blob Storage to Delta table.
+- Then, use a Processing activity to process and transform data from delta table on top of which business intelligence reporting solutions are built.
+- Guzzle Pipeline can have multiple groupings of activities: Ingestion, processing, contraint check and reconsiliation.
+
+## Creating a Pipeline with UI
+- To create a new pipeline, navigate to the Author tab in Guzzle (represented by the pencil icon), then click the three dots in pipeline section from sidebar and choose Pipeline from the menu.
+
+Guzzle will display the pipeline editor where you can find:
+1. All activities that can be used within the pipeline.
+2. The pipeline configurations setting, including parameters, spark settings, retry properties and timeout setting.
+3. The pipeline parallel run, auto dependency and databricks mutitask can be configured.
+
+<img width="1000" src="/img/docs/how-to-guides/pipeline/create_pipeline.png" />
+
+<br /> <br />
 
 Guzzle supports two types of pipeline
 1. <b> Guzzle Pipeline </b> - This is a standard pipeline that is run and orchestrated by Guzzle API
 2. <b> Databricks multitask pipeline </b> - Guzzle prepares and submits a set of activities with dependencies to databricks and databricks manages the orchestration of the pipeline
 
-In both pipelines, user can configure a static list of activities, and their parameters and override compute configuration but there is no option for a user to configure a list of activities dynamically. to resolve this issue we have added a new feature called dynamic pipeline.
+In both pipelines, user can configure a static list of activities, and their parameters and override compute configuration but there is no option for a user to configure a list of activities dynamically. to resolve this issue we have added a new feature called dynamic pipeline. For information about the 
 
 ## Usage
 - We may create a new pipeline in Guzzle by selecting the menu button in the Pipelines section on the left-hand sidebar of Guzzle. We must specify the name of the pipeline according to the action it performs.
@@ -30,8 +48,25 @@ In both pipelines, user can configure a static list of activities, and their par
 |Resume Pipeline| - This feature allows to resume the job group or pipeline from where it has failed <br /> - When we resume the pipeline, Guzzle will rerun a FALIED activity or activities which are NOT_STARTED. It will run the FAILED activity from the pipelien where it failed last. This is useful when we need to start execution from failed job, rerunning entire pipeline from beginning is expensive. |
 |Retry| - There are instances where activity fails in a pipeline due various reasons like network connectivity or other issue and we want to retry pipeline after it failed. <br /> - This feature is only supported when activity is run as part of pipeline. <br /> - Pipeline is to reattempt the same job before moving to next job (in same execution thread assuming parallel jobs are triggered). <br /> -  Retry properties <br /> - Retry status (Failed): If pipeline in Failed state, guzzle will try the job.  <br /> -  Retry interval (seconds) <br /> - Max retry - Number of time Guzzle will retry pieline. |
 |Dependency graph (lineage)| - With the help of dependancy graph, we can see ordered flow of pipeline from start to end.|
+|Parameters|Guzzle support various parameters that you can override or use in you application. we can set parameter at below hierarchy: <br /> 1. Pipeline Activity <br /> 2. Pipeline level <br /> 3. Runtime Popup <br /> Please check below documentation for <a href="/docs/how_to_guides/parameters/Parameters">Guzzlee parameters</a> and <a href="/docs/how_to_guides/parameters/spark_parameters">spark parameter</a>.|
 
 <img width="1000" src="/img/docs/how-to-guides/pipeline/pipeline_2.png" />
+
+## Pipeline UI Features
+- We can define list of activites in pipeline. Guzzle support interactive UI feature that we can use to create pipeline.
+- Guzzle supports drag and drop to arrange activities inside the pipeline.
+- Guzzle allows easy way to pass parameter to individual activities.
+
+## Pipeline parameters
+- Parameters are defined at the pipeline level, and can be modified during a pipeline run. Pipeline parameters can be used to control the behavior of a pipeline and its activities, such as by passing in the the path of a file to be processed.
+
+### How to define a pipeline parameter
+To define a pipeline parameter, follow these steps:
+
+- click on "add parameters" in activity parameters section, 
+- here you can define pipeline parameters name and value. whatever parameter you pass in pipeline level are takes highest precedence.
+<img width="1000" src="/img/docs/how-to-guides/pipeline/pipeline_parameters.png" />
+
 
 ## Dynamic Activity support in the pipeline
 

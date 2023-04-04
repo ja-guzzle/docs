@@ -143,7 +143,7 @@ module.exports = {
       {
         Pipelines: [
           'how_to_guides/ingest_data/pipeline',
-          'how_to_guides/ingest_data/pipeline_v2'
+          // 'how_to_guides/ingest_data/pipeline_v2'
         ]
       },
       {

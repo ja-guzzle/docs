@@ -68,4 +68,3 @@ title: Spark Parameters
 |Executor Core |-| Define number of drives |
 
 - Please check this excel file for more details on spark parameters - <a href="https://raxglobal.sharepoint.com/:x:/r/sites/JustAnalytics.Guzzle/Shared%20Documents/Guzzle%20Devt/Specs/Backend/Guzzle%20Parameters.xlsx?d=w09b577ce84c947e29df7555e4dbfe4d4&csf=1&web=1&e=6gLrnv">Guzzle Parameters</a>.
-
