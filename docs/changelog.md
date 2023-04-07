@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.16 (April 07, 2023)
+#### Features
+- Introduced new credential type option in Azure Blob/ADLS Gen2 datastore. It will use service principle credentials to read and write data in Azure Synapse Spark compute.
+
 ### Guzzle v2.4.15 (March 24, 2023)
 #### Bugs
 - UI Fix: While deleting truncate partition column entry in processing activity UI it was deleting multiple entries with same name. Fixed issue, now it delete only selected partition entry
