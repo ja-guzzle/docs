@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.17 (April 21, 2023)
+#### Features
+- Added support of manual dag pipeline. User can define pipeline execution flow based on activity execution status. It supports three types of transition: `success_warning`, `failed_aborted`, and `completed`. In case of activity success, It will execute all activities which depend on "success_warning" and "completed" status, for failed activity, it will execute "failed_aborted" and "completed" activities. 
+
 ### Guzzle v2.4.16 (April 07, 2023)
 #### Features
 - Introduced new credential type option in Azure Blob/ADLS Gen2 datastore. It will use service principle credentials to read and write data in Azure Synapse Spark compute.
