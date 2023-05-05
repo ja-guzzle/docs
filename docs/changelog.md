@@ -1,5 +1,12 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.18 (May 5, 2023)
+#### Features
+- Added purview integration support for hive/delta, JDBC, Azure SQL, Azure Synapse Analytics and Azure Synapse Analytics Native type of datastores in ingestion and processing module
+#### Bugs
+- The problem of the Guzzle API being stopped prematurely due to the stop action on pipeline and batch has been resolved. The termination process has been improved to handle the situation more gracefully.
+- The problem occurred when the heartbeat thread stopped updating the heartbeat, while the status sync thread continued to update the batch_control table status. This caused an inconsistent state between the job_info and batch_control. the issue has been fixed.
+
 ### Guzzle v2.4.17 (April 21, 2023)
 #### Features
 - Added support of manual dag pipeline. User can define pipeline execution flow based on activity execution status. It supports three types of transition: `success_warning`, `failed_aborted`, and `completed`. In case of activity success, It will execute all activities which depend on "success_warning" and "completed" status, for failed activity, it will execute "failed_aborted" and "completed" activities. 
