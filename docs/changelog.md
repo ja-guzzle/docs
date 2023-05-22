@@ -1,5 +1,10 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.19 (May 19, 2023)
+#### Features
+- Added support for creating purview lineage based on specified entity ids for source and target
+- Added support for manual dag pipeline UI
+
 ### Guzzle v2.4.18 (May 5, 2023)
 #### Features
 - Added purview integration support for hive/delta, JDBC, Azure SQL, Azure Synapse Analytics and Azure Synapse Analytics Native type of datastores in ingestion and processing module
