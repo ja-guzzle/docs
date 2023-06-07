@@ -1,5 +1,17 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.20 (Jun 07, 2023)
+#### Features
+- Added support for specifying governance entity ids and governance entity name in activity editors
+- Route purview api calls via Guzzle api
+- Added support for AWS Glue job in external activity
+- Added support for specifying secrets from azure key vault for purview integration config
+
+#### Bugs
+- Fixed processing activity validation issue for governance entity name field
+- Fixed purview integration issue for processing activity where source entity is overwritten by target entity in case of spark engine
+- The processing merge operation behavior has been modified so that when a user specifies a merge column, it will be utilized during the insertion of new records. Previously, all columns were used for inserting new records.
+
 ### Guzzle v2.4.19 (May 19, 2023)
 #### Features
 - Added support for creating purview lineage based on specified entity ids for source and target
