@@ -6,6 +6,7 @@
 - Route purview api calls via Guzzle api
 - Added support for AWS Glue job in external activity
 - Added support for specifying secrets from azure key vault for purview integration config
+- Added support of service principal in Azure Sql datastore 
 
 #### Bugs
 - Fixed processing activity validation issue for governance entity name field
