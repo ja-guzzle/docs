@@ -12,6 +12,7 @@
 - Fixed processing activity validation issue for governance entity name field
 - Fixed purview integration issue for processing activity where source entity is overwritten by target entity in case of spark engine
 - The processing merge operation behavior has been modified so that when a user specifies a merge column, it will be utilized during the insertion of new records. Previously, all columns were used for inserting new records.
+- Handle special character in table and column name for Azure Synapse Native, Snowflake and Redshift datastore
 
 ### Guzzle v2.4.19 (May 19, 2023)
 #### Features
