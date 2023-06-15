@@ -10,7 +10,7 @@ title: Batch
 - You can put additional dependency on other batches of systems  - example I can run foundation for “Order” system only if the foundation of “CRM” system is complete for a given business date 
 - Batches lets you see the end to end batch time, flexibility to do catch up run
 - Batches have built in capabilities to support catch-up run where it will run all the business dates (or open batches) in ascending order for which a given stage[s] is outstanding (haven't run)
-- Batches provide the notion of context columns starting form system_name (or batch_name) and other columns like: location, workspace, etc which can be used to by jobs to either organize or partition data or apply specific logic.
+- Batches provide the notion of context columns starting from system_name (or batch_name) and other columns like: location, workspace, etc which can be used to by jobs to either organize or partition data or apply specific logic.
 
 ### Creating a Batch with UI
 - To create a new batch, navigate to the Author tab in Guzzle (represented by the pencil icon), then click the three dots in Batch section from sidebar and choose Batch from the menu.
@@ -26,15 +26,18 @@ Guzzle will display the Batch UI where you can find:
 
 ### Why do we need Batch?
 - To have strict dependencies in data flows - whether its stages in the data flow, or cross-data flow dependencies
-- Flexibility to run batches in parallel from multiple system or even multiple stages from same batch
 - catch up the historical dates run which are pending
+- Resume the workflow at the point of failure.
 
 ### Batch Initialization
 - Before running the batch its mandatory to initialize batch with business date, It needs mandatory business date as parameter along with context columns.
 - You can initialize batch by clicking on initialize icon, it will open pop up for initialize batch.
-- You can do init with specific business date , or range with from and to date. "To Business Date" is always mandatory, while "From Date" is taken as the last available batch which is non Aborted stage.
-- When doing batch init for range of value the increments are done by date (there is no support for hours, minutes or seconds yet).
+- You can do init with specific business date , or range with from and to date.
 - By default you can not initialize batch of historical business dates, you have to use rerun batch feature.
+- Guzzle supports 3 different option to initialize batch:
+    - **Business Date**: We can initialize Batch based on specific business data. Just need to define business date and timestamp. Guzzle will initialize batch for that particular business date. Catchup feature is only supported for this option only. If we already have Batch initialize for that business date then Guzzle will make it as aborted.
+    - **Business Date Range**: This option helps to initialize Batch from certain date range. We can define From date and End date. We can also define interval between next Batch run. If we don't set From date then Guzzle will take Last Batch run business date with increment of 1. If we don't set To business date then Guzzle will take current date as to business date.
+    - **Increment**: For incremental initialize, Guzzle expects to have atleast 1 Batch for business date. We have to select Number of increments and Interval. We can select interval based on Day, Hour, Minute and second.
 
 <img width="450" height="400" src="/img/docs/how-to-guides/batch/batch_1.png"/>
 
@@ -48,10 +51,10 @@ Guzzle will display the Batch UI where you can find:
 
 ### Batch Resume
 - This feature allows to resume the job group or stages from where it has failed.
-- You can resume your batch from run popup expand override internal parameters option, initialize <b>guzzle.stage.resumer</b> paramete to True.
+- You can resume your batch from run popup expand override internal parameters option, initialize <b>guzzle.stage.resume</b> paramete to True.
 - Rerun of batches and Resume flag are independent concept though they may appear similar. Rerun feature allows one to re-init the batches for past periods even though system is moved future days.
 - Batch resume which will rerun a FALIED stages or stages which are NOT_STARTED. But it does run the FAILED batch from the job where it failed last.
-- Hence the resume guzzle.stage.resume/ guzzle.job_group.resume allows to achieve rerun from point it failed. This is useful when rerunning entire job group beginging is expensive.
+- Hence the resume guzzle.stage.resume allows to achieve rerun from point it failed. This is useful when rerunning entire job group beginging is expensive.
 
 <img width="550" height="700" src="/img/docs/how-to-guides/batch/resume.png"/>
 
@@ -85,7 +88,7 @@ FND -> <br />
 ### Batch Status
 | Status |Description|
 |--- |--- |
-|OPEN| - When batch is initialized <br /> - When batch complete one of the stage execution and other stages execution is pending. <br /> - Resume will work for OPEN status |
+|OPEN| - When batch is initialized <br /> - When batch complete one of the stage execution and other stages execution is pending. |
 |SUCCESS| - When all stages are executed successfully|
 |WARNING| - When one of the stage is run with WARNING status in case of partial allowed|
 |FAILED| - When stage is FAILED due to pipeline FAILED <br /> - When Batch or Stage is stopped by User from UI with FAILED status. <br /> - Resume will work for FAILED status |
