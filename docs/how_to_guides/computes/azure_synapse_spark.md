@@ -12,8 +12,8 @@ title: Azure Synapse Spark
 |-- |-- |-- |-- |
 |Synapse Workspace|Synapse workspace to be used for Guzzle.|<a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/quickstart-create-workspace">Steps to create synapse workspace</a>| Development endpoint URL  |\
 |Synapse Spark Pool|Spark pool added in synapse workspace that will be used by Guzzle |<a href="https://learn.microsoft.com/en-us/azure/synapse-analytics/quickstart-create-apache-spark-pool-portal">Steps to setup synapse spark pool</a>| - |
-|App Registration|Register service principal app for Guzzle and generate secret <br /> - This app registration is not being used for Authentication and hence and the steps for Authentication setup can be skipped.|<a href="https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application">App Registration steps</a>|Client Id, Client Secret and Tenant ID (From App registration overview)|
-|Blob Storage Account|Blob account used for shared storage account permission to Storage Blob Data Contributor. Select Service principal(Registered App) as Member. <br /> - You need to disable soft delete because we are usign ADFS protocol to access (for databricks). <br /> - Disable Shared Storage Soft Delete|<a href="https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal">Steps to assign Storage Blob Data Contributor role to service principal</a>| - |
+|App Registration|Register service principal app for Guzzle and generate secret <br /> - This app registration is being used for Authentication and hence and the steps for Authentication setup can be skipped.|<a href="https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application">App Registration steps</a>|Client Id, Client Secret and Tenant ID (From App registration overview)|
+|Blob Storage Account|Blob account used for shared storage account permission to Storage Blob Data Contributor. Select Service principal(Registered App) as Member. <br /> - You need to disable soft delete because we are using ADFS protocol to access (for databricks). <br /> - Disable Blob Storage Soft Delete|<a href="https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal">Steps to assign Storage Blob Data Contributor role to service principal</a>| - |
 |Key Vault|Key vault used to store different credentials (assumes one key vault is used to store all the credentials which are required for Guzzle environment configurations and data stores) |<a href="https://learn.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal">Assign a Key Vault access policy</a>| - |
 
 - This are the permissions to be granted to different AAD principals (User/groups/service principals / managed identity) on different resources (follow standard Azure document to grant permissions)
@@ -24,7 +24,7 @@ title: Azure Synapse Spark
 |Azure Service principal  (App Registration)|Primary storage ADLS |Blob Contributor|The spark jobs will read and write log files/temp files in the Primary storage as part of the job run. Since the job is run using service principal (app registration), same has to be grated read write permission  on primary ADLS|
 |Azure Service principal  (App Registration)|Synapse workspace|In Add role assignment section: <br /> - In Add role assignment section: <br/> - Role - > Synapse Admin | Guzzle will submit the jobs to Synapse workspace and run the jobs spark pool - for this it needs minimum: Synapse Admin permission. |
 |Azure Service principal  (App Registration)|Key Vault|Secret permission: Get, List, Set |The job which runs on spark-pool are submitted using service principal (app registration), and will need to retrieve the credential from KV for the data store |
-|Azure Service principal  (App Registration)|Blob Storage|Blob Reader |The job which runs on spark-pool are submitted using service principal (app registration), and will need to retrieve guzzle binaries from the shared storage ( we only need to read binaries) <br /> - The guzzle binaries are written into shared storage by Guzzle VM using account key or service pincple denpending on what is configured in this setup: Shared Storage - Guzzle |
+|Azure Service principal  (App Registration)|Blob Storage|Blob Reader |The job which runs on spark-pool are submitted using service principal (app registration), and will need to retrieve guzzle binaries from the shared storage ( we only need to read binaries) <br /> - The guzzle binaries are written into shared storage by Guzzle VM using account key or service principal depending on what is configured in this setup: Shared Storage - Guzzle |
 
 
 ## Guzzle Network Diagram for public endpoint
@@ -41,7 +41,7 @@ title: Azure Synapse Spark
 |2|Guzzle VM​|Azure SQL for Guzzle​|HTTPS|AAD user credential / native SQL account​|Read/write Guzzle audit and metadata​| Public | - |
 |3|Guzzle VM​|Key Vault​|HTTPS|Managed Identity (system generated ​ or user defined identity of Guzzle VM)|Get stored secrets and keys​|Public| - |
 |4|Guzzle VM​|Synapse Developer Endpoint|HTTPS|App Registration|Submit jobs to Spark Pool​|Public| - |
-|5||Spark Pool|Synapse Dedicated Pool​ (using Azure Synapse Native datastore)|HTTPS|App Registration which is specified in compute or Native user/password|<b>Authentication Mechanism:</b> <br /> - App Registration which is specified in compute or Native user/password  <br /> - the external data source includes an authentication method, that's why <br /> - <b>purpose of connection:</b> <br /> - for Ingestion: To read and write (connector) <br /> - for proessing: To run template SQL (JDBC connection) <br /> - for DQ/Recon: To read (connector)| Public | - |
+|5||Spark Pool|Synapse Dedicated Pool​ (using Azure Synapse Native datastore)|HTTPS|App Registration which is specified in compute or Native user/password|<b>Authentication Mechanism:</b> <br /> - App Registration which is specified in compute or Native user/password  <br /> - the external data source includes an authentication method, that's why <br /> - <b>purpose of connection:</b> <br /> - for Ingestion: To read and write (connector) <br /> - for processing: To run template SQL (JDBC connection) <br /> - for DQ/Recon: To read (connector)| Public | - |
 |6|Guzzle VM|Synapse Dedicated Pool​ (using Azure Synapse)|HTTPS|Native user/password|Processing jobs run directly from Guzzle VM against API|Public| - |
 |7|Spark pool|Guzzle VM|HTTPS|temp API key which is part of request and decrypted using passphrase in KV|Spark job to connect to guzzle API to retrieve config| - | - |
 |8|Spark pool|Blob storage|HTTPS|App Registration|Spark jobs to retrieve the config| - | - |
@@ -60,7 +60,7 @@ title: Azure Synapse Spark
 |Storage Account|<a href="https://learn.microsoft.com/en-gb/azure/storage/common/storage-network-security?tabs=azure-portal#change-the-default-network-access-rule">Configure Azure Storage firewalls and virtual networks </a> <br /> <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints">Use private endpoints - Azure Storage </a>|Disable public access and create private endpoint to access blob privately.|
 |SQL Server|<a href="https://learn.microsoft.com/en-us/azure/mysql/single-server/how-to-deny-public-network-access">Deny Public Network Access - Azure portal - Azure Database for MySQL </a>|Disable public access and create 2 private endpoint: <br/> 1. Guzzle Vm <br /> 2. Synapse workspace|
 |Key Vault|<a href="https://learn.microsoft.com/en-us/azure/key-vault/general/private-link-service?tabs=portal">Integrate Key Vault with Azure Private Link</a>|Disable public access on azure key vault and used as private endpoint|
-|Synapse Private Endpoint|<a href="https://learn.microsoft.com/en-gb/azure/synapse-analytics/security/how-to-set-up-access-control">Access control in Synapse workspace how to - Azure Synapse Analytics </a>|Add all private endpoint to syanpse. <br /> 1. Storage Account <br /> 2. Key Vault <br /> 3. SQL Server <br /> 4. Private Link Service |
+|Synapse Private Endpoint|<a href="https://learn.microsoft.com/en-gb/azure/synapse-analytics/security/how-to-set-up-access-control">Access control in Synapse workspace how to - Azure Synapse Analytics </a>|Add all private endpoint to synapse. <br /> 1. Storage Account <br /> 2. Key Vault <br /> 3. SQL Server <br /> 4. Private Link Service |
 |Private Link Service With Load Balancer|<a href="https://learn.microsoft.com/en-us/azure/private-link/create-private-link-service-portal?tabs=dynamic-ip">Quickstart - Create a Private Link service - Azure portal - Azure Private Link </a>|To access Guzzle VM in private network, we need to create private link service.|
 |Guzzle API Setting| - | Change Guzzle API Setting with private link service fully qualified domain name. |
 
@@ -68,7 +68,7 @@ title: Azure Synapse Spark
 
 |#|Source|Target|Protocol / Port|Authentication Mechanism| Purpose of connection|Traffic Type|
 |-- |-- |-- |-- |-- |-- |-- | 
-|1|Guzzle VM|Storage Acocunt for Guzzle​|HTTPS|Managed Identity​|To storage jars, third party library on blob for spark compute to read​|Private|
+|1|Guzzle VM|Storage Account for Guzzle​|HTTPS|Managed Identity​|To storage jars, third party library on blob for spark compute to read​|Private|
 |2|Guzzle VM|Azure SQL for Guzzle|HTTPS|AAD user credential / SAS​|Read/write Guzzle audit and metadata​​|Private|
 |3|Guzzle VM|Key Vault​|HTTPS|Managed Identity​|Get stored secrets and keys​​|Private|
 |4|Guzzle VM|Databricks Control Plane​|HTTPS|Managed Identity​|Submit jobs to Databricks Cluster​|Private|
@@ -77,7 +77,7 @@ title: Azure Synapse Spark
 |7|Guzzle VM​|Guzzle VM​|HTTPS|Managed Identity​|Update logs, retrieve configs from Guzzle​|Private|
 
 :::note 
-- Before running Job with Synapse it requries to have necessary guzzle setup.
+- Before running Job with Synapse it requires to have necessary guzzle setup.
     - <a href="https://corpinfollc.atlassian.net/wiki/spaces/APS/pages/119138614575164">Shared Storage Setup</a>
     - <a href="https://corpinfollc.atlassian.net/wiki/spaces/APS/pages/119138614706203">Guzzle Repo database setup</a>
     - <a href="https://corpinfollc.atlassian.net/wiki/spaces/APS/pages/119138613723943">Key Vault setup for guzzle</a>

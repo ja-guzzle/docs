@@ -9,7 +9,7 @@ title: Pipeline
 - The Pipeline allows you to manage the activities as a set instead of each one individually. You deploy and schedule the Pipeline instead of the activities independently.
 - The activities in a Pipeline define actions to perform on your data. For example, you may use a Guzzle Ingestion activity to copy data from an Azure Blob Storage to Delta table.
 - Then, use a Processing activity to process and transform data from delta table on top of which business intelligence reporting solutions are built.
-- Guzzle Pipeline can have multiple groupings of activities: Ingestion, processing, contraint check, reconsiliation and external activity.
+- Guzzle Pipeline can have multiple groupings of activities: Ingestion, processing, constraint check, reconciliation and external activity.
 
 <!-- ## Creating a Pipeline with UI
 - To create a new pipeline, navigate to the Author tab in Guzzle (represented by the pencil icon), then click the three dots in pipeline section from sidebar and choose Pipeline from the menu.
@@ -26,14 +26,15 @@ Guzzle will display the pipeline editor where you can find:
 Guzzle supports two types of pipeline
 1. <b> Guzzle Pipeline </b> - This is a standard pipeline that is run and orchestrated by Guzzle API
 2. <b> Databricks multitask pipeline </b> - Guzzle prepares and submits a set of activities with dependencies to databricks and databricks manages the orchestration of the pipeline
+3. <b> Manual DAG pipeline </b> -  In Guzzle, a manual DAG (Directed Acyclic Graph) workflow refers to a data processing pipeline where you explicitly define the dependencies and execution order of individual tasks or steps.
 
-In both pipelines, user can configure a static list of activities, and their parameters and override compute configuration but there is no option for a user to configure a list of activities dynamically. To resolve this issue we have added a new feature called dynamic pipeline. For information about the Dynamic Pipelien click <a href="#dynamic-activity-support-in-the-pipeline">here</a>.
+In both pipelines, user can configure a static list of activities, and their parameters and override compute configuration. Dynamic Pipeline are supported for Guzzle pipeline and Databricks multitask pipeline. For information about the Dynamic Pipeline click <a href="#dynamic-activity-support-in-the-pipeline">here</a>.
 
 ## Steps to create pipeline
-- Pipeline in Guzzle are created by selecting the menu (...) button in the Pipelines section on the left sidebar of Guzzle or "New" button below "Quick Search" which will bring up "Create New Pipeline" diaglog box.  Specify the name the Pipeline in this box.
-- Specify Pipeline configruation as per section "Pipeline Configurations"
-- Add Activites to the pipeline by either selecting from the  drop-down under column "Activities" or drag and drop the activties from left sidebard into pipeline. Specify the paremeters for activty by clikcing on cell under the column "Activity Parameter"
-- You can modify Spark settings for a particular activity in pipeline by clicking "settings". Also Spark and execution realted  settings can be modified globally for the pipeline by clicking on "Setting" button on top right in Pipeline editor. More details on how to specify this setting is covered in the section "
+- Pipeline in Guzzle are created by selecting the menu (...) button in the Pipelines section on the left sidebar of Guzzle or "New" button below "Quick Search" which will bring up "Create New Pipeline" dialog box.  Specify the name the Pipeline in this box.
+- Specify Pipeline configuration as per section "Pipeline Configurations"
+- Add Activities to the pipeline by either selecting from the  drop-down under column "Activities" or drag and drop the activities from left sidebar into pipeline. Specify the parameters for activity by clicking on cell under the column "Activity Parameter"
+- You can modify Spark settings for a particular activity in pipeline by clicking "settings". Also Spark and execution related  settings can be modified globally for the pipeline by clicking on "Setting" button on top right in Pipeline editor. More details on how to specify this setting is covered in the section "
 - Dynamic activity can be added to the pipeline 
 - A Pipeline dependency graph (Lineage or DAG of pipeline) can also be generated in Guzzle. For this, we need to go to the dependency section and choose the generate option. Guzzle will generate a graph showing the relationship between the different activities in our pipeline.
 
@@ -53,23 +54,23 @@ In both pipelines, user can configure a static list of activities, and their par
 |Parallel run| - Parallel run number of guzzle activity to run in parallel. For example, We have defined parallel run configuration as 3, Guzzle will run 3 activities in pipeline simultaneously|
 
 :::note
-- When Guzzle job is running, Internally Guzzle maintain hearthbeat of the job in Guzzle repo database. It will create entry with running state of activities in heartbeat table. Guzzle updates heartbeat table at every 5 mins. 
+- When Guzzle job is running, Internally Guzzle maintain heartbeat of the job in Guzzle repo database. It will create entry with running state of activities in heartbeat table. Guzzle updates heartbeat table at every 5 mins. 
 - Guzzle API thread is responsible for checking heartbeat value in the heartbeat table, if heartbeat is not updated in 1 min then Guzzle will mark that Activity/Pipeline as FAILED. 
 - In some cases we found that Guzzle database update is taking more time than usual as result Guzzle is not able to update heartbeat and Activity/Pipeline will be FAILED.
 - You can update heartbeat setting in "Manage -> Environment config -> Timeout and Sync -> Job heartbeat configuration -> Job Aborted Timeout". If you update this setting to 300000 then Guzzle wait for 5 mins to check the status of heartbeat.
 :::
 
 
-## Settings when adding Activtiy to pipeline
-When clicking on Setttings button for a pipeline we get will be able to update following properties for actvity when exeucting as part of pipeline
+## Settings when adding Activity to pipeline
+When clicking on Settlings button for a pipeline we get will be able to update following properties for activity when executing as part of pipeline
 
 |Property|Description|
 |-- |-- |
-|Override databricks settings|This will let you update the databricks compute settsing for a specifci job in pipelie
-|Override synapse spark settings|Tihs lets you update teh spar
-|Retry| - There are instances where activity fails in a pipeline due various reasons like network connectivity or other issue and we want to retry pipeline after it failed. <br /> - This feature is only supported when activity is run as part of pipeline. <br /> - Pipeline is to reattempt the same job before moving to next job (in same execution thread assuming parallel jobs are triggered). <br /> -  Retry properties <br /> - Retry status (Failed): If pipeline in Failed state, guzzle will try the job.  <br /> -  Retry interval (seconds) <br /> - Max retry - Number of time Guzzle will retry pieline. |
-|Dependency graph (lineage)| - With the help of dependancy graph, we can see ordered flow of pipeline from start to end.|
-|Parameters|Guzzle support various parameters that you can override or use in you application. we can set parameter at below hierarchy: <br /> 1. Pipeline Activity <br /> 2. Pipeline level <br /> 3. Runtime Popup <br /> Please check below documentation for <a href="/docs/how_to_guides/parameters/Parameters">Guzzlee parameters</a> and <a href="/docs/how_to_guides/parameters/spark_parameters">spark parameter</a>.|
+|Override databricks settings|This will let you update the databricks compute settings for a specific job in pipeline
+|Override synapse spark settings|This lets you update teh spar
+|Retry| - There are instances where activity fails in a pipeline due various reasons like network connectivity or other issue and we want to retry pipeline after it failed. <br /> - This feature is only supported when activity is run as part of pipeline. <br /> - Pipeline is to reattempt the same job before moving to next job (in same execution thread assuming parallel jobs are triggered). <br /> -  Retry properties <br /> - Retry status (Failed): If pipeline in Failed state, guzzle will try the job.  <br /> -  Retry interval (seconds) <br /> - Max retry - Number of time Guzzle will retry pipeline. |
+|Dependency graph (lineage)| - With the help of dependency graph, we can see ordered flow of pipeline from start to end.|
+|Parameters|Guzzle support various parameters that you can override or use in you application. we can set parameter at below hierarchy: <br /> 1. Pipeline Activity <br /> 2. Pipeline level <br /> 3. Runtime Popup <br /> Please check below documentation for <a href="/docs/how_to_guides/parameters/Parameters">Guzzle parameters</a> and <a href="/docs/how_to_guides/parameters/spark_parameters">spark parameter</a>.|
 
 
 ## Pipeline parameters
@@ -83,12 +84,12 @@ To define a pipeline parameter, follow these steps:
 <img width="1000" src="/img/docs/how-to-guides/pipeline/pipeline_parameters.png" />
 
 ## Dependency graph (lineage)
-With the help of dependancy graph, we can see ordered flow of pipeline from start to end
+With the help of dependency graph, we can see ordered flow of pipeline from start to end
 
 <img width="1000" src="/img/docs/how-to-guides/pipeline/pipeline_2.png" />
 
 ## Pipeline UI Features
-- We can define list of activites in pipeline. Guzzle support interactive UI feature that we can use to create pipeline.
+- We can define list of Activities in pipeline. Guzzle support interactive UI feature that we can use to create pipeline.
 - Guzzle supports drag and drop to arrange activities inside the pipeline.
 - Guzzle allows easy way to pass parameter to individual activities.
 
@@ -114,7 +115,7 @@ With the help of dependancy graph, we can see ordered flow of pipeline from star
 - If User wants to prevent the dynamic activity creation or parameter passing, he can set null value or null string in the column name.
 - When Guzzle will detect a null value or null string in the parameter name or value, it will not pass that parameter to activity.
 - If a null value is found for the activity name placeholder, It will not add an activity for that record.
-- User can also use Guzzle standard placeholder ${placehodler} inside the datastore sql to pass a value at runtime.
+- User can also use Guzzle standard placeholder ${placeholder} inside the datastore sql to pass a value at runtime.
 
 ### Supported datastores:
 1. JDBC
@@ -132,4 +133,4 @@ With the help of dependancy graph, we can see ordered flow of pipeline from star
 |Parameters|Description|
 |-- |-- |
 |Partial Run guzzle.job_group.partial | - A Pipeline can also be configured to Partial load to allow pipeline execution to continue further even if any jobs within pipelines called in the Pipeline fails. <br /> - Please note if Partial Load is not enabled then pipeline execution, then guzzle stops right there as soon as there is any job failure occurs within pipelines. |
-|Resume Pipeline guzzle.job_group.resume | - This feature allows to resume the job group or pipeline from where it has failed <br /> - When we resume the pipeline, Guzzle will rerun a FALIED activity or activities which are NOT_STARTED. It will run the FAILED activity from the pipelien where it failed last. This is useful when we need to start execution from failed job, rerunning entire pipeline from beginning is expensive. |
+|Resume Pipeline guzzle.job_group.resume | - This feature allows to resume the job group or pipeline from where it has failed <br /> - When we resume the pipeline, Guzzle will rerun a FAILED activity or activities which are NOT_STARTED. It will run the FAILED activity from the Pipeline where it failed last. This is useful when we need to start execution from failed job, rerunning entire pipeline from beginning is expensive. |

@@ -17,10 +17,10 @@ title: Batch
 
 Guzzle will display the Batch UI where you can find:
 
-- All stages that can be run within the Batch and respective Job Groups. Here we can map set of pipline with stage.
+- All stages that can be run within the Batch and respective Job Groups. Here we can map set of pipeline with stage.
 - Batch configurations Settings from right setting icon, We can set Validate SQL, Partial Load, and Rerun batch.
 - We can configure stage pairing from Batch UI
-- If we want to run our batch again then we can use Rerun batch option that guzzle provides, by default if our batch is initialize of one business date then we can not initilize it again.
+- If we want to run our batch again then we can use Rerun batch option that guzzle provides, by default if our batch is initialize of one business date then we can not initialize it again.
 
 <img src="/img/docs/how-to-guides/batch/batch-ui.png"/>
 
@@ -51,10 +51,10 @@ Guzzle will display the Batch UI where you can find:
 
 ### Batch Resume
 - This feature allows to resume the job group or stages from where it has failed.
-- You can resume your batch from run popup expand override internal parameters option, initialize <b>guzzle.stage.resume</b> paramete to True.
+- You can resume your batch from run popup expand override internal parameters option, initialize <b>guzzle.stage.resume</b> parameter to True.
 - Rerun of batches and Resume flag are independent concept though they may appear similar. Rerun feature allows one to re-init the batches for past periods even though system is moved future days.
-- Batch resume which will rerun a FALIED stages or stages which are NOT_STARTED. But it does run the FAILED batch from the job where it failed last.
-- Hence the resume guzzle.stage.resume allows to achieve rerun from point it failed. This is useful when rerunning entire job group beginging is expensive.
+- Batch resume which will rerun a FAILED stages or stages which are NOT_STARTED. But it does run the FAILED batch from the job where it failed last.
+- Hence the resume guzzle.stage.resume allows to achieve rerun from point it failed. This is useful when rerunning entire job group beginning is expensive.
 
 <img width="550" height="700" src="/img/docs/how-to-guides/batch/resume.png"/>
 
@@ -92,11 +92,11 @@ FND -> <br />
 |SUCCESS| - When all stages are executed successfully|
 |WARNING| - When one of the stage is run with WARNING status in case of partial allowed|
 |FAILED| - When stage is FAILED due to pipeline FAILED <br /> - When Batch or Stage is stopped by User from UI with FAILED status. <br /> - Resume will work for FAILED status |
-|ABORTED| - When stage or batch is stopped by User from UI with ABORTED status <br /> - When JVM is creshed and hertbeat is not updated for configured time and Batch is in RUNNING state <br /> - Batch execution or Resume will not work for ABORTED status |
+|ABORTED| - When stage or batch is stopped by User from UI with ABORTED status <br /> - When JVM is crested and heartbeat is not updated for configured time and Batch is in RUNNING state <br /> - Batch execution or Resume will not work for ABORTED status |
 
 ### Batch SQL Validation
 - A batch stage also has option called Validate SQL which is used to write any SQL validation query which in turn, if evaluates to TRUE(If SQL statement will return more than one record) then batch execution continues to execute that particular batch stage and if it evaluates to FALSE then batch execution stops right there without executing that particular batch stage. 
-- You can write validate SQL from rightside setting button and you will see option of Validate SQL.
+- You can write validate SQL from right side setting button and you will see option of Validate SQL.
 - This is most often used to handle upstream dependencies where you may want to check first if any upstream batch is completed successfully or not before proceeding with current batch stage load. 
 - Such upstream Guzzle batch status can always be queried using Guzzle runtime audit table batch_control or even by querying a table job_info for checking upstream individual job level statuses.
 
