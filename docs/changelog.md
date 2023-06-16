@@ -1,5 +1,14 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.21 (Jun 16, 2023)
+#### Features
+- Added support for EMR EC2 compute config editor UI. Users can now utilize the EMR EC2 compute config editor to modify and customize their EMR EC2 compute configurations.
+- Added support for EMR Serverless compute config editor UI. Users can now utilize the EMR Serverless compute config editor to modify and customize their EMR Serverless compute configurations.
+
+#### Bugs
+- Resolved synchronization issue with the "Not Started" activity status. Fixed the problem where Guzzle was unable to update the "Not Started" activity and pipeline status to "Abort" when the pipeline configuration file was missing.
+- Addressed stack overflow issue and enhanced performance. Fixed the problem where Guzzle encountered a stack overflow issue when the source contained a large number of columns.
+
 ### Guzzle v2.4.20 (Jun 07, 2023)
 #### Features
 - Added support for specifying governance entity ids and governance entity name in activity editors
