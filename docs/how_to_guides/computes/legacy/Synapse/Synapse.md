@@ -1,8 +1,3 @@
----
-id: azure_synapse_spark
-title: Azure Synapse Spark V2
----
-
 - In Guzzle, Azure cloud setup, we can use Azure Synapse Spark Pool to execute our workloads. This article helps using Azure Synapse Spark Pool as a computing environment in Guzzle.
 
 ## Prerequisites
@@ -55,7 +50,7 @@ Apart from this, there will be additional network traffic between spark pool to 
 |--- |--- |--- |
 |Storage Account| <a href="https://learn.microsoft.com/en-gb/azure/storage/common/storage-network-security?tabs=azure-portal#change-the-default-network-access-rule"> - Configure Azure Storage firewalls and virtual networks</a> <br /> <a href="https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints"> - Use private endpoints for Azure Storage</a> |Disable public access and create private endpoint to access blob privately.|
 |SQL Server| <a href="https://learn.microsoft.com/en-us/azure/mysql/single-server/how-to-deny-public-network-access">Deny Public Network Access in Azure Database for MySQL using Azure portal</a> | Disable public access and create 2 private endpoint: <br /> 1. Guzzle Vm <br /> 2. Synapse Workspace |
-|Key Vault|<a href="Disable public access on azure key vault and used as private endpoint"> Integrate Key Vault with Azure Private Link </a>|Disable public access on azure key vault and used as private endpoint|
+|Key Vault|<a href="https://learn.microsoft.com/en-us/azure/key-vault/general/private-link-service?tabs=portal"> Integrate Key Vault with Azure Private Link </a>|Disable public access on azure key vault and used as private endpoint|
 |Synapse Private Endpoint| <a href="https://learn.microsoft.com/en-gb/azure/synapse-analytics/security/how-to-set-up-access-control">How to set up access control for your Azure Synapse workspace</a> | Add all private endpoint to syanpse. <br /> 1. Storage Account <br /> 2.Key Vault <br /> 3. SQL Server  <br /> 4. Private Link Service |
 |Private Link Service With Load Balancer| <a href="https://learn.microsoft.com/en-us/azure/private-link/create-private-link-service-portal?tabs=dynamic-ip">Quickstart: Create a Private Link service by using the Azure portal </a> | To access Guzzle VM in private network, we need to create private link service. | 
 |Guzzle API Setting| - | Change Guzzle API Setting with private link service fully qualified domain name. |
