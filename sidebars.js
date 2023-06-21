@@ -141,7 +141,7 @@ module.exports = {
       },
       {
         Pipelines: [
-          'how_to_guides/ingest_data/pipeline',
+          'how_to_guides/ingest_data/pipeline'
         ]
       },
       {
@@ -151,7 +151,19 @@ module.exports = {
         Housekeeping: ['how_to_guides/ingest_data/housekeeping']
       },
       {
-        Parameter: ['how_to_guides/parameters/Parameters',]
+        Processing: ['how_to_guides/Processing/Processing']
+      },
+      {
+        // Synapse: ['how_to_guides/Synapse/Synapse']
+      },
+      {
+        'Parameter': [
+          'how_to_guides/parameters/parameters',
+          'how_to_guides/parameters/spark_parameters'
+        ]
+      },
+      {
+        'Running Guzzle Activity': ['how_to_guides/running_guzzle_activity/running_guzzle_activity',]
       },
       {
         'Monitor': [

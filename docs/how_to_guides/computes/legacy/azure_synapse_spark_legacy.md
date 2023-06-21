@@ -1,8 +1,3 @@
----
-id: azure_synapse_spark
-title: Azure Synapse Spark
----
-
 Guzzle supports computing environments on the Azure cloud. In Guzzle, Azure cloud setup, we can use Azure Synapse Spark Pool to execute our workloads. This article helps in using Azure Synapse Spark Pool as a computing environment in Guzzle.
 
 ## Below are the steps user has to perform to work with azure synapse compute
