@@ -1,5 +1,13 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.22 (Jun 30, 2023)
+#### Features
+- Added support for Notebook, Spark JAR, and PySpark external activities in EMR Serverless and EMR EC2 compute.
+
+#### Bugs
+- Fixed the partial flag and retry issue for external and processing template activities.
+- Resolved the ambiguous column name issue in the ingestion reject section.
+
 ### Guzzle v2.4.21 (Jun 16, 2023)
 #### Features
 - Added support for EMR EC2 compute config editor UI. Users can now utilize the EMR EC2 compute config editor to modify and customize their EMR EC2 compute configurations.
