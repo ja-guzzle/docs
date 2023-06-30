@@ -1,6 +1,6 @@
 ## In this section we will cover some examples of how to ingest data from different datastores.
 
-These are the example which we will cover in following articles.
+These are the examples which we will cover in following articles.
 
 * [Ingest Data From Local File System to MySQL Database](https://guzzle.justanalytics.com/docs/Tutorials/ingest_data_from_lfs_to_mysql)
 
