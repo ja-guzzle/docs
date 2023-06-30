@@ -101,3 +101,9 @@ FND -> <br />
 - Such upstream Guzzle batch status can always be queried using Guzzle runtime audit table batch_control or even by querying a table job_info for checking upstream individual job level statuses.
 
 <img width="600" height="400" src="/img/docs/how-to-guides/batch/validate_sql.png"/>
+
+:::note
+- If the Guzzle job submission fails to spark application, the status of the Activity/Batch/Pipeline will be marked as failed. In case the Pipeline/Batch thread crashes, the Activity status will be changed to ABORTED after a 15-minute interval.
+- If the Spark application is unable to retrieve Guzzle configurations, the Guzzle activity status for Databricks compute will be set to NOT_STARTED, and the Batch/Pipeline status will be marked as FAILED. In Synapse compute, the activity status will also be NOT_STARTED, but the Batch/Pipeline status will be either RUNNING or SUCCESS.
+- If spark application (Heartbeat of the job) is not able to update Guzzle activity in specific interval time then Guzzle will be marked that job as ABORTED. You can set 'Job aborted timeout' to 300000 to prevent this situation. You can find this setting in `Manage -> Environment config -> Timeout and Sync -> Job heartbeat configuration -> Job Aborted Timeout`.
+:::

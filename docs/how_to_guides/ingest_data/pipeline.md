@@ -175,4 +175,5 @@ Guzzle supports the following datastores within the pipeline for dynamic activit
 - The Guzzle API thread is responsible for regularly checking the heartbeat value in the heartbeat table. If the heartbeat is not updated within 1 minute, Guzzle will mark the corresponding Activity or Pipeline as ABORTED.
 - In certain cases, it has been observed that the database update process in Guzzle takes longer than usual, resulting in the inability to update the heartbeat. As a consequence, the affected Activity or Pipeline will be marked as ABORTED.
 - To address this issue, users have the option to adjust the heartbeat setting by navigating to `Manage -> Environment Config -> Timeout and Sync -> Job Heartbeat Configuration -> Job Aborted Timeout`. By updating this setting to 300000 (5 minutes), Guzzle will wait for a maximum of 5 minutes to check the status of the heartbeat, allowing sufficient time for the database update to occur.
+- If a user encounters a Spark OOM exception, the Guzzle activity will be labeled as ABORTED, and the status of the Pipeline/Batch will be set to FAILED
 :::
