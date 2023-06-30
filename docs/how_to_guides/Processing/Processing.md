@@ -86,26 +86,26 @@
 ### Order of statement execution
 <b>Spark Engine</b>
 
-|Operation|Description|
-|--- |--- |
-|Source: pre_sql|When we submit Processing job, Guzzle will first executes source - PreSQL|
-|Persist source SQL into temp table1||
-|Target: pre_sql|Guzzle will executes PreSQLfor target.|
-|Execute Processing operation query and insert data in temp table2|One PreSQL is executed from both the locations, Guzzle starts executing actual Processing operation. Guzzle will store result of the Processing operation to temporary table.|
-|Truncate target table (if applicable)|In certain Processing operations, Guzzle truncate target table. For example, If we perform overwrite operation using template then Guzzle will truncate target table.|
-|Copy from temp table2 to final table|Once we have processed data in target table, Guzzle will copy temporary table to target table|
-|Source: post_sql|After compilation of Processing operation, Guzzle will execute PostSQL statement on source.|
-|Target: post_sql|After source PostSQL, Guzzle will execute target PostSQL.|
+|Operation| Description                                                                                                                                                                    |
+|--- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Source: pre_sql| When we submit Processing job, Guzzle will first executes source - PreSQL                                                                                                      |
+|Persist source SQL into temp table1|                                                                                                                                                                                |
+|Target: pre_sql| Guzzle will executes PreSQL for target.                                                                                                                                        |
+|Execute Processing operation query and insert data in temp table2| Once PreSQL is executed from both the locations, Guzzle starts executing actual Processing operation. Guzzle will store result of the Processing operation to temporary table. |
+|Truncate target table (if applicable)| In certain Processing operations, Guzzle truncate target table. For example, If we perform overwrite operation using template then Guzzle will truncate target table.          |
+|Copy from temp table2 to final table| Once we have processed data in target table, Guzzle will copy temporary table to target table                                                                                  |
+|Source: post_sql| After compilation of Processing operation, Guzzle will execute PostSQL statement on source.                                                                                    |
+|Target: post_sql| After source PostSQL, Guzzle will execute target PostSQL.                                                                                                                      |
 
 <b>Template</b>
 
-|Operation|Description|
-|--- |--- |
-|Source: pre_sql|When we submit Processing job, Guzzle will first executes source - PreSQL|
-|Target: pre_sql|Guzzle will executes PreSQLfor target.|
-|Execute Processing operation query and insert data in temp table2|One PreSQL is executed from both the locations, Guzzle starts executing actual Processing operation. Guzzle will store result of the Processing operation to temporary table.|
-|Source: post_sql|After compilation of Processing operation, Guzzle will execute PostSQL statement on source.|
-|Target: post_sql|After source PostSQL, Guzzle will execute target PostSQL.|
+|Operation| Description                                                                                           |
+|--- |-------------------------------------------------------------------------------------------------------|
+|Source: pre_sql| When we submit Processing job, Guzzle will first executes source - PreSQL                             |
+|Target: pre_sql| Guzzle will executes PreSQL for target.                                                               |
+|Execute Processing operation query| Once PreSQL is executed from both the locations, Guzzle starts executing actual Processing operation. |
+|Source: post_sql| After compilation of Processing operation, Guzzle will execute PostSQL statement on source.           |
+|Target: post_sql| After source PostSQL, Guzzle will execute target PostSQL.                                             |
 
 
 ## Examples
