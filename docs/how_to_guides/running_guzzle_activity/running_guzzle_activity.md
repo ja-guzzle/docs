@@ -31,6 +31,10 @@ title: Running Guzzle Activity
 - Guzzle internal parameters are created mainly for changing behavior of Guzzle job. We can modify internal parameters in Runtime dialog box. 
 - Using internal parameters we can override the behavior of Activity, Pipeline and Batch. click <a href="//docs/how_to_guides/parameters/parameters#guzzle-internal-parameters">here</a> to check all possible internal parameters that Guzzle supports.
 
+:::note
+The Guzzle monitor UI provides the ability to rerun activities. Within the action section, there is a rerun button that allows for rerunning the activity. One advantage of using the rerun button is that it automatically handles all the parameters that were passed during the initial run, eliminating the need for manual reentry.
+:::
+<img width="600" src="/img/docs/how-to-guides/running-guzzle-job/rerun.png"/>
 
 ### Retry Properties
 - There are instances where activity fails in a pipeline due various reasons like network connectivity or other issue and we want to retry pipeline after it failed.
@@ -39,7 +43,8 @@ title: Running Guzzle Activity
 - Retry properties
     - Retry status (Failed): If pipeline in Failed state, guzzle will try the job.
     - Retry interval (seconds)
-    - Max retry - Number of time Guzzle will retry pieline.
+    - Max retry - Number of time Guzzle will retry pipeline.
+
 
 <img width="600" src="/img/docs/how-to-guides/running-guzzle-job/running_job_11.png"/>
 
