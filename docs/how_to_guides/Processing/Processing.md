@@ -1,30 +1,43 @@
 ## Introduction
-- The Processing module in Guzzle is used process data within the same datastore. It supports processing data via Spark engine or Template. 
-- In Processing module, source and target datastore technology **must** be  same. Example: We can not choose Delta as source and hive as target in Guzzle. 
-- It provides inbuilt framework columns like Effective start data and end date to handle SCD type 2 efficiently. 
-- It supports common operations like append, overwrite, merge and etc. 
-- For source, We need to choose datastore technology from where we need to bring data for Processing. 
-- Guzzle Processing modules supports using both Source SQL and Source table
-- The Processing module provides pre and post SQL to execute SQL. This pre-post SQL will execute before or after and read or writing operation. 
-- It provides the feature for overwriting table dependency for tables. 
-- Guzzle provides auto-create table functionality in target section.  If the target table is not present then Guzzle will create the target table. Only hive, delta and hudi are supported in the Processing module.
+- The processing module of Guzzle simplifies data transformation by offering a built-in framework column support and various data processing operations, making the data processing easier and more efficient.
+- Guzzle's processing module is designed for data processing within a unified datastore and offers support for Spark engine or Template-based data processing.
+- In processing module, source and target datastore **must** be  same. Example: We can not choose Delta as source and hive as target in Guzzle. 
+- To efficiently manage SCD type 2, Guzzle offers the built-in framework columns such as Effective Start Date and End Date.
+- It provides support for standard actions such as appending, overwriting, merging, and more.
+- Both Source SQL and Source table can be used with Guzzle processing modules.
+- The processing module provides pre and post SQL to execute SQL. This pre-post SQL will execute before or after and read or writing operation. 
+- It provides the feature for overwriting dependency 0f the tables. 
+- In the target section, Guzzle provides the functionality to automatically create a table if it doesn't already exist. In ingestion module, Guzzle supports auto create in Delta, Hive and Hudi. For processing, Guzzle supports Delta,hive and Hudi (coming soon).
+
+## How different operations works in Guzzle
+|Operation|Description|Spark|Template|
+|--- |--- |--- |--- |
+|Append| - The append operation in Guzzle adds data to the target table, extending its existing records. <br /> - The option to truncate a partition is not available in the append operation.| - Guzzle utilizes Spark to process the data, which involves bringing the data into a Spark cluster for further processing. <br /> - Guzzle utilizes Spark's write mode to perform the append operation, allowing it to add data to the target table. | - Guzzle uses the "INSERT INTO <target_table> SELECT" statement to append data to the target table. <br /> - Guzzle uses "INSERT INTO <target_table> SELECT" statement, Guzzle executes a single query to append records to the target database. This query selects the data from the source table and inserts it into the specified target table in one operation, ensuring efficient and streamlined data appending.|
+|Overwrite| - The overwrite operation in Guzzle is utilized to replace the existing records in the target table with the records from the source. It effectively overwrites the data in the target table with the new data from the source table. | Guzzle utilizes a temporary table to store and process the data during overwrite operation. The temporary table serves as an intermediate storage for the processed data before it is further manipulated or written to the target table. <br /> <b> Hive </b> <br /> - If partition column is configured -> It will use insert overwrite to overwrite that partition data. <br /> - It will use insert overwrite statement to overwrite data in that partition.  <br /> - If partition column is not configured -> It will truncate only those partitions for which source contains data. <br /> - Other partitions data will remain intact. <br /> - Click <a  href="https://Guzzle.justanalytics.com/docs/releases/2_4_0/Processing-behaviour-changes/">here</a> for details. <br /> <b>Delta</b> <br /> - If partition column is configured -> It will use insert overwrite statement to overwrite data in that partition. <br />  - If partition column is Not configured -> It will truncate full target table and insert source data into target database.| - For <b>synapse, snowflake, and SQL Server</b> template it uses two operations: <br /> - It will truncate target table. <br /> - Uses INSERT INTO <target_table> SELECT statement load data into target table. <br /> <b>Delta template</b> <br /> - It will use INSERT overwrite <targe_table> select operation to update data in target table. |
+|Merge|<b>Incremental</b> <br /> - Incremental operation, If the source data already exists in the target table, Guzzle will update those specific records in the target table <br /> - If the source data is not present in the target table during an incremental operation, Guzzle will add those records into the target table. <br /> - the remaining records in the target table that are not present in the source will remain unchanged.  <br /> <b>Full Load</b> <br /> - Incremental operation, If source data is present in target table then it will update those data in target table. <br /> - If source data is not present in target table, it will add those records into target table.  <br /> - Remaining records marks as in active in target table.| - Spark will bring source and target data into memory. <br /> - It will perform merge operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table.  | - Template uses merge statement to perform incremental and full merge operation. |
+|Effective Date Merge|<b> Incremental </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and correct record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remaining records which are not present in source will remain as it is in target table. <br /> <b> Full </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and correct record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remaining records which are not present in source will be marked as inactive records using effective end date and current flag. | - Spark will bring source and target data into memory. It will perform merge operation and write data into temp table. It will truncate target table(Truncate partition) and insert data from temp table to target table. | Template uses merge statement to perform incremental and full merge operation.  |
+|Update only| - Guzzle will update target table records which are coming from source. It won’t add any new record. | Spark will bring source and target data into memory. It will perform update operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table. | It uses merge operation to update source data into target table. |
+|Delete (Hard)| - Delete operation will delete all records which are coming from source.| - Spark will bring source and target data into memory. It will perform delete operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table. | It uses merge operation to delete data which are coming from source. |
+|Delete (Soft)| - It will mark current flag record as inactive(N). It wont delete any records.| Same as Delete Hard. | Same as Delete Hard. |
+
 
 ## Spark Engine vs Template
 
 |Spark|Template|
 |--- |--- |
 | Spark will bring data from the source in cluster, apply required transformation via spark dataframe API and send transformed data as result. |Template will directly compiles and run at datastore technology end and sends response back to Guzzle.|
-| Spark used connector libraries to connect with datastore. | Template uses JDBC connection to connect with data sources. |\
+| Spark used connector libraries to connect with datastore. | Guzzle's Template module utilizes JDBC connection to establish connections with data sources. However, when it comes to **Delta** data sources, Guzzle utilizes Spark SQL, allowing it to run seamlessly on a Spark cluster. |\
 | We cant not modify behavior Processing of spark engine.  | Templates are flexible so user can customize or add new template. |
 | Spark engine process data in spark cluster.  | Template execute queries in underlying datastore via JDBC connection. ** Guzzle Compute is not involved here ** |
 
-## Default template for each datastore
+## Spark Engine and Template support in datastore 
 
-|Datastore|Spark|Template|
+|Datastore|Spark|Template (Default template)|
 |--- |--- |--- |
 |Delta|Yes|Yes: Delta|
 |Hive|Yes|No|
-|Synapse|No|Yes: Synapse|
+|Synapse Analytics Native|No|Yes: Synapse|
+|Synapse Analytics (for databricks)|No|Yes: Synapse|
 |Snowflake|No|Yes: Snowflake|
 |JDBC|No|Yes: Select as per your database|
 |Azure SQL|No|Yes: SQL Server|
@@ -35,49 +48,48 @@
 :::
     
 
-## How different operations work Guzzle
-|Operation|Description|Spark|Template|
-|--- |--- |--- |--- |
-|Append| - Append operation will append data to target table. <br /> - Truncate partition option is not available in append.| - It uses spark to process the data so that it will bring data to spark cluster. <br /> - It uses spark write mode to append the data .| - It uses INSERT INTO <target_table> SELECT statement. <br /> - only single query will execute to append records on target database.|
-|Overwrite| - Overwrite operation is used to overwrite source records into target table. | It will use temp table to store processed data. <br /> <b> Hive </b> <br /> - If partition column is configured -> It will use insert overwrite to overwrite that partition data. <br /> - It will use insert overwrite statement to overwrite data in that partition.  <br /> - If partition column is not configured -> It will truncate only those partitions for which source contains data. <br /> - Other partitions data will remain intact. <br /> - Click <a  href="https://Guzzle.justanalytics.com/docs/releases/2_4_0/Processing-behaviour-changes/">here</a> for details. <br /> <b>Delta</b> <br /> - If partition column is configured -> It will use insert overwrite statement to overwrite data in that partition. <br />  - If partition column is Not configured -> It will truncate full target table and insert source data into target database.| - For <b>synapse, snowflake, and SQL Server</b> template it uses two operations: <br /> - It will truncate target table. <br /> - Uses INSERT INTO <target_table> SELECT statement load data into target table. <br /> <b>Delta template</b> <br /> - It will use INSERT overwrite <targe_table> select operation to update data in target table. |
-|Merge|<b>Incremental</b> <br /> - Incremental operation, If source data is present in target table then it will update those data in target table. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remaining records which are not present in source wil remain as it is in target table. <br /> <b>Full Load</b> <br /> - Incremental operation, If source data is present in target table then it will update those data in target table. <br /> - If source data is not present in target table, it will add those records into target table.  <br /> - Remaining records marks as in active in target table.| - Spark will bring source and target data into memory. <br /> - It will perform merge operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table.  | - Template uses merge statement to perform incremental and full merge operation. |
-|Effective Date Merge|<b> Incremental </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and correct record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remaining records which are not present in source will remain as it is in target table. <br /> <b> Full </b> <br /> - Incremental operation, If source data is present in target table and respective history column value is changed in source it will mark existing record as inactive using effective enddate and current record flag column value as N. <br /> - After that will create new record will updated value in target table using effective startdate column and correct record flag as Y. <br /> - If source data is not present in target table, it will add those records into target table. <br /> - Remaining records which are not present in source will be marked as inactive records using effective end date and current flag. | - Spark will bring source and target data into memory. It will perform merge operation and write data into temp table. It will truncate target table(Truncate partition) and insert data from temp table to target table. | Template uses merge statement to perform incremental and full merge operation.  |
-|Update only| - Guzzle will update target table records which are coming from source. It won’t add any new record. | Spark will bring source and target data into memory. It will perform update operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table. | It uses merge operation to update source data into target table. |
-|Delete (Hard)| - Delete operation will delete all records which are coming from source.| - Spark will bring source and target data into memory. It will perform delete operation and write data into temp table. <br /> - It will truncate target table(Truncate partition) and insert data from temp table to target table. | It uses merge operation to delete data which are coming from source. |
-|Delete (Soft)| - It will mark current flag record as inactive(N). It wont delete any records.| Same as Delete Hard. | Same as Delete Hard. |
-
-
 ## Framework Columns
 
 
 |Framework column|Default Value|Data Type|Description|Append|Overwrite|Merge|Effective Date Merge|Update only|Delete (soft)|Delete (hard)|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|w_created_ts | - By default, guzzle takes current timestamp as w_created_ts value. <br /> - If user wants to set custom value in UI then guzzle will take that value as w_created_ts.  |Timestamp|Generate current timestamp value.|Yes|Yes|Yes|Yes|No|No|No|
-|w_refresh_ts | - By default, guzzle takes current timestamp as w_refresh_ts value. <br /> - If user wants to set custom value in UI then guzzle will take that value as w_refresh_ts.|Timestamp|This framework column is using to get updated timestamp of the data. |Yes|Yes|Yes|Yes|Yes|Yes|No|
-|w_current_record_flag |- By default, guzzle takes Y(Yes) for w_current_record_flag value. <br /> - If target record in present in marge operation or If record is inactive in w_eff_start_date_ts and w_eff_end_date_ts then guzzle will mark this column as w_current_record_flag. <br /> - Custom values are not allowed in as w_current_record_flag.|String|This column will define flag that indicated particular record is latest or not. |Yes|Yes|Yes|Yes|Yes|Yes|No|
-|w_eff_start_date_ts | - By default, Guzzle takes effective start date based start date of SCD type 2. <br /> - If user wants to set custom date in UI then guzzle will take that value as w_eff_start_date_ts.  |Timestamp|This column is used to define effective start date of the dimension as SDC2. |No|No|No|Yes|No|No|No|
-|w_eff_end_date_ts |- By default, Guzzle takes effective end date based end date of SCD type 2. <br /> - If user wants to set custom date in UI then guzzle will take that value as w_eff_end_date_ts.|Timestamp|This column is used to define effective end date of the dimension as SDC2. |No|No|No|Yes|No|No|No|
+|w_created_ts | Current Timestamp |Timestamp| - Guzzle takes current timestamp as w_created_ts value. During the SCD type 2 and merge operation, Guzzle does not update the value of w_created_ts when adding a new entry of dimension. |Yes|Yes|Yes|Yes|No|No|No|
+|w_refresh_ts | Current Timestamp |Timestamp|This framework column is use to get updated timestamp of the record when the data will change |Yes|Yes|Yes|Yes|Yes|Yes|No|
+|w_current_record_flag |- By default, guzzle takes Y(Yes) for w_current_record_flag value. <br /> - If target record in present in marge operation or If record is inactive in w_eff_start_date_ts and w_eff_end_date_ts then guzzle will mark this column as N. <br /> - Custom values are not allowed in as w_current_record_flag.|String| This column will serve as a flag to indicate whether a particular record is the latest or not. |Yes|Yes|Yes|Yes|Yes|Yes|No|
+|w_eff_start_date_ts | - By default, Guzzle takes effective start date based start date of SCD type 2. <br /> - If user wants to set custom date in UI then guzzle will take that value as w_eff_start_date_ts.  |Timestamp|This column is used to define the date from which the specific historical version is active |No|No|No|Yes|No|No|No|
+|w_eff_end_date_ts |- By default, Guzzle takes effective end date based end date of SCD type 2. <br /> - If user wants to set custom date in UI then guzzle will take that value as w_eff_end_date_ts.|Timestamp|This column is used to define the date from which the specific historical version is inactive |No|No|No|Yes|No|No|No|
 |w_sequence_key |By default, Guzzle takes w_sequence_key value based logic that we have implemented. <br /> - Custom values are not allowed in as w_sequence_key.|Bigint|This column is used to define system generated surrogate key. |No|No|Yes**|Yes**|No|No|No|
-|w_version_key |By default, Guzzle takes w_version_key value based logic that we have implemented. <br /> - Custom values are not allowed in as w_version_key.|Bigint|This column is used to define system generated surrogate key. |Bigint |This column is used to define version of each dimensions by primary key. |No|No|No|Yes**|No|No|No|
+|w_version_key |By default, Guzzle takes w_version_key value based logic that we have implemented. <br /> - Custom values are not allowed in as w_version_key.|Bigint|This column is used to define version of each dimensions by primary key. |Bigint |No |No|No|No|Yes**|No|No|No|
 
 
 :::note
 * Yes** => Only applicable on spark engine.
-* Check the behavior of each framework column with different operations. Click here. 
+* Check the behavior of each framework column with different operations. Click <a target="_blank" href="../../../static/documents/processing_module_2.1.0.xlsx">here</a>. 
 :::
 
 ## Special Configurations
 
 ||Description|Append|Overwrite|Merge|Effective Date Merge|Update|Soft Delete|Hard Delete|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|Primary Key|It will uses to link source and target data.|No|No|Yes|Yes|Yes|Yes|Yes|
-|Incremental|When we want to update only those target records which are present in source. Remaining existing records in target will not change. will remain as it is.|No|No|Yes|Yes|No|No|No|
-|Merge Column| - Before merging record it will check whether data is updated or not in given merge column. if it is updated then it will update target records else it will not update target table. <br /> - If the merge columns are not specified in configuration by default Guzzle considers all columns as merge column. <br /><br /> |No|No|Yes|No|Yes|No|No|
-|History Column| - If history column data is update then it will create new records in target table. Else it will not create records in target table. <br /> - If history columns are not specified in the configuration by default Guzzle considers all columns as History columns |No|No|No|Yes|No|No|No|
+|Primary Key|It utilizes the link between the source and target data.|No|No|Yes|Yes|Yes|Yes|Yes|
+|Incremental|When updating records, only the target records that exist in the source will be modified, while the remaining existing records in the target will remain unchanged.|No|No|Yes|Yes|No|No|No|
+|Merge Column| - Before merging records, the Guzzle checks whether the data in the specified merge column has been updated. If there is an update, the target records will be updated accordingly. However, if there is no update in the merge column, the target table will not be modified. <br /> - If the merge columns are not specified in configuration by default Guzzle considers all columns as merge column. <br /><br /> |No|No|Yes|No|Yes|No|No|
+|History Column| - If the data in the history column is updated, the Guzzle will create new records in the target table. However, if there are no updates in the history column, new records will not be created in the target table. <br /> - If history columns are not specified in the configuration by default Guzzle considers all columns as History columns |No|No|No|Yes|No|No|No|
 
 
-### Below steps are used to determine final list of columns that are part of update section. 
-<b>Source Columns:</b> CustomerId    CustomerName    Age    Country <br /> <b>Target columns:</b> CustomerId, CustomerName, Age <br /><br /> 1. user define merge columns <br/> CustomerName, Age <br/> 2. we fetch source columns <br/> CustomerId, CustomerName, Age, Country<br /> 3. we fetch target column <br /> CustomerId, CustomerName, Age <br /> 4. intersect source(2) and target(3) columns <br /> CustomerId, CustomerName, Age <br /> 5. Remove the framework column from (4) <br /> CustomerId, CustomerName, Age -> (No framework column). <br /> 6. Remove the primary columns from (5), let's call it data columns <br /> CustomerName, Age <br /> 7. finally we intersect merge columns(1) with data columns(6). <br /> CustomerName, Age
+## How Guzzle generate merge column and history column list 
+<b>Source Columns:</b> CustomerId    CustomerName    Age    Country <br /> <b>Target columns:</b> CustomerId, CustomerName, Age <br /><br /> 
+
+<!-- 1. user define merge columns <br/> CustomerName, Age <br/> 2. we fetch source columns <br/> CustomerId, CustomerName, Age, Country<br /> 3. we fetch target column <br /> CustomerId, CustomerName, Age <br /> 4. intersect source(2) and target(3) columns <br /> CustomerId, CustomerName, Age <br /> 5. Remove the framework column from (4) <br /> CustomerId, CustomerName, Age -> (No framework column). <br /> 6. Remove the primary columns from (5), let's call it data columns <br /> CustomerName, Age <br /> 7. finally we intersect merge columns(1) with data columns(6). <br /> CustomerName, Age -->
+
+|Steps|Example|
+|--- |--- |
+| User define merge columns in Guzzle UI | CustomerName, Age |
+| Guzzle fetched source columns | CustomerId, CustomerName, Age, Country |
+| Guzzle fetched target columns | CustomerId, CustomerName, Age |
+| Guzzle do intersect of source(2) and target(3) columns | CustomerId, CustomerName, Age |
+| Guzzle removes the framework columns | CustomerId, CustomerName, Age -> (No framework column). |
+| Guzzle removes primary key columns | CustomerName, Age |
 
 ## How Pre SQL and Post SQL works
 
