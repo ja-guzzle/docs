@@ -84,12 +84,13 @@
 
 |Steps|Example|
 |--- |--- |
-| User define merge columns in Guzzle UI | CustomerName, Age |
+| User define merge columns | CustomerName |
 | Guzzle fetched source columns | CustomerId, CustomerName, Age, Country |
 | Guzzle fetched target columns | CustomerId, CustomerName, Age |
 | Guzzle do intersect of source(2) and target(3) columns | CustomerId, CustomerName, Age |
 | Guzzle removes the framework columns | CustomerId, CustomerName, Age -> (No framework column). |
 | Guzzle removes primary key columns | CustomerName, Age |
+| Guzzle interects the columns from previous step with merge column list specified | CustomerName |
 
 ## How Pre SQL and Post SQL works
 
