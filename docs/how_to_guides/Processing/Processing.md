@@ -78,19 +78,31 @@
 
 
 ## How Guzzle generate merge column and history column list 
-<b>Source Columns:</b> CustomerId    CustomerName    Age    Country <br /> <b>Target columns:</b> CustomerId, CustomerName, Age <br /><br /> 
+<b>Source Columns:</b> CustomerId, CustomerName, Age, Country, create_ts
+<br /> <b>Target columns:</b> CustomerId, CustomerName, Age, create_ts <br /><br /> 
+<b>Merge Column:</b> CustomerName
+<br /><b>Framework column:</b>  create_dt  which is mapped to framework column **w_create_ts**
 
+**Note:** Guzzle does not consdier the case of columns when matching column list
 <!-- 1. user define merge columns <br/> CustomerName, Age <br/> 2. we fetch source columns <br/> CustomerId, CustomerName, Age, Country<br /> 3. we fetch target column <br /> CustomerId, CustomerName, Age <br /> 4. intersect source(2) and target(3) columns <br /> CustomerId, CustomerName, Age <br /> 5. Remove the framework column from (4) <br /> CustomerId, CustomerName, Age -> (No framework column). <br /> 6. Remove the primary columns from (5), let's call it data columns <br /> CustomerName, Age <br /> 7. finally we intersect merge columns(1) with data columns(6). <br /> CustomerName, Age -->
 
 |Steps|Example|
 |--- |--- |
-| User define merge columns | CustomerName |
-| Guzzle fetched source columns | CustomerId, CustomerName, Age, Country |
-| Guzzle fetched target columns | CustomerId, CustomerName, Age |
-| Guzzle do intersect of source(2) and target(3) columns | CustomerId, CustomerName, Age |
-| Guzzle removes the framework columns | CustomerId, CustomerName, Age -> (No framework column). |
+| User define merge columns specified by user | CustomerName |
+| Guzzle fetched source columns | CustomerId, CustomerName, Age, Country, create_ts |
+| Guzzle fetched target columns | CustomerId, CustomerName, Age, create_ts |
+| Guzzle do intersect of source(2) and target(3) columns | CustomerId, CustomerName, Age, create_ts |
+| Guzzle removes the framework columns | CustomerId, CustomerName, Age -> (Guzzle removes create_ts which is mapped to framework column). |
 | Guzzle removes primary key columns | CustomerName, Age |
 | Guzzle interects the columns from previous step with merge column list specified | CustomerName |
+
+Additional commments:
+1. For the above example, Guzzle will use  CustomerName column alone to do the merge/update of data.
+2. Insert will include primary key as well.
+3. Other columns which are mapped to framework columns will follow the respective framework column behavior (example: w_create_ts will be populated only when new records are inserted for merge/effective dated merge/append/ovewrite etc).
+4. The columns in "Additional Columns" section  which are not mapped to any framework column will be part of insert and update statements as long as they are present in target table
+
+History trigger column
 
 ## How Pre SQL and Post SQL works
 
