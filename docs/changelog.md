@@ -1,5 +1,15 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.22 (July 14, 2023)
+#### Features
+- Updated the internal parameter UI to include an override button, allowing users to explicitly override internal parameters.
+- Improved the behavior of internal parameters. If a user provides an unsupported internal parameter, the job execution will now fail with an invalid parameters error.
+- Enhanced the rerun pipeline and activity behavior. Now, when rerunning, a run dialog box is displayed on the monitor screen with pre-populated parameters for easier execution.
+- Removed dead code from the system to improve overall code cleanliness and efficiency.
+
+#### Bugs
+- Resolved an issue where failed read operations occurred while reading the source file list and performing delete operations concurrently. The issue has been fixed, and the cached file list has been removed.
+
 ### Guzzle v2.4.22 (Jun 30, 2023)
 #### Features
 - Added support for Notebook, Spark JAR, and PySpark external activities in EMR Serverless and EMR EC2 compute.
@@ -45,7 +55,10 @@
 
 ### Guzzle v2.4.17 (April 21, 2023)
 #### Features
-- Added support of manual dag pipeline. User can define pipeline execution flow based on activity execution status. It supports three types of transition: `success_warning`, `failed_aborted`, and `completed`. In case of activity success, It will execute all activities which depend on "success_warning" and "completed" status, for failed activity, it will execute "failed_aborted" and "completed" activities. 
+- Added support of manual dag pipeline. User can define pipeline execution flow based on activity execution status. It supports three types of transition: `success_warning`, `failed_aborted`, and `completed`. In case of activity success, It will execute all activities which depend on "success_warning" and "completed" status, for failed activity, it will execute "failed_aborted" and "completed" activities.
+
+#### Bugs
+- Improved the parsing and resolution of job parameters in the Guzzle activity. Previously, if this process failed, the job would remain in the "Not Started" state. This issue has been fixed, and now the system marks the job as failed and terminates the execution gracefully.
 
 ### Guzzle v2.4.16 (April 07, 2023)
 #### Features
