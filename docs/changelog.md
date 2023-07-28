@@ -1,6 +1,14 @@
 # Guzzle Changelog
 
-### Guzzle v2.4.22 (July 14, 2023)
+### Guzzle v2.4.24 (July 28, 2023)
+#### Features
+- Added APIs for exporting and importing Guzzle config packages, allowing users to manage configurations more efficiently.
+- AWS Glue now supports Delta format using datalake-formats approach, replacing the previous delta-connector based approach. This change is applied to AWS Glue compute, providing improved data handling capabilities.
+- When preparing table dependencies, we have updated the symbol used to separate datastore, database, and table names from an underscore (_) to a dot (.), making it more consistent and intuitive.
+- Job execution flow has been enhanced in various services, including Databricks, Synapse, Glue, EMR EC2, and Serverless. We've introduced retry support for failed-to-submit jobs, ensuring a more robust and reliable processing experience. Additionally, users can now set timeout settings for Synapse and EMR compute in the manage section, allowing greater control over job execution.
+- We have eliminated dead code from the system, resulting in improved overall code cleanliness and efficiency. This optimization contributes to better performance and maintainability of the product.
+
+### Guzzle v2.4.23 (July 14, 2023)
 #### Features
 - Updated the internal parameter UI to include an override button, allowing users to explicitly override internal parameters.
 - Improved the behavior of internal parameters. If a user provides an unsupported internal parameter, the job execution will now fail with an invalid parameters error.
