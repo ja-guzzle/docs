@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.26 (August 11, 2023)
+#### Features
+- Removed dead code from the system to improve overall code cleanliness and efficiency.
+
 ### Guzzle v2.4.25 (August 11, 2023)
 #### Features
 - We have eliminated livy compute, Quantity Resource from Schedule and other dead code from the system. This clean-up of redundant code improves code quality, leading to better performance and easier maintenance.
