@@ -1,5 +1,9 @@
 # Guzzle Changelog
 
+### Guzzle v2.4.27 (December 08, 2023)
+#### Features
+- Refactor code for improve overall code cleanliness and efficiency.
+
 ### Guzzle v2.4.26 (September 15, 2023)
 #### Features
 - Removed dead code from the system to improve overall code cleanliness and efficiency.
