@@ -1,6 +1,7 @@
 {
   "name": "guzzle",
   "version": "0.0.0",
+  "homepage": "https://ja-guzzle.github.io/docs",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
