@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://guzzle.justanalytics.com/blog</id>
+    <id>https://ja-guzzle.github.io/blog</id>
     <title>Guzzle Blog</title>
     <updated>2019-05-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://guzzle.justanalytics.com/blog"/>
+    <link rel="alternate" href="https://ja-guzzle.github.io/blog"/>
     <subtitle>Guzzle Blog</subtitle>
-    <icon>https://guzzle.justanalytics.com/img/favicon.ico</icon>
+    <icon>https://ja-guzzle.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
-        <link href="https://guzzle.justanalytics.com/blog/welcome"/>
+        <link href="https://ja-guzzle.github.io/blog/welcome"/>
         <updated>2019-05-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien]]></summary>
     </entry>

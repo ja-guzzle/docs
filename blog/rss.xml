@@ -2,14 +2,14 @@
 <rss version="2.0">
     <channel>
         <title>Guzzle Blog</title>
-        <link>https://guzzle.justanalytics.com/blog</link>
+        <link>https://ja-guzzle.github.io/blog</link>
         <description>Guzzle Blog</description>
         <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://guzzle.justanalytics.com/blog/welcome</link>
+            <link>https://ja-guzzle.github.io/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien]]></description>
